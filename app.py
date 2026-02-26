@@ -1006,10 +1006,32 @@ def pagina_dashboard():
     col4.metric("Ticket Médio", f"R$ {ticket_medio:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
     st.markdown("---")
 
+    # PREPARAR COLUNAS EXTRAS
+    # Primeiro Nome (title case)
+    if "Nome" in df_filtrado.columns:
+        df_filtrado["Primeiro_Nome"] = df_filtrado["Nome"].fillna("").str.split().str[0].str.title()
+        df_filtrado = df_filtrado.rename(columns={"Nome": "Nome_Completo"})
+
+    # Valor_Total_Filtrado (valor nas lojas/segmentos selecionados)
+    if (segmento_filtro or loja_filtro) and not df_cliente_loja.empty:
+        df_cl_calc = df_cliente_loja[df_cliente_loja["cliente_id"].isin(df_filtrado["Cliente_ID"])]
+        if segmento_filtro and not df_loja_info.empty:
+            lojas_seg = df_loja_info[df_loja_info["segmento"].isin(segmento_filtro)]["loja_nome"].unique()
+            df_cl_calc = df_cl_calc[df_cl_calc["loja_nome"].isin(lojas_seg)]
+        if loja_filtro:
+            df_cl_calc = df_cl_calc[df_cl_calc["loja_nome"].isin(loja_filtro)]
+        valor_filtrado = df_cl_calc.groupby("cliente_id")["valor"].sum().reset_index()
+        valor_filtrado.columns = ["Cliente_ID", "Valor_Total_Filtrado"]
+        df_filtrado = df_filtrado.merge(valor_filtrado, on="Cliente_ID", how="left")
+        df_filtrado["Valor_Total_Filtrado"] = df_filtrado["Valor_Total_Filtrado"].fillna(0).round(2)
+    else:
+        df_filtrado["Valor_Total_Filtrado"] = df_filtrado["Valor_Total"]
+
     # TABELA
     colunas_exibir = [
-        "Ranking", "Nome", "CPF", "Email", "Celular", "Bairro", "Cidade", "Genero",
-        "Valor_Total", "Frequencia_Compras", "Recencia_Dias",
+        "Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo", "Email", "Celular",
+        "Bairro", "Cidade", "Genero",
+        "Valor_Total", "Valor_Total_Filtrado", "Frequencia_Compras", "Recencia_Dias",
         "Data_Primeira_Compra", "Data_Ultima_Compra",
         "Segmento_Principal", "Loja_Favorita_Shopping", "Perfil_Cliente",
     ]
@@ -1115,7 +1137,7 @@ def pagina_dashboard():
     vips = df_filtrado[df_filtrado["Perfil_Cliente"] == "VIP"]
     vips_risco = vips[vips["Recencia_Dias"] > 60] if not vips.empty else pd.DataFrame()
     if not vips_risco.empty:
-        nomes_vip = ", ".join(vips_risco["Nome"].head(5).tolist())
+        nomes_vip = ", ".join(vips_risco["Primeiro_Nome"].head(5).tolist())
         extra = f" e mais {len(vips_risco) - 5}" if len(vips_risco) > 5 else ""
         st.markdown(f"""<div class="action-card alerta">
             <h4>🚨 VIPs em Risco — {len(vips_risco)} cliente(s)</h4>
@@ -1132,7 +1154,7 @@ def pagina_dashboard():
     premium = df_filtrado[df_filtrado["Perfil_Cliente"] == "Premium"]
     if not premium.empty:
         top_premium = premium.nlargest(5, "Valor_Total")
-        nomes_premium = ", ".join(top_premium["Nome"].tolist())
+        nomes_premium = ", ".join(top_premium["Primeiro_Nome"].tolist())
         st.markdown(f"""<div class="action-card atencao">
             <h4>⬆️ Premium para Upgrade — {len(top_premium)} candidato(s)</h4>
             <p>Estes clientes Premium estão próximos de se tornarem VIP: <strong>{nomes_premium}</strong></p>
