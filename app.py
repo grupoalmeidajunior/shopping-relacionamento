@@ -822,7 +822,14 @@ def pagina_dashboard():
         segmentos_disponiveis = sorted(df["Segmento_Principal"].dropna().unique().tolist())
         segmento_filtro = st.multiselect("Segmento", segmentos_disponiveis, key="filtro_segmento")
     with fcol3:
-        lojas_disponiveis = sorted(df_loja_info["loja_nome"].dropna().unique().tolist()) if not df_loja_info.empty else []
+        # Lojas filtradas: só do shopping e, se segmento selecionado, só dos segmentos escolhidos
+        if not df_loja_info.empty:
+            df_lojas_filtradas = df_loja_info.copy()
+            if segmento_filtro:
+                df_lojas_filtradas = df_lojas_filtradas[df_lojas_filtradas["segmento"].isin(segmento_filtro)]
+            lojas_disponiveis = sorted(df_lojas_filtradas["loja_nome"].dropna().unique().tolist())
+        else:
+            lojas_disponiveis = []
         loja_filtro = st.multiselect("Loja", lojas_disponiveis, key="filtro_loja")
 
     df_filtrado = df.copy()
