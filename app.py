@@ -9,8 +9,6 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import plotly.io as pio
-import bcrypt
-import openpyxl
 import io
 import os
 import base64
@@ -227,6 +225,7 @@ def validar_credenciais(username, password, config):
     stored_hash = user_data.get("password", "")
 
     try:
+        import bcrypt
         if bcrypt.checkpw(password.encode(), stored_hash.encode()):
             return True, user_data.get("shopping", "")
     except Exception:
