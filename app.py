@@ -1031,8 +1031,7 @@ def pagina_dashboard():
     colunas_exibir = [
         "Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo", "Email", "Celular",
         "Bairro", "Cidade", "Genero",
-        "Valor_Total", "Valor_Total_Filtrado", "Frequencia_Compras", "Recencia_Dias",
-        "Data_Primeira_Compra", "Data_Ultima_Compra",
+        "Valor_Total", "Valor_Total_Filtrado",
         "Perfil_Cliente",
     ]
     colunas_existentes = [c for c in colunas_exibir if c in df_filtrado.columns]
