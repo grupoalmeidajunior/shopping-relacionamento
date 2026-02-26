@@ -40,7 +40,7 @@ Aramis,Moda,Neumarkt Shopping,290303.39,318
 Aramis Menswear,Moda,Garten Shopping,106344.34,131
 Arcos Dourados Comercio De Alimentos Ltda,Gastronomia,Norte Shopping,65.7,1
 Arezzo,Calçados,Continente Shopping,471800.08999999997,1037
-Arezzo,Calçados,Garten Shopping,372411.64999999997,764
+Arezzo,Calçados,Garten Shopping,372411.65,764
 Arezzo,Calçados,Nações Shopping,304701.93,672
 Arranjos Express,Serviços,Garten Shopping,2046.8999999999999,19
 Artwalk,Calçados,Balneário Shopping,394181.47000000003,441
@@ -144,7 +144,7 @@ CVC,Serviços,Garten Shopping,1365718.49,143
 CVC,Serviços,Norte Shopping,377588.71,60
 Cabanas,Moda,Neumarkt Shopping,131510.34,324
 Cacau Show,Gastronomia,Balneário Shopping,173537.7,1145
-Cacau Show,Gastronomia,Continente Shopping,135701.14,1258
+Cacau Show,Gastronomia,Continente Shopping,135701.13999999998,1258
 Cacau Show,Gastronomia,Garten Shopping,314379.0,2758
 Cacau Show,Gastronomia,Neumarkt Shopping,217506.78,2159
 Cacau Show,Gastronomia,Norte Shopping,118814.7,1168
@@ -200,7 +200,6 @@ Chilli Beans,Ótica,Balneário Shopping,60589.39,121
 Chilli Beans,Ótica,Continente Shopping,77444.11,163
 Chilli Beans,Ótica,Garten Shopping,278400.04,525
 Chilli Beans,Ótica,Nações Shopping,28198.48,64
-Chilli Beans,Ótica,Neumarkt Shopping,100283.46,199
 Chilli Beans,Ótica,Norte Shopping,155041.4,282
 Chiquinho Sorvetes,Gastronomia,Neumarkt Shopping,14454.52,704
 Chiquinho Sorvetes,Gastronomia - Sorvetes,Continente Shopping,2717.1,107
@@ -232,14 +231,14 @@ Cobasi,Pets,Nações Shopping,292658.04,2117
 Cobasi,Pets,Neumarkt Shopping,289395.26,2114
 Cobasi,Pets,Norte Shopping,215546.06,1661
 Colcci,Moda,Balneário Shopping,24683.8,26
-Colcci,Moda,Nações Shopping,359726.47000000003,434
+Colcci,Moda,Nações Shopping,359726.47,434
 Coliseu,Joalheria,Balneário Shopping,2199.0,1
 Coliseu,Joalheria,Garten Shopping,101180.1,26
 Companhia da Moda,Moda,Continente Shopping,380227.55,674
 Constance,Calçados,Continente Shopping,240491.48,782
 Continente Shopping - Estacionamento,Serviços,Continente Shopping,43955.13,2351
 Cores em Cacau,Gastronomia,Balneário Shopping,2119.14,56
-Cores em Cacau,Gastronomia,Neumarkt Shopping,2253.9700000000003,54
+Cores em Cacau,Gastronomia,Neumarkt Shopping,2253.97,54
 Correios,Serviços,Neumarkt Shopping,29.4,1
 Creamy Skin Care,Beleza e Bem-estar,Balneário Shopping,48721.84,336
 Crepefy,Gastronomia,Continente Shopping,712.14,27
@@ -577,7 +576,7 @@ Mc Donald's,Gastronomia,Balneário Shopping,1513.8,45
 Mc Donald's,Gastronomia,Continente Shopping,315.9,19
 Mc Donalds,Gastronomia,Norte Shopping,78333.37,1208
 McDonald's,Gastronomia,Continente Shopping,107752.91,2327
-McDonald's,Gastronomia,Garten Shopping,103979.46,2392
+McDonald's,Gastronomia,Garten Shopping,103979.45999999999,2392
 McDonald's,Gastronomia,Nações Shopping,55743.2,1256
 McDonald's,Gastronomia,Neumarkt Shopping,92161.53,2147
 McDonald´s Quiosque,Gastronomia,Neumarkt Shopping,1054.6,80
@@ -710,7 +709,7 @@ Panvel Farmácias,Farmácias,Balneário Shopping,39216.98,369
 Panvel Farmácias,Farmácias,Continente Shopping,256651.06,2782
 Panvel Farmácias,Farmácias,Garten Shopping,111757.61,1211
 Panvel Farmácias,Farmácias,Nações Shopping,92410.1,762
-Panvel Farmácias,Farmácias,Neumarkt Shopping,310247.78,2625
+Panvel Farmácias,Farmácias,Neumarkt Shopping,310247.77999999997,2625
 Paquetá,Esportes,Neumarkt Shopping,247717.12,807
 Paquetá,Esportes,Norte Shopping,244055.14,755
 Paquetá Esportes,Esportes,Balneário Shopping,110876.39,353
@@ -835,7 +834,7 @@ Sinhá Benta,Gastronomia,Norte Shopping,7838.17,173
 Sinhá Benta Café,Gastronomia,Neumarkt Shopping,10745.43,214
 Sinhá Benta Gourmet,Gastronomia,Neumarkt Shopping,78351.76,1037
 Sisley Paris,Beleza e Bem-estar,Balneário Shopping,22604.0,24
-SmartCase,Eletrônicos,Neumarkt Shopping,31705.94,127
+SmartCase,Eletrônicos,Neumarkt Shopping,31705.940000000002,127
 Smartcase,Eletrônicos,Garten Shopping,1549.2,10
 Souq,Moda Feminina,Balneário Shopping,295272.7,326
 Spedini,Gastronomia,Neumarkt Shopping,27958.66,497

@@ -32,7 +32,7 @@ Adidas,Esportes,Balneário Shopping,466093.71,765
 Adidas,Esportes,Garten Shopping,250629.42,378
 Adidas,Esportes,Neumarkt Shopping,580216.25,1140
 Adidas,Moda,Balneário Shopping,267853.89,381
-Adidas Originals,Moda,Balneário Shopping,423819.54,635
+Adidas Originals,Moda,Balneário Shopping,423819.54000000004,635
 Alice Salazar,Beleza e Bem-estar,Garten Shopping,47.0,1
 Alison Salles Hair Stylist,Salão de Beleza | Barbearia,Neumarkt Shopping,55636.85,248
 Altenburg,Casa e Decoração,Balneário Shopping,593172.79,567
@@ -119,7 +119,7 @@ Boiko,Joalheria,Balneário Shopping,655003.25,149
 Boiko Joalheiros,Joalheria,Norte Shopping,129343.72,109
 Bom Beef,Gastronomia,Continente Shopping,46563.84,503
 Bona Park,Moda,Balneário Shopping,5053.87,10
-Bondyou,Presentes e Acessórios,Balneário Shopping,9919.289999999999,125
+Bondyou,Presentes e Acessórios,Balneário Shopping,9919.29,125
 Bonna Panquecas e Massas,Gastronomia,Balneário Shopping,28603.7,448
 Borelli,Gastronomia,Balneário Shopping,9327.38,220
 Borelli Gelato,Gastronomia - Sorvetes,Continente Shopping,34309.39,882
@@ -136,7 +136,7 @@ Brasil Cacau,Gastronomia,Continente Shopping,139662.6,2083
 Bread Pide,Gastronomia,Balneário Shopping,17375.95,274
 Brooksfield,Moda,Balneário Shopping,1025590.6,685
 Brooksfield,Moda,Continente Shopping,690110.5700000001,595
-Brooksfield,Moda,Garten Shopping,976867.0700000001,749
+Brooksfield,Moda,Garten Shopping,976867.07,749
 Brooksfield,Moda,Neumarkt Shopping,1074084.34,910
 Buddha Spa,Serviços,Balneário Shopping,21077.010000000002,43
 Buddha Spa Garten Joinville,Beleza e Bem-estar,Garten Shopping,10126.6,30
@@ -150,7 +150,7 @@ Burger King,Gastronomia,Norte Shopping,103674.58,1779
 Békko,Moda,Nações Shopping,323673.84,381
 C&A,Moda,Balneário Shopping,2241674.44,7059
 C&A,Moda,Continente Shopping,2020963.96,6996
-C&A,Moda,Garten Shopping,1456013.6,5288
+C&A,Moda,Garten Shopping,1455993.61,5287
 C&A,Moda,Nações Shopping,895494.34,3222
 CALZEDONIA,Moda,Balneário Shopping,117736.62,204
 CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,69879.19,1671
@@ -222,7 +222,6 @@ Chilli Beans,Ótica,Balneário Shopping,119020.91,181
 Chilli Beans,Ótica,Continente Shopping,62056.65,103
 Chilli Beans,Ótica,Garten Shopping,249114.89,456
 Chilli Beans,Ótica,Nações Shopping,39314.67,84
-Chilli Beans,Ótica,Neumarkt Shopping,135387.43,254
 Chilli Beans,Ótica,Norte Shopping,157826.98,285
 Chilli Beans Ótica,Ótica,Continente Shopping,32175.96,34
 Chiquinho Sorvetes,Gastronomia,Neumarkt Shopping,35272.68,1479
@@ -253,7 +252,7 @@ Clube Melissa,Calçados,Neumarkt Shopping,171769.83000000002,621
 Coach,Beleza e Bem-estar,Balneário Shopping,367489.8,104
 Coach,Moda Feminina,Balneário Shopping,40472.0,13
 Cobasi,Pets,Continente Shopping,406234.71,2998
-Cobasi,Pets,Garten Shopping,248716.86000000002,2161
+Cobasi,Pets,Garten Shopping,248716.86,2161
 Cobasi,Pets,Nações Shopping,232160.05,1704
 Cobasi,Pets,Neumarkt Shopping,405061.07,2830
 Cobasi,Pets,Norte Shopping,276148.81,2099
@@ -267,7 +266,7 @@ Constance,Calçados,Continente Shopping,300255.60000000003,964
 Continente Shopping - Estacionamento,Serviços,Continente Shopping,75998.01,3579
 Cores em Cacau,Gastronomia,Balneário Shopping,20954.24,188
 Cores em Cacau,Gastronomia,Neumarkt Shopping,3361.7599999999998,43
-Correios,Serviços,Neumarkt Shopping,429.3,5
+Correios,Serviços,Neumarkt Shopping,429.29999999999995,5
 Cotton On,Beleza e Bem-estar,Balneário Shopping,363009.17,911
 Cotton On,Moda,Continente Shopping,185803.11,552
 Cotton:on,Moda,Balneário Shopping,29543.46,67
@@ -311,7 +310,7 @@ Dolce & Gabbana,Moda,Balneário Shopping,40754.0,9
 Dolce & Gabbana Do Brasil,Moda,Balneário Shopping,716357.0,92
 Don Barber,Beleza e Bem-estar,Neumarkt Shopping,3400.05,20
 Don Pettine,Salão de Beleza | Barbearia,Nações Shopping,367.05,5
-Dona Torta,Gastronomia,Garten Shopping,260831.27,5103
+Dona Torta,Gastronomia,Garten Shopping,260768.77,5100
 Donna Mirô,Gastronomia,Nações Shopping,22832.67,383
 Dress To,Moda Feminina,Balneário Shopping,146869.2,179
 Dudalina,Moda,Nações Shopping,177079.83,222
@@ -427,7 +426,7 @@ Havaianas,Calçados,Garten Shopping,257232.35,2486
 Havaianas,Calçados,Nações Shopping,47489.409999999996,485
 Havan,Casa e Decoração,Garten Shopping,1521878.96,5547
 Havan,Casa e Decoração,Neumarkt Shopping,2421312.26,8201
-Havan,Casa e Decoração,Norte Shopping,2443662.45,6646
+Havan,Casa e Decoração,Norte Shopping,2443302.47,6645
 Havanna Café,Gastronomia,Balneário Shopping,78532.55,542
 Hector Albertazzi,Joalheria,Balneário Shopping,96841.27,43
 Hefesto Acessorios,Presentes e Acessórios,Continente Shopping,98725.46,260
@@ -726,7 +725,7 @@ O Boticário,Beleza e Bem-estar,Continente Shopping,483587.93,2458
 O Boticário,Beleza e Bem-estar,Garten Shopping,415002.99,2321
 O Boticário,Beleza e Bem-estar,Nações Shopping,160378.95,929
 O Boticário,Beleza e Bem-estar,Neumarkt Shopping,342442.24,1676
-O Boticário,Beleza e Bem-estar,Norte Shopping,263414.03,1210
+O Boticário,Beleza e Bem-estar,Norte Shopping,263094.11,1209
 O Mundo das Capas,Telefonia,Neumarkt Shopping,42494.05,131
 OJO,Ótica,Neumarkt Shopping,239148.7,188
 OJO Sol & Grau,Ótica,Garten Shopping,341361.4,292
@@ -795,7 +794,7 @@ Pernambucanas,Moda,Continente Shopping,443728.35,2350
 Piastrini Joinville - Optica Machota,Ótica e Joalheria,Garten Shopping,147361.16,92
 Piticas,Chope Artesanal,Balneário Shopping,579.3000000000001,6
 Piticas,Moda,Continente Shopping,179.70000000000002,3
-Pittol,Calçados,Garten Shopping,985843.85,3719
+Pittol,Calçados,Garten Shopping,985613.86,3718
 Pittol,Calçados,Nações Shopping,413511.42,1448
 Pittol,Calçados,Norte Shopping,1491465.82,5172
 Pizza Hut,Gastronomia,Balneário Shopping,59252.04,819
@@ -826,7 +825,7 @@ Provin Joias,Joalheria,Norte Shopping,50621.79,162
 Provin Joias,Não informado,Continente Shopping,37326.26,119
 Provin Jóias,Não informado,Nações Shopping,46233.51,103
 Puket,Moda,Balneário Shopping,203134.32,571
-Purpurata,Presentes e Acessórios,Garten Shopping,274460.16000000003,1029
+Purpurata,Presentes e Acessórios,Garten Shopping,274460.16,1029
 Quebra Gelo,Presentes e Acessórios,Continente Shopping,37929.85,169
 "Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,52577.56,536
 Quiksilver,Moda,Balneário Shopping,219741.81,345
@@ -856,7 +855,7 @@ Riachuelo,Moda,Continente Shopping,1566737.4,5869
 Riachuelo,Moda,Garten Shopping,2177451.27,7915
 Riachuelo,Moda,Nações Shopping,732329.58,2698
 Riachuelo,Moda,Neumarkt Shopping,1643888.75,6246
-Riachuelo,Moda,Norte Shopping,957933.4400000001,3628
+Riachuelo,Moda,Norte Shopping,957411.61,3627
 Richard's,Moda,Balneário Shopping,482382.35,377
 Rip Curl,Moda,Balneário Shopping,300939.2,460
 Ritmi Studio,Moda Feminina,Nações Shopping,72180.38,192
@@ -912,7 +911,7 @@ Souq,Moda Feminina,Balneário Shopping,322430.95,359
 Spedini,Gastronomia,Neumarkt Shopping,5871.0,110
 Spedini Trattoria Expressa,Gastronomia,Continente Shopping,10221.4,167
 Spoleto,Gastronomia,Continente Shopping,126441.95,2368
-St. Chicken,Gastronomia,Garten Shopping,18490.329999999998,374
+St. Chicken,Gastronomia,Garten Shopping,18490.33,374
 St.Chicken,Gastronomia,Nações Shopping,8698.8,143
 Stanley,Presentes e Acessórios,Balneário Shopping,166517.84,475
 Stanley,Presentes e Acessórios,Garten Shopping,170707.48,512
@@ -931,7 +930,7 @@ Subway,Gastronomia,Norte Shopping,15093.9,292
 Sunglass Hut,Ótica,Balneário Shopping,473018.72,237
 Sunglass Hut,Ótica,Continente Shopping,408355.51,288
 Superlegal,Infantil,Garten Shopping,572447.66,2715
-Superlegal Brinquedos,Infantil,Balneário Shopping,1363221.65,4769
+Superlegal Brinquedos,Infantil,Balneário Shopping,1363221.6500000001,4769
 Superlegal Brinquedos,Infantil,Norte Shopping,290539.24,1307
 Suplementos Premium,Suplementos esportivos,Balneário Shopping,38286.9,174
 Suíça Relógios,Serviços,Continente Shopping,4217.0,14
