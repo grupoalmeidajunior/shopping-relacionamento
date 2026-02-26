@@ -1221,6 +1221,44 @@ def pagina_dashboard():
             <p>Nenhum cliente próximo de mudar de perfil no momento.</p>
         </div>""", unsafe_allow_html=True)
 
+    # SEGMENTO DOMINANTE
+    if not df_filtrado.empty and "Segmento_Principal" in df_filtrado.columns:
+        seg_totais = df_filtrado.groupby("Segmento_Principal")["Valor_Total"].sum()
+        if not seg_totais.empty:
+            seg_top = seg_totais.idxmax()
+            seg_pct = seg_totais.max() / seg_totais.sum() * 100
+            st.markdown(f"""<div class="action-card oportunidade">
+                <h4>🏆 Segmento Dominante — {seg_top}</h4>
+                <p><strong>{seg_pct:.1f}%</strong> do faturamento vem do segmento <strong>{seg_top}</strong>.</p>
+                <p class="acao">💡 Ação: reforçar parcerias com lojas deste segmento, criar promoções temáticas</p>
+            </div>""", unsafe_allow_html=True)
+
+    # LOJA DESTAQUE
+    if "Loja_Favorita_Shopping" in df_filtrado.columns:
+        loja_counts = df_filtrado["Loja_Favorita_Shopping"].value_counts()
+        if not loja_counts.empty:
+            st.markdown(f"""<div class="action-card oportunidade">
+                <h4>⭐ Loja Destaque — {loja_counts.index[0]}</h4>
+                <p>A loja <strong>{loja_counts.index[0]}</strong> é a favorita de <strong>{loja_counts.iloc[0]}</strong> dos clientes filtrados.</p>
+                <p class="acao">💡 Ação: ações conjuntas, eventos exclusivos, programa de fidelidade com a loja</p>
+            </div>""", unsafe_allow_html=True)
+
+    # CLIENTES INATIVOS
+    if "Recencia_Dias" in df_filtrado.columns:
+        inativos = df_filtrado[df_filtrado["Recencia_Dias"] > 90]
+        if not inativos.empty:
+            st.markdown(f"""<div class="action-card alerta">
+                <h4>😴 Clientes Inativos — {len(inativos)} cliente(s)</h4>
+                <p><strong>{len(inativos)}</strong> clientes não compram há mais de 3 meses. Perfis: {', '.join(inativos['Perfil_Cliente'].value_counts().index.tolist())}</p>
+                <p class="acao">💡 Ação: campanha de reativação com benefícios, cupons de desconto, contato direto</p>
+            </div>""", unsafe_allow_html=True)
+        else:
+            st.markdown("""<div class="action-card oportunidade">
+                <h4>✅ Base Ativa</h4>
+                <p>Todos os clientes compraram nos últimos 90 dias. Excelente engajamento!</p>
+                <p class="acao">💡 Ação: aproveitar o momento para ampliar ticket médio e cross-sell</p>
+            </div>""", unsafe_allow_html=True)
+
 
 # ==============================================================================
 # EXECUÇÃO
