@@ -728,5 +728,9 @@ def main():
 # EXECUÇÃO
 # ==============================================================================
 
-if __name__ == "__main__":
+try:
     main()
+except Exception as e:
+    import traceback
+    st.error(f"Erro: {e}")
+    st.code(traceback.format_exc())
