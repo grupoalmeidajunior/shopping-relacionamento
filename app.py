@@ -1087,6 +1087,12 @@ def pagina_dashboard():
             # Filtrar cliente_loja pelos clientes do df_filtrado
             clientes_filtrados_ids = df_filtrado["Cliente_ID"].unique()
             df_cl_filtrado = df_cliente_loja[df_cliente_loja["cliente_id"].isin(clientes_filtrados_ids)]
+            # Se tem filtro de segmento ou loja, mostrar apenas lojas correspondentes
+            if segmento_filtro and not df_loja_info.empty:
+                lojas_do_segmento = df_loja_info[df_loja_info["segmento"].isin(segmento_filtro)]["loja_nome"].unique()
+                df_cl_filtrado = df_cl_filtrado[df_cl_filtrado["loja_nome"].isin(lojas_do_segmento)]
+            if loja_filtro:
+                df_cl_filtrado = df_cl_filtrado[df_cl_filtrado["loja_nome"].isin(loja_filtro)]
             if not df_cl_filtrado.empty:
                 loja_valor = df_cl_filtrado.groupby("loja_nome")["valor"].sum().reset_index()
                 loja_valor = loja_valor.sort_values("valor", ascending=True).tail(10)
