@@ -204,10 +204,12 @@ def converter_para_dict(obj):
 def carregar_config_auth():
     """Carrega configuração de autenticação dos secrets."""
     try:
-        config = converter_para_dict(dict(st.secrets.get("credentials", {})))
+        if "credentials" not in st.secrets:
+            return None
+        config = converter_para_dict(dict(st.secrets["credentials"]))
         if config and "usernames" in config:
             return {"credentials": config}
-    except Exception:
+    except (FileNotFoundError, KeyError):
         pass
     return None
 
