@@ -553,31 +553,115 @@ def optimize_dtypes(df):
     return df
 
 
+MESES_PT = {
+    "01": "Janeiro", "02": "Fevereiro", "03": "Março", "04": "Abril",
+    "05": "Maio", "06": "Junho", "07": "Julho", "08": "Agosto",
+    "09": "Setembro", "10": "Outubro", "11": "Novembro", "12": "Dezembro",
+}
+
+
 def _resolver_periodo_pasta(periodo):
     if periodo == "Completo":
         return os.path.join(RESULTADOS_DIR, "Completo")
     elif periodo.startswith("20") and len(periodo) == 4:
         return os.path.join(RESULTADOS_DIR, "Por_Ano", periodo)
-    else:
+    elif "_Q" in periodo:
         return os.path.join(RESULTADOS_DIR, "Por_Trimestre", periodo)
+    else:
+        # Mês: formato 2025_01
+        return os.path.join(RESULTADOS_DIR, "Por_Mes", periodo)
+
+
+def _label_periodo(codigo):
+    """Gera label legível: 2025_01 -> '2025 - Janeiro', 2025_Q1 -> '2025 - Q1'."""
+    if codigo == "Completo":
+        return "Completo"
+    if "_Q" in codigo:
+        return codigo.replace("_", " - ")
+    if len(codigo) == 4:
+        return codigo
+    # Mês: 2025_01
+    partes = codigo.split("_")
+    if len(partes) == 2 and partes[1] in MESES_PT:
+        return f"{partes[0]} - {MESES_PT[partes[1]]}"
+    return codigo
 
 
 @st.cache_data(ttl=3600, max_entries=5)
-def carregar_top_consumidores(periodo, shopping_nome):
+def _carregar_top_consumidores_unico(periodo, shopping_nome):
     pasta = _resolver_periodo_pasta(periodo)
     caminho = os.path.join(pasta, "top_consumidores_rfv.csv")
     if not os.path.exists(caminho):
         return pd.DataFrame()
-    # Ler apenas colunas do shopping para economizar memória
     df = pd.read_csv(caminho, sep=";", decimal=",", encoding="utf-8-sig")
     if shopping_nome:
         df = df[df["Shopping"] == shopping_nome].copy()
-    df = optimize_dtypes(df)
     return df
 
 
+def carregar_top_consumidores(periodos_selecionados, shopping_nome):
+    """Carrega e agrega dados de um ou mais períodos."""
+    if len(periodos_selecionados) == 1:
+        df = _carregar_top_consumidores_unico(periodos_selecionados[0], shopping_nome)
+        return optimize_dtypes(df) if not df.empty else df
+
+    # Multi-período: carregar cada um e agregar
+    dfs = []
+    for p in periodos_selecionados:
+        df_p = _carregar_top_consumidores_unico(p, shopping_nome)
+        if not df_p.empty:
+            dfs.append(df_p)
+
+    if not dfs:
+        return pd.DataFrame()
+
+    df_all = pd.concat(dfs, ignore_index=True)
+
+    # Colunas de dados pessoais (pegar first)
+    cols_pessoais = ["Shopping", "Nome", "CPF", "Email", "Celular",
+                     "Logradouro", "Numero", "Complemento", "Bairro", "Cidade", "Estado", "CEP",
+                     "Genero"]
+    cols_pessoais = [c for c in cols_pessoais if c in df_all.columns]
+
+    # Agregar por Cliente_ID
+    agg_dict = {}
+    for c in cols_pessoais:
+        agg_dict[c] = "first"
+    if "Valor_Total" in df_all.columns:
+        agg_dict["Valor_Total"] = "sum"
+    if "Frequencia_Compras" in df_all.columns:
+        agg_dict["Frequencia_Compras"] = "sum"
+    if "Recencia_Dias" in df_all.columns:
+        agg_dict["Recencia_Dias"] = "min"
+    if "Data_Primeira_Compra" in df_all.columns:
+        agg_dict["Data_Primeira_Compra"] = "min"
+    if "Data_Ultima_Compra" in df_all.columns:
+        agg_dict["Data_Ultima_Compra"] = "max"
+    # Para categorias, pegar moda (valor mais frequente)
+    def _moda(x):
+        m = x.mode()
+        return m.iloc[0] if len(m) > 0 else x.iloc[0]
+
+    for c in ["Segmento_Principal", "Loja_Favorita_Shopping", "Loja_Favorita_Geral", "Perfil_Cliente"]:
+        if c in df_all.columns:
+            agg_dict[c] = _moda
+    # Scores e valores de segmento: pegar do período mais recente (last)
+    for c in ["Score_Recencia", "Score_Frequencia", "Score_Valor", "Score_Total_RFV",
+              "Valor_Segmento_Principal", "Valor_Loja_Favorita_Geral", "Valor_Loja_Favorita_Shopping"]:
+        if c in df_all.columns:
+            agg_dict[c] = "last"
+
+    df_agg = df_all.groupby("Cliente_ID", as_index=False).agg(agg_dict)
+
+    # Re-ranquear por Valor_Total
+    df_agg = df_agg.sort_values("Valor_Total", ascending=False).reset_index(drop=True)
+    df_agg["Ranking"] = range(1, len(df_agg) + 1)
+
+    return optimize_dtypes(df_agg)
+
+
 @st.cache_data(ttl=3600)
-def carregar_loja_info(periodo, shopping_nome):
+def _carregar_loja_info_unico(periodo, shopping_nome):
     pasta = _resolver_periodo_pasta(periodo)
     caminhos = [
         os.path.join(pasta, "RFV", "loja_info.csv"),
@@ -593,8 +677,31 @@ def carregar_loja_info(periodo, shopping_nome):
     return pd.DataFrame()
 
 
+def carregar_loja_info(periodos_selecionados, shopping_nome):
+    if len(periodos_selecionados) == 1:
+        return _carregar_loja_info_unico(periodos_selecionados[0], shopping_nome)
+    dfs = []
+    for p in periodos_selecionados:
+        df_p = _carregar_loja_info_unico(p, shopping_nome)
+        if not df_p.empty:
+            dfs.append(df_p)
+    if not dfs:
+        return pd.DataFrame()
+    df_all = pd.concat(dfs, ignore_index=True)
+    # Agregar: mesma loja em vários períodos -> somar valor e cupons
+    group_cols = [c for c in ["loja_nome", "segmento", "shopping"] if c in df_all.columns]
+    if group_cols:
+        agg = {}
+        if "valor" in df_all.columns:
+            agg["valor"] = "sum"
+        if "cupons" in df_all.columns:
+            agg["cupons"] = "sum"
+        df_all = df_all.groupby(group_cols, as_index=False).agg(agg)
+    return df_all
+
+
 @st.cache_data(ttl=3600)
-def carregar_cliente_loja(periodo):
+def _carregar_cliente_loja_unico(periodo):
     pasta = _resolver_periodo_pasta(periodo)
     caminhos = [
         os.path.join(pasta, "RFV", "cliente_loja.csv"),
@@ -607,17 +714,57 @@ def carregar_cliente_loja(periodo):
     return pd.DataFrame()
 
 
+def carregar_cliente_loja(periodos_selecionados):
+    if len(periodos_selecionados) == 1:
+        return _carregar_cliente_loja_unico(periodos_selecionados[0])
+    dfs = []
+    for p in periodos_selecionados:
+        df_p = _carregar_cliente_loja_unico(p)
+        if not df_p.empty:
+            dfs.append(df_p)
+    if not dfs:
+        return pd.DataFrame()
+    df_all = pd.concat(dfs, ignore_index=True)
+    group_cols = [c for c in ["cliente_id", "loja_nome"] if c in df_all.columns]
+    if group_cols:
+        agg = {}
+        if "n" in df_all.columns:
+            agg["n"] = "sum"
+        if "valor" in df_all.columns:
+            agg["valor"] = "sum"
+        df_all = df_all.groupby(group_cols, as_index=False).agg(agg)
+    return df_all
+
+
 def descobrir_periodos():
-    periodos = []
+    """Retorna dict {codigo: label} ordenado: Completo, anos, trimestres, meses."""
+    periodos = {}
+
     if os.path.exists(os.path.join(RESULTADOS_DIR, "Completo", "top_consumidores_rfv.csv")):
-        periodos.append("Completo")
+        periodos["Completo"] = "Completo"
+
+    # Anos (somente 2025/2026)
     pasta_anos = os.path.join(RESULTADOS_DIR, "Por_Ano")
     if os.path.exists(pasta_anos):
-        periodos.extend(sorted([d for d in os.listdir(pasta_anos) if os.path.isdir(os.path.join(pasta_anos, d))], reverse=True))
+        for d in sorted(os.listdir(pasta_anos), reverse=True):
+            if os.path.isdir(os.path.join(pasta_anos, d)) and d in ("2025", "2026"):
+                periodos[d] = d
+
+    # Trimestres (somente 2025/2026)
     pasta_tri = os.path.join(RESULTADOS_DIR, "Por_Trimestre")
     if os.path.exists(pasta_tri):
-        periodos.extend(sorted([d for d in os.listdir(pasta_tri) if os.path.isdir(os.path.join(pasta_tri, d))], reverse=True))
-    return periodos if periodos else ["Completo"]
+        for d in sorted(os.listdir(pasta_tri), reverse=True):
+            if os.path.isdir(os.path.join(pasta_tri, d)) and d.startswith(("2025_", "2026_")):
+                periodos[d] = _label_periodo(d)
+
+    # Meses (somente 2025/2026)
+    pasta_mes = os.path.join(RESULTADOS_DIR, "Por_Mes")
+    if os.path.exists(pasta_mes):
+        for d in sorted(os.listdir(pasta_mes), reverse=True):
+            if os.path.isdir(os.path.join(pasta_mes, d)) and d.startswith(("2025_", "2026_")):
+                periodos[d] = _label_periodo(d)
+
+    return periodos if periodos else {"Completo": "Completo"}
 
 
 # ==============================================================================
@@ -772,8 +919,16 @@ def pagina_dashboard():
             st.session_state["shopping_nome"] = shopping_sel
             shopping_nome = shopping_sel
 
-        periodos = descobrir_periodos()
-        periodo = st.selectbox("📅 Período", periodos, index=0)
+        periodos_dict = descobrir_periodos()
+        codigos = list(periodos_dict.keys())
+        labels = list(periodos_dict.values())
+        periodos_selecionados = st.multiselect(
+            "📅 Período(s)", codigos, default=[codigos[0]] if codigos else [],
+            format_func=lambda x: periodos_dict.get(x, x),
+            key="filtro_periodo"
+        )
+        if not periodos_selecionados:
+            periodos_selecionados = [codigos[0]] if codigos else ["Completo"]
 
         st.divider()
         st.markdown('<div class="logout-btn">', unsafe_allow_html=True)
@@ -789,16 +944,18 @@ def pagina_dashboard():
         return
 
     # CARREGAR DADOS
-    df = carregar_top_consumidores(periodo, shopping_nome)
+    df = carregar_top_consumidores(periodos_selecionados, shopping_nome)
     if df.empty:
-        st.warning(f"Nenhum dado encontrado para **{shopping_nome}** no período **{periodo}**.")
+        periodo_label = ", ".join([periodos_dict.get(p, p) for p in periodos_selecionados])
+        st.warning(f"Nenhum dado encontrado para **{shopping_nome}** no período **{periodo_label}**.")
         return
-    df_loja_info = carregar_loja_info(periodo, shopping_nome)
-    df_cliente_loja = carregar_cliente_loja(periodo)
+    df_loja_info = carregar_loja_info(periodos_selecionados, shopping_nome)
+    df_cliente_loja = carregar_cliente_loja(periodos_selecionados)
 
     # HEADER
+    periodo_label = ", ".join([periodos_dict.get(p, p) for p in periodos_selecionados])
     st.markdown(f'<p class="main-header">📊 Top Consumidores — {shopping_nome}</p>', unsafe_allow_html=True)
-    st.markdown(f'<p class="sub-header">Período: {periodo} · Dados para ações de relacionamento</p>', unsafe_allow_html=True)
+    st.markdown(f'<p class="sub-header">Período: {periodo_label} · Dados para ações de relacionamento</p>', unsafe_allow_html=True)
 
     # KPIs
     col1, col2, col3, col4 = st.columns(4)
@@ -862,8 +1019,9 @@ def pagina_dashboard():
     df_export = df_filtrado[colunas_existentes].copy()
     for col in df_export.select_dtypes(include=["category"]).columns:
         df_export[col] = df_export[col].astype(str)
-    csv_filename = f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo}.csv"
-    xlsx_filename = f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo}.xlsx"
+    periodo_sufixo = "_".join(periodos_selecionados)
+    csv_filename = f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo_sufixo}.csv"
+    xlsx_filename = f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo_sufixo}.xlsx"
     with dcol1:
         csv_data = df_export.to_csv(sep=";", decimal=",", index=False, encoding="utf-8-sig")
         if st.download_button("⬇️ Baixar CSV", data=csv_data,

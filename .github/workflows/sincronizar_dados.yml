@@ -70,20 +70,30 @@ jobs:
             done
           }
 
+          # Limpar dados antigos antes de sincronizar
+          rm -rf "$DEST"
+
           # Completo
           copiar_csvs "$FONTE/Completo" "$DEST/Completo" "Completo"
 
-          # Por_Ano
-          if [ -d "$FONTE/Por_Ano" ]; then
-            for ano in $(ls "$FONTE/Por_Ano" 2>/dev/null); do
+          # Por_Ano (somente 2025 e 2026)
+          for ano in 2025 2026; do
+            if [ -d "$FONTE/Por_Ano/$ano" ]; then
               copiar_csvs "$FONTE/Por_Ano/$ano" "$DEST/Por_Ano/$ano" "Por_Ano/$ano"
+            fi
+          done
+
+          # Por_Trimestre (somente 2025 e 2026)
+          if [ -d "$FONTE/Por_Trimestre" ]; then
+            for tri in $(ls "$FONTE/Por_Trimestre" 2>/dev/null | grep -E '^202[56]_'); do
+              copiar_csvs "$FONTE/Por_Trimestre/$tri" "$DEST/Por_Trimestre/$tri" "Por_Trimestre/$tri"
             done
           fi
 
-          # Por_Trimestre
-          if [ -d "$FONTE/Por_Trimestre" ]; then
-            for tri in $(ls "$FONTE/Por_Trimestre" 2>/dev/null); do
-              copiar_csvs "$FONTE/Por_Trimestre/$tri" "$DEST/Por_Trimestre/$tri" "Por_Trimestre/$tri"
+          # Por_Mes (somente 2025 e 2026)
+          if [ -d "$FONTE/Por_Mes" ]; then
+            for mes in $(ls "$FONTE/Por_Mes" 2>/dev/null | grep -E '^202[56]_'); do
+              copiar_csvs "$FONTE/Por_Mes/$mes" "$DEST/Por_Mes/$mes" "Por_Mes/$mes"
             done
           fi
 
@@ -113,6 +123,7 @@ jobs:
 
           Dados sincronizados do dashboard-perfil-cliente.
           CSVs: top_consumidores_rfv, cliente_loja, loja_info
+          Periodos: Completo + 2025/2026 (ano, trimestre, mes)
 
           Co-Authored-By: GitHub Actions <actions@github.com>"
 
@@ -129,3 +140,4 @@ jobs:
           echo "- Completo" >> $GITHUB_STEP_SUMMARY
           for d in $(ls Resultados/Por_Ano/ 2>/dev/null); do echo "- Ano: $d" >> $GITHUB_STEP_SUMMARY; done
           for d in $(ls Resultados/Por_Trimestre/ 2>/dev/null); do echo "- Trimestre: $d" >> $GITHUB_STEP_SUMMARY; done
+          for d in $(ls Resultados/Por_Mes/ 2>/dev/null); do echo "- Mes: $d" >> $GITHUB_STEP_SUMMARY; done
