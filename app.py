@@ -171,6 +171,36 @@ def registrar_login(usuario, nome, shopping):
         pass
 
 
+def registrar_filtro(usuario, shopping, filtro, valor):
+    try:
+        spreadsheet = get_gsheets_connection()
+        if spreadsheet is None:
+            return
+        try:
+            ws = spreadsheet.worksheet('filtros')
+        except Exception:
+            ws = spreadsheet.add_worksheet(title='filtros', rows=1000, cols=5)
+            ws.append_row(['timestamp', 'usuario', 'shopping', 'filtro', 'valor'])
+        ws.append_row([get_timestamp_brasilia(), usuario, shopping, filtro, str(valor)])
+    except Exception:
+        pass
+
+
+def registrar_download(usuario, shopping, arquivo, registros):
+    try:
+        spreadsheet = get_gsheets_connection()
+        if spreadsheet is None:
+            return
+        try:
+            ws = spreadsheet.worksheet('downloads')
+        except Exception:
+            ws = spreadsheet.add_worksheet(title='downloads', rows=1000, cols=5)
+            ws.append_row(['timestamp', 'usuario', 'shopping', 'arquivo', 'registros'])
+        ws.append_row([get_timestamp_brasilia(), usuario, shopping, arquivo, str(registros)])
+    except Exception:
+        pass
+
+
 def registrar_evento_seguranca(tipo_evento, username, client_id, detalhes=None):
     try:
         spreadsheet = get_gsheets_connection()
@@ -540,7 +570,7 @@ def carregar_top_consumidores(periodo, shopping_nome):
         return pd.DataFrame()
     df = pd.read_csv(caminho, sep=";", decimal=",", encoding="utf-8-sig")
     if shopping_nome:
-        df = df[df["Shopping"] == shopping_nome].head(150).copy()
+        df = df[df["Shopping"] == shopping_nome].copy()
     df = optimize_dtypes(df)
     return df
 
@@ -597,7 +627,7 @@ def pagina_admin():
     st.markdown('<p class="main-header">⚙️ Administração</p>', unsafe_allow_html=True)
     st.markdown('<p class="sub-header">Logs de acesso e segurança do dashboard</p>', unsafe_allow_html=True)
 
-    tab1, tab2, tab3 = st.tabs(["Logs de Login", "Segurança", "Rate Limit"])
+    tab1, tab2, tab3, tab4, tab5 = st.tabs(["Logs de Login", "Filtros", "Downloads", "Segurança", "Rate Limit"])
 
     spreadsheet = get_gsheets_connection()
 
@@ -618,6 +648,38 @@ def pagina_admin():
             st.warning("Google Sheets não configurado.")
 
     with tab2:
+        if spreadsheet:
+            try:
+                ws = spreadsheet.worksheet('filtros')
+                dados = ws.get_all_records()
+                if dados:
+                    df_filtros = pd.DataFrame(dados)
+                    st.dataframe(df_filtros.sort_values('timestamp', ascending=False).head(200), hide_index=True, use_container_width=True)
+                    st.caption(f"Total: {len(dados)} registros")
+                else:
+                    st.info("Nenhum filtro registrado ainda.")
+            except Exception as e:
+                st.error(f"Erro ao carregar filtros: {e}")
+        else:
+            st.warning("Google Sheets não configurado.")
+
+    with tab3:
+        if spreadsheet:
+            try:
+                ws = spreadsheet.worksheet('downloads')
+                dados = ws.get_all_records()
+                if dados:
+                    df_dl = pd.DataFrame(dados)
+                    st.dataframe(df_dl.sort_values('timestamp', ascending=False).head(200), hide_index=True, use_container_width=True)
+                    st.caption(f"Total: {len(dados)} registros")
+                else:
+                    st.info("Nenhum download registrado ainda.")
+            except Exception as e:
+                st.error(f"Erro ao carregar downloads: {e}")
+        else:
+            st.warning("Google Sheets não configurado.")
+
+    with tab4:
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('seguranca')
@@ -641,7 +703,7 @@ def pagina_admin():
         else:
             st.warning("Google Sheets não configurado.")
 
-    with tab3:
+    with tab5:
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('rate_limit')
@@ -734,7 +796,7 @@ def pagina_dashboard():
     df_cliente_loja = carregar_cliente_loja(periodo)
 
     # HEADER
-    st.markdown(f'<p class="main-header">📊 Top 150 Consumidores — {shopping_nome}</p>', unsafe_allow_html=True)
+    st.markdown(f'<p class="main-header">📊 Top Consumidores — {shopping_nome}</p>', unsafe_allow_html=True)
     st.markdown(f'<p class="sub-header">Período: {periodo} · Dados para ações de relacionamento</p>', unsafe_allow_html=True)
 
     # KPIs
@@ -765,11 +827,14 @@ def pagina_dashboard():
     df_filtrado = df.copy()
     if perfil_filtro:
         df_filtrado = df_filtrado[df_filtrado["Perfil_Cliente"].isin(perfil_filtro)]
+        registrar_filtro(username, shopping_nome, "Perfil", ", ".join(perfil_filtro))
     if segmento_filtro:
         df_filtrado = df_filtrado[df_filtrado["Segmento_Principal"].isin(segmento_filtro)]
+        registrar_filtro(username, shopping_nome, "Segmento", ", ".join(segmento_filtro))
     if loja_filtro and not df_cliente_loja.empty:
         clientes_loja = df_cliente_loja[df_cliente_loja["loja_nome"].isin(loja_filtro)]["cliente_id"].unique()
         df_filtrado = df_filtrado[df_filtrado["Cliente_ID"].isin(clientes_loja)]
+        registrar_filtro(username, shopping_nome, "Loja", ", ".join(loja_filtro))
 
     st.markdown(f'<div class="counter">Exibindo {len(df_filtrado)} de {len(df)} clientes</div>', unsafe_allow_html=True)
 
@@ -789,18 +854,21 @@ def pagina_dashboard():
     df_export = df_filtrado[colunas_existentes].copy()
     for col in df_export.select_dtypes(include=["category"]).columns:
         df_export[col] = df_export[col].astype(str)
+    csv_filename = f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo}.csv"
+    xlsx_filename = f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo}.xlsx"
     with dcol1:
         csv_data = df_export.to_csv(sep=";", decimal=",", index=False, encoding="utf-8-sig")
-        st.download_button("⬇️ Baixar CSV", data=csv_data,
-                           file_name=f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo}.csv",
-                           mime="text/csv", use_container_width=True)
+        if st.download_button("⬇️ Baixar CSV", data=csv_data,
+                              file_name=csv_filename, mime="text/csv", use_container_width=True):
+            registrar_download(username, shopping_nome, csv_filename, len(df_export))
     with dcol2:
         buffer = io.BytesIO()
         df_export.to_excel(buffer, index=False, engine="openpyxl")
-        st.download_button("⬇️ Baixar Excel", data=buffer.getvalue(),
-                           file_name=f"top_consumidores_{shopping_nome.replace(' ', '_')}_{periodo}.xlsx",
-                           mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-                           use_container_width=True)
+        if st.download_button("⬇️ Baixar Excel", data=buffer.getvalue(),
+                              file_name=xlsx_filename,
+                              mime="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+                              use_container_width=True):
+            registrar_download(username, shopping_nome, xlsx_filename, len(df_export))
     st.markdown("---")
 
     # GRÁFICOS
