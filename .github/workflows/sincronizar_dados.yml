@@ -1,0 +1,131 @@
+# Workflow para sincronizar dados do Dashboard Shopping Relacionamento
+# Copia os 3 CSVs necessarios do repo dashboard-perfil-cliente
+# Executa toda segunda-feira as 6h (Brasilia = 9h UTC), 1h apos o workflow do dash principal
+
+name: Sincronizar Dados
+
+on:
+  schedule:
+    # Segunda-feira as 6h horario de Brasilia (UTC-3 = 9h UTC)
+    - cron: '0 9 * * 1'
+
+  # Permite execucao manual
+  workflow_dispatch:
+
+  # Dispara quando o repo principal atualiza (via repository_dispatch)
+  repository_dispatch:
+    types: [dados-atualizados]
+
+permissions:
+  contents: write
+
+jobs:
+  sincronizar:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout shopping-relacionamento
+        uses: actions/checkout@v4
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Checkout dashboard-perfil-cliente (fonte dos dados)
+        uses: actions/checkout@v4
+        with:
+          repository: carlosgravi/dashboard-perfil-cliente
+          token: ${{ secrets.REPO_ACCESS_TOKEN }}
+          path: fonte
+
+      - name: Sincronizar CSVs
+        run: |
+          echo "=== Sincronizando dados do dashboard-perfil-cliente ==="
+
+          FONTE="fonte/Resultados"
+          DEST="Resultados"
+
+          # Funcao para copiar os 3 CSVs de uma pasta
+          copiar_csvs() {
+            local src_dir="$1"
+            local dst_dir="$2"
+            local nome="$3"
+
+            # top_consumidores_rfv.csv (sempre na raiz do periodo)
+            if [ -f "$src_dir/top_consumidores_rfv.csv" ]; then
+              mkdir -p "$dst_dir"
+              cp "$src_dir/top_consumidores_rfv.csv" "$dst_dir/"
+              echo "  ✓ $nome/top_consumidores_rfv.csv"
+            fi
+
+            # cliente_loja.csv e loja_info.csv (em RFV/ ou raiz)
+            for csv in cliente_loja.csv loja_info.csv; do
+              if [ -f "$src_dir/RFV/$csv" ]; then
+                mkdir -p "$dst_dir/RFV"
+                cp "$src_dir/RFV/$csv" "$dst_dir/RFV/"
+                echo "  ✓ $nome/RFV/$csv"
+              elif [ -f "$src_dir/$csv" ]; then
+                mkdir -p "$dst_dir"
+                cp "$src_dir/$csv" "$dst_dir/"
+                echo "  ✓ $nome/$csv"
+              fi
+            done
+          }
+
+          # Completo
+          copiar_csvs "$FONTE/Completo" "$DEST/Completo" "Completo"
+
+          # Por_Ano
+          if [ -d "$FONTE/Por_Ano" ]; then
+            for ano in $(ls "$FONTE/Por_Ano" 2>/dev/null); do
+              copiar_csvs "$FONTE/Por_Ano/$ano" "$DEST/Por_Ano/$ano" "Por_Ano/$ano"
+            done
+          fi
+
+          # Por_Trimestre
+          if [ -d "$FONTE/Por_Trimestre" ]; then
+            for tri in $(ls "$FONTE/Por_Trimestre" 2>/dev/null); do
+              copiar_csvs "$FONTE/Por_Trimestre/$tri" "$DEST/Por_Trimestre/$tri" "Por_Trimestre/$tri"
+            done
+          fi
+
+          echo ""
+          echo "=== Resumo ==="
+          echo "Total CSVs sincronizados: $(find $DEST -name '*.csv' | wc -l)"
+
+      - name: Limpar repo fonte
+        run: rm -rf fonte
+
+      - name: Commit e Push
+        run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "actions@github.com"
+
+          DATA_HORA=$(TZ='America/Sao_Paulo' date '+%Y-%m-%d %H:%M')
+
+          git add Resultados/
+
+          # Verificar se ha alteracoes
+          if git diff --cached --quiet; then
+            echo "Nenhuma alteracao detectada nos dados"
+            exit 0
+          fi
+
+          git commit -m "data: sincronizacao automatica - $DATA_HORA
+
+          Dados sincronizados do dashboard-perfil-cliente.
+          CSVs: top_consumidores_rfv, cliente_loja, loja_info
+
+          Co-Authored-By: GitHub Actions <actions@github.com>"
+
+          git push origin main
+
+      - name: Resumo
+        run: |
+          echo "## Sincronizacao Concluida" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Data/Hora:** $(TZ='America/Sao_Paulo' date '+%Y-%m-%d %H:%M')" >> $GITHUB_STEP_SUMMARY
+          echo "- **CSVs sincronizados:** $(find Resultados -name '*.csv' | wc -l)" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### Periodos:" >> $GITHUB_STEP_SUMMARY
+          echo "- Completo" >> $GITHUB_STEP_SUMMARY
+          for d in $(ls Resultados/Por_Ano/ 2>/dev/null); do echo "- Ano: $d" >> $GITHUB_STEP_SUMMARY; done
+          for d in $(ls Resultados/Por_Trimestre/ 2>/dev/null); do echo "- Trimestre: $d" >> $GITHUB_STEP_SUMMARY; done
