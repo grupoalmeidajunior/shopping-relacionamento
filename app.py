@@ -1,7 +1,7 @@
 """
 Shopping Relacionamento - Dashboard de Relacionamento por Shopping
 Dashboard focado em ações de relacionamento do app AJFANS.
-Cada shopping tem login próprio e vê apenas seus top 150 consumidores.
+Cada shopping tem login próprio e vê todos os consumidores do seu shopping.
 """
 
 import streamlit as st
@@ -562,12 +562,13 @@ def _resolver_periodo_pasta(periodo):
         return os.path.join(RESULTADOS_DIR, "Por_Trimestre", periodo)
 
 
-@st.cache_data(ttl=3600)
+@st.cache_data(ttl=3600, max_entries=5)
 def carregar_top_consumidores(periodo, shopping_nome):
     pasta = _resolver_periodo_pasta(periodo)
     caminho = os.path.join(pasta, "top_consumidores_rfv.csv")
     if not os.path.exists(caminho):
         return pd.DataFrame()
+    # Ler apenas colunas do shopping para economizar memória
     df = pd.read_csv(caminho, sep=";", decimal=",", encoding="utf-8-sig")
     if shopping_nome:
         df = df[df["Shopping"] == shopping_nome].copy()
