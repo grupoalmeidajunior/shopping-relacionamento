@@ -1048,19 +1048,27 @@ def pagina_dashboard():
     with tab1:
         gcol1, gcol2 = st.columns(2)
         with gcol1:
-            perfil_counts = df_filtrado["Perfil_Cliente"].value_counts().reset_index()
-            perfil_counts.columns = ["Perfil", "Clientes"]
-            fig_pie = px.pie(perfil_counts, names="Perfil", values="Clientes", title="Distribuição por Perfil",
+            perfil_valor_pie = df_filtrado.groupby("Perfil_Cliente")["Valor_Total"].sum().reset_index()
+            perfil_valor_pie.columns = ["Perfil", "Valor"]
+            fig_pie = px.pie(perfil_valor_pie, names="Perfil", values="Valor",
+                             title="Concentração de Valor por Perfil",
                              color="Perfil", color_discrete_map=cores_perfil)
             fig_pie.update_traces(textposition="inside", textinfo="percent+label")
             render_chart(fig_pie, key="pie_perfil")
         with gcol2:
-            perfil_valor = df_filtrado.groupby("Perfil_Cliente")["Valor_Total"].mean().reset_index()
-            perfil_valor.columns = ["Perfil", "Valor Médio"]
-            perfil_valor = perfil_valor.sort_values("Valor Médio", ascending=True)
-            fig_bar = px.bar(perfil_valor, x="Valor Médio", y="Perfil", orientation="h",
-                             title="Valor Médio por Perfil (R$)", color="Perfil", color_discrete_map=cores_perfil)
-            fig_bar.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
+            perfil_resumo = df_filtrado.groupby("Perfil_Cliente").agg(
+                Clientes=("Cliente_ID", "count"),
+                Valor_Medio=("Valor_Total", "mean")
+            ).reset_index()
+            perfil_resumo.columns = ["Perfil", "Clientes", "Valor Médio"]
+            perfil_resumo = perfil_resumo.sort_values("Valor Médio", ascending=True)
+            fig_bar = px.bar(perfil_resumo, x="Valor Médio", y="Perfil", orientation="h",
+                             title="Valor Médio por Perfil (R$)", color="Perfil", color_discrete_map=cores_perfil,
+                             custom_data=["Clientes"])
+            fig_bar.update_traces(
+                texttemplate="R$ %{x:,.0f} (%{customdata[0]} clientes)",
+                textposition="outside"
+            )
             fig_bar.update_layout(showlegend=False)
             render_chart(fig_bar, key="bar_perfil")
 
