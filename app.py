@@ -960,18 +960,6 @@ def pagina_dashboard():
     st.markdown(f'<p class="main-header">📊 Top Consumidores — {shopping_nome}</p>', unsafe_allow_html=True)
     st.markdown(f'<p class="sub-header">Período: {periodo_label} · Dados para ações de relacionamento</p>', unsafe_allow_html=True)
 
-    # KPIs
-    col1, col2, col3, col4 = st.columns(4)
-    total_clientes = len(df)
-    valor_total = df["Valor_Total"].sum()
-    pct_vip = (df["Perfil_Cliente"].eq("VIP").sum() / total_clientes * 100) if total_clientes > 0 else 0
-    ticket_medio = valor_total / total_clientes if total_clientes > 0 else 0
-    col1.metric("Total Clientes", f"{total_clientes}")
-    col2.metric("Valor Total", f"R$ {valor_total:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
-    col3.metric("% VIP", f"{pct_vip:.1f}%")
-    col4.metric("Ticket Médio", f"R$ {ticket_medio:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
-    st.markdown("---")
-
     # FILTROS
     st.markdown("#### 🔍 Filtros")
     fcol1, fcol2, fcol3 = st.columns(3)
@@ -1005,6 +993,18 @@ def pagina_dashboard():
         registrar_filtro(username, shopping_nome, "Loja", ", ".join(loja_filtro))
 
     st.markdown(f'<div class="counter">Exibindo {len(df_filtrado)} de {len(df)} clientes</div>', unsafe_allow_html=True)
+
+    # KPIs (baseados nos dados filtrados)
+    col1, col2, col3, col4 = st.columns(4)
+    total_clientes = len(df_filtrado)
+    valor_total = df_filtrado["Valor_Total"].sum() if total_clientes > 0 else 0
+    pct_vip = (df_filtrado["Perfil_Cliente"].eq("VIP").sum() / total_clientes * 100) if total_clientes > 0 else 0
+    ticket_medio = valor_total / total_clientes if total_clientes > 0 else 0
+    col1.metric("Total Clientes", f"{total_clientes:,}".replace(",", "."))
+    col2.metric("Valor Total", f"R$ {valor_total:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+    col3.metric("% VIP", f"{pct_vip:.1f}%")
+    col4.metric("Ticket Médio", f"R$ {ticket_medio:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+    st.markdown("---")
 
     # TABELA
     colunas_exibir = [
@@ -1083,13 +1083,20 @@ def pagina_dashboard():
         render_chart(fig_seg, key="bar_segmento")
 
     with tab3:
-        if not df_loja_info.empty:
-            loja_top = df_loja_info.sort_values("valor", ascending=True).tail(10)
-            fig_loja = px.bar(loja_top, x="valor", y="loja_nome", orientation="h",
-                              title="Top 10 Lojas por Valor (R$)", color_discrete_sequence=["#2ECC71"])
-            fig_loja.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
-            fig_loja.update_layout(showlegend=False, yaxis_title="Loja")
-            render_chart(fig_loja, key="bar_loja")
+        if not df_cliente_loja.empty and not df_filtrado.empty:
+            # Filtrar cliente_loja pelos clientes do df_filtrado
+            clientes_filtrados_ids = df_filtrado["Cliente_ID"].unique()
+            df_cl_filtrado = df_cliente_loja[df_cliente_loja["cliente_id"].isin(clientes_filtrados_ids)]
+            if not df_cl_filtrado.empty:
+                loja_valor = df_cl_filtrado.groupby("loja_nome")["valor"].sum().reset_index()
+                loja_valor = loja_valor.sort_values("valor", ascending=True).tail(10)
+                fig_loja = px.bar(loja_valor, x="valor", y="loja_nome", orientation="h",
+                                  title="Top 10 Lojas por Valor (R$)", color_discrete_sequence=["#2ECC71"])
+                fig_loja.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
+                fig_loja.update_layout(showlegend=False, yaxis_title="Loja")
+                render_chart(fig_loja, key="bar_loja")
+            else:
+                st.info("Nenhum dado de loja para os clientes filtrados.")
         else:
             st.info("Dados de loja não disponíveis para este período.")
 
