@@ -1158,16 +1158,23 @@ def pagina_dashboard():
         "Potencial → Premium": "programa de incentivo progressivo, benefícios por frequência",
         "Premium → VIP": "convites para eventos exclusivos, atendimento personalizado",
     }
-    # Calcular threshold mínimo de Valor_Total para cada perfil
-    thresholds = {}
+    score_col = "Score_Total_RFV" if "Score_Total_RFV" in df_filtrado.columns else None
+
+    # Calcular threshold mínimo de Score_Total_RFV para cada perfil
+    thresholds_score = {}
+    thresholds_valor = {}
     for perfil in perfis_ordem:
         perfil_df = df_filtrado[df_filtrado["Perfil_Cliente"] == perfil]
         if not perfil_df.empty:
-            thresholds[perfil] = perfil_df["Valor_Total"].min()
+            if score_col:
+                thresholds_score[perfil] = perfil_df[score_col].min()
+            thresholds_valor[perfil] = perfil_df["Valor_Total"].median()
 
     colunas_download = ["Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo",
                         "Email", "Celular", "Bairro", "Cidade",
                         "Valor_Total", "Perfil_Cliente"]
+    if score_col:
+        colunas_download.append(score_col)
     colunas_download = [c for c in colunas_download if c in df_filtrado.columns]
 
     tem_upgrade = False
@@ -1176,41 +1183,60 @@ def pagina_dashboard():
         perfil_proximo = perfis_ordem[i + 1]
         label = f"{perfil_atual} → {perfil_proximo}"
 
-        if perfil_atual not in thresholds or perfil_proximo not in thresholds:
-            continue
-
-        threshold_proximo = thresholds[perfil_proximo]
-        # Candidatos: estão a 20% ou menos do threshold do próximo perfil
         clientes_perfil = df_filtrado[df_filtrado["Perfil_Cliente"] == perfil_atual].copy()
         if clientes_perfil.empty:
             continue
 
-        candidatos = clientes_perfil[clientes_perfil["Valor_Total"] >= threshold_proximo * 0.8]
-        candidatos = candidatos.sort_values("Valor_Total", ascending=False)
+        if score_col and perfil_proximo in thresholds_score:
+            # Usar Score_Total_RFV (define o perfil real)
+            score_threshold = thresholds_score[perfil_proximo]
+            # Candidatos: faltam até 2 pontos RFV para o próximo perfil
+            clientes_perfil["_gap"] = score_threshold - clientes_perfil[score_col]
+            candidatos = clientes_perfil[clientes_perfil["_gap"] <= 2].copy()
+            candidatos = candidatos.sort_values("_gap")
 
-        if candidatos.empty:
-            continue
+            if candidatos.empty:
+                continue
 
-        tem_upgrade = True
-        falta_media = (threshold_proximo - candidatos["Valor_Total"]).clip(lower=0).mean()
-        falta_media_fmt = f"R$ {falta_media:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+            tem_upgrade = True
+            gap_medio = candidatos["_gap"].mean()
+            valor_medio_atual = candidatos["Valor_Total"].median()
+            valor_medio_proximo = thresholds_valor.get(perfil_proximo, 0)
+            valor_fmt = f"R$ {valor_medio_atual:,.0f}".replace(",", "X").replace(".", ",").replace("X", ".")
+            valor_prox_fmt = f"R$ {valor_medio_proximo:,.0f}".replace(",", "X").replace(".", ",").replace("X", ".")
 
-        st.markdown(f"""<div class="action-card atencao">
-            <h4>⬆️ {label} — {len(candidatos)} cliente(s)</h4>
-            <p><strong>{len(candidatos)}</strong> clientes {perfil_atual} estão próximos de se tornarem <strong>{perfil_proximo}</strong>.
-            Falta em média <strong>{falta_media_fmt}</strong> para atingir o próximo nível.</p>
-            <p class="acao">💡 Ação: {acoes_upgrade[label]}</p>
-        </div>""", unsafe_allow_html=True)
+            st.markdown(f"""<div class="action-card atencao">
+                <h4>⬆️ {label} — {len(candidatos)} cliente(s)</h4>
+                <p><strong>{len(candidatos)}</strong> clientes {perfil_atual} estão próximos de se tornarem <strong>{perfil_proximo}</strong>.
+                Faltam em média <strong>{gap_medio:.1f} pontos RFV</strong> (score atual vs mínimo {perfil_proximo}: {score_threshold:.0f}).
+                Valor mediano atual: <strong>{valor_fmt}</strong> · Mediana {perfil_proximo}: <strong>{valor_prox_fmt}</strong></p>
+                <p class="acao">💡 Ação: {acoes_upgrade[label]}</p>
+            </div>""", unsafe_allow_html=True)
 
-        # Download dos candidatos
-        df_down = candidatos[colunas_download].copy()
-        df_down["Falta_Para_Upgrade"] = (threshold_proximo - df_down["Valor_Total"]).clip(lower=0).round(2)
-        for col in df_down.select_dtypes(include=["category"]).columns:
-            df_down[col] = df_down[col].astype(str)
+            # Download
+            df_down = candidatos[colunas_download].copy()
+            df_down["Pontos_Faltantes"] = candidatos["_gap"].round(1).values
+            for col in df_down.select_dtypes(include=["category"]).columns:
+                df_down[col] = df_down[col].astype(str)
+        else:
+            # Fallback sem score: usar top 20% por valor dentro do perfil
+            candidatos = clientes_perfil.nlargest(max(1, len(clientes_perfil) // 5), "Valor_Total")
+            if candidatos.empty:
+                continue
+            tem_upgrade = True
+            st.markdown(f"""<div class="action-card atencao">
+                <h4>⬆️ {label} — {len(candidatos)} cliente(s)</h4>
+                <p>Os <strong>{len(candidatos)}</strong> clientes {perfil_atual} com maior valor estão mais próximos de {perfil_proximo}.</p>
+                <p class="acao">💡 Ação: {acoes_upgrade[label]}</p>
+            </div>""", unsafe_allow_html=True)
+            df_down = candidatos[colunas_download].copy()
+            for col in df_down.select_dtypes(include=["category"]).columns:
+                df_down[col] = df_down[col].astype(str)
+
         nome_arquivo = f"upgrade_{perfil_atual}_para_{perfil_proximo}_{shopping_nome.replace(' ', '_')}.csv"
         csv_upgrade = df_down.to_csv(sep=";", decimal=",", index=False, encoding="utf-8-sig")
         st.download_button(
-            f"⬇️ Baixar lista {label} ({len(candidatos)})",
+            f"⬇️ Baixar lista {label} ({len(df_down)})",
             data=csv_upgrade, file_name=nome_arquivo, mime="text/csv",
             key=f"download_upgrade_{i}", use_container_width=True
         )
