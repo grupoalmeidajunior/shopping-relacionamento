@@ -1150,47 +1150,75 @@ def pagina_dashboard():
             <p class="acao">💡 Ação: manter programa de fidelidade e benefícios exclusivos</p>
         </div>""", unsafe_allow_html=True)
 
-    premium = df_filtrado[df_filtrado["Perfil_Cliente"] == "Premium"]
-    if not premium.empty:
-        top_premium = premium.nlargest(5, "Valor_Total")
-        nomes_premium = ", ".join(top_premium["Primeiro_Nome"].tolist())
+    # PRÓXIMOS DE UPGRADE
+    st.markdown("##### ⬆️ Próximos de Upgrade")
+    perfis_ordem = ["Pontual", "Potencial", "Premium", "VIP"]
+    acoes_upgrade = {
+        "Pontual → Potencial": "campanha de ativação, cupons de primeira compra recorrente",
+        "Potencial → Premium": "programa de incentivo progressivo, benefícios por frequência",
+        "Premium → VIP": "convites para eventos exclusivos, atendimento personalizado",
+    }
+    # Calcular threshold mínimo de Valor_Total para cada perfil
+    thresholds = {}
+    for perfil in perfis_ordem:
+        perfil_df = df_filtrado[df_filtrado["Perfil_Cliente"] == perfil]
+        if not perfil_df.empty:
+            thresholds[perfil] = perfil_df["Valor_Total"].min()
+
+    colunas_download = ["Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo",
+                        "Email", "Celular", "Bairro", "Cidade",
+                        "Valor_Total", "Perfil_Cliente"]
+    colunas_download = [c for c in colunas_download if c in df_filtrado.columns]
+
+    tem_upgrade = False
+    for i in range(len(perfis_ordem) - 1):
+        perfil_atual = perfis_ordem[i]
+        perfil_proximo = perfis_ordem[i + 1]
+        label = f"{perfil_atual} → {perfil_proximo}"
+
+        if perfil_atual not in thresholds or perfil_proximo not in thresholds:
+            continue
+
+        threshold_proximo = thresholds[perfil_proximo]
+        # Candidatos: estão a 20% ou menos do threshold do próximo perfil
+        clientes_perfil = df_filtrado[df_filtrado["Perfil_Cliente"] == perfil_atual].copy()
+        if clientes_perfil.empty:
+            continue
+
+        candidatos = clientes_perfil[clientes_perfil["Valor_Total"] >= threshold_proximo * 0.8]
+        candidatos = candidatos.sort_values("Valor_Total", ascending=False)
+
+        if candidatos.empty:
+            continue
+
+        tem_upgrade = True
+        falta_media = (threshold_proximo - candidatos["Valor_Total"]).clip(lower=0).mean()
+        falta_media_fmt = f"R$ {falta_media:,.2f}".replace(",", "X").replace(".", ",").replace("X", ".")
+
         st.markdown(f"""<div class="action-card atencao">
-            <h4>⬆️ Premium para Upgrade — {len(top_premium)} candidato(s)</h4>
-            <p>Estes clientes Premium estão próximos de se tornarem VIP: <strong>{nomes_premium}</strong></p>
-            <p class="acao">💡 Ação: programa de incentivo, convites para eventos, benefícios progressivos</p>
+            <h4>⬆️ {label} — {len(candidatos)} cliente(s)</h4>
+            <p><strong>{len(candidatos)}</strong> clientes {perfil_atual} estão próximos de se tornarem <strong>{perfil_proximo}</strong>.
+            Falta em média <strong>{falta_media_fmt}</strong> para atingir o próximo nível.</p>
+            <p class="acao">💡 Ação: {acoes_upgrade[label]}</p>
         </div>""", unsafe_allow_html=True)
 
-    if not df_filtrado.empty:
-        seg_totais = df_filtrado.groupby("Segmento_Principal")["Valor_Total"].sum()
-        seg_top = seg_totais.idxmax()
-        seg_pct = seg_totais.max() / seg_totais.sum() * 100
-        st.markdown(f"""<div class="action-card oportunidade">
-            <h4>🏆 Segmento Dominante — {seg_top}</h4>
-            <p><strong>{seg_pct:.1f}%</strong> do faturamento dos top clientes vem do segmento <strong>{seg_top}</strong>.</p>
-            <p class="acao">💡 Ação: reforçar parcerias com lojas deste segmento, criar promoções temáticas</p>
-        </div>""", unsafe_allow_html=True)
+        # Download dos candidatos
+        df_down = candidatos[colunas_download].copy()
+        df_down["Falta_Para_Upgrade"] = (threshold_proximo - df_down["Valor_Total"]).clip(lower=0).round(2)
+        for col in df_down.select_dtypes(include=["category"]).columns:
+            df_down[col] = df_down[col].astype(str)
+        nome_arquivo = f"upgrade_{perfil_atual}_para_{perfil_proximo}_{shopping_nome.replace(' ', '_')}.csv"
+        csv_upgrade = df_down.to_csv(sep=";", decimal=",", index=False, encoding="utf-8-sig")
+        st.download_button(
+            f"⬇️ Baixar lista {label} ({len(candidatos)})",
+            data=csv_upgrade, file_name=nome_arquivo, mime="text/csv",
+            key=f"download_upgrade_{i}", use_container_width=True
+        )
 
-    if "Loja_Favorita_Shopping" in df_filtrado.columns:
-        loja_counts = df_filtrado["Loja_Favorita_Shopping"].value_counts()
-        if not loja_counts.empty:
-            st.markdown(f"""<div class="action-card oportunidade">
-                <h4>⭐ Loja Destaque — {loja_counts.index[0]}</h4>
-                <p>A loja <strong>{loja_counts.index[0]}</strong> é a favorita de <strong>{loja_counts.iloc[0]}</strong> dos top clientes.</p>
-                <p class="acao">💡 Ação: ações conjuntas, eventos exclusivos, programa de fidelidade com a loja</p>
-            </div>""", unsafe_allow_html=True)
-
-    inativos = df_filtrado[df_filtrado["Recencia_Dias"] > 90]
-    if not inativos.empty:
-        st.markdown(f"""<div class="action-card alerta">
-            <h4>😴 Clientes Inativos — {len(inativos)} cliente(s)</h4>
-            <p><strong>{len(inativos)}</strong> clientes não compram há mais de 3 meses. Perfis: {', '.join(inativos['Perfil_Cliente'].value_counts().index.tolist())}</p>
-            <p class="acao">💡 Ação: campanha de reativação com benefícios, cupons de desconto, contato direto</p>
-        </div>""", unsafe_allow_html=True)
-    else:
+    if not tem_upgrade:
         st.markdown("""<div class="action-card oportunidade">
-            <h4>✅ Base Ativa</h4>
-            <p>Todos os top clientes compraram nos últimos 90 dias. Excelente engajamento!</p>
-            <p class="acao">💡 Ação: aproveitar o momento para ampliar ticket médio e cross-sell</p>
+            <h4>✅ Perfis Estáveis</h4>
+            <p>Nenhum cliente próximo de mudar de perfil no momento.</p>
         </div>""", unsafe_allow_html=True)
 
 
