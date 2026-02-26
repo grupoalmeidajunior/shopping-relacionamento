@@ -86,8 +86,13 @@ st.markdown("""
 }
 [data-testid="stMetric"] label { color: #5D6D7E !important; font-size: 0.85rem !important; }
 [data-testid="stMetric"] [data-testid="stMetricValue"] { color: #1E3A5F !important; font-size: 1.4rem !important; font-weight: 700 !important; }
-.logout-btn button { background-color: #E74C3C !important; color: white !important; border: none !important; width: 100%; }
-.logout-btn button:hover { background-color: #C0392B !important; }
+[data-testid="stSidebar"] button[kind="secondary"] {
+    background-color: #E74C3C !important; color: white !important;
+    border: none !important; font-weight: 600 !important;
+}
+[data-testid="stSidebar"] button[kind="secondary"]:hover {
+    background-color: #C0392B !important; color: white !important;
+}
 .action-card { border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 5px solid; }
 .action-card.alerta { background-color: #FDEDEC; border-left-color: #E74C3C; }
 .action-card.atencao { background-color: #FEF9E7; border-left-color: #F39C12; }
@@ -931,12 +936,10 @@ def pagina_dashboard():
             periodos_selecionados = [codigos[0]] if codigos else ["Completo"]
 
         st.divider()
-        st.markdown('<div class="logout-btn">', unsafe_allow_html=True)
         if st.button("🚪 Sair", key="logout_btn", use_container_width=True):
             for key in ["authentication_status", "shopping_nome", "username", "name", "role"]:
                 st.session_state[key] = None
             st.rerun()
-        st.markdown('</div>', unsafe_allow_html=True)
 
     # Roteamento
     if role == "admin" and pagina_selecionada == "⚙️ Administração":
