@@ -206,23 +206,34 @@ def registrar_download(usuario, shopping, arquivo, registros):
         pass
 
 
-def ler_aba_como_df(worksheet):
-    """Lê uma aba do Google Sheets como DataFrame, tolerando cabeçalhos duplicados."""
+def ler_aba_como_df(worksheet, expected_headers=None):
+    """Lê uma aba do Google Sheets como DataFrame, tolerando cabeçalhos duplicados.
+    Se expected_headers for fornecido, sobrescreve os cabeçalhos da planilha."""
     rows = worksheet.get_all_values()
     if not rows or len(rows) < 2:
         return pd.DataFrame()
-    headers = rows[0]
-    # Desduplicar cabeçalhos adicionando sufixo
-    seen = {}
-    unique_headers = []
-    for h in headers:
-        if h in seen:
-            seen[h] += 1
-            unique_headers.append(f"{h}_{seen[h]}")
-        else:
-            seen[h] = 0
-            unique_headers.append(h)
-    return pd.DataFrame(rows[1:], columns=unique_headers)
+    if expected_headers:
+        # Usar cabeçalhos esperados e corrigir na planilha se diferentes
+        headers = expected_headers[:len(rows[0])]
+        if rows[0] != headers:
+            try:
+                worksheet.update('A1', [headers])
+            except Exception:
+                pass
+    else:
+        headers = rows[0]
+        # Desduplicar cabeçalhos adicionando sufixo
+        seen = {}
+        unique_headers = []
+        for h in headers:
+            if h in seen:
+                seen[h] += 1
+                unique_headers.append(f"{h}_{seen[h]}")
+            else:
+                seen[h] = 0
+                unique_headers.append(h)
+        headers = unique_headers
+    return pd.DataFrame(rows[1:], columns=headers)
 
 
 def registrar_evento_seguranca(tipo_evento, username, client_id, detalhes=None):
@@ -807,7 +818,7 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('logins')
-                df_logs = ler_aba_como_df(ws)
+                df_logs = ler_aba_como_df(ws, expected_headers=['timestamp', 'usuario', 'nome', 'shopping', 'ip'])
                 if not df_logs.empty:
                     if 'timestamp' in df_logs.columns:
                         df_logs = df_logs.sort_values('timestamp', ascending=False)
@@ -824,7 +835,7 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('filtros')
-                df_filtros = ler_aba_como_df(ws)
+                df_filtros = ler_aba_como_df(ws, expected_headers=['timestamp', 'usuario', 'shopping', 'filtro', 'valor'])
                 if not df_filtros.empty:
                     if 'timestamp' in df_filtros.columns:
                         df_filtros = df_filtros.sort_values('timestamp', ascending=False)
@@ -841,7 +852,7 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('downloads')
-                df_dl = ler_aba_como_df(ws)
+                df_dl = ler_aba_como_df(ws, expected_headers=['timestamp', 'usuario', 'shopping', 'arquivo', 'registros'])
                 if not df_dl.empty:
                     if 'timestamp' in df_dl.columns:
                         df_dl = df_dl.sort_values('timestamp', ascending=False)
@@ -858,7 +869,7 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('seguranca')
-                df_seg = ler_aba_como_df(ws)
+                df_seg = ler_aba_como_df(ws, expected_headers=['timestamp', 'tipo', 'username', 'client_id', 'detalhes', 'ip'])
                 if not df_seg.empty:
                     if 'timestamp' in df_seg.columns:
                         df_seg = df_seg.sort_values('timestamp', ascending=False)
@@ -883,7 +894,7 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('rate_limit')
-                df_rl = ler_aba_como_df(ws)
+                df_rl = ler_aba_como_df(ws, expected_headers=['client_id', 'tentativas', 'ultima_tentativa', 'bloqueado_ate'])
                 if not df_rl.empty:
                     st.dataframe(df_rl, hide_index=True, use_container_width=True)
 
