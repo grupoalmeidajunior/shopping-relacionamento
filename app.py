@@ -206,6 +206,25 @@ def registrar_download(usuario, shopping, arquivo, registros):
         pass
 
 
+def ler_aba_como_df(worksheet):
+    """Lê uma aba do Google Sheets como DataFrame, tolerando cabeçalhos duplicados."""
+    rows = worksheet.get_all_values()
+    if not rows or len(rows) < 2:
+        return pd.DataFrame()
+    headers = rows[0]
+    # Desduplicar cabeçalhos adicionando sufixo
+    seen = {}
+    unique_headers = []
+    for h in headers:
+        if h in seen:
+            seen[h] += 1
+            unique_headers.append(f"{h}_{seen[h]}")
+        else:
+            seen[h] = 0
+            unique_headers.append(h)
+    return pd.DataFrame(rows[1:], columns=unique_headers)
+
+
 def registrar_evento_seguranca(tipo_evento, username, client_id, detalhes=None):
     try:
         spreadsheet = get_gsheets_connection()
@@ -788,11 +807,12 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('logins')
-                dados = ws.get_all_records()
-                if dados:
-                    df_logs = pd.DataFrame(dados)
-                    st.dataframe(df_logs.sort_values('timestamp', ascending=False).head(100), hide_index=True, use_container_width=True)
-                    st.caption(f"Total: {len(dados)} registros")
+                df_logs = ler_aba_como_df(ws)
+                if not df_logs.empty:
+                    if 'timestamp' in df_logs.columns:
+                        df_logs = df_logs.sort_values('timestamp', ascending=False)
+                    st.dataframe(df_logs.head(100), hide_index=True, use_container_width=True)
+                    st.caption(f"Total: {len(df_logs)} registros")
                 else:
                     st.info("Nenhum login registrado ainda.")
             except Exception as e:
@@ -804,11 +824,12 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('filtros')
-                dados = ws.get_all_records()
-                if dados:
-                    df_filtros = pd.DataFrame(dados)
-                    st.dataframe(df_filtros.sort_values('timestamp', ascending=False).head(200), hide_index=True, use_container_width=True)
-                    st.caption(f"Total: {len(dados)} registros")
+                df_filtros = ler_aba_como_df(ws)
+                if not df_filtros.empty:
+                    if 'timestamp' in df_filtros.columns:
+                        df_filtros = df_filtros.sort_values('timestamp', ascending=False)
+                    st.dataframe(df_filtros.head(200), hide_index=True, use_container_width=True)
+                    st.caption(f"Total: {len(df_filtros)} registros")
                 else:
                     st.info("Nenhum filtro registrado ainda.")
             except Exception as e:
@@ -820,11 +841,12 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('downloads')
-                dados = ws.get_all_records()
-                if dados:
-                    df_dl = pd.DataFrame(dados)
-                    st.dataframe(df_dl.sort_values('timestamp', ascending=False).head(200), hide_index=True, use_container_width=True)
-                    st.caption(f"Total: {len(dados)} registros")
+                df_dl = ler_aba_como_df(ws)
+                if not df_dl.empty:
+                    if 'timestamp' in df_dl.columns:
+                        df_dl = df_dl.sort_values('timestamp', ascending=False)
+                    st.dataframe(df_dl.head(200), hide_index=True, use_container_width=True)
+                    st.caption(f"Total: {len(df_dl)} registros")
                 else:
                     st.info("Nenhum download registrado ainda.")
             except Exception as e:
@@ -836,18 +858,19 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('seguranca')
-                dados = ws.get_all_records()
-                if dados:
-                    df_seg = pd.DataFrame(dados)
-                    st.dataframe(df_seg.sort_values('timestamp', ascending=False).head(100), hide_index=True, use_container_width=True)
+                df_seg = ler_aba_como_df(ws)
+                if not df_seg.empty:
+                    if 'timestamp' in df_seg.columns:
+                        df_seg = df_seg.sort_values('timestamp', ascending=False)
+                    st.dataframe(df_seg.head(100), hide_index=True, use_container_width=True)
 
                     # Resumo
                     st.markdown("##### Resumo")
                     col1, col2, col3 = st.columns(3)
-                    col1.metric("Total Eventos", len(dados))
-                    bloqueios = len([d for d in dados if d.get('tipo') == 'bloqueio_brute_force'])
+                    col1.metric("Total Eventos", len(df_seg))
+                    bloqueios = len(df_seg[df_seg.get('tipo', pd.Series()) == 'bloqueio_brute_force']) if 'tipo' in df_seg.columns else 0
                     col2.metric("Bloqueios", bloqueios)
-                    falhas = len([d for d in dados if d.get('tipo') == 'login_falha'])
+                    falhas = len(df_seg[df_seg['tipo'] == 'login_falha']) if 'tipo' in df_seg.columns else 0
                     col3.metric("Falhas Login", falhas)
                 else:
                     st.info("Nenhum evento de segurança registrado.")
@@ -860,14 +883,13 @@ def pagina_admin():
         if spreadsheet:
             try:
                 ws = spreadsheet.worksheet('rate_limit')
-                dados = ws.get_all_records()
-                if dados:
-                    df_rl = pd.DataFrame(dados)
+                df_rl = ler_aba_como_df(ws)
+                if not df_rl.empty:
                     st.dataframe(df_rl, hide_index=True, use_container_width=True)
 
                     # Botão para limpar bloqueios
                     if st.button("🔓 Limpar todos os bloqueios", type="primary"):
-                        for i in range(len(dados)):
+                        for i in range(len(df_rl)):
                             ws.update_cell(i + 2, 2, '0')
                             ws.update_cell(i + 2, 4, '')
                         st.success("Bloqueios limpos!")
