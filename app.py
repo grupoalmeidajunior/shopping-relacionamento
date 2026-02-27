@@ -932,7 +932,8 @@ def pagina_dashboard():
         periodos_selecionados = st.multiselect(
             "📅 Período(s)", codigos, default=[codigos[0]] if codigos else [],
             format_func=lambda x: periodos_dict.get(x, x),
-            key="filtro_periodo"
+            key="filtro_periodo",
+            help="Selecione um ou mais períodos. Ao combinar períodos, os dados são somados (ex: 2025 + 2026 mostra o total dos dois anos)"
         )
         if not periodos_selecionados:
             periodos_selecionados = [codigos[0]] if codigos else ["Completo"]
@@ -965,15 +966,28 @@ def pagina_dashboard():
     st.markdown(f'<p class="main-header">📊 Top Consumidores — {shopping_nome}</p>', unsafe_allow_html=True)
     st.markdown(f'<p class="sub-header">Período: {periodo_label} · Dados para ações de relacionamento</p>', unsafe_allow_html=True)
 
+    st.info(
+        "**O que é este painel?** Aqui você encontra a lista dos seus consumidores mais relevantes, "
+        "organizados por valor de compras. Use os **filtros** abaixo para encontrar grupos específicos "
+        "(ex: clientes VIP do segmento Moda) e as **Ações Recomendadas** ao final da página para planejar "
+        "campanhas de relacionamento."
+    )
+
     # FILTROS
     st.markdown("#### 🔍 Filtros")
+    st.caption(
+        "Use os filtros para segmentar a lista de clientes. Eles funcionam em conjunto: "
+        "ao selecionar um segmento, o filtro de loja mostra apenas as lojas daquele segmento."
+    )
     fcol1, fcol2, fcol3 = st.columns(3)
     with fcol1:
         perfis_disponiveis = sorted(df["Perfil_Cliente"].unique().tolist())
-        perfil_filtro = st.multiselect("Perfil", perfis_disponiveis, key="filtro_perfil")
+        perfil_filtro = st.multiselect("Perfil", perfis_disponiveis, key="filtro_perfil",
+                                        help="Classificação do cliente por valor e frequência de compra: VIP (maior valor), Premium, Potencial e Pontual (menor valor)")
     with fcol2:
         segmentos_disponiveis = sorted(df["Segmento_Principal"].dropna().unique().tolist())
-        segmento_filtro = st.multiselect("Segmento", segmentos_disponiveis, key="filtro_segmento")
+        segmento_filtro = st.multiselect("Segmento", segmentos_disponiveis, key="filtro_segmento",
+                                          help="Categoria de loja onde o cliente mais compra (ex: Moda, Alimentação, Esportes)")
     with fcol3:
         # Lojas filtradas: só do shopping e, se segmento selecionado, só dos segmentos escolhidos
         if not df_loja_info.empty:
@@ -983,7 +997,8 @@ def pagina_dashboard():
             lojas_disponiveis = sorted(df_lojas_filtradas["loja_nome"].dropna().unique().tolist())
         else:
             lojas_disponiveis = []
-        loja_filtro = st.multiselect("Loja", lojas_disponiveis, key="filtro_loja")
+        loja_filtro = st.multiselect("Loja", lojas_disponiveis, key="filtro_loja",
+                                      help="Filtra clientes que compraram nesta(s) loja(s) específica(s)")
 
     df_filtrado = df.copy()
     if perfil_filtro:
@@ -1005,10 +1020,14 @@ def pagina_dashboard():
     valor_total = df_filtrado["Valor_Total"].sum() if total_clientes > 0 else 0
     pct_vip = (df_filtrado["Perfil_Cliente"].eq("VIP").sum() / total_clientes * 100) if total_clientes > 0 else 0
     ticket_medio = valor_total / total_clientes if total_clientes > 0 else 0
-    col1.metric("Total Clientes", f"{total_clientes:,}".replace(",", "."))
-    col2.metric("Valor Total", f"R$ {valor_total:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
-    col3.metric("% VIP", f"{pct_vip:.1f}%")
-    col4.metric("Ticket Médio", f"R$ {ticket_medio:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."))
+    col1.metric("Total Clientes", f"{total_clientes:,}".replace(",", "."),
+                help="Quantidade de clientes exibidos com os filtros atuais")
+    col2.metric("Valor Total", f"R$ {valor_total:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."),
+                help="Soma de todas as compras destes clientes no período selecionado")
+    col3.metric("% VIP", f"{pct_vip:.1f}%",
+                help="Percentual de clientes VIP (os que mais compram) entre os filtrados")
+    col4.metric("Ticket Médio", f"R$ {ticket_medio:,.2f}".replace(",", "X").replace(".", ",").replace("X", "."),
+                help="Valor médio gasto por cliente (Valor Total ÷ Total Clientes)")
     st.markdown("---")
 
     # PREPARAR COLUNAS EXTRAS
@@ -1033,6 +1052,14 @@ def pagina_dashboard():
         df_filtrado["Valor_Total_Filtrado"] = df_filtrado["Valor_Total"]
 
     # TABELA
+    st.markdown("#### 📋 Lista de Clientes")
+    st.caption(
+        "**Valor_Total** = total gasto pelo cliente no período (todas as lojas do shopping). "
+        "**Valor_Total_Filtrado** = total gasto apenas nas lojas/segmentos selecionados nos filtros. "
+        "**Perfil_Cliente** = classificação automática: **VIP** (maior valor e frequência), "
+        "**Premium** (alto), **Potencial** (médio) e **Pontual** (esporádico). "
+        "Clique no cabeçalho de qualquer coluna para ordenar a tabela."
+    )
     colunas_exibir = [
         "Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo", "Email", "Celular",
         "Bairro", "Cidade", "Genero",
@@ -1044,6 +1071,7 @@ def pagina_dashboard():
 
     # DOWNLOADS
     st.markdown("#### 📥 Exportar Dados")
+    st.caption("Baixe a lista de clientes filtrada para usar em campanhas, mailings ou análises externas. O CSV abre no Excel com separador `;`.")
     dcol1, dcol2 = st.columns(2)
     df_export = df_filtrado[colunas_existentes].copy()
     for col in df_export.select_dtypes(include=["category"]).columns:
@@ -1067,11 +1095,17 @@ def pagina_dashboard():
     st.markdown("---")
 
     # GRÁFICOS
-    st.markdown("#### 📈 Análises")
+    st.markdown("#### 📈 Análises Visuais")
+    st.caption("Os gráficos abaixo respondem aos filtros aplicados. Explore as abas para diferentes visões dos dados.")
     cores_perfil = {"VIP": "#FFD700", "Premium": "#C0C0C0", "Potencial": "#CD7F32", "Pontual": "#808080"}
     tab1, tab2, tab3 = st.tabs(["Por Perfil", "Por Segmento", "Por Loja"])
 
     with tab1:
+        st.caption(
+            "**Pizza (esquerda):** mostra quanto do faturamento total vem de cada perfil. "
+            "Se os VIPs concentram grande parte, significa que poucos clientes geram a maior receita. "
+            "**Barras (direita):** mostra o gasto médio de cada perfil — quanto maior a barra, maior o valor médio por cliente."
+        )
         gcol1, gcol2 = st.columns(2)
         with gcol1:
             perfil_valor_pie = df_filtrado.groupby("Perfil_Cliente")["Valor_Total"].sum().reset_index()
@@ -1099,6 +1133,10 @@ def pagina_dashboard():
             render_chart(fig_bar, key="bar_perfil")
 
     with tab2:
+        st.caption(
+            "Mostra os 10 segmentos de loja com maior faturamento entre os clientes filtrados. "
+            "Use para identificar quais tipos de loja são mais relevantes para o seu público."
+        )
         seg_valor = df_filtrado.groupby("Segmento_Principal")["Valor_Total"].sum().reset_index()
         seg_valor.columns = ["Segmento", "Valor Total"]
         seg_valor = seg_valor.sort_values("Valor Total", ascending=True).tail(10)
@@ -1109,6 +1147,10 @@ def pagina_dashboard():
         render_chart(fig_seg, key="bar_segmento")
 
     with tab3:
+        st.caption(
+            "Mostra as 10 lojas onde os clientes filtrados mais gastaram. "
+            "Se você selecionou um segmento ou loja nos filtros, o gráfico mostra apenas as lojas correspondentes."
+        )
         if not df_cliente_loja.empty and not df_filtrado.empty:
             # Filtrar cliente_loja pelos clientes do df_filtrado
             clientes_filtrados_ids = df_filtrado["Cliente_ID"].unique()
@@ -1136,8 +1178,15 @@ def pagina_dashboard():
 
     # AÇÕES RECOMENDADAS
     st.markdown("#### 🎯 Ações Recomendadas")
-    st.markdown('<p class="sub-header">Sugestões automáticas baseadas nos dados dos seus top clientes</p>', unsafe_allow_html=True)
+    st.info(
+        "**Como usar esta seção?** Os cards abaixo são gerados automaticamente a partir dos dados dos seus clientes. "
+        "Cada card mostra uma **situação** (o que está acontecendo), **quem são os clientes** envolvidos, "
+        "e uma **sugestão de ação** concreta. Cards **vermelhos** precisam de atenção urgente, "
+        "**amarelos** são oportunidades de melhoria e **verdes** são pontos positivos."
+    )
 
+    st.markdown("##### 🚨 Monitoramento de VIPs")
+    st.caption("Clientes VIP são os mais valiosos. Quando param de comprar (mais de 60 dias sem compra), é um sinal de alerta.")
     vips = df_filtrado[df_filtrado["Perfil_Cliente"] == "VIP"]
     vips_risco = vips[vips["Recencia_Dias"] > 60] if not vips.empty else pd.DataFrame()
     if not vips_risco.empty:
@@ -1157,6 +1206,12 @@ def pagina_dashboard():
 
     # PRÓXIMOS DE UPGRADE
     st.markdown("##### ⬆️ Próximos de Upgrade")
+    st.caption(
+        "Clientes próximos de subir de perfil (ex: de Potencial para Premium). "
+        "O **Score RFV** é uma pontuação de 3 a 15 que combina Recência (quão recente foi a última compra), "
+        "Frequência (quantas vezes comprou) e Valor (quanto gastou). Quanto maior o score, mais valioso o cliente. "
+        "Aqui mostramos quem está a poucos pontos de alcançar o próximo nível — esses clientes merecem atenção especial!"
+    )
     perfis_ordem = ["Pontual", "Potencial", "Premium", "VIP"]
     acoes_upgrade = {
         "Pontual → Potencial": "campanha de ativação, cupons de primeira compra recorrente",
@@ -1253,6 +1308,8 @@ def pagina_dashboard():
         </div>""", unsafe_allow_html=True)
 
     # SEGMENTO DOMINANTE
+    st.markdown("##### 📊 Destaques do Período")
+    st.caption("Visão geral dos segmentos e lojas mais relevantes para os clientes filtrados.")
     if not df_filtrado.empty and "Segmento_Principal" in df_filtrado.columns:
         seg_totais = df_filtrado.groupby("Segmento_Principal")["Valor_Total"].sum()
         if not seg_totais.empty:
@@ -1275,6 +1332,8 @@ def pagina_dashboard():
             </div>""", unsafe_allow_html=True)
 
     # CLIENTES INATIVOS
+    st.markdown("##### 😴 Reativação")
+    st.caption("Clientes que não compram há mais de 90 dias (3 meses) são considerados inativos e podem precisar de uma campanha de reativação.")
     if "Recencia_Dias" in df_filtrado.columns:
         inativos = df_filtrado[df_filtrado["Recencia_Dias"] > 90]
         if not inativos.empty:
@@ -1335,6 +1394,15 @@ def pagina_ajfans(shopping_nome, username):
     st.markdown('<p class="main-header">🎖️ AJFANS — Categorias de Clientes</p>', unsafe_allow_html=True)
     st.markdown(f'<p class="sub-header">{shopping_nome} · Categorias de fidelidade do app AJFANS</p>', unsafe_allow_html=True)
 
+    st.info(
+        "**O que é o AJFANS?** É o programa de fidelidade do app Almeida Junior. "
+        "Os clientes são classificados em 3 categorias com base no valor total de compras e quantidade de cupons registrados no app:\n\n"
+        "- 🥇 **MegaFan** — Clientes mais engajados, com maior valor de compras e mais cupons registrados\n"
+        "- 🥈 **SuperFan** — Clientes com bom engajamento, valor e cupons intermediários\n"
+        "- 🥉 **NewFan** — Clientes com menor engajamento, geralmente recentes ou com poucas compras\n\n"
+        "Os critérios de cada categoria variam por shopping."
+    )
+
     df_cat = carregar_categorias_ajfans(shopping_nome)
     df_rank = carregar_ranking_ajfans(shopping_nome)
 
@@ -1349,16 +1417,25 @@ def pagina_ajfans(shopping_nome, username):
     new = (df_cat["categoria"] == "NewFan").sum()
 
     col1, col2, col3, col4 = st.columns(4)
-    col1.metric("Total Cadastros", f"{total:,}".replace(",", "."))
-    col2.metric("🥇 MegaFan", f"{mega:,}".replace(",", "."))
-    col3.metric("🥈 SuperFan", f"{super_:,}".replace(",", "."))
-    col4.metric("🥉 NewFan", f"{new:,}".replace(",", "."))
+    col1.metric("Total Cadastros", f"{total:,}".replace(",", "."),
+                help="Total de clientes cadastrados no AJFANS neste shopping")
+    col2.metric("🥇 MegaFan", f"{mega:,}".replace(",", "."),
+                help="Clientes mais engajados — maior valor de compras e mais cupons registrados")
+    col3.metric("🥈 SuperFan", f"{super_:,}".replace(",", "."),
+                help="Clientes com bom engajamento — valor e cupons intermediários")
+    col4.metric("🥉 NewFan", f"{new:,}".replace(",", "."),
+                help="Clientes com menor engajamento — geralmente mais recentes ou com poucas compras")
     st.markdown("---")
 
     # TABS
     tab1, tab2, tab3 = st.tabs(["Distribuição", "Ranking de Consumo", "Lista de Clientes"])
 
     with tab1:
+        st.caption(
+            "**Pizza (esquerda):** proporção de clientes em cada categoria. "
+            "**Barras (direita):** quanto cada categoria gera em valor de compras. "
+            "Compare: os MegaFans podem ser poucos, mas geram a maior receita."
+        )
         gcol1, gcol2 = st.columns(2)
         with gcol1:
             cat_counts = df_cat["categoria"].value_counts().reset_index()
@@ -1385,6 +1462,10 @@ def pagina_ajfans(shopping_nome, username):
         # Engajamento: com cupons vs sem cupons
         if not df_rank.empty:
             st.markdown("##### 📊 Engajamento por Categoria")
+            st.caption(
+                "Mostra quantos clientes de cada categoria registraram pelo menos um cupom no app. "
+                "Um percentual alto de engajamento significa que os clientes estão usando o app ativamente."
+            )
             clientes_com_cupons = set(df_rank["cliente_id"].unique())
             df_cat_eng = df_cat.copy()
             df_cat_eng["tem_cupons"] = df_cat_eng["cliente_id"].isin(clientes_com_cupons)
@@ -1409,6 +1490,11 @@ def pagina_ajfans(shopping_nome, username):
             st.warning("Dados de ranking não disponíveis.")
         else:
             st.markdown("##### 🏆 Top Consumidores por Categoria")
+            st.caption(
+                "Ranking dos clientes AJFANS com maior valor de compras. "
+                "Selecione a categoria e a quantidade de clientes para visualizar. "
+                "Ideal para identificar os melhores clientes para ações de relacionamento personalizado."
+            )
             rcol1, rcol2 = st.columns(2)
             with rcol1:
                 cat_filtro = st.multiselect("Categoria", ["MegaFan", "SuperFan", "NewFan"],
@@ -1459,6 +1545,11 @@ def pagina_ajfans(shopping_nome, username):
 
     with tab3:
         st.markdown("##### 📋 Lista Completa de Clientes")
+        st.caption(
+            "Lista completa de todos os clientes AJFANS do shopping. "
+            "Filtre por categoria e baixe o arquivo para usar em campanhas de comunicação, "
+            "mailings ou ações direcionadas."
+        )
         cat_lista = st.multiselect("Filtrar por Categoria", ["MegaFan", "SuperFan", "NewFan"],
                                     key="ajfans_cat_lista")
 
