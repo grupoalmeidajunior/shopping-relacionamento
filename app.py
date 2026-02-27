@@ -903,13 +903,15 @@ def pagina_dashboard():
         st.markdown("### 🛍️ Shopping Relacionamento")
         st.markdown(f"**{st.session_state.get('name', '')}**")
 
+        st.divider()
         if role == "admin":
-            st.divider()
             pagina_selecionada = st.radio(
-                "Navegação", ["📊 Dashboard", "⚙️ Administração"],
+                "Navegação", ["📊 Dashboard", "🎖️ AJFANS", "⚙️ Administração"],
                 key="nav_admin", label_visibility="collapsed")
         else:
-            pagina_selecionada = "📊 Dashboard"
+            pagina_selecionada = st.radio(
+                "Navegação", ["📊 Dashboard", "🎖️ AJFANS"],
+                key="nav_viewer", label_visibility="collapsed")
 
         st.divider()
 
@@ -944,6 +946,9 @@ def pagina_dashboard():
     # Roteamento
     if role == "admin" and pagina_selecionada == "⚙️ Administração":
         pagina_admin()
+        return
+    if pagina_selecionada == "🎖️ AJFANS":
+        pagina_ajfans(shopping_nome, username)
         return
 
     # CARREGAR DADOS
@@ -1284,6 +1289,215 @@ def pagina_dashboard():
                 <p>Todos os clientes compraram nos últimos 90 dias. Excelente engajamento!</p>
                 <p class="acao">💡 Ação: aproveitar o momento para ampliar ticket médio e cross-sell</p>
             </div>""", unsafe_allow_html=True)
+
+
+# ==============================================================================
+# 12. PÁGINA AJFANS
+# ==============================================================================
+
+MAPA_SHOPPING_ID = {
+    1: "Continente Shopping", 2: "Balneário Shopping", 3: "Neumarkt Shopping",
+    4: "Norte Shopping", 5: "Garten Shopping", 6: "Nações Shopping",
+}
+MAPA_SHOPPING_NOME_ID = {v: k for k, v in MAPA_SHOPPING_ID.items()}
+CORES_CATEGORIA = {"MegaFan": "#FFD700", "SuperFan": "#C0C0C0", "NewFan": "#CD7F32"}
+
+
+@st.cache_data(ttl=3600, max_entries=3)
+def carregar_categorias_ajfans(shopping_nome):
+    caminho = os.path.join(BASE_DIR, "cliente_categoria.csv")
+    if not os.path.exists(caminho):
+        return pd.DataFrame()
+    df = pd.read_csv(caminho, encoding="latin-1")
+    df["shopping_id"] = df["shopping_id"].fillna(0).astype(int)
+    df["shopping_nome"] = df["shopping_id"].map(MAPA_SHOPPING_ID)
+    if shopping_nome:
+        df = df[df["shopping_nome"] == shopping_nome].copy()
+    return df
+
+
+@st.cache_data(ttl=3600, max_entries=3)
+def carregar_ranking_ajfans(shopping_nome):
+    caminho = os.path.join(BASE_DIR, "ranking_ajfans.csv")
+    if not os.path.exists(caminho):
+        return pd.DataFrame()
+    df = pd.read_csv(caminho, encoding="utf-8-sig", sep=";", low_memory=False)
+    # Excluir linhas "Geral"
+    df = df[df["shopping_sigla"].notna() & (df["shopping_sigla"] != "")].copy()
+    if shopping_nome:
+        df = df[df["shopping_nome"] == shopping_nome].copy()
+    for c in df.select_dtypes(include=["float64"]).columns:
+        df[c] = df[c].astype("float32")
+    return df
+
+
+def pagina_ajfans(shopping_nome, username):
+    st.markdown('<p class="main-header">🎖️ AJFANS — Categorias de Clientes</p>', unsafe_allow_html=True)
+    st.markdown(f'<p class="sub-header">{shopping_nome} · Categorias de fidelidade do app AJFANS</p>', unsafe_allow_html=True)
+
+    df_cat = carregar_categorias_ajfans(shopping_nome)
+    df_rank = carregar_ranking_ajfans(shopping_nome)
+
+    if df_cat.empty:
+        st.warning("Dados de categorias AJFANS não disponíveis. Verifique se o arquivo `cliente_categoria.csv` existe.")
+        return
+
+    # KPIs
+    total = len(df_cat)
+    mega = (df_cat["categoria"] == "MegaFan").sum()
+    super_ = (df_cat["categoria"] == "SuperFan").sum()
+    new = (df_cat["categoria"] == "NewFan").sum()
+
+    col1, col2, col3, col4 = st.columns(4)
+    col1.metric("Total Cadastros", f"{total:,}".replace(",", "."))
+    col2.metric("🥇 MegaFan", f"{mega:,}".replace(",", "."))
+    col3.metric("🥈 SuperFan", f"{super_:,}".replace(",", "."))
+    col4.metric("🥉 NewFan", f"{new:,}".replace(",", "."))
+    st.markdown("---")
+
+    # TABS
+    tab1, tab2, tab3 = st.tabs(["Distribuição", "Ranking de Consumo", "Lista de Clientes"])
+
+    with tab1:
+        gcol1, gcol2 = st.columns(2)
+        with gcol1:
+            cat_counts = df_cat["categoria"].value_counts().reset_index()
+            cat_counts.columns = ["Categoria", "Clientes"]
+            fig_pie = px.pie(cat_counts, names="Categoria", values="Clientes",
+                             title="Distribuição por Categoria",
+                             color="Categoria", color_discrete_map=CORES_CATEGORIA)
+            fig_pie.update_traces(textposition="inside", textinfo="percent+label")
+            render_chart(fig_pie, key="ajfans_pie")
+        with gcol2:
+            if not df_rank.empty:
+                cat_valor = df_rank.groupby("categoria")["valor_total"].sum().reset_index()
+                cat_valor.columns = ["Categoria", "Valor"]
+                cat_valor = cat_valor.sort_values("Valor", ascending=True)
+                fig_bar = px.bar(cat_valor, x="Valor", y="Categoria", orientation="h",
+                                 title="Valor Total por Categoria (R$)",
+                                 color="Categoria", color_discrete_map=CORES_CATEGORIA)
+                fig_bar.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
+                fig_bar.update_layout(showlegend=False)
+                render_chart(fig_bar, key="ajfans_bar_valor")
+            else:
+                st.info("Dados de ranking não disponíveis.")
+
+        # Engajamento: com cupons vs sem cupons
+        if not df_rank.empty:
+            st.markdown("##### 📊 Engajamento por Categoria")
+            clientes_com_cupons = set(df_rank["cliente_id"].unique())
+            df_cat_eng = df_cat.copy()
+            df_cat_eng["tem_cupons"] = df_cat_eng["cliente_id"].isin(clientes_com_cupons)
+
+            eng_resumo = df_cat_eng.groupby("categoria").agg(
+                total=("cliente_id", "count"),
+                com_cupons=("tem_cupons", "sum")
+            ).reset_index()
+            eng_resumo["pct_engajado"] = (eng_resumo["com_cupons"] / eng_resumo["total"] * 100).round(1)
+            eng_resumo["sem_cupons"] = eng_resumo["total"] - eng_resumo["com_cupons"]
+
+            ecol1, ecol2, ecol3 = st.columns(3)
+            for col_st, (_, row) in zip([ecol1, ecol2, ecol3], eng_resumo.iterrows()):
+                col_st.metric(
+                    f"{row['categoria']}",
+                    f"{row['pct_engajado']:.1f}% engajados",
+                    f"{int(row['com_cupons']):,} de {int(row['total']):,}".replace(",", ".")
+                )
+
+    with tab2:
+        if df_rank.empty:
+            st.warning("Dados de ranking não disponíveis.")
+        else:
+            st.markdown("##### 🏆 Top Consumidores por Categoria")
+            rcol1, rcol2 = st.columns(2)
+            with rcol1:
+                cat_filtro = st.multiselect("Categoria", ["MegaFan", "SuperFan", "NewFan"],
+                                            default=["MegaFan"], key="ajfans_cat_filtro")
+            with rcol2:
+                top_n = st.slider("Quantidade", 5, 50, 20, key="ajfans_top_n")
+
+            df_rank_filtrado = df_rank.copy()
+            if cat_filtro:
+                df_rank_filtrado = df_rank_filtrado[df_rank_filtrado["categoria"].isin(cat_filtro)]
+
+            df_top = df_rank_filtrado.nlargest(top_n, "valor_total")
+
+            if not df_top.empty:
+                df_top["primeiro_nome"] = df_top["nome"].fillna("").str.split().str[0].str.title()
+
+                # Gráfico
+                fig_rank = px.bar(
+                    df_top.sort_values("valor_total", ascending=True).tail(20),
+                    x="valor_total", y="primeiro_nome", orientation="h",
+                    title=f"Top {min(top_n, len(df_top))} — Valor Total (R$)",
+                    color="categoria", color_discrete_map=CORES_CATEGORIA,
+                )
+                fig_rank.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
+                fig_rank.update_layout(showlegend=True, yaxis_title="")
+                render_chart(fig_rank, key="ajfans_rank_bar")
+
+                # Tabela
+                colunas_rank = ["cliente_id", "primeiro_nome", "nome", "categoria",
+                                "valor_total", "qtd_cupons", "ticket_medio",
+                                "email", "celular", "cidade", "estado"]
+                colunas_rank = [c for c in colunas_rank if c in df_top.columns]
+                st.dataframe(df_top[colunas_rank], height=400, hide_index=True, use_container_width=True)
+
+                # Download
+                df_rank_export = df_top[colunas_rank].copy()
+                for c in df_rank_export.select_dtypes(include=["category"]).columns:
+                    df_rank_export[c] = df_rank_export[c].astype(str)
+                csv_rank = df_rank_export.to_csv(sep=";", decimal=",", index=False, encoding="utf-8-sig")
+                st.download_button(
+                    f"⬇️ Baixar Top {len(df_top)} ({', '.join(cat_filtro) if cat_filtro else 'Todas'})",
+                    data=csv_rank,
+                    file_name=f"ranking_ajfans_{shopping_nome.replace(' ', '_')}.csv",
+                    mime="text/csv", key="ajfans_download_rank", use_container_width=True
+                )
+            else:
+                st.info("Nenhum cliente encontrado com os filtros selecionados.")
+
+    with tab3:
+        st.markdown("##### 📋 Lista Completa de Clientes")
+        cat_lista = st.multiselect("Filtrar por Categoria", ["MegaFan", "SuperFan", "NewFan"],
+                                    key="ajfans_cat_lista")
+
+        if not df_rank.empty:
+            df_lista = df_rank.copy()
+            if cat_lista:
+                df_lista = df_lista[df_lista["categoria"].isin(cat_lista)]
+
+            df_lista["primeiro_nome"] = df_lista["nome"].fillna("").str.split().str[0].str.title()
+            colunas_lista = ["cliente_id", "primeiro_nome", "nome", "categoria",
+                             "valor_total", "qtd_cupons", "email", "celular", "cidade"]
+            colunas_lista = [c for c in colunas_lista if c in df_lista.columns]
+
+            st.markdown(f'<div class="counter">{len(df_lista):,} clientes</div>'.replace(",", "."),
+                        unsafe_allow_html=True)
+            st.dataframe(df_lista[colunas_lista].head(5000), height=500, hide_index=True, use_container_width=True)
+
+            # Download completo
+            df_lista_export = df_lista[colunas_lista].copy()
+            for c in df_lista_export.select_dtypes(include=["category"]).columns:
+                df_lista_export[c] = df_lista_export[c].astype(str)
+            csv_lista = df_lista_export.to_csv(sep=";", decimal=",", index=False, encoding="utf-8-sig")
+            cat_label = "_".join(cat_lista) if cat_lista else "todas"
+            st.download_button(
+                f"⬇️ Baixar lista completa ({len(df_lista):,} clientes)".replace(",", "."),
+                data=csv_lista,
+                file_name=f"lista_ajfans_{cat_label}_{shopping_nome.replace(' ', '_')}.csv",
+                mime="text/csv", key="ajfans_download_lista", use_container_width=True
+            )
+            registrar_filtro(username, shopping_nome, "AJFANS_Categoria",
+                             ", ".join(cat_lista) if cat_lista else "Todas")
+        else:
+            # Fallback: usar cliente_categoria.csv (sem dados de contato)
+            df_lista = df_cat.copy()
+            if cat_lista:
+                df_lista = df_lista[df_lista["categoria"].isin(cat_lista)]
+            st.markdown(f'<div class="counter">{len(df_lista):,} clientes</div>'.replace(",", "."),
+                        unsafe_allow_html=True)
+            st.dataframe(df_lista[["cliente_id", "categoria"]], height=500, hide_index=True, use_container_width=True)
 
 
 # ==============================================================================

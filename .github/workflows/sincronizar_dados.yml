@@ -97,9 +97,17 @@ jobs:
             done
           fi
 
+          # CSVs AJFANS (na raiz do repo fonte)
+          for csv in cliente_categoria.csv ranking_ajfans.csv; do
+            if [ -f "fonte/$csv" ]; then
+              cp "fonte/$csv" "./$csv"
+              echo "  ✓ $csv (AJFANS)"
+            fi
+          done
+
           echo ""
           echo "=== Resumo ==="
-          echo "Total CSVs sincronizados: $(find $DEST -name '*.csv' | wc -l)"
+          echo "Total CSVs sincronizados: $(find $DEST -name '*.csv' | wc -l) + $(ls *.csv 2>/dev/null | wc -l) AJFANS"
 
       - name: Limpar repo fonte
         run: rm -rf fonte
