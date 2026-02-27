@@ -42,16 +42,44 @@ MAX_LOGIN_ATTEMPTS = 5
 LOCKOUT_DURATION_MINUTES = 15
 ATTEMPT_RESET_MINUTES = 30
 
+# Identidade Visual Almeida Junior
+AZUL_NAVY = "#031835"
+CINZA_GELO = "#dfe2e6"
+
+# Paleta de cores por shopping (extraída do Manual House Materiais)
+CORES_SHOPPING = {
+    "Neumarkt Shopping":   {"accent": "#226275", "accent2": "#0f3643", "light": "#d5b8b6",
+                            "chart": ["#226275", "#0f3643", "#d5b8b6", "#5f605c"]},
+    "Balneário Shopping":  {"accent": "#8a6cae", "accent2": "#152d52", "light": "#cda7b9",
+                            "chart": ["#8a6cae", "#152d52", "#cda7b9", "#0f3457"]},
+    "Continente Shopping": {"accent": "#f1716e", "accent2": "#424872", "light": "#aea0ae",
+                            "chart": ["#f1716e", "#424872", "#716480", "#aea0ae"]},
+    "Garten Shopping":     {"accent": "#6563ab", "accent2": "#7790c9", "light": "#4d1d58",
+                            "chart": ["#6563ab", "#7790c9", "#4d1d58", "#3f4269"]},
+    "Norte Shopping":      {"accent": "#185665", "accent2": "#9c688d", "light": "#0f7171",
+                            "chart": ["#185665", "#9c688d", "#0f7171", "#2a1446"]},
+    "Nações Shopping":     {"accent": "#014b6f", "accent2": "#8e3e83", "light": "#8a6cae",
+                            "chart": ["#014b6f", "#8e3e83", "#2e184c", "#8a6cae"]},
+}
+
+CORES_PERFIL = {"VIP": "#C9A84C", "Premium": "#8A8D93", "Potencial": "#B07D4B", "Pontual": "#8E9AAF"}
+
+
+def get_cores(shopping_nome):
+    return CORES_SHOPPING.get(shopping_nome, CORES_SHOPPING["Balneário Shopping"])
+
 # ==============================================================================
 # 2. PLOTLY TEMPLATE + RENDER_CHART
 # ==============================================================================
 
 pio.templates["dashboard"] = go.layout.Template(layout=go.Layout(
-    font=dict(size=12),
+    font=dict(family="Inter, Helvetica Neue, Arial, sans-serif", size=12, color=AZUL_NAVY),
     margin=dict(t=40, b=30, l=40, r=20),
     legend=dict(orientation="h", yanchor="bottom", y=-0.2, xanchor="center", x=0.5, font=dict(size=10)),
-    xaxis=dict(tickfont=dict(size=10), title=dict(font=dict(size=11)), automargin=True),
-    yaxis=dict(tickfont=dict(size=10), title=dict(font=dict(size=11)), automargin=True),
+    xaxis=dict(tickfont=dict(size=10), title=dict(font=dict(size=11)), automargin=True, gridcolor="#ebedf0"),
+    yaxis=dict(tickfont=dict(size=10), title=dict(font=dict(size=11)), automargin=True, gridcolor="#ebedf0"),
+    plot_bgcolor="rgba(0,0,0,0)",
+    paper_bgcolor="rgba(0,0,0,0)",
     autosize=True,
 ))
 pio.templates.default = "plotly+dashboard"
@@ -67,50 +95,95 @@ def render_chart(fig, key=None):
 # 3. CSS
 # ==============================================================================
 
-st.markdown("""
+st.markdown(f"""
 <style>
-[data-testid="stSidebar"] { background-color: #1E3A5F; }
-[data-testid="stSidebar"] * { color: #FFFFFF !important; }
+/* ---- SIDEBAR (Azul Navy) ---- */
+[data-testid="stSidebar"] {{ background-color: {AZUL_NAVY}; }}
+[data-testid="stSidebar"] * {{ color: #FFFFFF !important; }}
 [data-testid="stSidebar"] .stSelectbox label,
-[data-testid="stSidebar"] .stMultiSelect label { color: #B0C4DE !important; }
+[data-testid="stSidebar"] .stMultiSelect label {{ color: #8a9bb5 !important; font-size: 0.85rem !important; letter-spacing: 0.04em; }}
 [data-testid="stSidebar"] .stSelectbox [data-baseweb="select"] > div,
-[data-testid="stSidebar"] .stMultiSelect [data-baseweb="select"] > div {
-    background-color: #16253d; border-color: #2C3E50;
-}
-[data-testid="stSidebar"] .stSelectbox [data-baseweb="select"] > div * { color: #FFFFFF !important; }
-.main-header { font-size: 2rem; font-weight: 700; color: #1E3A5F; margin-bottom: 0.5rem; }
-.sub-header { font-size: 1.1rem; color: #5D6D7E; margin-bottom: 1.5rem; }
-[data-testid="stMetric"] {
-    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
-    border-radius: 10px; padding: 15px; border-left: 4px solid #3498DB;
-}
-[data-testid="stMetric"] label { color: #5D6D7E !important; font-size: 0.85rem !important; }
-[data-testid="stMetric"] [data-testid="stMetricValue"] { color: #1E3A5F !important; font-size: 1.4rem !important; font-weight: 700 !important; }
-[data-testid="stSidebar"] button[kind="secondary"] {
+[data-testid="stSidebar"] .stMultiSelect [data-baseweb="select"] > div {{
+    background-color: #0a2240; border-color: #1a3a5c; border-radius: 6px;
+}}
+[data-testid="stSidebar"] .stSelectbox [data-baseweb="select"] > div * {{ color: #FFFFFF !important; }}
+[data-testid="stSidebar"] h3 {{ font-weight: 300 !important; letter-spacing: 0.12em !important; font-size: 1.1rem !important; }}
+[data-testid="stSidebar"] button[kind="secondary"] {{
     background-color: #E74C3C !important; color: white !important;
-    border: none !important; font-weight: 600 !important;
-}
-[data-testid="stSidebar"] button[kind="secondary"]:hover {
+    border: none !important; font-weight: 500 !important; border-radius: 6px !important;
+    letter-spacing: 0.05em;
+}}
+[data-testid="stSidebar"] button[kind="secondary"]:hover {{
     background-color: #C0392B !important; color: white !important;
-}
-.action-card { border-radius: 10px; padding: 20px; margin-bottom: 15px; border-left: 5px solid; }
-.action-card.alerta { background-color: #FDEDEC; border-left-color: #E74C3C; }
-.action-card.atencao { background-color: #FEF9E7; border-left-color: #F39C12; }
-.action-card.oportunidade { background-color: #EAFAF1; border-left-color: #2ECC71; }
-.action-card h4 { margin: 0 0 8px 0; color: #1E3A5F; }
-.action-card p { margin: 0 0 5px 0; color: #2C3E50; font-size: 0.95rem; }
-.action-card .acao { font-weight: 600; color: #1E3A5F; font-size: 0.9rem; margin-top: 8px; }
-.counter { background: #EBF5FB; border-radius: 8px; padding: 8px 16px; display: inline-block; color: #1E3A5F; font-weight: 600; margin-bottom: 10px; }
-.stTabs [data-baseweb="tab-list"] { gap: 8px; }
-.stTabs [data-baseweb="tab"] { background-color: #2C3E50; color: white; border-radius: 6px; padding: 8px 16px; }
-.stTabs [aria-selected="true"] { background-color: #3498DB !important; }
-@media (max-width: 768px) {
-    .main-header { font-size: 1.5rem; }
-    [data-testid="stMetric"] { padding: 10px; }
-    [data-testid="stMetric"] [data-testid="stMetricValue"] { font-size: 1.1rem !important; }
-}
+}}
+
+/* ---- HEADERS (tipografia brand: clean, letter-spaced) ---- */
+.main-header {{
+    font-size: 1.8rem; font-weight: 400; color: {AZUL_NAVY};
+    letter-spacing: 0.06em; margin-bottom: 0.3rem;
+}}
+.sub-header {{
+    font-size: 1rem; color: #5D6D7E; margin-bottom: 1.2rem;
+    letter-spacing: 0.03em; font-weight: 300;
+}}
+
+/* ---- KPI CARDS ---- */
+[data-testid="stMetric"] {{
+    background: #FFFFFF; border-radius: 8px; padding: 15px;
+    border-left: 4px solid {CINZA_GELO}; box-shadow: 0 1px 3px rgba(3,24,53,0.08);
+}}
+[data-testid="stMetric"] label {{
+    color: #5D6D7E !important; font-size: 0.8rem !important;
+    letter-spacing: 0.05em !important; text-transform: uppercase;
+}}
+[data-testid="stMetric"] [data-testid="stMetricValue"] {{
+    color: {AZUL_NAVY} !important; font-size: 1.4rem !important; font-weight: 600 !important;
+}}
+
+/* ---- ACTION CARDS ---- */
+.action-card {{ border-radius: 8px; padding: 20px; margin-bottom: 12px; border-left: 4px solid; }}
+.action-card.alerta {{ background-color: #fdf2f2; border-left-color: #e53e3e; }}
+.action-card.atencao {{ background-color: #fefcf3; border-left-color: #d69e2e; }}
+.action-card.oportunidade {{ background-color: #f0faf4; border-left-color: #38a169; }}
+.action-card h4 {{ margin: 0 0 8px 0; color: {AZUL_NAVY}; font-weight: 500; letter-spacing: 0.02em; }}
+.action-card p {{ margin: 0 0 5px 0; color: #2D3748; font-size: 0.92rem; line-height: 1.5; }}
+.action-card .acao {{ font-weight: 600; color: {AZUL_NAVY}; font-size: 0.88rem; margin-top: 8px; }}
+
+/* ---- COUNTER ---- */
+.counter {{
+    background: #f7f8fa; border-left: 3px solid {CINZA_GELO};
+    border-radius: 6px; padding: 8px 16px; display: inline-block;
+    color: {AZUL_NAVY}; font-weight: 500; margin-bottom: 10px;
+    font-size: 0.9rem; letter-spacing: 0.02em;
+}}
+
+/* ---- TABS ---- */
+.stTabs [data-baseweb="tab-list"] {{ gap: 6px; }}
+.stTabs [data-baseweb="tab"] {{
+    background-color: {AZUL_NAVY}; color: white; border-radius: 6px;
+    padding: 8px 16px; font-weight: 400; letter-spacing: 0.03em;
+}}
+.stTabs [aria-selected="true"] {{ background-color: #226275 !important; }}
+
+/* ---- RESPONSIVE ---- */
+@media (max-width: 768px) {{
+    .main-header {{ font-size: 1.4rem; }}
+    [data-testid="stMetric"] {{ padding: 10px; }}
+    [data-testid="stMetric"] [data-testid="stMetricValue"] {{ font-size: 1.1rem !important; }}
+}}
 </style>
 """, unsafe_allow_html=True)
+
+
+def injetar_css_shopping(shopping_nome):
+    """Injeta CSS dinâmico com as cores específicas do shopping logado."""
+    cores = get_cores(shopping_nome)
+    accent = cores["accent"]
+    st.markdown(f"""<style>
+    [data-testid="stMetric"] {{ border-left-color: {accent} !important; }}
+    .stTabs [aria-selected="true"] {{ background-color: {accent} !important; }}
+    .counter {{ border-left-color: {accent} !important; background: {accent}0d !important; }}
+    </style>""", unsafe_allow_html=True)
 
 
 # ==============================================================================
@@ -921,6 +994,10 @@ def pagina_dashboard():
     shopping_nome = st.session_state.get("shopping_nome", "")
     role = st.session_state.get("role", "viewer")
     username = st.session_state.get("username", "")
+    cores_shop = get_cores(shopping_nome)
+
+    # CSS dinâmico por shopping
+    injetar_css_shopping(shopping_nome)
 
     # SIDEBAR
     with st.sidebar:
@@ -1130,7 +1207,7 @@ def pagina_dashboard():
     # GRÁFICOS
     st.markdown("#### 📈 Análises Visuais")
     st.caption("Os gráficos abaixo respondem aos filtros aplicados. Explore as abas para diferentes visões dos dados.")
-    cores_perfil = {"VIP": "#FFD700", "Premium": "#C0C0C0", "Potencial": "#CD7F32", "Pontual": "#808080"}
+    cores_perfil = CORES_PERFIL
     tab1, tab2, tab3 = st.tabs(["Por Perfil", "Por Segmento", "Por Loja"])
 
     with tab1:
@@ -1174,7 +1251,7 @@ def pagina_dashboard():
         seg_valor.columns = ["Segmento", "Valor Total"]
         seg_valor = seg_valor.sort_values("Valor Total", ascending=True).tail(10)
         fig_seg = px.bar(seg_valor, x="Valor Total", y="Segmento", orientation="h",
-                         title="Top 10 Segmentos por Valor Total (R$)", color_discrete_sequence=["#3498DB"])
+                         title="Top 10 Segmentos por Valor Total (R$)", color_discrete_sequence=[cores_shop["accent"]])
         fig_seg.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
         fig_seg.update_layout(showlegend=False)
         render_chart(fig_seg, key="bar_segmento")
@@ -1198,7 +1275,7 @@ def pagina_dashboard():
                 loja_valor = df_cl_filtrado.groupby("loja_nome")["valor"].sum().reset_index()
                 loja_valor = loja_valor.sort_values("valor", ascending=True).tail(10)
                 fig_loja = px.bar(loja_valor, x="valor", y="loja_nome", orientation="h",
-                                  title="Top 10 Lojas por Valor (R$)", color_discrete_sequence=["#2ECC71"])
+                                  title="Top 10 Lojas por Valor (R$)", color_discrete_sequence=[cores_shop["accent2"]])
                 fig_loja.update_traces(texttemplate="R$ %{x:,.0f}", textposition="outside")
                 fig_loja.update_layout(showlegend=False, yaxis_title="Loja")
                 render_chart(fig_loja, key="bar_loja")
@@ -1392,7 +1469,7 @@ MAPA_SHOPPING_ID = {
     4: "Norte Shopping", 5: "Garten Shopping", 6: "Nações Shopping",
 }
 MAPA_SHOPPING_NOME_ID = {v: k for k, v in MAPA_SHOPPING_ID.items()}
-CORES_CATEGORIA = {"MegaFan": "#FFD700", "SuperFan": "#C0C0C0", "NewFan": "#CD7F32"}
+CORES_CATEGORIA = {"MegaFan": "#C9A84C", "SuperFan": "#8A8D93", "NewFan": "#B07D4B"}
 
 
 @st.cache_data(ttl=3600, max_entries=3)
@@ -1424,6 +1501,7 @@ def carregar_ranking_ajfans(shopping_nome):
 
 
 def pagina_ajfans(shopping_nome, username):
+    injetar_css_shopping(shopping_nome)
     st.markdown('<p class="main-header">🎖️ AJFANS — Categorias de Clientes</p>', unsafe_allow_html=True)
     st.markdown(f'<p class="sub-header">{shopping_nome} · Categorias de fidelidade do app AJFANS</p>', unsafe_allow_html=True)
 
