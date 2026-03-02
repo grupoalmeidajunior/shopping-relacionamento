@@ -99,7 +99,7 @@ Burger King,Gastronomia,Neumarkt Shopping,5181.36,115
 Burger King,Gastronomia,Norte Shopping,9866.24,136
 Békko,Moda,Nações Shopping,8339.99,13
 C&A,Moda,Balneário Shopping,40087.7,152
-C&A,Moda,Continente Shopping,35861.340000000004,183
+C&A,Moda,Continente Shopping,35861.34,183
 C&A,Moda,Garten Shopping,19819.48,94
 C&A,Moda,Nações Shopping,32034.95,137
 CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,1071.62,39
@@ -124,7 +124,7 @@ Camarão Express,Gastronomia,Balneário Shopping,1735.2,22
 Camarão Express,Gastronomia,Continente Shopping,5170.37,55
 Camarão Express,Gastronomia,Nações Shopping,4361.86,49
 Camarão Express,Gastronomia,Neumarkt Shopping,1895.13,33
-Camicado,Casa e Decoração,Balneário Shopping,13630.119999999999,48
+Camicado,Casa e Decoração,Balneário Shopping,13630.12,48
 Camicado,Casa e Decoração,Nações Shopping,4450.84,26
 Camicado,Casa e Decoração,Neumarkt Shopping,14409.24,52
 Cantinho Grill,Gastronomia,Nações Shopping,1248.1,24
@@ -336,7 +336,7 @@ John John Denim,Moda,Balneário Shopping,1468.0,3
 Joker Socks,Presentes e Acessórios,Continente Shopping,232.6,3
 Jorge Bischoff,Calçados,Balneário Shopping,2496.0,3
 Juistreet,Gastronomia,Balneário Shopping,328.02,9
-KFC,Fast Food,Norte Shopping,7437.35,132
+KFC,Fast Food,Norte Shopping,7437.349999999999,132
 KFC,Gastronomia,Balneário Shopping,4808.18,85
 KFC,Gastronomia,Garten Shopping,4088.72,85
 Kalunga,Papelaria,Continente Shopping,10369.03,197
@@ -379,7 +379,7 @@ Le Creuset,Casa e Decoração,Balneário Shopping,10780.69,11
 Le Lis,Moda,Neumarkt Shopping,16922.489999999998,16
 Le Lis Blanc,Moda,Garten Shopping,11146.5,9
 Le Lis Blanc,Moda Feminina,Balneário Shopping,45660.0,6
-Le Postiche,Presentes e Acessórios,Continente Shopping,2774.9300000000003,9
+Le Postiche,Presentes e Acessórios,Continente Shopping,2774.93,9
 Lego,Infantil,Balneário Shopping,11719.630000000001,25
 Leo Cosméticos,Beleza e Bem-estar,Continente Shopping,11078.0,201
 Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,6664.18,117
@@ -441,7 +441,7 @@ Mamma Mia Express,Gastronomia,Neumarkt Shopping,3813.2,68
 Mar de Maria,Moda,Nações Shopping,2349.5,12
 Maria Dolores,Joalheria,Balneário Shopping,6875.17,6
 Maze,Calçados,Neumarkt Shopping,8534.48,14
-Maze Skate,Moda,Garten Shopping,27579.31,16
+Maze Skate,Moda,Garten Shopping,27579.309999999998,16
 Maze Vale Comercio LTDA,Moda,Continente Shopping,1439.65,2
 Mc Donalds,Gastronomia,Norte Shopping,10697.76,176
 McDonald's,Gastronomia,Balneário Shopping,3080.4,72
@@ -555,7 +555,7 @@ Paquetá,Esportes,Norte Shopping,7526.96,27
 Paquetá Esportes,Esportes,Balneário Shopping,2038.91,6
 Paquetá Esportes,Esportes,Garten Shopping,1679.85,6
 Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,13879.86,61
-Patbo,Moda Feminina,Balneário Shopping,12049.050000000001,6
+Patbo,Moda Feminina,Balneário Shopping,12049.05,6
 Paula Torres,Calçados Femininos,Balneário Shopping,19625.0,9
 Pecorino,Gastronomia,Balneário Shopping,1636.01,6
 Pegada,Calçados,Balneário Shopping,95.99,1
@@ -683,7 +683,7 @@ Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,16.25,1
 Tania Bulhões,Presentes e Acessórios,Balneário Shopping,2025.0,5
 Tea Shop,Gastronomia,Balneário Shopping,2905.89,11
 Tech Smart,Eletrônicos,Balneário Shopping,446.70000000000005,2
-Tech Smart,Eletrônicos,Neumarkt Shopping,3670.4,8
+Tech Smart,Eletrônicos,Neumarkt Shopping,3670.3999999999996,8
 Tech Smart,Eletrônicos,Norte Shopping,567.5,4
 The North Face,Moda,Balneário Shopping,2996.2,3
 Tigre Maníacos,Esportes,Nações Shopping,2389.85,13
