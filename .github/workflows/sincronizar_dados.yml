@@ -23,6 +23,10 @@ jobs:
   sincronizar:
     runs-on: ubuntu-latest
 
+    outputs:
+      csv_count: ${{ steps.sync.outputs.csv_count }}
+      changes: ${{ steps.commit.outputs.changes }}
+
     steps:
       - name: Checkout shopping-relacionamento
         uses: actions/checkout@v4
@@ -37,6 +41,7 @@ jobs:
           path: fonte
 
       - name: Sincronizar CSVs
+        id: sync
         run: |
           echo "=== Sincronizando dados do dashboard-perfil-cliente ==="
 
@@ -105,27 +110,36 @@ jobs:
             fi
           done
 
+          CSV_COUNT=$(find $DEST -name '*.csv' 2>/dev/null | wc -l)
+          AJFANS_COUNT=$(ls cliente_categoria.csv ranking_ajfans.csv 2>/dev/null | wc -l)
+          TOTAL=$((CSV_COUNT + AJFANS_COUNT))
+
           echo ""
           echo "=== Resumo ==="
-          echo "Total CSVs sincronizados: $(find $DEST -name '*.csv' | wc -l) + $(ls *.csv 2>/dev/null | wc -l) AJFANS"
+          echo "Total CSVs sincronizados: $TOTAL"
+          echo "csv_count=$TOTAL" >> "$GITHUB_OUTPUT"
 
       - name: Limpar repo fonte
         run: rm -rf fonte
 
       - name: Commit e Push
+        id: commit
         run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "actions@github.com"
 
           DATA_HORA=$(TZ='America/Sao_Paulo' date '+%Y-%m-%d %H:%M')
 
-          git add Resultados/
+          git add Resultados/ cliente_categoria.csv ranking_ajfans.csv || true
 
           # Verificar se ha alteracoes
           if git diff --cached --quiet; then
             echo "Nenhuma alteracao detectada nos dados"
+            echo "changes=false" >> "$GITHUB_OUTPUT"
             exit 0
           fi
+
+          echo "changes=true" >> "$GITHUB_OUTPUT"
 
           git commit -m "data: sincronizacao automatica - $DATA_HORA
 
@@ -149,3 +163,32 @@ jobs:
           for d in $(ls Resultados/Por_Ano/ 2>/dev/null); do echo "- Ano: $d" >> $GITHUB_STEP_SUMMARY; done
           for d in $(ls Resultados/Por_Trimestre/ 2>/dev/null); do echo "- Trimestre: $d" >> $GITHUB_STEP_SUMMARY; done
           for d in $(ls Resultados/Por_Mes/ 2>/dev/null); do echo "- Mes: $d" >> $GITHUB_STEP_SUMMARY; done
+
+  # Job de notificacao WhatsApp (roda no self-hosted onde esta o gateway)
+  notificar-whatsapp:
+    runs-on: self-hosted
+    needs: sincronizar
+    if: always()
+
+    env:
+      WA_GATEWAY_URL: "http://localhost:3001"
+      WA_GROUP_ID: "120363408855201409@g.us"
+
+    steps:
+      - name: Checkout (para acessar o script)
+        uses: actions/checkout@v4
+
+      - name: Notificar sucesso
+        if: needs.sincronizar.result == 'success'
+        shell: powershell
+        run: |
+          pip install requests --quiet 2>$null
+          $csvCount = "${{ needs.sincronizar.outputs.csv_count }}"
+          python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status sucesso --detalhes "$csvCount CSVs sincronizados do Dashboard Perfil"
+
+      - name: Notificar erro
+        if: needs.sincronizar.result == 'failure'
+        shell: powershell
+        run: |
+          pip install requests --quiet 2>$null
+          python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status erro
