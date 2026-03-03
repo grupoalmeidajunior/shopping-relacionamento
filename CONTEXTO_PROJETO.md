@@ -269,15 +269,33 @@ Apenas 7 dependencias (vs 17+ do dashboard principal).
 
 ---
 
-## Proximos Passos Sugeridos
+## Notificacoes WhatsApp (Sessao 03/03/2026)
 
-1. Configurar `REPO_ACCESS_TOKEN` nos repos para sync automatico
-2. Regenerar dados completos (todos clientes + meses) via GitHub Actions
-3. Considerar Git LFS para ranking_ajfans.csv (88MB, proximo do limite)
-4. Adicionar mais periodos conforme dados ficam disponiveis
-5. Implementar comparativo entre periodos (tendencia)
+### Script `scripts/notificar_whatsapp.py`
+- Script reutilizavel para qualquer dashboard (parametro `--dashboard`)
+- Envia via WhatsApp Gateway local (Baileys, localhost:3001)
+- Mensagens: sucesso (🛍 + detalhes + link dashboard) e erro (❌ + link Actions)
+
+### GitHub Actions (atualizado)
+- **Job principal:** `sincronizar` roda no `ubuntu-latest` (cloud)
+- **Job notificacao:** `notificar-whatsapp` roda no `self-hosted` (acesso ao gateway)
+- **Condicao:** `if: always()` + `needs.sincronizar.result` para sucesso/erro
+- **Detalhes:** Inclui contagem de CSVs sincronizados na mensagem
+
+### Sessao 4 (03/03/2026) — Notificacoes WhatsApp
+- Adicionado script notificar_whatsapp.py (reutilizavel entre projetos)
+- Job de notificacao WhatsApp no workflow (self-hosted runner)
+- Mensagens com emojis: sucesso + erro
 
 ---
 
-*Ultima atualizacao: 27/02/2026 (Sessao 3)*
+## Proximos Passos Sugeridos
+
+1. Considerar Git LFS para ranking_ajfans.csv (88MB, proximo do limite)
+2. Adicionar mais periodos conforme dados ficam disponiveis
+3. Implementar comparativo entre periodos (tendencia)
+
+---
+
+*Ultima atualizacao: 03/03/2026 (Sessao 4)*
 *Repositorio: https://github.com/carlosgravi/shopping-relacionamento*
