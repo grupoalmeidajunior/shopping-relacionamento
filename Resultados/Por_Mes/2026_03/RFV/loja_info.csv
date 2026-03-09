@@ -1,292 +1,598 @@
 ﻿loja_nome,segmento,shopping,valor,cupons
-10 Pastéis,Gastronomia,Balneário Shopping,26.0,1
-A Fabulosa,Presentes e Acessórios,Norte Shopping,390.79,3
-ADCOS,Beleza e Bem-estar,Garten Shopping,143.2,1
-Acium,Presentes e Acessórios,Garten Shopping,652.0,3
+10 Pastéis,Gastronomia,Balneário Shopping,605.8,12
+A Fabulosa,Presentes e Acessórios,Norte Shopping,745.64,11
+ADCOS,Beleza e Bem-estar,Continente Shopping,604.18,1
+ADCOS,Beleza e Bem-estar,Garten Shopping,1792.95,6
+AJ FANS Neumarkt,Promocional,Neumarkt Shopping,500.0,1
+AJFans Balneário Shopping,Promocional,Balneário Shopping,1500.0,3
+AJFans Garten Shopping (Ação especial),Promocional,Garten Shopping,500.0,1
+AJFans Nações Shopping (Ação especial),Telefonia,Nações Shopping,1000.0,1
+ALLMINI,Presentes e Acessórios,Norte Shopping,84.0,1
+Acium,Joalheria,Neumarkt Shopping,486.0,3
+Acium,Presentes e Acessórios,Garten Shopping,1647.0,6
+Acium,Presentes e Acessórios,Norte Shopping,83.13,1
 Acuo,Moda,Nações Shopping,199.9,1
-Adcos,Beleza e Bem-estar,Balneário Shopping,35.8,1
-Adidas,Esportes,Neumarkt Shopping,899.98,1
-Americanas,Eletrodomésticos,Nações Shopping,34.47,1
-Anacapri,Calçados Femininos,Garten Shopping,125.9,1
-Aramis,Moda,Neumarkt Shopping,699.9,1
-Arezzo,Calçados,Continente Shopping,569.9,1
-Arezzo,Calçados,Garten Shopping,759.81,2
-Arezzo,Calçados,Neumarkt Shopping,718.9,2
-Arezzo,Calçados Femininos,Balneário Shopping,1339.6999999999998,3
-Atacadão,Supermercado,Norte Shopping,1809.5900000000001,13
+Adcos,Beleza e Bem-estar,Balneário Shopping,742.8,2
+Adcos,Beleza e Bem-estar,Nações Shopping,219.0,1
+Adidas,Esportes,Balneário Shopping,3298.99,2
+Adidas,Esportes,Neumarkt Shopping,6268.05,12
+Adidas Originals,Moda,Balneário Shopping,3719.9300000000003,5
+Altenburg,Casa e Decoração,Continente Shopping,179.0,1
+Americanas,Eletrodomésticos,Nações Shopping,1277.33,21
+Anacapri,Calçados Femininos,Garten Shopping,285.8,2
+Anacapri,Não informado,Continente Shopping,299.8,1
+Aramis,Moda,Balneário Shopping,799.8,1
+Aramis,Moda,Nações Shopping,179.9,1
+Aramis,Moda,Neumarkt Shopping,1169.9,2
+Arezzo,Calçados,Continente Shopping,2720.22,7
+Arezzo,Calçados,Garten Shopping,2259.41,5
+Arezzo,Calçados,Neumarkt Shopping,6325.4,11
+Arezzo,Calçados Femininos,Balneário Shopping,2519.3999999999996,6
+Arquipélago  Sushi,Gastronomia,Continente Shopping,84.7,1
+Arranjos Express,Serviços,Garten Shopping,70.9,2
+Artwalk,Calçados,Balneário Shopping,619.97,2
+Atacadão,Supermercado,Norte Shopping,14345.61,102
+Audithorium,Moda,Balneário Shopping,299.8,2
+Audithorium,Moda,Garten Shopping,129.8,1
+Audithorium Menswear,Moda,Continente Shopping,307.7,2
 Authentic Feet,Moda,Neumarkt Shopping,699.99,1
-Avatim,Beleza e Bem-estar,Nações Shopping,41.0,1
-Avatim,Beleza e Bem-estar,Neumarkt Shopping,1407.0,5
-Avatim,Beleza e Bem-estar,Norte Shopping,160.0,2
-Bacio di Latte,Gastronomia,Balneário Shopping,481.15,7
-Bacio di Latte,Gastronomia,Continente Shopping,470.0,8
+Avatim,Beleza e Bem-estar,Nações Shopping,271.0,3
+Avatim,Beleza e Bem-estar,Neumarkt Shopping,5845.5,29
+Avatim,Beleza e Bem-estar,Norte Shopping,2530.0,6
+Avatim Cheiros Da Terra,Beleza e Bem-estar,Garten Shopping,791.0,5
+Bacio di Latte,Gastronomia,Balneário Shopping,1811.1000000000001,35
+Bacio di Latte,Gastronomia,Continente Shopping,1781.97,37
 Bagaggio,Presentes e Acessórios,Continente Shopping,599.9,1
-Baummer,Joalheria,Nações Shopping,89.91,1
-Beagle,Moda,Garten Shopping,1179.77,2
-Belshop,Beleza e Bem-estar,Neumarkt Shopping,128.94,1
-Bibi,Infantil,Balneário Shopping,217.8,1
-Bibi Calçados,Calçados,Garten Shopping,854.65,2
+Bagaggio,Presentes e Acessórios,Garten Shopping,649.11,3
+Bagaggio,Presentes e Acessórios,Nações Shopping,1049.6999999999998,3
+Bagaggio,Presentes e Acessórios,Neumarkt Shopping,299.9,1
+Baier Joalheria,Joalheria,Neumarkt Shopping,138.24,1
+Balneário Shopping - Estacionamento,Serviços,Balneário Shopping,545.0,11
+Baummer,Joalheria,Nações Shopping,270.66999999999996,2
+Baummer Semijóias,Presentes e Acessórios,Garten Shopping,152.82,1
+Beagle,Moda,Balneário Shopping,743.89,3
+Beagle,Moda,Garten Shopping,3139.7,6
+Beagle,Moda,Nações Shopping,829.84,2
+Beagle,Moda,Norte Shopping,139.99,1
+BelShop,Beleza e Bem-estar,Nações Shopping,297.22,7
+Belshop,Beleza e Bem-estar,Neumarkt Shopping,1305.01,11
+Bibi,Infantil,Balneário Shopping,364.73,2
+Bibi Calçados,Calçados,Garten Shopping,1054.55,3
+BioMundo Produtos Naturais,Beleza e Bem-estar,Neumarkt Shopping,100.99,3
+Bob's,Gastronomia,Balneário Shopping,131.8,8
+Bob's,Gastronomia,Norte Shopping,75.8,1
 Bob's (Quiosque 2),Gastronomia - Sorvetes,Norte Shopping,43.0,1
-Bom Beef,Gastronomia,Continente Shopping,219.89999999999998,3
-Bonna Panquecas e Massas,Gastronomia,Balneário Shopping,95.0,1
-Borelli Gelato,Gastronomia - Sorvetes,Continente Shopping,66.0,1
-Brasil Cacau,Gastronomia,Continente Shopping,165.98,2
-Burger King,Gastronomia,Balneário Shopping,9.9,1
-Burger King,Gastronomia,Continente Shopping,207.39999999999998,3
-Burger King,Gastronomia,Garten Shopping,83.8,2
-Burger King,Gastronomia,Neumarkt Shopping,215.29999999999998,3
+Bob's - Quiosque,Gastronomia,Nações Shopping,12.0,1
+Bob's Sorvete - Quiosque,Gastronomia,Continente Shopping,386.2,8
+Bom Beef,Gastronomia,Continente Shopping,1559.12,19
+Bonna Panquecas e Massas,Gastronomia,Balneário Shopping,419.0,5
+Borelli,Gastronomia,Balneário Shopping,10.85,1
+Borelli Gelato,Gastronomia - Sorvetes,Continente Shopping,322.0,7
+Boss,Moda,Balneário Shopping,6960.0,3
+Botoclinic,Beleza e Bem-estar,Garten Shopping,1448.85,1
+Bottero,Calçados,Balneário Shopping,379.9,1
+Bottero,Calçados,Neumarkt Shopping,359.9,1
+Brasil Cacau,Gastronomia,Continente Shopping,889.81,17
+Bread Pide,Gastronomia,Balneário Shopping,283.1,4
+Brooksfield,Moda,Balneário Shopping,1999.9,1
+Brooksfield,Moda,Neumarkt Shopping,2758.8,3
+Bull Prime Steak House,Gastronomia,Garten Shopping,1143.17,3
+Burger King,Gastronomia,Balneário Shopping,624.39,15
+Burger King,Gastronomia,Continente Shopping,1752.59,32
+Burger King,Gastronomia,Garten Shopping,302.2,7
+Burger King,Gastronomia,Nações Shopping,149.9,5
+Burger King,Gastronomia,Neumarkt Shopping,1056.3799999999999,27
+Burger King,Gastronomia,Norte Shopping,1241.06,20
 Békko,Moda,Nações Shopping,3534.0,1
-C&A,Moda,Balneário Shopping,1465.86,6
-C&A,Moda,Continente Shopping,459.96000000000004,2
-C&A,Moda,Garten Shopping,1259.9,4
-C&A,Moda,Nações Shopping,1508.87,7
-Cacau Show,Gastronomia,Nações Shopping,704.97,4
-Cacau Show,Gastronomia,Neumarkt Shopping,49.0,2
-Café Cultura,Gastronomia,Balneário Shopping,134.0,3
-Café Cultura,Gastronomia,Continente Shopping,58.0,1
-Café Cultura,Gastronomia,Garten Shopping,124.0,2
-Café Cultura,Gastronomia,Nações Shopping,57.0,1
-Café Cultura,Gastronomia,Neumarkt Shopping,66.0,2
-Camarão Express,Gastronomia,Balneário Shopping,122.0,1
-Camarão Express,Gastronomia,Nações Shopping,114.9,1
-Camicado,Casa e Decoração,Balneário Shopping,109.97,1
-Camicado,Casa e Decoração,Nações Shopping,854.77,1
-Camicado,Casa e Decoração,Neumarkt Shopping,146.95,3
-Cantinho Grill,Gastronomia,Nações Shopping,73.8,1
-Capivalley,Promocional,Continente Shopping,500.0,1
-Cartes - Cozinha do Mundo,Gastronomia,Continente Shopping,409.81,4
-Casa Bauducco,Gastronomia,Garten Shopping,175.0,2
-Casa Maria,Casa e Decoração,Nações Shopping,49.96,1
-Cassol Centerlar,Casa e Decoração,Nações Shopping,339.5,1
-Centauro,Esportes,Balneário Shopping,258.99,2
-Centauro,Esportes,Continente Shopping,1146.91,3
-Centauro,Esportes,Garten Shopping,209.97,1
-Centauro,Esportes,Nações Shopping,111.06,1
-Centauro,Esportes,Neumarkt Shopping,779.95,3
-Centauro,Esportes,Norte Shopping,1634.9,5
-Chiquinho Sorvetes,Gastronomia,Neumarkt Shopping,63.0,3
-Chiquinho Sorvetes,Gastronomia - Sorvetes,Norte Shopping,60.0,2
-Chuá Brand,Moda Feminina,Continente Shopping,5237.9,2
-Cinépolis,Lazer,Continente Shopping,262.0,4
-Cinépolis,Lazer,Norte Shopping,212.0,1
-Clube Melissa,Calçados,Neumarkt Shopping,149.9,1
-Cobasi,Pets,Continente Shopping,553.35,6
-Cobasi,Pets,Garten Shopping,268.2,2
-Cobasi,Pets,Neumarkt Shopping,284.07,2
-Cobasi,Pets,Norte Shopping,299.43,5
-Constance,Calçados,Continente Shopping,219.99,1
+C&A,Moda,Balneário Shopping,8301.31,28
+C&A,Moda,Continente Shopping,9437.91,39
+C&A,Moda,Garten Shopping,6096.91,25
+C&A,Moda,Nações Shopping,8198.26,34
+CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,382.25,8
+CAPA FINA,Telefonia,Garten Shopping,20.0,1
+Cabanas,Moda,Neumarkt Shopping,961.9799999999999,3
+Cacau Show,Gastronomia,Balneário Shopping,2410.92,9
+Cacau Show,Gastronomia,Nações Shopping,2317.35,21
+Cacau Show,Gastronomia,Neumarkt Shopping,778.63,20
+Cacau Show,Gastronomia,Norte Shopping,1023.67,10
+Café Cultura,Gastronomia,Balneário Shopping,621.4,15
+Café Cultura,Gastronomia,Continente Shopping,398.0,6
+Café Cultura,Gastronomia,Garten Shopping,699.01,12
+Café Cultura,Gastronomia,Nações Shopping,775.0,12
+Café Cultura,Gastronomia,Neumarkt Shopping,1234.0,27
+Calvin Klein,Moda,Garten Shopping,1759.1,2
+Calvin Klein e Tommy Hilfiger,Moda,Nações Shopping,4035.0,1
+Calzedonia,Moda Feminina,Neumarkt Shopping,192.9,1
+Camarão Express,Gastronomia,Balneário Shopping,953.8,8
+Camarão Express,Gastronomia,Continente Shopping,234.20999999999998,5
+Camarão Express,Gastronomia,Nações Shopping,709.3,7
+Camarão Express,Gastronomia,Neumarkt Shopping,459.8,7
+Camicado,Casa e Decoração,Balneário Shopping,1823.7400000000002,7
+Camicado,Casa e Decoração,Nações Shopping,1296.68,4
+Camicado,Casa e Decoração,Neumarkt Shopping,2006.28,13
+Cantinho Grill,Gastronomia,Nações Shopping,611.8,8
+Capivalley,Promocional,Continente Shopping,1500.0,3
+Carioca Calçados,Calçados,Continente Shopping,1129.94,5
+Carter's,Infantil,Garten Shopping,1519.83,4
+Carter's,Infantil,Neumarkt Shopping,2811.91,7
+Carter´s,Infantil,Balneário Shopping,1085.92,3
+Cartes - Cozinha do Mundo,Gastronomia,Continente Shopping,1833.22,22
+Casa Bauducco,Gastronomia,Balneário Shopping,1236.33,25
+Casa Bauducco,Gastronomia,Garten Shopping,430.1,5
+Casa Maria,Casa e Decoração,Continente Shopping,399.74,8
+Casa Maria,Casa e Decoração,Nações Shopping,520.84,6
+Casas Bahia,Eletrodomésticos,Norte Shopping,1819.0,3
+Cassol Centerlar,Casa e Decoração,Nações Shopping,893.99,5
+Cavezzale,Presentes e Acessórios,Neumarkt Shopping,1749.5,2
+Celulares e Cia.,Eletrônicos,Norte Shopping,530.0,2
+Centauro,Esportes,Balneário Shopping,3444.75,13
+Centauro,Esportes,Continente Shopping,6134.71,18
+Centauro,Esportes,Garten Shopping,5173.8,12
+Centauro,Esportes,Nações Shopping,2611.93,10
+Centauro,Esportes,Neumarkt Shopping,6409.47,20
+Centauro,Esportes,Norte Shopping,2816.55,10
+Chilli Beans,Ótica,Neumarkt Shopping,863.88,1
+Chiquinho Sorvetes,Gastronomia,Neumarkt Shopping,299.0,16
+Chiquinho Sorvetes,Gastronomia - Sorvetes,Continente Shopping,74.0,3
+Chiquinho Sorvetes,Gastronomia - Sorvetes,Garten Shopping,63.0,4
+Chiquinho Sorvetes,Gastronomia - Sorvetes,Norte Shopping,110.0,4
+Chuá Brand,Moda,Garten Shopping,579.9,1
+Chuá Brand,Moda Feminina,Continente Shopping,5692.7,3
+Cia do Homem,Moda,Neumarkt Shopping,1.43,1
+Cinépolis,Lazer,Continente Shopping,433.9,9
+Cinépolis,Lazer,Norte Shopping,330.0,2
+Claro,Telefonia,Continente Shopping,10097.0,3
+Clifield,Moda,Balneário Shopping,209.4,1
+Clifield,Moda,Continente Shopping,2422.0,2
+Clube Melissa,Calçados,Balneário Shopping,220.8,1
+Clube Melissa,Calçados,Neumarkt Shopping,599.6999999999999,3
+Coach,Moda Feminina,Balneário Shopping,3038.1,1
+Cobasi,Pets,Continente Shopping,4480.21,36
+Cobasi,Pets,Garten Shopping,1019.05,8
+Cobasi,Pets,Nações Shopping,1291.62,14
+Cobasi,Pets,Neumarkt Shopping,4024.68,23
+Cobasi,Pets,Norte Shopping,1861.66,21
+Colcci,Moda,Nações Shopping,1497.0,3
+Coliseu,Joalheria,Balneário Shopping,7426.4,3
+Conecta Store,Não informado,Garten Shopping,7839.1,1
+Constance,Calçados,Continente Shopping,299.98,2
+Continente Shopping - Estacionamento,Serviços,Continente Shopping,124.0,5
+Cores em Cacau,Gastronomia,Balneário Shopping,15.2,1
+Cotton On,Moda,Continente Shopping,793.65,3
+Cotton:on,Moda,Balneário Shopping,1616.08,4
+Creamy Skin Care,Beleza e Bem-estar,Balneário Shopping,267.43,1
+Crepefy,Gastronomia,Neumarkt Shopping,39.98,1
 Criamigos,Infantil,Balneário Shopping,119.8,1
-De Ville Gourmet,Gastronomia,Balneário Shopping,123.05,2
-Decathlon,Esportes,Continente Shopping,1382.6000000000001,5
-Democrata,Calçados,Continente Shopping,99.95,1
-Democrata,Calçados,Garten Shopping,799.8,1
-Docejo,Gastronomia,Continente Shopping,144.8,3
-Dona Torta,Gastronomia,Garten Shopping,716.5,8
-Dudalina,Moda,Nações Shopping,249.0,1
-Due Sapori,Gastronomia,Neumarkt Shopping,134.75,1
+Crocs,Calçados,Nações Shopping,1872.3,3
+Crocs,Calçados,Neumarkt Shopping,340.0,1
+Damyller,Moda,Garten Shopping,449.0,1
+Damyller,Moda,Nações Shopping,429.0,1
+Damyller,Moda,Neumarkt Shopping,5529.38,6
+Daniela Tombini,Moda,Neumarkt Shopping,2291.2,4
+De Ville Gourmet,Gastronomia,Balneário Shopping,684.54,8
+Decathlon,Esportes,Continente Shopping,4727.16,29
+Democrata,Calçados,Balneário Shopping,99.95,1
+Democrata,Calçados,Continente Shopping,1029.6499999999999,5
+Democrata,Calçados,Garten Shopping,1429.6,3
+Democrata,Calçados,Neumarkt Shopping,749.8,2
+Dez Pastéis,Gastronomia,Nações Shopping,96.7,2
+Diesel,Moda,Balneário Shopping,4144.0,1
+Divino Fogão,Gastronomia,Balneário Shopping,156.7,3
+Divino Fogão,Gastronomia,Continente Shopping,124.8,2
+Divino Fogão,Gastronomia,Garten Shopping,30.0,1
+Divino Fogão,Gastronomia,Neumarkt Shopping,679.91,13
+Docejo,Gastronomia,Continente Shopping,1291.6,24
+Dona Torta,Gastronomia,Garten Shopping,2272.25,40
+Donna Mirô,Gastronomia,Nações Shopping,347.78000000000003,4
+Dress To,Moda Feminina,Balneário Shopping,612.89,1
+Dudalina,Moda,Nações Shopping,1549.0,2
+Due Sapori,Gastronomia,Neumarkt Shopping,861.57,13
 Duladu,Gastronomia,Balneário Shopping,115.2,1
+Empório DUHomem,Moda,Neumarkt Shopping,1126.8,2
+Empório Du Homem,Moda,Continente Shopping,4.0,1
 Empório Du Homem,Moda,Nações Shopping,2164.0,1
-Empório DuHomem,Moda,Norte Shopping,219.9,1
-Estação Choperia,Gastronomia,Neumarkt Shopping,98.0,1
-Express Grill,Gastronomia,Norte Shopping,86.47,2
-Farm,Moda Feminina,Garten Shopping,351.2,1
-Farm,Moda Feminina,Neumarkt Shopping,187.53,1
-Feng Cheng,Gastronomia,Neumarkt Shopping,205.34,2
-Fini,Gastronomia,Continente Shopping,14.31,1
-Freddo,Gastronomia,Neumarkt Shopping,138.0,3
+Empório DuHomem,Moda,Norte Shopping,3485.8999999999996,10
+Estação Choperia,Gastronomia,Neumarkt Shopping,497.59999999999997,9
+Estação Choperia,Gastronomia,Norte Shopping,116.5,4
+Estrela Beauty,Infantil,Balneário Shopping,49.0,1
+Express Grill,Gastronomia,Norte Shopping,275.94,10
+Express Grill,Gastronomia - Restaurante,Garten Shopping,490.38,12
+FARM Rio,Moda,Continente Shopping,835.0,2
+Farm,Moda,Balneário Shopping,1420.0,3
+Farm,Moda,Nações Shopping,1491.56,3
+Farm,Moda Feminina,Garten Shopping,2882.98,5
+Farm,Moda Feminina,Neumarkt Shopping,581.83,3
+Feng Cheng,Gastronomia,Garten Shopping,1610.92,31
+Feng Cheng,Gastronomia,Neumarkt Shopping,2175.94,27
+Feng Cheng,Gastronomia,Norte Shopping,391.96,6
+Figueira Store,Esportes,Continente Shopping,319.98,2
+Fini,Gastronomia,Continente Shopping,24.310000000000002,2
+Forneria Carbone,Gastronomia,Continente Shopping,641.5799999999999,2
+Freddo,Gastronomia,Balneário Shopping,59.8,1
+Freddo,Gastronomia,Garten Shopping,245.0,5
+Freddo,Gastronomia,Neumarkt Shopping,1083.0,29
 Fátima Bebê,Infantil,Nações Shopping,389.0,1
-Fátima Criança,Infantil,Nações Shopping,49.0,1
-Fátima Esportes,Esportes,Nações Shopping,349.0,1
-Gamelas & Panella´s,Gastronomia,Balneário Shopping,470.53999999999996,6
-Gelato Borelli,Gastronomia,Neumarkt Shopping,217.5,7
-Gelato Borelli,Gastronomia - Sorvetes,Garten Shopping,127.5,2
-Giraffa's,Gastronomia,Balneário Shopping,52.4,2
-Giraffas,Gastronomia,Continente Shopping,204.9,2
-Gnc Balneario,Lazer,Balneário Shopping,35.0,1
-Gondolier,Gastronomia,Neumarkt Shopping,456.0,5
-Granado,Beleza e Bem-estar,Balneário Shopping,169.0,1
-Havaianas,Calçados,Garten Shopping,49.99,1
-Havan,Casa e Decoração,Garten Shopping,2556.53,10
-Havan,Casa e Decoração,Neumarkt Shopping,1795.59,6
-Havan,Casa e Decoração,Norte Shopping,1563.59,9
-Havanna Café,Gastronomia,Balneário Shopping,38.1,1
-Hering,Moda,Garten Shopping,125.98,1
-Hering Store,Moda,Neumarkt Shopping,69.99,1
-Hope,Moda,Continente Shopping,104.0,1
-Hope,Moda,Neumarkt Shopping,139.23,1
-Hope Nacoes Shopping,Outros,Nações Shopping,243.0,2
-Idéli Oui,Beleza e Bem-estar,Garten Shopping,99.0,1
-Idéli.Oui,Beleza e Bem-estar,Neumarkt Shopping,698.0,2
-Idéli.oui,Beleza e Bem-estar,Norte Shopping,66.0,1
-Intimissimi,Moda Feminina,Neumarkt Shopping,279.0,1
-JCanedo,Moda,Neumarkt Shopping,1695.9,1
-Jah Açaí,Gastronomia,Balneário Shopping,11.53,2
+Fátima Criança,Infantil,Nações Shopping,178.0,2
+Fátima Esportes,Esportes,Nações Shopping,998.0,2
+Fátima Papelaria,Papelaria,Nações Shopping,182.0,3
+GNC Cinemas,Lazer,Neumarkt Shopping,319.0,6
+Game Mania,Eletrônicos,Neumarkt Shopping,4799.0,1
+Gamelas & Panella's,Gastronomia,Continente Shopping,747.8199999999999,13
+Gamelas & Panella´s,Gastronomia,Balneário Shopping,997.25,13
+Gelato Borelli,Gastronomia,Neumarkt Shopping,772.5,19
+Gelato Borelli,Gastronomia - Sorvetes,Garten Shopping,605.72,9
+General Lyy,Moda,Garten Shopping,632.9,3
+General Lyy,Moda,Neumarkt Shopping,234.0,3
+Gio Gelato Sorveteria Italiana Artesanal,Não informado,Nações Shopping,43.9,1
+Giraffa's,Gastronomia,Balneário Shopping,1052.5,25
+Giraffas,Gastronomia,Continente Shopping,2057.68,47
+Gnc Balneario,Lazer,Balneário Shopping,293.0,5
+Gnc Cinemas,Lazer,Nações Shopping,165.0,3
+Gnc Joinville Garten,Lazer,Garten Shopping,49.0,2
+Goldko,Gastronomia,Continente Shopping,59.040000000000006,2
+Gondolier,Gastronomia,Neumarkt Shopping,2138.0,30
+Granado,Beleza e Bem-estar,Balneário Shopping,902.0,6
+Granado Phamácias,Farmácias,Garten Shopping,1323.1,12
+Grandvision by Fototica,Ótica,Balneário Shopping,4746.0,2
+Grano Pasta Ristorante,Gastronomia,Garten Shopping,52.0,1
+Griletto,Gastronomia,Continente Shopping,216.0,9
+Griletto,Gastronomia,Nações Shopping,171.1,3
+Griletto,Gastronomia - Restaurante,Garten Shopping,52.3,2
+Havaianas,Calçados,Balneário Shopping,657.87,7
+Havaianas,Calçados,Garten Shopping,114.97999999999999,2
+Havaianas,Calçados,Nações Shopping,49.0,1
+Havan,Casa e Decoração,Garten Shopping,6153.12,27
+Havan,Casa e Decoração,Neumarkt Shopping,11292.47,60
+Havan,Casa e Decoração,Norte Shopping,11532.49,44
+Havanna Café,Gastronomia,Balneário Shopping,155.5,3
+Hering,Moda,Garten Shopping,3134.77,13
+Hering,Moda,Norte Shopping,319.96,2
+Hering Store,Moda,Balneário Shopping,1209.0,3
+Hering Store,Moda,Continente Shopping,2806.95,5
+Hering Store,Moda,Neumarkt Shopping,3028.82,14
+Hope,Moda,Balneário Shopping,813.1,3
+Hope,Moda,Continente Shopping,1767.0,6
+Hope,Moda,Neumarkt Shopping,4064.05,13
+Hope Nacoes Shopping,Outros,Nações Shopping,891.0,4
+Hot Dog Du Piru,Gastronomia,Continente Shopping,369.94,9
+IDéli oui,Beleza e Bem-estar,Continente Shopping,2790.71,9
+Idéli Oui,Beleza e Bem-estar,Garten Shopping,198.0,2
+Idéli.Oui,Beleza e Bem-estar,Neumarkt Shopping,6064.1,10
+Idéli.oui,Beleza e Bem-estar,Norte Shopping,847.89,5
+Intimissimi,Moda,Balneário Shopping,1702.13,4
+Intimissimi,Moda Feminina,Neumarkt Shopping,4838.83,8
+JAH Açaí,Gastronomia,Nações Shopping,102.67999999999999,4
+JBay,Moda,Continente Shopping,94.9,1
+JCanedo,Moda,Garten Shopping,3298.95,5
+JCanedo,Moda,Neumarkt Shopping,3131.78,4
+Jah Açaí,Gastronomia,Balneário Shopping,29.11,4
+Jah Açaí Joinville,Gastronomia - Sorvetes,Garten Shopping,107.49000000000001,3
 Jah do Açaí,Gastronomia,Continente Shopping,73.35,1
-KFC,Fast Food,Norte Shopping,130.5,3
-KFC,Gastronomia,Balneário Shopping,463.2,4
-KFC,Gastronomia,Garten Shopping,173.0,3
-Kalunga,Papelaria,Continente Shopping,67.0,4
-Kalunga,Papelaria,Garten Shopping,523.09,8
-Kalunga,Papelaria,Neumarkt Shopping,1723.3700000000001,12
-Kfc,Gastronomia,Neumarkt Shopping,225.29999999999998,5
-Kings  Sneakers,Calçados,Continente Shopping,166.61,1
-Kipling,Presentes e Acessórios,Balneário Shopping,999.0,1
-Kombina Felice,Gastronomia - Restaurante,Neumarkt Shopping,341.0,1
-Kopenhagen,Gastronomia,Balneário Shopping,97.30000000000001,3
-Kopenhagen,Gastronomia,Continente Shopping,20.7,1
+John John,Moda,Continente Shopping,762.2,1
+KFC,Fast Food,Norte Shopping,1250.3,25
+KFC,Gastronomia,Balneário Shopping,2090.5,31
+KFC,Gastronomia,Garten Shopping,1162.39,20
+Kalunga,Papelaria,Continente Shopping,2737.94,42
+Kalunga,Papelaria,Garten Shopping,2543.19,27
+Kalunga,Papelaria,Neumarkt Shopping,5091.64,54
+Kfc,Gastronomia,Neumarkt Shopping,1762.6,34
+Kib´s,Kids,Garten Shopping,165.91,3
+Kings  Sneakers,Calçados,Continente Shopping,516.56,2
+Kings Sneakers,Calçados,Neumarkt Shopping,749.9,1
+Kipling,Presentes e Acessórios,Balneário Shopping,2737.0,3
+Kombina Felice,Gastronomia - Restaurante,Neumarkt Shopping,1060.3600000000001,4
+Kopenhagen,Gastronomia,Balneário Shopping,305.9,10
+Kopenhagen,Gastronomia,Continente Shopping,520.9399999999999,8
+Kopenhagen,Gastronomia,Neumarkt Shopping,1985.3799999999999,47
+Kopenhagen,Não informado,Nações Shopping,133.6,2
+Kulkes,Joalheria,Balneário Shopping,28000.0,1
+L'Occitane En Provence,Beleza e Bem-estar,Balneário Shopping,343.29,1
+L'occitane Au Brasil,Beleza e Bem-estar,Garten Shopping,157.7,1
+L'occitane Bresil,Beleza e Bem-estar,Balneário Shopping,378.23,2
+L'occitane au Brésil,Beleza e Bem-estar,Continente Shopping,2208.5,4
+LAtte Art Coffee Cafeteria,Gastronomia,Neumarkt Shopping,35.0,1
+LIVE!,Moda,Neumarkt Shopping,3947.3,7
 La Dullie,Gastronomia,Norte Shopping,65.0,2
-Las Leñas Parrilla Uruguaya,Gastronomia,Nações Shopping,253.0,1
-Lego,Infantil,Balneário Shopping,271.59,1
-Leo Cosméticos,Beleza e Bem-estar,Garten Shopping,416.94,6
-Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,574.44,8
-Levi's,Moda,Balneário Shopping,449.9,1
-Life by Vivara,Joalheria,Neumarkt Shopping,1.79,1
-Lindt,Gastronomia,Balneário Shopping,9.63,2
-Lindt,Gastronomia,Neumarkt Shopping,488.6,2
-Liquori Caffè Gourmet,Gastronomia,Balneário Shopping,50.0,1
-Live!,Moda,Balneário Shopping,203.95,1
-Livraria Catarinense,Livrarias,Nações Shopping,239.10000000000002,2
-Livrarias Catarinense,Livrarias,Balneário Shopping,1019.9000000000001,8
-Livrarias Catarinense,Livrarias,Continente Shopping,286.69,4
-Livrarias Catarinense,Livrarias,Neumarkt Shopping,1169.48,15
-Livrarias Catarinense,Livrarias,Norte Shopping,569.0,6
-Livrarias Curitiba,Livrarias,Garten Shopping,328.3,4
-Lofty style,Moda Feminina,Balneário Shopping,1449.0,1
-Lojas Americanas,Eletrodomésticos,Continente Shopping,349.54,6
-Lojas Americanas,Eletrodomésticos,Neumarkt Shopping,37.73,2
-Lojas Americanas,Eletrodomésticos,Norte Shopping,1019.75,8
-Lojas Americanas,Supermercado,Balneário Shopping,4.98,1
-Lupo,Moda,Balneário Shopping,75.0,1
-Lupo,Moda,Continente Shopping,426.3,1
-Lupo,Moda,Garten Shopping,303.1,1
-Lupo,Moda,Nações Shopping,94.0,1
-Luz da Lua,Calçados,Neumarkt Shopping,3028.9,2
-Madero,Gastronomia,Continente Shopping,588.1800000000001,3
-Madero,Gastronomia,Garten Shopping,283.8,1
-Madero,Gastronomia,Neumarkt Shopping,908.15,5
-Magazine Luiza,Eletrodomésticos,Continente Shopping,1.87,1
-Magazine Luiza,Eletrodomésticos,Garten Shopping,6.49,2
-Magic Feet,Moda,Balneário Shopping,409.0,1
-Makenji,Moda,Garten Shopping,4924.0,1
-Mamma Mia Express,Gastronomia,Neumarkt Shopping,60.0,1
-Mc Donalds,Gastronomia,Norte Shopping,32.9,2
-McDonald's,Gastronomia,Balneário Shopping,43.8,2
-McDonald's,Gastronomia,Continente Shopping,227.4,3
-McDonald's,Gastronomia,Garten Shopping,78.3,3
-McDonald's,Gastronomia,Nações Shopping,122.3,3
-McDonald's,Gastronomia,Neumarkt Shopping,265.2,6
-Mcdonald´s Quiosque,Gastronomia,Garten Shopping,18.5,1
-Me Linda,Farmácias,Nações Shopping,282.0,3
-Me.Linda,Beleza e Bem-estar,Neumarkt Shopping,116.0,3
-MeLinda,Calçados Femininos,Balneário Shopping,279.0,3
-Metroville,Gastronomia,Balneário Shopping,98.0,1
-Mini Kalzone,Gastronomia,Continente Shopping,96.0,4
-Mini Kalzone,Gastronomia,Garten Shopping,99.5,3
-Mini Kalzone,Gastronomia,Nações Shopping,142.7,7
-Mini Kalzone,Gastronomia,Neumarkt Shopping,139.2,8
-Mini Kalzone,Gastronomia,Norte Shopping,218.6,6
+Laci Baruffi,Presentes e Acessórios,Neumarkt Shopping,1493.0,3
+Lança Perfume,Moda,Nações Shopping,2320.0,2
+Las Leñas Parrilla Uruguaya,Gastronomia,Nações Shopping,7829.5,26
+Le Creuset,Casa e Decoração,Balneário Shopping,1600.6,3
+Le Lis,Moda,Neumarkt Shopping,9677.0,7
+Le Lis Blanc,Moda,Garten Shopping,379.70000000000005,2
+Le Postiche,Presentes e Acessórios,Continente Shopping,108.0,2
+Lego,Infantil,Balneário Shopping,5561.52,6
+Leo Cosméticos,Beleza e Bem-estar,Garten Shopping,1557.08,26
+Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,1459.99,23
+Levi's,Moda,Balneário Shopping,979.8,2
+Levi's,Moda,Garten Shopping,3833.8,3
+Life Vivara,Joalheria,Balneário Shopping,1740.0,3
+Life Vivara,Joalheria,Continente Shopping,291.84,2
+Life Vivara,Joalheria,Garten Shopping,2426.0,4
+Life by Vivara,Joalheria,Neumarkt Shopping,1513.8400000000001,6
+Lindt,Gastronomia,Balneário Shopping,1563.01,13
+Lindt,Gastronomia,Garten Shopping,716.26,8
+Lindt,Gastronomia,Neumarkt Shopping,2735.7000000000003,21
+Liquori Caffè Gourmet,Gastronomia,Balneário Shopping,278.0,4
+Live!,Moda,Balneário Shopping,3748.4900000000002,6
+Live!,Moda,Garten Shopping,899.6,2
+Live!,Moda,Nações Shopping,2019.0,3
+Live!,Moda Feminina,Continente Shopping,1524.3,3
+Livraria Catarinense,Livrarias,Nações Shopping,2065.9,23
+Livrarias Catarinense,Livrarias,Balneário Shopping,3385.6800000000003,37
+Livrarias Catarinense,Livrarias,Continente Shopping,2553.29,40
+Livrarias Catarinense,Livrarias,Neumarkt Shopping,5069.57,59
+Livrarias Catarinense,Livrarias,Norte Shopping,1318.3,12
+Livrarias Curitiba,Livrarias,Garten Shopping,1622.4,21
+Lofty style,Moda Feminina,Balneário Shopping,2305.35,3
+Lojas Americanas,Eletrodomésticos,Continente Shopping,3819.08,86
+Lojas Americanas,Eletrodomésticos,Neumarkt Shopping,2992.23,71
+Lojas Americanas,Eletrodomésticos,Norte Shopping,2472.1,41
+Lojas Americanas,Supermercado,Balneário Shopping,1064.8,37
+Loungerie,Moda,Balneário Shopping,135.66,1
+Lua Luá,Moda,Balneário Shopping,529.3,2
+Lua Luá,Moda,Continente Shopping,367.0,2
+Lug's,Gastronomia,Nações Shopping,358.72999999999996,6
+Lupo,Moda,Balneário Shopping,926.7,7
+Lupo,Moda,Continente Shopping,637.6,3
+Lupo,Moda,Garten Shopping,1540.8,5
+Lupo,Moda,Nações Shopping,1262.0,5
+Lupo,Moda,Neumarkt Shopping,460.40000000000003,4
+Luz da Lua,Calçados,Neumarkt Shopping,10866.0,9
+Luz da Lua,Não informado,Continente Shopping,699.9,1
+MB Acessórios,Presentes e Acessórios,Neumarkt Shopping,352.6,5
+MB acessórios,Presentes e Acessórios,Balneário Shopping,303.7,1
+Madero,Gastronomia,Balneário Shopping,2613.9,16
+Madero,Gastronomia,Continente Shopping,1488.71,9
+Madero,Gastronomia,Garten Shopping,2678.53,16
+Madero,Gastronomia,Neumarkt Shopping,9361.47,54
+Magazine Luiza,Eletrodomésticos,Balneário Shopping,2114.0,1
+Magazine Luiza,Eletrodomésticos,Continente Shopping,7798.9,4
+Magazine Luiza,Eletrodomésticos,Garten Shopping,8863.0,3
+Magazine Luiza,Eletrodomésticos,Norte Shopping,10229.58,5
+Magic Feet,Moda,Balneário Shopping,900.96,3
+Makenji,Moda,Garten Shopping,6515.88,4
+Mamma Mia,Gastronomia,Garten Shopping,1168.88,6
+Mamma Mia Express,Gastronomia,Neumarkt Shopping,1547.0,26
+Manly,Moda Feminina,Garten Shopping,439.51,2
+Mar de Maria,Moda,Nações Shopping,245.0,3
+Maria Dolores,Joalheria,Balneário Shopping,480.0,1
+Maze Vale Comercio LTDA,Moda,Continente Shopping,2511.87,3
+Mc Donalds,Gastronomia,Norte Shopping,715.1,13
+McDonald's,Gastronomia,Balneário Shopping,1418.6,26
+McDonald's,Gastronomia,Continente Shopping,1591.91,27
+McDonald's,Gastronomia,Garten Shopping,1427.0,30
+McDonald's,Gastronomia,Nações Shopping,746.6,22
+McDonald's,Gastronomia,Neumarkt Shopping,3425.72,72
+McDonald´s Quiosque,Gastronomia,Neumarkt Shopping,12.0,1
+Mcdonald´s Quiosque,Gastronomia,Garten Shopping,42.1,3
+Me Blue,Presentes e Acessórios,Continente Shopping,482.3,4
+Me Linda,Farmácias,Nações Shopping,2041.27,31
+Me.Linda,Beleza e Bem-estar,Continente Shopping,1477.24,13
+Me.Linda,Beleza e Bem-estar,Neumarkt Shopping,3530.31,34
+MeLinda,Calçados Femininos,Balneário Shopping,371.9,6
+Melissa,Calçados,Continente Shopping,749.6999999999999,2
+Metroville,Gastronomia,Balneário Shopping,457.0,10
+Metroville Prime Grill,Gastronomia,Garten Shopping,467.87,10
+Milky Moo,Gastronomia,Continente Shopping,87.0,2
+Milky Moo,Gastronomia,Norte Shopping,47.0,1
+Milkymoo,Gastronomia - Sorvetes,Nações Shopping,24.0,1
+Milon,Infantil,Balneário Shopping,706.6,2
+Mini Kalzone,Gastronomia,Balneário Shopping,540.8,24
+Mini Kalzone,Gastronomia,Continente Shopping,1176.6,55
+Mini Kalzone,Gastronomia,Garten Shopping,722.2,26
+Mini Kalzone,Gastronomia,Nações Shopping,782.36,33
+Mini Kalzone,Gastronomia,Neumarkt Shopping,2007.9,92
+Mini Kalzone,Gastronomia,Norte Shopping,1230.8,49
+Miniso,Presentes e Acessórios,Balneário Shopping,232.88,3
+Montana Grill,Gastronomia,Balneário Shopping,784.5799999999999,16
+Montana Grill,Gastronomia,Continente Shopping,721.7,14
+Montana Grill,Gastronomia,Garten Shopping,146.6,4
 Monviso,Ótica,Continente Shopping,1520.0,1
-Morana Acessórios,Presentes e Acessórios,Garten Shopping,366.02,2
-Mr. Cheff,Gastronomia,Continente Shopping,162.0,3
-Narbona Brasil,Gastronomia,Continente Shopping,343.84,1
-Natura,Beleza e Bem-estar,Balneário Shopping,512.4,3
-Natura,Beleza e Bem-estar,Neumarkt Shopping,59.9,1
-Natura,Beleza e Bem-estar,Norte Shopping,10.0,1
-Neumarkt Shopping - Estacionamento,Serviços,Neumarkt Shopping,84.0,4
-New Era,Moda,Continente Shopping,319.9,1
-Nike Unite,Moda,Continente Shopping,2558.96,4
-O Boticário,Beleza e Bem-estar,Balneário Shopping,478.0,5
-O Boticário,Beleza e Bem-estar,Continente Shopping,183.0,2
-O Boticário,Beleza e Bem-estar,Garten Shopping,462.9,4
-O Boticário,Beleza e Bem-estar,Norte Shopping,189.9,1
-Officina Gelatiera,Gastronomia,Nações Shopping,119.8,1
-Orientali,Gastronomia,Continente Shopping,251.31,2
-Orientali,Gastronomia,Neumarkt Shopping,97.28999999999999,2
-Outback SteakHouse,Gastronomia,Nações Shopping,97.83,1
-Outback Steakhouse,Gastronomia,Balneário Shopping,512.4,2
-Outback Steakhouse,Gastronomia,Continente Shopping,749.95,2
-Outback Steakhouse,Gastronomia,Garten Shopping,539.34,2
-Outback Steakhouse,Gastronomia,Neumarkt Shopping,955.02,2
-Panvel Farmácias,Farmácias,Balneário Shopping,304.68,6
-Panvel Farmácias,Farmácias,Continente Shopping,558.21,4
-Panvel Farmácias,Farmácias,Garten Shopping,216.62,2
-Panvel Farmácias,Farmácias,Nações Shopping,68.7,3
-Panvel Farmácias,Farmácias,Neumarkt Shopping,159.78,2
-Panvel Farmácias,Farmácias,Norte Shopping,508.90999999999997,4
-Paquetá Esportes,Esportes,Balneário Shopping,499.99,1
-Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,696.21,1
-Pernambucanas,Moda,Continente Shopping,1053.8,4
+Morana,Presentes e Acessórios,Balneário Shopping,284.6,1
+Morana,Presentes e Acessórios,Continente Shopping,479.40000000000003,4
+Morana Acessórios,Presentes e Acessórios,Garten Shopping,1135.02,8
+Mr. Cat,Calçados,Continente Shopping,739.7,1
+Mr. Cheff,Gastronomia,Balneário Shopping,29.99,1
+Mr. Cheff,Gastronomia,Continente Shopping,839.95,22
+Mr. Cheff,Gastronomia,Norte Shopping,337.88,7
+Mânoa Acessórios,Presentes e Acessórios,Balneário Shopping,225.0,5
+NOHA SHOES,Calçados,Garten Shopping,270.0,1
+Narbona Brasil,Gastronomia,Continente Shopping,746.64,2
+Natura,Beleza e Bem-estar,Balneário Shopping,1065.73,8
+Natura,Beleza e Bem-estar,Continente Shopping,820.8399999999999,9
+Natura,Beleza e Bem-estar,Garten Shopping,268.49,3
+Natura,Beleza e Bem-estar,Nações Shopping,286.22,4
+Natura,Beleza e Bem-estar,Neumarkt Shopping,1812.92,13
+Natura,Beleza e Bem-estar,Norte Shopping,1099.76,7
+Neumarkt Shopping - Estacionamento,Serviços,Neumarkt Shopping,316.0,15
+New Era,Moda,Continente Shopping,549.8,2
+Nike Unite,Moda,Continente Shopping,11526.77,22
+Noha Shoes,Moda,Balneário Shopping,1167.0,1
+Nutty Bavarian,Gastronomia,Balneário Shopping,26.0,1
+Nutty Bavarian,Gastronomia,Garten Shopping,139.0,1
+O Boticário,Beleza e Bem-estar,Balneário Shopping,1649.34,17
+O Boticário,Beleza e Bem-estar,Continente Shopping,1649.3600000000001,20
+O Boticário,Beleza e Bem-estar,Garten Shopping,950.48,12
+O Boticário,Beleza e Bem-estar,Nações Shopping,3245.81,14
+O Boticário,Beleza e Bem-estar,Neumarkt Shopping,126.61,2
+O Boticário,Beleza e Bem-estar,Norte Shopping,776.03,6
+Officina Do Celular,Eletrônicos,Garten Shopping,294.9,2
+Officina Gelatiera,Gastronomia,Nações Shopping,199.7,3
+Ophicina,Moda,Continente Shopping,1199.0,1
+Ophicina,Moda,Neumarkt Shopping,419.0,1
+Orientali,Gastronomia,Continente Shopping,373.23,3
+Orientali,Gastronomia,Neumarkt Shopping,447.04,9
+Orientali,Gastronomia,Norte Shopping,401.62,9
+Oticas Carol,Não informado,Garten Shopping,5400.0,1
+Outback SteakHouse,Gastronomia,Nações Shopping,769.8800000000001,2
+Outback Steakhouse,Gastronomia,Balneário Shopping,3298.17,14
+Outback Steakhouse,Gastronomia,Continente Shopping,2062.77,11
+Outback Steakhouse,Gastronomia,Garten Shopping,1541.76,8
+Outback Steakhouse,Gastronomia,Neumarkt Shopping,5105.83,20
+Outlet Suplementos,Esportes,Continente Shopping,299.08000000000004,2
+Padrão,Moda,Balneário Shopping,599.9,1
+Padrão,Moda,Garten Shopping,2105.0,1
+Paladare Di Italia,Gastronomia,Balneário Shopping,1373.0,11
+Pampile,Infantil,Balneário Shopping,899.48,2
+Panda Café & Chá Mix,Gastronomia,Nações Shopping,62.6,2
+Panda Sushi,Gastronomia,Nações Shopping,66.44,2
+Panvel Farmácias,Farmácias,Balneário Shopping,1530.17,21
+Panvel Farmácias,Farmácias,Continente Shopping,5064.38,55
+Panvel Farmácias,Farmácias,Garten Shopping,1955.65,27
+Panvel Farmácias,Farmácias,Nações Shopping,1454.83,16
+Panvel Farmácias,Farmácias,Neumarkt Shopping,3593.8,39
+Panvel Farmácias,Farmácias,Norte Shopping,1880.31,25
+Paquetá,Esportes,Neumarkt Shopping,229.98000000000002,2
+Paquetá,Esportes,Norte Shopping,499.98,1
+Paquetá Esportes,Esportes,Balneário Shopping,919.98,2
+Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,4903.63,17
+Paula Torres,Calçados Femininos,Balneário Shopping,2311.0,1
+Pecorino,Gastronomia,Balneário Shopping,133.34,1
+Pegada,Calçados,Balneário Shopping,309.99,1
+Pegada,Calçados,Neumarkt Shopping,459.0,1
+Pernambucanas,Moda,Continente Shopping,2442.54,14
 Piastrini Joinville - Optica Machota,Ótica e Joalheria,Garten Shopping,859.0,1
-Pittol,Calçados,Garten Shopping,1270.98,5
-Pittol,Calçados,Nações Shopping,69.0,1
-Pittol,Calçados,Norte Shopping,480.99,5
-Polo Wear,Moda,Garten Shopping,10.0,1
-Portus Padaria Artesanal,Gastronomia,Neumarkt Shopping,36.0,1
-Pratafina,Presentes e Acessórios,Garten Shopping,95.0,1
-Pratafina,Presentes e Acessórios,Neumarkt Shopping,205.0,2
-Puket,Moda,Balneário Shopping,49.9,1
+Pingu Brinquedos,Infantil,Neumarkt Shopping,119.9,1
+Pittol,Calçados,Garten Shopping,3456.91,12
+Pittol,Calçados,Nações Shopping,1086.98,5
+Pittol,Calçados,Norte Shopping,7877.63,24
+Pizza Hut,Gastronomia,Balneário Shopping,275.0,6
+Pizza Hut,Gastronomia,Neumarkt Shopping,432.40000000000003,6
+Plié,Moda,Balneário Shopping,149.9,1
+Plié,Moda,Garten Shopping,1039.6999999999998,2
+Polo Wear,Moda,Continente Shopping,449.97,5
+Polo Wear,Moda,Garten Shopping,328.71999999999997,4
+Polo Wear,Moda,Norte Shopping,69.97,2
+Pop Me,Moda,Continente Shopping,1136.8,8
+Pop Me,Moda,Garten Shopping,856.1,5
+Portus Padaria Artesanal,Gastronomia,Neumarkt Shopping,398.1,6
+Pratafina,Presentes e Acessórios,Balneário Shopping,2084.0,5
+Pratafina,Presentes e Acessórios,Garten Shopping,565.0,4
+Pratafina,Presentes e Acessórios,Neumarkt Shopping,1493.0,8
+Pratafina,Presentes e Acessórios,Norte Shopping,908.0,5
+Puket,Moda,Balneário Shopping,321.3,4
+Quebra Gelo,Presentes e Acessórios,Continente Shopping,171.0,1
+"Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,26.0,1
 QÓculos,Ótica,Neumarkt Shopping,95.0,1
-Rei Do Mate,Gastronomia,Neumarkt Shopping,22.0,1
-Renner,Moda,Balneário Shopping,2283.26,7
-Renner,Moda,Continente Shopping,2287.4,8
-Renner,Moda,Garten Shopping,1228.5,5
-Renner,Moda,Nações Shopping,239.9,1
-Renner,Moda,Neumarkt Shopping,1338.71,6
-Renner,Moda,Norte Shopping,44.91,1
-Ri Happy,Infantil,Balneário Shopping,267.92,2
-Ri Happy,Infantil,Garten Shopping,219.98,1
-Ri Happy,Infantil,Nações Shopping,349.0,1
-Ri Happy,Infantil,Neumarkt Shopping,149.99,1
-Riachuelo,Moda,Balneário Shopping,399.97,1
-Riachuelo,Moda,Continente Shopping,739.94,5
-Riachuelo,Moda,Garten Shopping,1081.76,9
-Riachuelo,Moda,Nações Shopping,1120.83,6
-Riachuelo,Moda,Neumarkt Shopping,259.59,2
-Riachuelo,Moda,Norte Shopping,669.9100000000001,4
-Riviera Café,Gastronomia,Continente Shopping,233.0,4
-Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,22.0,1
-Royal Trudel,Gastronomia,Nações Shopping,156.4,3
-Sabor Brasileiro,Gastronomia,Norte Shopping,2224.38,12
-Santo Boteco,Gastronomia,Nações Shopping,207.11,2
-Sephora,Beleza e Bem-estar,Balneário Shopping,507.0,1
+Rei Do Mate,Gastronomia,Neumarkt Shopping,767.8,20
+Renner,Moda,Balneário Shopping,14852.83,51
+Renner,Moda,Continente Shopping,14188.460000000001,60
+Renner,Moda,Garten Shopping,12069.76,59
+Renner,Moda,Nações Shopping,7588.92,29
+Renner,Moda,Neumarkt Shopping,14824.02,63
+Renner,Moda,Norte Shopping,2699.31,13
+Reserva,Moda,Neumarkt Shopping,159.0,1
+Reserva Nacoes Shopping,Moda,Nações Shopping,129.0,1
+Ri Happy,Infantil,Balneário Shopping,3891.54,13
+Ri Happy,Infantil,Garten Shopping,1028.97,5
+Ri Happy,Infantil,Nações Shopping,1066.96,8
+Ri Happy,Infantil,Neumarkt Shopping,3210.33,18
+Ri Happy Baby,Infantil,Continente Shopping,721.49,7
+Riachuelo,Moda,Balneário Shopping,6159.55,19
+Riachuelo,Moda,Continente Shopping,4527.4400000000005,22
+Riachuelo,Moda,Garten Shopping,7334.41,46
+Riachuelo,Moda,Nações Shopping,4698.44,22
+Riachuelo,Moda,Neumarkt Shopping,7805.63,50
+Riachuelo,Moda,Norte Shopping,4599.21,29
+Ritmi Studio,Moda Feminina,Nações Shopping,359.8,1
+Riviera Café,Gastronomia,Continente Shopping,602.0,14
+Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,89.95,3
+Rochelli Calçados,Calçados,Garten Shopping,519.8,1
+Royal Trudel,Gastronomia,Nações Shopping,480.52,15
+Sabor Brasileiro,Gastronomia,Norte Shopping,32297.02,226
+Saint Germain,Joalheria,Balneário Shopping,659.8,1
+Samsung,Eletrônicos,Continente Shopping,2618.0,1
+Samsung,Eletrônicos,Neumarkt Shopping,149.0,1
+Sandaliaria,Calçados,Continente Shopping,439.9,1
+Sandra Duwe,Joalheria,Neumarkt Shopping,720.0,1
+Santo Boteco,Gastronomia,Nações Shopping,662.17,7
+Schutz,Calçados,Balneário Shopping,4031.69,4
+Sephora,Beleza e Bem-estar,Balneário Shopping,13044.03,29
+Shantal Grill & Risoto,Gastronomia,Balneário Shopping,107.8,1
 Shawarma Food Joinville,Gastronomia,Garten Shopping,35.99,1
-Sinhá Benta,Gastronomia,Norte Shopping,117.7,1
-Sinhá Benta Gourmet,Gastronomia,Neumarkt Shopping,397.71000000000004,5
-Souq,Moda Feminina,Balneário Shopping,403.2,1
-Spoleto,Gastronomia,Continente Shopping,24.94,1
-Studio Z,Calçados,Balneário Shopping,529.96,4
-Studio Z,Calçados,Continente Shopping,278.98,2
-Studio Z,Calçados,Neumarkt Shopping,299.96,1
-Subway,Gastronomia,Balneário Shopping,37.9,1
-Subway,Gastronomia,Continente Shopping,68.0,1
-Subway,Gastronomia,Nações Shopping,24.5,1
-Subway,Gastronomia,Neumarkt Shopping,159.9,4
-Subway,Gastronomia,Norte Shopping,44.5,1
-Superlegal,Infantil,Garten Shopping,59.99,1
-Superlegal Brinquedos,Infantil,Balneário Shopping,200.19,3
-Superlegal Brinquedos,Infantil,Norte Shopping,199.97,2
-Swarovski,Joalheria,Balneário Shopping,1758.0,1
-TNG,Moda,Neumarkt Shopping,1599.96,2
-Tim,Telefonia,Norte Shopping,15.0,1
-Tip Top,Infantil,Balneário Shopping,140.81,1
-Toni Toys,Infantil,Norte Shopping,29.98,1
-Track & Field,Moda,Neumarkt Shopping,810.9100000000001,2
-Track&Field,Moda,Balneário Shopping,609.7,1
+Shoulder,Moda Feminina,Neumarkt Shopping,4998.4,7
+Sinhá Benta,Gastronomia,Balneário Shopping,347.8,5
+Sinhá Benta,Gastronomia,Norte Shopping,261.8,3
+Sinhá Benta Café,Gastronomia,Neumarkt Shopping,308.95,6
+Sinhá Benta Gourmet,Gastronomia,Neumarkt Shopping,2127.52,29
+SmartCase,Eletrônicos,Neumarkt Shopping,158.0,2
+Smartcase,Eletrônicos,Continente Shopping,379.8,1
+Souq,Moda Feminina,Balneário Shopping,1209.2,2
+Spedini Trattoria Expressa,Gastronomia,Continente Shopping,439.5,10
+Spoleto,Gastronomia,Continente Shopping,1431.0,28
+Stanley,Presentes e Acessórios,Balneário Shopping,632.25,2
+Stanley,Presentes e Acessórios,Garten Shopping,958.25,2
+Studio Z,Calçados,Balneário Shopping,2269.19,15
+Studio Z,Calçados,Continente Shopping,1331.29,11
+Studio Z,Calçados,Neumarkt Shopping,1326.88,8
+Subway,Gastronomia,Balneário Shopping,562.45,13
+Subway,Gastronomia,Continente Shopping,415.9,9
+Subway,Gastronomia,Garten Shopping,302.5,9
+Subway,Gastronomia,Nações Shopping,309.1,7
+Subway,Gastronomia,Neumarkt Shopping,389.8,9
+Subway,Gastronomia,Norte Shopping,260.70000000000005,4
+Superlegal,Infantil,Garten Shopping,839.9300000000001,6
+Superlegal Brinquedos,Infantil,Balneário Shopping,5969.7,25
+Superlegal Brinquedos,Infantil,Norte Shopping,834.89,9
+Suplementos Premium,Suplementos esportivos,Balneário Shopping,632.97,2
+Swarovski,Joalheria,Balneário Shopping,9375.0,5
+Swell Poke,Gastronomia,Balneário Shopping,497.0,6
+Swell Poke,Gastronomia,Continente Shopping,1230.0,19
+Swell Poke,Gastronomia,Garten Shopping,61.0,1
+TIM,Telefonia,Balneário Shopping,4199.0,1
+TIM,Telefonia,Neumarkt Shopping,3597.0,1
+TNG,Moda,Neumarkt Shopping,3768.9,6
+Tania Bulhões,Presentes e Acessórios,Balneário Shopping,340.0,1
+Tea Shop,Gastronomia,Balneário Shopping,267.70000000000005,2
+Tech Smart,Eletrônicos,Balneário Shopping,60.0,1
+Tech Smart,Eletrônicos,Neumarkt Shopping,109.9,1
+The Family's Burger & Pizza,Gastronomia,Norte Shopping,99.98,2
+Tim,Telefonia,Norte Shopping,234.0,2
+Tip Top,Infantil,Balneário Shopping,880.21,3
+Tomato,Gastronomia,Continente Shopping,656.4,11
+Tommy Hilfiger,Moda,Continente Shopping,80.0,1
+Tommy Hilfiger,Moda,Neumarkt Shopping,2895.0,2
+Toni Toys,Infantil,Norte Shopping,209.95,2
+Track & Field,Moda,Neumarkt Shopping,7536.3099999999995,10
+Track&Field,Moda,Balneário Shopping,1758.4,5
+Track&Field,Moda,Garten Shopping,578.9,2
+Uebel Make Up,Beleza e Bem-estar,Nações Shopping,341.67,2
+Unizushi,Gastronomia,Balneário Shopping,1515.11,6
+Usaflex,Calçados,Balneário Shopping,3389.93,1
 Usaflex,Calçados,Continente Shopping,1349.0,1
-Vicio DiPrata,Joalheria,Continente Shopping,218.0,1
-Vivara,Joalheria,Balneário Shopping,997.35,3
-Vivara,Joalheria,Garten Shopping,750.0,1
-WePink,Beleza e Bem-estar,Continente Shopping,154.8,2
-Wepink,Beleza e Bem-estar,Balneário Shopping,50.0,1
-Wepink,Beleza e Bem-estar,Nações Shopping,67.0,1
-Wepink,Não informado,Garten Shopping,273.6,2
-World Cookies,Gastronomia,Continente Shopping,13.0,1
-World Tennis,Calçados,Garten Shopping,159.99,1
-Youcom,Moda,Continente Shopping,13.98,1
-Youcom,Moda,Nações Shopping,319.8,1
-Youcom,Moda,Neumarkt Shopping,99.9,1
-Zamban Grill,Gastronomia,Norte Shopping,34.99,1
-Zanoni Sushi,Gastronomia,Continente Shopping,58.8,1
-z Bob's - Quiosque 2,Gastronomia,Nações Shopping,26.0,1
-z Kfc,Gastronomia,Nações Shopping,85.6,2
+VIRUS 41,Calçados,Garten Shopping,1648.9,2
+Vans,Calçados,Balneário Shopping,159.98,1
+Via Pian Food,Gastronomia,Nações Shopping,238.92,3
+Vicio DiPrata,Joalheria,Continente Shopping,612.9,6
+Victor Hugo,Moda Feminina,Balneário Shopping,2998.0,1
+Villa,Moda,Nações Shopping,1658.0,2
+Virus 41,Calçados,Balneário Shopping,1009.8,2
+Vivara,Joalheria,Balneário Shopping,4049.35,6
+Vivara,Joalheria,Garten Shopping,1740.0,2
+Vivara,Joalheria,Neumarkt Shopping,998.19,4
+Vivara,Joalheria,Norte Shopping,1380.0,2
+Vivo,Telefonia,Norte Shopping,13.0,1
+Vix Varejo,Moda Feminina,Balneário Shopping,1611.0,1
+WePink,Beleza e Bem-estar,Continente Shopping,803.1,7
+WePink,Beleza e Bem-estar,Neumarkt Shopping,556.5,6
+Wepink,Beleza e Bem-estar,Balneário Shopping,150.9,4
+Wepink,Beleza e Bem-estar,Nações Shopping,698.0,5
+Wepink,Não informado,Garten Shopping,729.0,5
+World Cookies,Gastronomia,Continente Shopping,19.0,2
+World Tennis,Calçados,Balneário Shopping,67.0,1
+World Tennis,Calçados,Continente Shopping,1019.96,2
+World Tennis,Calçados,Garten Shopping,1169.96,3
+Youcom,Moda,Balneário Shopping,1350.54,5
+Youcom,Moda,Continente Shopping,512.68,5
+Youcom,Moda,Garten Shopping,363.53999999999996,3
+Youcom,Moda,Nações Shopping,1314.72,4
+Youcom,Moda,Neumarkt Shopping,2290.9500000000003,8
+Zamban Grill,Gastronomia,Norte Shopping,82.71000000000001,3
+Zanoni Sushi,Gastronomia,Continente Shopping,575.11,8
+Zara,Moda,Balneário Shopping,1.0,1
+iPlace Mobile,Eletrônicos,Balneário Shopping,179.1,1
+z Bob's - Quiosque 2,Gastronomia,Nações Shopping,428.5,9
+z Kfc,Gastronomia,Nações Shopping,560.24,10
+Água de coco,Moda Feminina,Balneário Shopping,1977.0,2
 Ótica Chilli Beans,Ótica,Garten Shopping,1358.0,1
+Ótica Diniz,Ótica,Continente Shopping,1450.0,1

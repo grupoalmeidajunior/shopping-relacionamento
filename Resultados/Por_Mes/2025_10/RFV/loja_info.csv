@@ -65,7 +65,7 @@ Bibi,Infantil,Balneário Shopping,7742.48,24
 Bibi Calçados,Calçados,Garten Shopping,1851.82,5
 Big Jack Cervejaria,Gastronomia,Nações Shopping,1071.8,41
 BioMundo Produtos Naturais,Beleza e Bem-estar,Neumarkt Shopping,4540.95,21
-Bkko,Moda,Norte Shopping,8113.6,17
+Bkko,Moda,Norte Shopping,8113.599999999999,17
 Boali,Gastronomia,Garten Shopping,979.2,22
 Bob's,Gastronomia,Balneário Shopping,1139.4,37
 Bob's,Gastronomia,Norte Shopping,1521.3799999999999,40
@@ -86,13 +86,13 @@ Brando Bike,Outros,Norte Shopping,4195.0,4
 Brasil Cacau,Gastronomia,Continente Shopping,2704.91,96
 Bread Pide,Gastronomia,Balneário Shopping,1155.5,19
 Brooksfield,Moda,Balneário Shopping,9093.04,7
-Brooksfield,Moda,Continente Shopping,15272.82,10
+Brooksfield,Moda,Continente Shopping,15272.820000000002,10
 Brooksfield,Moda,Garten Shopping,3949.5299999999997,4
 Brooksfield,Moda,Neumarkt Shopping,11364.27,10
 Buddha Spa,Serviços,Balneário Shopping,188.0,1
 Bull Prime Steak House,Gastronomia,Garten Shopping,1154.96,4
 Burger King,Gastronomia,Balneário Shopping,2181.89,47
-Burger King,Gastronomia,Continente Shopping,7127.43,143
+Burger King,Gastronomia,Continente Shopping,7127.429999999999,143
 Burger King,Gastronomia,Garten Shopping,4701.71,98
 Burger King,Gastronomia,Nações Shopping,2561.2,47
 Burger King,Gastronomia,Neumarkt Shopping,5181.36,115
@@ -118,7 +118,7 @@ Café Cultura,Gastronomia,Nações Shopping,4607.95,78
 Café Cultura,Gastronomia,Neumarkt Shopping,4797.7,109
 Calvin Klein,Moda,Garten Shopping,3496.0,5
 Calvin Klein e Tommy Hilfiger,Moda,Nações Shopping,1785.0,3
-Calzedonia,Moda Feminina,Neumarkt Shopping,5922.349999999999,8
+Calzedonia,Moda Feminina,Neumarkt Shopping,5922.35,8
 Calçados Pegada,Calçados,Garten Shopping,1073.98,3
 Camarão Express,Gastronomia,Balneário Shopping,1735.2,22
 Camarão Express,Gastronomia,Continente Shopping,5170.37,55
@@ -222,7 +222,7 @@ Due Sapori,Gastronomia,Neumarkt Shopping,5321.38,99
 Duladu,Gastronomia,Balneário Shopping,1203.69,8
 Duplicado*,Moda,Garten Shopping,1812.9,3
 Ellus,Moda,Balneário Shopping,5224.4,4
-Empório Du Homem,Moda,Continente Shopping,33717.979999999996,54
+Empório Du Homem,Moda,Continente Shopping,33717.98,54
 Empório Du Homem,Moda,Nações Shopping,28500.3,18
 Empório DuHomem,Moda,Norte Shopping,11868.0,9
 Espaço Laser,Beleza e Bem-estar,Continente Shopping,1453.42,5
@@ -277,7 +277,7 @@ Gnc Balneario,Lazer,Balneário Shopping,1034.9,17
 Gnc Cinemas,Lazer,Nações Shopping,398.0,8
 Gnc Joinville Garten,Lazer,Garten Shopping,11248.1,113
 Go Coffee,Gastronomia,Norte Shopping,55.0,2
-Goldko,Gastronomia,Continente Shopping,475.17999999999995,10
+Goldko,Gastronomia,Continente Shopping,475.18,10
 Gondolier,Gastronomia,Neumarkt Shopping,4472.02,72
 Granado,Beleza e Bem-estar,Balneário Shopping,4689.79,28
 Granado Phamácias,Farmácias,Garten Shopping,3790.16,25
@@ -555,7 +555,7 @@ Paquetá,Esportes,Norte Shopping,7526.96,27
 Paquetá Esportes,Esportes,Balneário Shopping,2038.91,6
 Paquetá Esportes,Esportes,Garten Shopping,1679.85,6
 Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,13879.86,61
-Patbo,Moda Feminina,Balneário Shopping,12049.05,6
+Patbo,Moda Feminina,Balneário Shopping,12049.050000000001,6
 Paula Torres,Calçados Femininos,Balneário Shopping,19625.0,9
 Pecorino,Gastronomia,Balneário Shopping,1636.01,6
 Pegada,Calçados,Balneário Shopping,95.99,1
@@ -639,7 +639,7 @@ Sephora,Beleza e Bem-estar,Balneário Shopping,48106.1,121
 Sestini,Presentes e Acessórios,Balneário Shopping,3681.4,6
 Shawarma Food Joinville,Gastronomia,Garten Shopping,308.91,8
 Shoulder,Moda Feminina,Balneário Shopping,12906.6,10
-Shoulder,Moda Feminina,Garten Shopping,9413.38,15
+Shoulder,Moda Feminina,Garten Shopping,9413.380000000001,15
 Shoulder,Moda Feminina,Neumarkt Shopping,30534.57,31
 Sinhá Benta,Gastronomia,Balneário Shopping,771.5,15
 Sinhá Benta,Gastronomia,Norte Shopping,1167.2,22
@@ -737,7 +737,7 @@ Wepink,Beleza e Bem-estar,Nações Shopping,862.0,10
 World Tennis,Calçados,Continente Shopping,1441.8,3
 World Tennis,Calçados,Nações Shopping,2596.66,12
 World Tennis,Calçados,Neumarkt Shopping,8487.82,16
-World Tennis,Calçados,Norte Shopping,11052.810000000001,25
+World Tennis,Calçados,Norte Shopping,11052.81,25
 Wow Park,Infantil,Garten Shopping,129.0,1
 Youcom,Moda,Balneário Shopping,3543.63,13
 Youcom,Moda,Continente Shopping,6242.4,22

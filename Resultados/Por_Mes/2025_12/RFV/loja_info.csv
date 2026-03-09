@@ -7,7 +7,7 @@
 .,Gastronomia,Neumarkt Shopping,8974.65,30
 10 Pastéis,Gastronomia,Balneário Shopping,8663.08,182
 10P Pastelaria Joinville,Gastronomia,Garten Shopping,3094.25,92
-A Fabulosa,Presentes e Acessórios,Norte Shopping,24209.719999999998,411
+A Fabulosa,Presentes e Acessórios,Norte Shopping,24209.72,411
 ADCOS,Beleza e Bem-estar,Continente Shopping,87048.18000000001,167
 ADCOS,Beleza e Bem-estar,Garten Shopping,47102.21,131
 AJ FANS Neumarkt,Promocional,Neumarkt Shopping,500.0,1
@@ -126,7 +126,7 @@ Békko,Moda,Nações Shopping,32560.44,57
 C&A,Moda,Balneário Shopping,795913.0700000001,2568
 C&A,Moda,Continente Shopping,701544.29,2563
 C&A,Moda,Garten Shopping,498800.61,2011
-C&A,Moda,Nações Shopping,106196.67,412
+C&A,Moda,Nações Shopping,105636.71,409
 CALZEDONIA,Moda,Balneário Shopping,94514.72,158
 CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,26065.329999999998,599
 CAPA FINA,Telefonia,Garten Shopping,4272.85,39
@@ -156,7 +156,7 @@ Camarão Express,Gastronomia,Neumarkt Shopping,8993.0,136
 Camicado,Casa e Decoração,Balneário Shopping,261644.21,663
 Camicado,Casa e Decoração,Nações Shopping,16984.260000000002,63
 Camicado,Casa e Decoração,Neumarkt Shopping,213812.79,816
-Cantinho Grill,Gastronomia,Nações Shopping,2962.7999999999997,58
+Cantinho Grill,Gastronomia,Nações Shopping,2962.8,58
 Capivalley,Promocional,Continente Shopping,500.0,1
 Carioca Calçados,Calçados,Continente Shopping,280521.92,833
 Carter's,Infantil,Garten Shopping,128071.54000000001,425
@@ -283,7 +283,7 @@ Empório Du Homem,Moda,Nações Shopping,45198.35,35
 Empório DuHomem,Moda,Norte Shopping,55127.32,96
 Engenharia do Corpo Academia,Serviços,Nações Shopping,349.70000000000005,2
 Espaço Laser,Beleza e Bem-estar,Continente Shopping,49375.91,29
-Espaço Laser,Beleza e Bem-estar,Nações Shopping,1820.11,4
+Espaço Laser,Beleza e Bem-estar,Nações Shopping,1820.1100000000001,4
 Espaço Laser,Beleza e Bem-estar,Neumarkt Shopping,339.6,1
 Espaço Laser,Beleza e Bem-estar,Norte Shopping,2460.76,4
 Essence Parfums,Beleza e Bem-estar,Nações Shopping,74857.39,96
@@ -305,7 +305,7 @@ Farm,Moda Feminina,Garten Shopping,267812.88,466
 Farm,Moda Feminina,Neumarkt Shopping,289904.8,571
 Feng Cheng,Gastronomia,Garten Shopping,66078.51,887
 Feng Cheng,Gastronomia,Neumarkt Shopping,33736.03,449
-Feng Cheng,Gastronomia,Norte Shopping,14036.46,194
+Feng Cheng,Gastronomia,Norte Shopping,14036.460000000001,194
 Figueira Store,Esportes,Continente Shopping,20158.53,83
 Fini,Gastronomia,Balneário Shopping,1096.31,39
 Fini,Gastronomia,Continente Shopping,31614.8,1086
@@ -540,7 +540,7 @@ Mc Donalds,Gastronomia,Norte Shopping,16486.42,290
 McDonald's,Gastronomia,Balneário Shopping,28918.9,475
 McDonald's,Gastronomia,Continente Shopping,35878.1,689
 McDonald's,Gastronomia,Garten Shopping,38964.84,778
-McDonald's,Gastronomia,Nações Shopping,5456.79,116
+McDonald's,Gastronomia,Nações Shopping,5391.19,115
 McDonald's,Gastronomia,Neumarkt Shopping,33786.88,654
 McDonald´s Quiosque,Gastronomia,Neumarkt Shopping,323.1,23
 Mcdonald´s Quiosque,Gastronomia,Garten Shopping,2262.7,122
@@ -729,12 +729,12 @@ Ri Happy Baby,Infantil,Continente Shopping,340974.14,1382
 Riachuelo,Moda,Balneário Shopping,577716.53,1934
 Riachuelo,Moda,Continente Shopping,554701.56,2109
 Riachuelo,Moda,Garten Shopping,934738.82,3559
-Riachuelo,Moda,Nações Shopping,78551.51,328
+Riachuelo,Moda,Nações Shopping,78511.52,327
 Riachuelo,Moda,Neumarkt Shopping,641673.85,2466
 Riachuelo,Moda,Norte Shopping,362683.13,1393
 Richard's,Moda,Balneário Shopping,264316.0,215
 Rip Curl,Moda,Balneário Shopping,164417.25,289
-Ritmi Studio,Moda Feminina,Nações Shopping,24893.100000000002,69
+Ritmi Studio,Moda Feminina,Nações Shopping,24893.1,69
 Riviera Café,Gastronomia,Continente Shopping,11354.49,238
 Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,2652.95,66
 Rochelli Calçados,Calçados,Garten Shopping,133910.49,359
@@ -806,7 +806,7 @@ TIM,Telefonia,Balneário Shopping,184035.23,55
 TIM,Telefonia,Continente Shopping,195582.42,62
 TIM,Telefonia,Garten Shopping,52794.2,19
 TIM,Telefonia,Neumarkt Shopping,172148.04,55
-TNG,Moda,Garten Shopping,78593.26000000001,249
+TNG,Moda,Garten Shopping,78593.26,249
 TNG,Moda,Neumarkt Shopping,109142.7,297
 TOUTI Blumenau,Calçados,Norte Shopping,4177.88,31
 Tabacaria E Presentes Trevo,Serviços,Garten Shopping,4386.82,28
