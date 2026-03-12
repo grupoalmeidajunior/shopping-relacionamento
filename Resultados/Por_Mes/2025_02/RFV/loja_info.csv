@@ -108,7 +108,7 @@ Camicado,Casa e Decoração,Balneário Shopping,9213.18,25
 Camicado,Casa e Decoração,Garten Shopping,179.97,2
 Camicado,Casa e Decoração,Nações Shopping,1654.89,6
 Camicado,Casa e Decoração,Neumarkt Shopping,4521.12,15
-Cantinho Grill,Gastronomia,Nações Shopping,483.8,9
+Cantinho Grill,Gastronomia,Nações Shopping,483.79999999999995,9
 Carioca Calçados,Calçados,Continente Shopping,7043.66,19
 Carter's,Infantil,Garten Shopping,1339.33,5
 Carter´s,Infantil,Balneário Shopping,2978.74,10
@@ -250,7 +250,7 @@ Hope,Moda,Neumarkt Shopping,5784.72,17
 Hope Nacoes Shopping,Outros,Nações Shopping,2138.0,9
 IDéli oui,Beleza e Bem-estar,Continente Shopping,5138.83,15
 Idéli Oui,Beleza e Bem-estar,Garten Shopping,5166.4,14
-Idéli.Oui,Beleza e Bem-estar,Neumarkt Shopping,8683.29,12
+Idéli.Oui,Beleza e Bem-estar,Neumarkt Shopping,8683.289999999999,12
 Idéli.oui,Beleza e Bem-estar,Norte Shopping,4588.6900000000005,13
 Innovva Editora,Livrarias,Garten Shopping,70.0,2
 Inovare Suplementos,Esportes,Continente Shopping,149.99,1
@@ -326,7 +326,7 @@ Live!,Moda,Balneário Shopping,11582.08,20
 Live!,Moda,Garten Shopping,4536.32,7
 Live!,Moda,Nações Shopping,3987.8,6
 Live!,Moda Feminina,Continente Shopping,3344.18,8
-Livraria Catarinense,Livrarias,Nações Shopping,3341.7799999999997,40
+Livraria Catarinense,Livrarias,Nações Shopping,3341.78,40
 Livrarias Catarinense,Livrarias,Balneário Shopping,12121.44,99
 Livrarias Catarinense,Livrarias,Continente Shopping,7633.41,106
 Livrarias Catarinense,Livrarias,Neumarkt Shopping,12599.91,131
@@ -339,7 +339,7 @@ Lojas Americanas,Supermercado,Balneário Shopping,4892.68,88
 Loungerie,Moda,Balneário Shopping,3575.25,4
 Lua Luá,Moda,Balneário Shopping,8508.2,16
 Lua Luá,Moda,Continente Shopping,1192.4,5
-Lug's,Gastronomia,Nações Shopping,687.82,13
+Lug's,Gastronomia,Nações Shopping,687.8199999999999,13
 Luiza Barcelos,Calçados,Garten Shopping,499.95,1
 Lupo,Moda,Balneário Shopping,2236.88,11
 Lupo,Moda,Continente Shopping,2395.6,15
@@ -429,7 +429,7 @@ OJO Sol & Grau,Ótica,Garten Shopping,3184.0,4
 OPHICINA,Moda,Continente Shopping,1348.89,2
 Ophicina,Moda,Neumarkt Shopping,2486.52,6
 Orientali,Gastronomia,Balneário Shopping,290.11,4
-Orientali,Gastronomia,Continente Shopping,1771.14,25
+Orientali,Gastronomia,Continente Shopping,1771.1399999999999,25
 Orientali,Gastronomia,Neumarkt Shopping,544.35,7
 Orientali,Gastronomia,Norte Shopping,1359.1,23
 Osklen,Moda,Balneário Shopping,9802.0,3
@@ -478,7 +478,7 @@ Pratafina,Presentes e Acessórios,Neumarkt Shopping,2050.0,11
 Preçolândia,Casa e Decoração,Neumarkt Shopping,4183.9,31
 Provin Joias,Joalheria,Garten Shopping,59.0,1
 Provin Joias,Joalheria,Norte Shopping,799.0,2
-Puket,Moda,Balneário Shopping,2701.7400000000002,7
+Puket,Moda,Balneário Shopping,2701.74,7
 Purpurata,Presentes e Acessórios,Garten Shopping,1019.95,8
 "Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,292.29,9
 Quiksilver,Moda,Balneário Shopping,1375.1,3
@@ -530,7 +530,7 @@ Sinhá Benta Gourmet,Gastronomia,Neumarkt Shopping,4925.17,60
 Sisley Paris,Beleza e Bem-estar,Balneário Shopping,440.0,1
 Souq,Moda Feminina,Balneário Shopping,4154.0,5
 Spedini,Gastronomia,Neumarkt Shopping,1057.5,20
-Spoleto,Gastronomia,Continente Shopping,5799.52,106
+Spoleto,Gastronomia,Continente Shopping,5799.5199999999995,106
 St. Chicken,Gastronomia,Garten Shopping,700.3,15
 St.Chicken,Gastronomia,Nações Shopping,164.0,3
 Stanley,Presentes e Acessórios,Balneário Shopping,1813.01,6
@@ -548,7 +548,7 @@ Subway,Gastronomia,Neumarkt Shopping,718.5,20
 Subway,Gastronomia,Norte Shopping,263.0,4
 Superlegal,Infantil,Garten Shopping,2605.6,19
 Superlegal Brinquedos,Infantil,Balneário Shopping,8866.86,53
-Superlegal Brinquedos,Infantil,Norte Shopping,1713.8500000000001,14
+Superlegal Brinquedos,Infantil,Norte Shopping,1713.85,14
 Swarovski,Joalheria,Balneário Shopping,5662.0,3
 Swarovski,Joalheria,Neumarkt Shopping,5215.0,3
 Swell Poke,Gastronomia,Balneário Shopping,455.0,7
@@ -570,7 +570,7 @@ Tommy Hilfiger,Moda,Balneário Shopping,1165.0,3
 Tommy Hilfiger,Moda,Continente Shopping,199.0,1
 Tommy Hilfiger,Moda,Neumarkt Shopping,699.0,1
 Toni Toys,Infantil,Norte Shopping,1197.77,10
-Track & Field,Moda,Neumarkt Shopping,5421.820000000001,11
+Track & Field,Moda,Neumarkt Shopping,5421.82,11
 Track&Field,Moda,Balneário Shopping,8884.0,14
 Track&Field,Moda,Garten Shopping,2298.5,3
 Trëma,Gastronomia,Garten Shopping,365.4,7

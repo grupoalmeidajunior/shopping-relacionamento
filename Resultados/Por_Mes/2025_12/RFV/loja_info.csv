@@ -151,12 +151,12 @@ Calzedonia,Moda Feminina,Neumarkt Shopping,88915.06,163
 Calçados Pegada,Calçados,Garten Shopping,53569.8,136
 Camarão Express,Gastronomia,Balneário Shopping,15186.65,177
 Camarão Express,Gastronomia,Continente Shopping,97160.72,1012
-Camarão Express,Gastronomia,Nações Shopping,16626.17,176
+Camarão Express,Gastronomia,Nações Shopping,16626.170000000002,176
 Camarão Express,Gastronomia,Neumarkt Shopping,8993.0,136
 Camicado,Casa e Decoração,Balneário Shopping,261644.21,663
 Camicado,Casa e Decoração,Nações Shopping,16984.260000000002,63
 Camicado,Casa e Decoração,Neumarkt Shopping,213812.79,816
-Cantinho Grill,Gastronomia,Nações Shopping,2962.8,58
+Cantinho Grill,Gastronomia,Nações Shopping,2962.7999999999997,58
 Capivalley,Promocional,Continente Shopping,500.0,1
 Carioca Calçados,Calçados,Continente Shopping,280521.92,833
 Carter's,Infantil,Garten Shopping,128071.54000000001,425
@@ -246,7 +246,7 @@ Damyller,Moda,Neumarkt Shopping,163216.3,251
 Damyller,Não informado,Balneário Shopping,72219.65,110
 Daniela Tombini,Moda,Neumarkt Shopping,75830.85,134
 De Ville Gourmet,Gastronomia,Balneário Shopping,28654.99,319
-Decathlon,Esportes,Continente Shopping,470224.97,1791
+Decathlon,Esportes,Continente Shopping,470224.97000000003,1791
 Dedal Oficina de Costura,Serviços,Continente Shopping,173.0,2
 Democrata,Calçados,Balneário Shopping,134256.26,317
 Democrata,Calçados,Continente Shopping,141741.3,343
@@ -283,7 +283,7 @@ Empório Du Homem,Moda,Nações Shopping,45198.35,35
 Empório DuHomem,Moda,Norte Shopping,55127.32,96
 Engenharia do Corpo Academia,Serviços,Nações Shopping,349.70000000000005,2
 Espaço Laser,Beleza e Bem-estar,Continente Shopping,49375.91,29
-Espaço Laser,Beleza e Bem-estar,Nações Shopping,1820.1100000000001,4
+Espaço Laser,Beleza e Bem-estar,Nações Shopping,1820.11,4
 Espaço Laser,Beleza e Bem-estar,Neumarkt Shopping,339.6,1
 Espaço Laser,Beleza e Bem-estar,Norte Shopping,2460.76,4
 Essence Parfums,Beleza e Bem-estar,Nações Shopping,74857.39,96
@@ -305,7 +305,7 @@ Farm,Moda Feminina,Garten Shopping,267812.88,466
 Farm,Moda Feminina,Neumarkt Shopping,289904.8,571
 Feng Cheng,Gastronomia,Garten Shopping,66078.51,887
 Feng Cheng,Gastronomia,Neumarkt Shopping,33736.03,449
-Feng Cheng,Gastronomia,Norte Shopping,14036.460000000001,194
+Feng Cheng,Gastronomia,Norte Shopping,14036.46,194
 Figueira Store,Esportes,Continente Shopping,20158.53,83
 Fini,Gastronomia,Balneário Shopping,1096.31,39
 Fini,Gastronomia,Continente Shopping,31614.8,1086
@@ -422,7 +422,7 @@ Kalunga,Papelaria,Neumarkt Shopping,195969.69,1459
 Kalunga,Papelaria,Norte Shopping,16325.97,149
 Kfc,Fast Food,Continente Shopping,19415.0,349
 Kfc,Gastronomia,Neumarkt Shopping,30357.2,506
-Kib´s,Kids,Garten Shopping,84053.43,1111
+Kib´s,Kids,Garten Shopping,84053.43000000001,1111
 Kids Play,Lazer,Garten Shopping,25.0,1
 Kings,Moda,Nações Shopping,19316.36,24
 Kings  Sneakers,Calçados,Continente Shopping,61894.36,80
@@ -446,7 +446,7 @@ L'occitane Bresil,Beleza e Bem-estar,Balneário Shopping,78173.35,393
 L'occitane au Brésil,Beleza e Bem-estar,Continente Shopping,109384.35,475
 LAtte Art Coffee Cafeteria,Gastronomia,Neumarkt Shopping,1431.0,52
 LE LIS BLANC DEUX,Moda,Balneário Shopping,236302.61,231
-LIVE!,Moda,Neumarkt Shopping,177551.89,327
+LIVE!,Moda,Neumarkt Shopping,177551.88999999998,327
 LUZ DA LUA,Calçados,Garten Shopping,133423.54,211
 La Dullie,Gastronomia,Norte Shopping,2652.8,68
 Laci Baruffi,Presentes e Acessórios,Neumarkt Shopping,65010.82,109
@@ -645,6 +645,7 @@ Outback Steakhouse,Gastronomia,Continente Shopping,100345.75,405
 Outback Steakhouse,Gastronomia,Garten Shopping,316324.72,1169
 Outback Steakhouse,Gastronomia,Neumarkt Shopping,96178.12,380
 Outlet Suplementos,Esportes,Continente Shopping,8152.09,34
+Outlet Suplementos,Suplementos esportivos,Balneário Shopping,10032.460000000001,56
 PIPOCA AMERICANA,Gastronomia,Continente Shopping,198.4,5
 PRIME GAMES,Eletrônicos,Continente Shopping,19198.0,67
 Padrão,Moda,Balneário Shopping,340181.55,178
@@ -666,7 +667,7 @@ Panvel Farmácias,Farmácias,Neumarkt Shopping,98866.26,1032
 Panvel Farmácias,Farmácias,Norte Shopping,4672.82,54
 Paquetá,Esportes,Neumarkt Shopping,119202.8,384
 Paquetá,Esportes,Norte Shopping,78640.92,264
-Paquetá Esportes,Esportes,Balneário Shopping,94212.48000000001,268
+Paquetá Esportes,Esportes,Balneário Shopping,94212.48,268
 Paquetá Esportes,Esportes,Garten Shopping,108503.51000000001,363
 Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,613167.07,1333
 Patbo,Moda Feminina,Balneário Shopping,48639.11,17
@@ -682,7 +683,7 @@ Pittol,Calçados,Norte Shopping,559047.5,2158
 Pizza Hut,Gastronomia,Balneário Shopping,16437.739999999998,226
 Pizza Hut,Gastronomia,Neumarkt Shopping,18481.91,255
 Plié,Moda,Balneário Shopping,25368.91,94
-Plié,Moda,Garten Shopping,60142.02,169
+Plié,Moda,Garten Shopping,60142.020000000004,169
 Polishop,Eletrodomésticos,Continente Shopping,131855.37,116
 Polo Wear,Moda,Continente Shopping,176316.56,696
 Polo Wear,Moda,Garten Shopping,172974.5,655
@@ -795,7 +796,6 @@ Sunglass Hut,Ótica,Continente Shopping,181293.91,131
 Superlegal,Infantil,Garten Shopping,313351.08,1284
 Superlegal Brinquedos,Infantil,Balneário Shopping,738989.4400000001,2181
 Superlegal Brinquedos,Infantil,Norte Shopping,161968.72,630
-Suplementos Premium,Suplementos esportivos,Balneário Shopping,10032.460000000001,56
 Suíça Relógios,Serviços,Continente Shopping,1952.0,6
 Swarovski,Joalheria,Balneário Shopping,369607.06,202
 Swarovski,Joalheria,Neumarkt Shopping,184459.84,117
@@ -806,13 +806,13 @@ TIM,Telefonia,Balneário Shopping,184035.23,55
 TIM,Telefonia,Continente Shopping,195582.42,62
 TIM,Telefonia,Garten Shopping,52794.2,19
 TIM,Telefonia,Neumarkt Shopping,172148.04,55
-TNG,Moda,Garten Shopping,78593.26,249
+TNG,Moda,Garten Shopping,78593.26000000001,249
 TNG,Moda,Neumarkt Shopping,109142.7,297
 TOUTI Blumenau,Calçados,Norte Shopping,4177.88,31
 Tabacaria E Presentes Trevo,Serviços,Garten Shopping,4386.82,28
 Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,2234.6,14
 Tania Bulhões,Presentes e Acessórios,Balneário Shopping,65665.04000000001,91
-Tea Shop,Gastronomia,Balneário Shopping,41955.270000000004,172
+Tea Shop,Gastronomia,Balneário Shopping,41955.27,172
 Tech Smart,Eletrônicos,Balneário Shopping,38006.05,97
 Tech Smart,Eletrônicos,Neumarkt Shopping,65603.55,150
 Tech Smart,Eletrônicos,Norte Shopping,17688.01,46

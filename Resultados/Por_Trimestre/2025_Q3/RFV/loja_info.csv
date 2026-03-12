@@ -106,7 +106,7 @@ Bull Prime Steak House,Gastronomia,Garten Shopping,6758.780000000001,19
 Burger King,Gastronomia,Balneário Shopping,10342.59,194
 Burger King,Gastronomia,Continente Shopping,19632.17,380
 Burger King,Gastronomia,Garten Shopping,11722.36,231
-Burger King,Gastronomia,Nações Shopping,9856.529999999999,188
+Burger King,Gastronomia,Nações Shopping,9856.53,188
 Burger King,Gastronomia,Neumarkt Shopping,24914.82,465
 Burger King,Gastronomia,Norte Shopping,37302.13,641
 Békko,Moda,Nações Shopping,16471.4,28
@@ -118,7 +118,7 @@ CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,2348.21,
 CAPA FINA,Telefonia,Garten Shopping,620.1,6
 CELULAR CENTER,Eletrônicos,Continente Shopping,424.91,2
 Cabanas,Moda,Neumarkt Shopping,3975.75,16
-Cacau Show,Gastronomia,Balneário Shopping,5343.69,98
+Cacau Show,Gastronomia,Balneário Shopping,5343.6900000000005,98
 Cacau Show,Gastronomia,Continente Shopping,3517.08,94
 Cacau Show,Gastronomia,Garten Shopping,13954.5,280
 Cacau Show,Gastronomia,Nações Shopping,12312.96,216
@@ -386,7 +386,7 @@ Kfc,Fast Food,Continente Shopping,16047.11,299
 Kfc,Gastronomia,Neumarkt Shopping,24667.21,486
 Kfc,Gastronomia,Norte Shopping,47.7,1
 Kib´s,Kids,Garten Shopping,8946.27,161
-Kings,Moda,Nações Shopping,25247.24,38
+Kings,Moda,Nações Shopping,25247.239999999998,38
 Kings  Sneakers,Calçados,Continente Shopping,15096.58,27
 Kings Sneakers,Calçados,Neumarkt Shopping,6723.5599999999995,10
 Kings Sneakers,Moda,Garten Shopping,4372.5,6
@@ -549,7 +549,7 @@ NEW ERA,Moda,Continente Shopping,1855.33,4
 NOHA SHOES,Calçados,Garten Shopping,2372.82,4
 Natura,Beleza e Bem-estar,Balneário Shopping,12105.09,73
 Natura,Beleza e Bem-estar,Continente Shopping,12620.84,103
-Natura,Beleza e Bem-estar,Garten Shopping,9365.960000000001,74
+Natura,Beleza e Bem-estar,Garten Shopping,9365.96,74
 Natura,Beleza e Bem-estar,Nações Shopping,7233.93,51
 Natura,Beleza e Bem-estar,Neumarkt Shopping,19087.15,105
 Natura,Beleza e Bem-estar,Norte Shopping,8160.63,65
@@ -564,7 +564,7 @@ Nutty Bavarian,Gastronomia,Balneário Shopping,131.0,4
 Nutty Bavarian,Gastronomia,Garten Shopping,93.0,1
 O Boticário,Beleza e Bem-estar,Balneário Shopping,19436.55,145
 O Boticário,Beleza e Bem-estar,Continente Shopping,31933.47,201
-O Boticário,Beleza e Bem-estar,Garten Shopping,20035.329999999998,162
+O Boticário,Beleza e Bem-estar,Garten Shopping,20035.33,162
 O Boticário,Beleza e Bem-estar,Nações Shopping,9100.76,96
 O Boticário,Beleza e Bem-estar,Neumarkt Shopping,17036.63,108
 O Boticário,Beleza e Bem-estar,Norte Shopping,15095.18,86
@@ -590,6 +590,7 @@ Outback Steakhouse,Gastronomia,Continente Shopping,52022.57,256
 Outback Steakhouse,Gastronomia,Garten Shopping,35309.87,184
 Outback Steakhouse,Gastronomia,Neumarkt Shopping,33513.22,178
 Outlet Suplementos,Esportes,Continente Shopping,3223.63,14
+Outlet Suplementos,Suplementos esportivos,Balneário Shopping,3645.37,13
 PIPOCA AMERICANA,Gastronomia,Continente Shopping,70.2,2
 PRIME GAMES,Eletrônicos,Continente Shopping,27032.5,26
 Padrão,Moda,Balneário Shopping,45198.02,19
@@ -618,7 +619,7 @@ Patbo,Moda Feminina,Balneário Shopping,107950.21,35
 Paula Torres,Calçados Femininos,Balneário Shopping,34556.81,23
 Pecorino,Gastronomia,Balneário Shopping,3134.39,9
 Pegada,Calçados,Neumarkt Shopping,4946.27,15
-Pernambucanas,Moda,Continente Shopping,34316.77,222
+Pernambucanas,Moda,Continente Shopping,34316.770000000004,222
 Piastrini Joinville - Optica Machota,Ótica e Joalheria,Garten Shopping,11357.0,5
 Pittol,Calçados,Garten Shopping,32340.6,138
 Pittol,Calçados,Nações Shopping,31417.57,120
@@ -683,7 +684,7 @@ Riviera Café,Gastronomia,Continente Shopping,7814.04,162
 Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,1884.45,63
 Rochelli Calçados,Calçados,Garten Shopping,7410.9,10
 SABORES DO MUNDO,Gastronomia,Garten Shopping,20.0,1
-SAINT GERMAIN STORE,Joalheria,Garten Shopping,4306.8,9
+SAINT GERMAIN STORE,Joalheria,Garten Shopping,4306.799999999999,9
 SOS Ateliê,Serviços,Neumarkt Shopping,980.0,11
 Sabor Brasileiro,Gastronomia,Norte Shopping,3255.82,74
 Saint Germain,Joalheria,Balneário Shopping,3282.0,7
@@ -740,7 +741,6 @@ Sunglass Hut,Ótica,Continente Shopping,4925.0,5
 Superlegal,Infantil,Garten Shopping,21187.91,163
 Superlegal Brinquedos,Infantil,Balneário Shopping,77048.72,403
 Superlegal Brinquedos,Infantil,Norte Shopping,30623.38,198
-Suplementos Premium,Suplementos esportivos,Balneário Shopping,3645.37,13
 Swarovski,Joalheria,Balneário Shopping,13530.0,13
 Swarovski,Joalheria,Neumarkt Shopping,39615.2,20
 Swell Poke,Gastronomia,Balneário Shopping,7268.05,107
@@ -807,7 +807,7 @@ Vivara,Joalheria,Neumarkt Shopping,33767.8,20
 Vivara,Joalheria,Norte Shopping,6838.95,12
 Vivo,Telefonia,Balneário Shopping,9262.05,4
 Vivo,Telefonia,Continente Shopping,45173.0,11
-Vivo,Telefonia,Garten Shopping,15624.880000000001,8
+Vivo,Telefonia,Garten Shopping,15624.88,8
 Vivo,Telefonia,Neumarkt Shopping,29895.0,5
 Vivo,Telefonia,Norte Shopping,3095.0,5
 Vix Varejo,Moda Feminina,Balneário Shopping,14474.0,9
