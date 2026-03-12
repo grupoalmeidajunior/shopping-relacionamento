@@ -178,17 +178,22 @@ jobs:
       - name: Checkout (para acessar o script)
         uses: actions/checkout@v4
 
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Instalar dependencias
+        run: pip install requests --quiet
+
       - name: Notificar sucesso
         if: needs.sincronizar.result == 'success'
         shell: powershell
         run: |
-          pip install requests --quiet 2>$null
           $csvCount = "${{ needs.sincronizar.outputs.csv_count }}"
           python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status sucesso --detalhes "$csvCount CSVs sincronizados do Dashboard Perfil"
 
       - name: Notificar erro
         if: needs.sincronizar.result == 'failure'
         shell: powershell
-        run: |
-          pip install requests --quiet 2>$null
-          python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status erro
+        run: python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status erro
