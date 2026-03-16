@@ -77,7 +77,7 @@ BEAGLE,Moda,Norte Shopping,3011.77,19
 BRANDO BIKES,Presentes e Acessórios,Continente Shopping,89344.0,49
 Baby Bê,Infantil,Neumarkt Shopping,13690.07,40
 Baby Mee,Infantil,Continente Shopping,4785.1,36
-BabyMee,Infantil,Neumarkt Shopping,7719.93,69
+BabyMee,Infantil,Neumarkt Shopping,7719.929999999999,69
 Bacio di Latte,Gastronomia,Balneário Shopping,156289.88,2947
 Bacio di Latte,Gastronomia,Continente Shopping,180312.11,3495
 Bagaggio,Presentes e Acessórios,Balneário Shopping,157855.77,270
@@ -136,7 +136,7 @@ Brasil Cacau,Gastronomia,Continente Shopping,139662.6,2083
 Bread Pide,Gastronomia,Balneário Shopping,17375.95,274
 Brooksfield,Moda,Balneário Shopping,1025590.6,685
 Brooksfield,Moda,Continente Shopping,690110.5700000001,595
-Brooksfield,Moda,Garten Shopping,976867.07,749
+Brooksfield,Moda,Garten Shopping,976867.0700000001,749
 Brooksfield,Moda,Neumarkt Shopping,1074084.34,910
 Buddha Spa,Serviços,Balneário Shopping,21077.010000000002,43
 Buddha Spa Garten Joinville,Beleza e Bem-estar,Garten Shopping,10126.6,30
@@ -252,7 +252,7 @@ Clube Melissa,Calçados,Neumarkt Shopping,171769.83000000002,621
 Coach,Beleza e Bem-estar,Balneário Shopping,367489.8,104
 Coach,Moda Feminina,Balneário Shopping,40472.0,13
 Cobasi,Pets,Continente Shopping,406234.71,2998
-Cobasi,Pets,Garten Shopping,248716.86,2161
+Cobasi,Pets,Garten Shopping,248716.86000000002,2161
 Cobasi,Pets,Nações Shopping,232160.05,1704
 Cobasi,Pets,Neumarkt Shopping,405061.07,2830
 Cobasi,Pets,Norte Shopping,276148.81,2099
@@ -266,7 +266,7 @@ Constance,Calçados,Continente Shopping,300255.60000000003,964
 Continente Shopping - Estacionamento,Serviços,Continente Shopping,75998.01,3579
 Cores em Cacau,Gastronomia,Balneário Shopping,20954.24,188
 Cores em Cacau,Gastronomia,Neumarkt Shopping,3361.7599999999998,43
-Correios,Serviços,Neumarkt Shopping,429.29999999999995,5
+Correios,Serviços,Neumarkt Shopping,429.3,5
 Cotton On,Beleza e Bem-estar,Balneário Shopping,363009.17,911
 Cotton On,Moda,Continente Shopping,185803.11,552
 Cotton:on,Moda,Balneário Shopping,29543.46,67
@@ -506,7 +506,7 @@ Kipling,Presentes e Acessórios,Balneário Shopping,448889.8,446
 Kitsu Box,Gastronomia,Nações Shopping,12849.720000000001,103
 Kolméia Kids,Lazer,Continente Shopping,70.0,2
 Kombina Felice,Gastronomia - Restaurante,Neumarkt Shopping,160438.98,631
-Kopenhagen,Gastronomia,Balneário Shopping,175884.33,1633
+Kopenhagen,Gastronomia,Balneário Shopping,175884.33000000002,1633
 Kopenhagen,Gastronomia,Continente Shopping,192935.88,1663
 Kopenhagen,Gastronomia,Garten Shopping,5851.54,80
 Kopenhagen,Gastronomia,Nações Shopping,276.49,2
@@ -561,7 +561,7 @@ Lindt,Gastronomia,Neumarkt Shopping,499575.24,3315
 Liquori Caffè Gourmet,Gastronomia,Balneário Shopping,23469.5,406
 Live!,Moda,Balneário Shopping,949428.59,1405
 Live!,Moda,Garten Shopping,328455.12,577
-Live!,Moda,Nações Shopping,184353.16999999998,275
+Live!,Moda,Nações Shopping,184353.17,275
 Live!,Moda Feminina,Continente Shopping,512323.11,884
 Livo,Ótica,Balneário Shopping,2050.7,3
 Livraria Catarinense,Livrarias,Nações Shopping,196698.9,1900

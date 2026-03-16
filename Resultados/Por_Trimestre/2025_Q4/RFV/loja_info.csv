@@ -40,7 +40,7 @@ Anacapri,Não informado,Continente Shopping,113199.74,409
 Anjos Colchões & Sofás,Casa e Decoração,Neumarkt Shopping,101144.0,26
 Anselmi,Moda Feminina,Balneário Shopping,264953.5,164
 Antonio's Boliche,Lazer,Continente Shopping,370.0,2
-Aramis,Moda,Balneário Shopping,197160.01,187
+Aramis,Moda,Balneário Shopping,197160.00999999998,187
 Aramis,Moda,Nações Shopping,9548.94,10
 Aramis,Moda,Neumarkt Shopping,250976.58,254
 Aramis Menswear,Moda,Garten Shopping,216073.67,204
@@ -166,7 +166,7 @@ Camarão Express,Gastronomia,Neumarkt Shopping,14624.73,228
 Camicado,Casa e Decoração,Balneário Shopping,383570.2,973
 Camicado,Casa e Decoração,Nações Shopping,59758.86,205
 Camicado,Casa e Decoração,Neumarkt Shopping,326756.66,1190
-Cantinho Grill,Gastronomia,Nações Shopping,9993.95,204
+Cantinho Grill,Gastronomia,Nações Shopping,9993.949999999999,204
 Capivalley,Promocional,Continente Shopping,1502.0,4
 Carioca Calçados,Calçados,Continente Shopping,382866.11,1100
 Carter's,Infantil,Garten Shopping,177908.66,555
@@ -218,9 +218,9 @@ Claro,Telefonia,Garten Shopping,93908.96,23
 Claro,Telefonia,Neumarkt Shopping,283683.76,114
 Claro,Telefonia,Norte Shopping,147266.04,54
 Claro S/a,Telefonia,Balneário Shopping,101499.2,26
-Clifield,Moda,Balneário Shopping,196259.61,230
+Clifield,Moda,Balneário Shopping,196259.61000000002,230
 Clifield,Moda,Continente Shopping,340344.22,556
-Clube Melissa,Calçados,Balneário Shopping,107303.18000000001,342
+Clube Melissa,Calçados,Balneário Shopping,107303.18,342
 Clube Melissa,Calçados,Neumarkt Shopping,96060.63,376
 Coach,Beleza e Bem-estar,Balneário Shopping,367489.8,104
 Coach,Moda Feminina,Balneário Shopping,40472.0,13
@@ -305,7 +305,7 @@ Estacionamento - Nações Shopping,Serviços,Nações Shopping,2699.07,140
 Estacionamento Norte Shopping,Não informado,Norte Shopping,6223.0,401
 Estação BrinCar,Lazer,Neumarkt Shopping,180.0,5
 Estação Choperia,Gastronomia,Neumarkt Shopping,15095.3,321
-Estação Choperia,Gastronomia,Norte Shopping,16111.449999999999,267
+Estação Choperia,Gastronomia,Norte Shopping,16111.45,267
 Estação do Doce,Gastronomia,Nações Shopping,3881.93,119
 Estrela Beauty,Infantil,Balneário Shopping,17823.8,95
 Evolucell,Eletrônicos,Continente Shopping,2556.0,17
@@ -331,7 +331,7 @@ Floripratas,Presentes e Acessórios,Continente Shopping,35517.07,180
 Forneria Carbone,Gastronomia,Continente Shopping,136183.82,359
 Frank d'Ferran Cabelereiros,Salão de Beleza | Barbearia,Continente Shopping,4140.0,12
 Freddo,Gastronomia,Balneário Shopping,33602.79,690
-Freddo,Gastronomia,Garten Shopping,12743.7,381
+Freddo,Gastronomia,Garten Shopping,12743.699999999999,381
 Freddo,Gastronomia,Neumarkt Shopping,26198.73,687
 Fun Case,Eletrônicos,Balneário Shopping,4704.8,20
 Fun Case,Eletrônicos,Norte Shopping,2621.0,13
@@ -886,7 +886,7 @@ Valenttina,Moda,Garten Shopping,147613.57,629
 Valenttina,Moda Feminina,Balneário Shopping,135495.38,530
 Vans,Calçados,Balneário Shopping,276484.04,429
 Via Brasil Balneario Camboriu,Moda,Balneário Shopping,132006.03,501
-Via Pian Food,Gastronomia,Nações Shopping,6819.849999999999,106
+Via Pian Food,Gastronomia,Nações Shopping,6819.85,106
 Vialaser,Beleza e Bem-estar,Garten Shopping,79.77,1
 Vialaser,Beleza e Bem-estar,Nações Shopping,22738.48,17
 Vialaser,Beleza e Bem-estar,Neumarkt Shopping,105400.89,84

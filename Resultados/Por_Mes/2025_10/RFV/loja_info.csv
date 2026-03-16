@@ -92,7 +92,7 @@ Brooksfield,Moda,Neumarkt Shopping,11364.27,10
 Buddha Spa,Serviços,Balneário Shopping,188.0,1
 Bull Prime Steak House,Gastronomia,Garten Shopping,1154.96,4
 Burger King,Gastronomia,Balneário Shopping,2181.89,47
-Burger King,Gastronomia,Continente Shopping,7127.429999999999,143
+Burger King,Gastronomia,Continente Shopping,7127.43,143
 Burger King,Gastronomia,Garten Shopping,4701.71,98
 Burger King,Gastronomia,Nações Shopping,2561.2,47
 Burger King,Gastronomia,Neumarkt Shopping,5181.36,115
@@ -233,7 +233,7 @@ Estação Choperia,Gastronomia,Neumarkt Shopping,2872.7,66
 Estação Choperia,Gastronomia,Norte Shopping,4712.42,77
 Estação do Doce,Gastronomia,Nações Shopping,546.58,16
 Estrela Beauty,Infantil,Balneário Shopping,1562.0,6
-Express Grill,Gastronomia,Norte Shopping,2612.55,67
+Express Grill,Gastronomia,Norte Shopping,2612.5499999999997,67
 Express Grill,Gastronomia - Restaurante,Garten Shopping,1393.05,38
 FARM Rio,Moda,Continente Shopping,4118.9400000000005,8
 Farm,Moda,Balneário Shopping,5076.36,9
@@ -277,7 +277,7 @@ Gnc Balneario,Lazer,Balneário Shopping,1034.9,17
 Gnc Cinemas,Lazer,Nações Shopping,398.0,8
 Gnc Joinville Garten,Lazer,Garten Shopping,11248.1,113
 Go Coffee,Gastronomia,Norte Shopping,55.0,2
-Goldko,Gastronomia,Continente Shopping,475.18,10
+Goldko,Gastronomia,Continente Shopping,475.17999999999995,10
 Gondolier,Gastronomia,Neumarkt Shopping,4472.02,72
 Granado,Beleza e Bem-estar,Balneário Shopping,4689.79,28
 Granado Phamácias,Farmácias,Garten Shopping,3790.16,25
@@ -336,7 +336,7 @@ John John Denim,Moda,Balneário Shopping,1468.0,3
 Joker Socks,Presentes e Acessórios,Continente Shopping,232.6,3
 Jorge Bischoff,Calçados,Balneário Shopping,2496.0,3
 Juistreet,Gastronomia,Balneário Shopping,328.02,9
-KFC,Fast Food,Norte Shopping,7437.349999999999,132
+KFC,Fast Food,Norte Shopping,7437.35,132
 KFC,Gastronomia,Balneário Shopping,4808.18,85
 KFC,Gastronomia,Garten Shopping,4088.72,85
 Kalunga,Papelaria,Continente Shopping,10369.03,197
@@ -441,7 +441,7 @@ Mamma Mia Express,Gastronomia,Neumarkt Shopping,3813.2,68
 Mar de Maria,Moda,Nações Shopping,2349.5,12
 Maria Dolores,Joalheria,Balneário Shopping,6875.17,6
 Maze,Calçados,Neumarkt Shopping,8534.48,14
-Maze Skate,Moda,Garten Shopping,27579.31,16
+Maze Skate,Moda,Garten Shopping,27579.309999999998,16
 Maze Vale Comercio LTDA,Moda,Continente Shopping,1439.65,2
 Mc Donalds,Gastronomia,Norte Shopping,10697.76,176
 McDonald's,Gastronomia,Balneário Shopping,3080.4,72
@@ -556,7 +556,7 @@ Paquetá,Esportes,Norte Shopping,7526.96,27
 Paquetá Esportes,Esportes,Balneário Shopping,2038.91,6
 Paquetá Esportes,Esportes,Garten Shopping,1679.85,6
 Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,13879.86,61
-Patbo,Moda Feminina,Balneário Shopping,12049.050000000001,6
+Patbo,Moda Feminina,Balneário Shopping,12049.05,6
 Paula Torres,Calçados Femininos,Balneário Shopping,19625.0,9
 Pecorino,Gastronomia,Balneário Shopping,1636.01,6
 Pegada,Calçados,Balneário Shopping,95.99,1
@@ -576,7 +576,7 @@ Polo Wear,Moda,Nações Shopping,2062.84,14
 Polo Wear,Moda,Neumarkt Shopping,4492.27,31
 Polo Wear,Moda,Norte Shopping,1135.79,11
 Pop Me,Moda,Continente Shopping,4582.8099999999995,22
-Pop Me,Moda,Garten Shopping,7489.929999999999,29
+Pop Me,Moda,Garten Shopping,7489.93,29
 Portus Padaria Artesanal,Gastronomia,Neumarkt Shopping,1052.6,23
 Pratafina,Presentes e Acessórios,Balneário Shopping,2646.0,16
 Pratafina,Presentes e Acessórios,Garten Shopping,610.0,5
@@ -614,7 +614,7 @@ Riachuelo,Moda,Continente Shopping,27467.29,144
 Riachuelo,Moda,Garten Shopping,38436.46,174
 Riachuelo,Moda,Nações Shopping,24551.93,117
 Riachuelo,Moda,Neumarkt Shopping,39744.29,197
-Riachuelo,Moda,Norte Shopping,42242.229999999996,171
+Riachuelo,Moda,Norte Shopping,42242.23,171
 Richard's,Moda,Balneário Shopping,4659.0,2
 Rip Curl,Moda,Balneário Shopping,3079.9799999999996,2
 Riviera Café,Gastronomia,Continente Shopping,1939.75,52
@@ -637,10 +637,10 @@ Santo Boteco,Gastronomia,Nações Shopping,7130.49,58
 Schutz,Calçados,Balneário Shopping,11170.0,11
 Senhora Farinha,Gastronomia,Norte Shopping,838.37,12
 Sephora,Beleza e Bem-estar,Balneário Shopping,48106.1,121
-Sestini,Presentes e Acessórios,Balneário Shopping,3681.3999999999996,6
+Sestini,Presentes e Acessórios,Balneário Shopping,3681.4,6
 Shawarma Food Joinville,Gastronomia,Garten Shopping,308.91,8
 Shoulder,Moda Feminina,Balneário Shopping,12906.6,10
-Shoulder,Moda Feminina,Garten Shopping,9413.380000000001,15
+Shoulder,Moda Feminina,Garten Shopping,9413.38,15
 Shoulder,Moda Feminina,Neumarkt Shopping,30534.57,31
 Sinhá Benta,Gastronomia,Balneário Shopping,771.5,15
 Sinhá Benta,Gastronomia,Norte Shopping,1167.2,22
