@@ -20,7 +20,7 @@ Altenburg,Casa e Decoração,Balneário Shopping,5819.55,4
 Altenburg,Casa e Decoração,Continente Shopping,1127.0,1
 Americanas,Eletrodomésticos,Nações Shopping,4129.58,95
 Anacapri,Calçados,Neumarkt Shopping,339.9,2
-Anacapri,Não informado,Continente Shopping,749.6,3
+Anacapri,Lazer,Continente Shopping,749.6,3
 Anjos Colchões & Sofás,Casa e Decoração,Neumarkt Shopping,15279.0,4
 Aramis,Moda,Balneário Shopping,5938.6,3
 Aramis,Moda,Neumarkt Shopping,1829.6,2
@@ -59,9 +59,9 @@ Belshop,Beleza e Bem-estar,Neumarkt Shopping,3654.7799999999997,30
 Bergerson,Joalheria,Garten Shopping,13454.59,3
 Bibi,Infantil,Balneário Shopping,1827.1,8
 Bibi Calçados,Calçados,Garten Shopping,898.6999999999999,4
-BioMundo Produtos Naturais,Beleza e Bem-estar,Neumarkt Shopping,1348.6299999999999,12
+BioMundo Produtos Naturais,Beleza e Bem-estar,Neumarkt Shopping,1348.63,12
 Biscoitê,Calçados,Balneário Shopping,62.9,1
-Bkko,Moda,Norte Shopping,3935.0099999999998,3
+Bkko,Moda,Norte Shopping,3935.01,3
 Boali,Gastronomia,Garten Shopping,697.01,17
 Bob's,Gastronomia,Balneário Shopping,506.5,10
 Bob's,Gastronomia,Norte Shopping,252.6,9
@@ -162,7 +162,7 @@ Claro,Telefonia,Neumarkt Shopping,989.0,1
 Claro,Telefonia,Norte Shopping,3214.0,4
 Clifield,Moda,Balneário Shopping,3547.8,5
 Clifield,Moda,Continente Shopping,596.0,1
-Clube Melissa,Calçados,Balneário Shopping,3916.6099999999997,8
+Clube Melissa,Calçados,Balneário Shopping,3916.61,8
 Clube Melissa,Calçados,Neumarkt Shopping,1824.63,7
 Cobasi,Pets,Continente Shopping,9748.64,63
 Cobasi,Pets,Garten Shopping,3975.44,44
@@ -245,7 +245,6 @@ Game Mania,Eletrônicos,Neumarkt Shopping,809.8,2
 Game Mania,Eletrônicos,Norte Shopping,4780.0,1
 Gamelas & Panella's,Gastronomia,Continente Shopping,4747.72,86
 Gamelas & Panella´s,Gastronomia,Balneário Shopping,1542.83,17
-Garten Shopping - Estacionamento,Serviços,Garten Shopping,1918.0,123
 Gelato Borelli,Gastronomia,Neumarkt Shopping,973.55,23
 Gelato Borelli,Gastronomia - Sorvetes,Garten Shopping,59.0,2
 Gelatony Gelateria,Gastronomia,Continente Shopping,225.0,7
@@ -293,7 +292,7 @@ Innovva Soluções Literárias,Livrarias,Nações Shopping,94.8,1
 Inovare Suplementos,Esportes,Continente Shopping,1093.9,5
 Inovathi Acessórios,Presentes e Acessórios,Garten Shopping,1912.95,6
 Intimissimi,Moda,Continente Shopping,2158.02,5
-JAH Açaí,Gastronomia,Nações Shopping,1152.12,18
+JAH Açaí,Gastronomia,Nações Shopping,1152.1200000000001,18
 JBay,Moda,Continente Shopping,999.8399999999999,2
 JCanedo,Moda,Continente Shopping,6956.55,10
 JCanedo,Moda,Neumarkt Shopping,2928.67,5
@@ -354,7 +353,6 @@ Le Creuset,Casa e Decoração,Balneário Shopping,400.1,3
 Le Lis,Moda,Neumarkt Shopping,17987.44,20
 Le Lis Blanc,Moda,Garten Shopping,7096.84,6
 Le Lis Blanc,Moda Feminina,Balneário Shopping,16098.289999999999,10
-Leo Cosméticos,Beleza e Bem-estar,Continente Shopping,5760.22,99
 Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,2839.15,31
 Levi's,Moda,Balneário Shopping,3076.21,5
 Levi's,Moda,Garten Shopping,12235.15,25
@@ -395,7 +393,7 @@ Lupo,Moda,Neumarkt Shopping,5591.17,29
 Lupo,Moda,Norte Shopping,745.55,4
 Luz da Lua,Calçados,Balneário Shopping,10368.7,10
 Luz da Lua,Calçados Femininos,Nações Shopping,7279.3,7
-Luz da Lua,Não informado,Continente Shopping,11745.6,8
+Luz da Lua,Moda,Continente Shopping,11745.6,8
 MB Acessórios,Presentes e Acessórios,Neumarkt Shopping,1384.1000000000001,13
 MB acessórios,Presentes e Acessórios,Balneário Shopping,1034.56,6
 Mac,Beleza e Bem-estar,Balneário Shopping,3046.0,4
@@ -458,7 +456,7 @@ Morana,Presentes e Acessórios,Balneário Shopping,3977.69,21
 Morana,Presentes e Acessórios,Continente Shopping,1841.0,15
 Morana Acessórios,Presentes e Acessórios,Garten Shopping,1093.0,9
 Mr Trend,Ótica,Continente Shopping,1159.0,3
-Mr. Cheff,Gastronomia,Balneário Shopping,473.88000000000005,10
+Mr. Cheff,Gastronomia,Balneário Shopping,473.88,10
 Mr. Cheff,Gastronomia,Continente Shopping,1622.81,41
 Mr. Cheff,Gastronomia,Norte Shopping,353.91999999999996,9
 Mânoa Acessórios,Presentes e Acessórios,Balneário Shopping,884.8,10
@@ -568,7 +566,7 @@ Reserva,Moda,Neumarkt Shopping,2583.8,6
 Ri Happy,Infantil,Balneário Shopping,4746.53,32
 Ri Happy,Infantil,Garten Shopping,4476.54,28
 Ri Happy,Infantil,Nações Shopping,3835.88,21
-Ri Happy,Infantil,Neumarkt Shopping,10408.130000000001,70
+Ri Happy,Infantil,Neumarkt Shopping,10408.13,70
 Ri Happy Baby,Infantil,Continente Shopping,8866.02,72
 Riachuelo,Moda,Balneário Shopping,22645.84,71
 Riachuelo,Moda,Continente Shopping,30598.24,115
@@ -634,7 +632,6 @@ Swell Poke,Gastronomia,Continente Shopping,2036.0,36
 Swell Poke,Gastronomia,Garten Shopping,816.0,12
 TIM,Telefonia,Balneário Shopping,9585.0,2
 TIM,Telefonia,Neumarkt Shopping,6264.0,5
-TNG,Moda,Garten Shopping,1668.96,4
 TNG,Moda,Neumarkt Shopping,1719.94,4
 Tea Shop,Gastronomia,Balneário Shopping,1749.3,12
 Tech Smart,Eletrônicos,Balneário Shopping,259.8,2

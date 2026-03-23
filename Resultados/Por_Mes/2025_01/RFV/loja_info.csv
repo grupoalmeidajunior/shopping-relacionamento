@@ -23,7 +23,7 @@ Alô Bebê,Infantil,Balneário Shopping,27765.22,97
 Alô Bebê,Infantil,Continente Shopping,32280.19,134
 Americanas,Eletrodomésticos,Nações Shopping,6574.37,92
 Anacapri,Calçados,Neumarkt Shopping,6285.5,30
-Anacapri,Não informado,Continente Shopping,10557.09,46
+Anacapri,Lazer,Continente Shopping,10557.09,46
 Anjos Colchões & Sofás,Casa e Decoração,Neumarkt Shopping,29765.0,9
 Aramis,Moda,Balneário Shopping,19136.52,19
 Aramis,Moda,Neumarkt Shopping,11448.42,16
@@ -90,7 +90,7 @@ Bottero,Calçados,Neumarkt Shopping,18502.32,56
 Bowling Blu,Lazer,Norte Shopping,904.0,3
 Brando Bike,Lazer,Garten Shopping,2099.01,1
 Brando Bike,Outros,Norte Shopping,16782.0,13
-Brasil Cacau,Gastronomia,Continente Shopping,5660.2300000000005,94
+Brasil Cacau,Gastronomia,Continente Shopping,5660.23,94
 Brooksfield,Moda,Balneário Shopping,26633.61,28
 Brooksfield,Moda,Continente Shopping,27908.48,31
 Brooksfield,Moda,Garten Shopping,10641.56,16
@@ -110,7 +110,7 @@ C&A,Moda,Garten Shopping,72987.78,319
 C&A,Moda,Nações Shopping,41572.36,195
 CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,2811.0,57
 CAPA FINA,Telefonia,Garten Shopping,232.53,4
-CELULAR CENTER,Eletrônicos,Continente Shopping,1443.6000000000001,8
+CELULAR CENTER,Eletrônicos,Continente Shopping,1443.6,8
 CLIFIELD,Moda,Continente Shopping,32882.7,48
 CVC,Serviços,Garten Shopping,82857.78,12
 CVC,Serviços,Norte Shopping,54581.54,4
@@ -205,7 +205,7 @@ Criamigos,Infantil,Balneário Shopping,9940.44,31
 Crocs,Calçados,Balneário Shopping,17340.0,52
 Crocs,Calçados,Garten Shopping,6854.0,24
 Crocs,Calçados,Neumarkt Shopping,6638.0,21
-Cvc Viagens,Serviços,Neumarkt Shopping,58766.399999999994,10
+Cvc Viagens,Serviços,Neumarkt Shopping,58766.4,10
 Damay Cafeteria,Gastronomia,Garten Shopping,722.23,21
 Damyller,Moda,Continente Shopping,19696.0,31
 Damyller,Moda,Garten Shopping,20718.0,30
@@ -236,6 +236,7 @@ EVOLUCELL CELULARES,Telefonia,Continente Shopping,1558.9,3
 Ellus,Moda,Balneário Shopping,7323.85,11
 Empório Du Homem,Moda,Continente Shopping,38536.97,69
 Empório Du Homem,Moda,Nações Shopping,15927.880000000001,16
+Empório Sabores do Mundo,Gastronomia,Garten Shopping,170.0,1
 Espaço Laser,Beleza e Bem-estar,Norte Shopping,942.39,1
 Estacionamento - Nações Shopping,Serviços,Nações Shopping,1962.0,146
 Estação Choperia,Gastronomia,Neumarkt Shopping,1128.8,21
@@ -278,7 +279,6 @@ Game Mania,Eletrônicos,Neumarkt Shopping,16970.63,20
 Game Mania,Eletrônicos,Norte Shopping,21637.399999999998,21
 Gamelas & Panella's,Gastronomia,Continente Shopping,13728.5,210
 Gamelas & Panella´s,Gastronomia,Balneário Shopping,4242.51,55
-Garten Shopping - Estacionamento,Serviços,Garten Shopping,3618.0,232
 Gelato Borelli,Gastronomia,Neumarkt Shopping,3591.26,87
 Gelatony Gelateria,Gastronomia,Continente Shopping,1077.0,27
 General Lyy,Moda,Garten Shopping,17270.9,56
@@ -401,7 +401,6 @@ Le Creuset,Casa e Decoração,Balneário Shopping,22912.9,36
 Le Lis,Moda,Neumarkt Shopping,75530.33,59
 Le Lis Blanc,Moda,Garten Shopping,59672.54,53
 Le Lis Blanc,Moda Feminina,Balneário Shopping,1070.4,1
-Leo Cosméticos,Beleza e Bem-estar,Continente Shopping,24135.9,340
 Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,9432.48,117
 Levi's,Moda,Balneário Shopping,27202.79,57
 Levi's,Moda,Garten Shopping,48771.38,104
@@ -444,7 +443,7 @@ Lupo,Moda,Neumarkt Shopping,22155.6,124
 Lupo,Moda,Norte Shopping,3660.35,29
 Luz da Lua,Calçados,Balneário Shopping,35431.11,53
 Luz da Lua,Calçados Femininos,Nações Shopping,37912.53,60
-Luz da Lua,Não informado,Continente Shopping,23873.739999999998,34
+Luz da Lua,Moda,Continente Shopping,23873.739999999998,34
 Lyllu Acessórios,Joalheria,Continente Shopping,1959.3999999999999,9
 MB Acessórios,Presentes e Acessórios,Neumarkt Shopping,5463.2,60
 MB acessórios,Presentes e Acessórios,Balneário Shopping,4762.8,23
@@ -498,7 +497,7 @@ Mini Kalzone,Gastronomia,Garten Shopping,3471.8,173
 Mini Kalzone,Gastronomia,Nações Shopping,4214.2,175
 Mini Kalzone,Gastronomia,Neumarkt Shopping,5524.89,246
 Mini Kalzone,Gastronomia,Norte Shopping,4239.3,176
-Miniso,Presentes e Acessórios,Balneário Shopping,11923.699999999999,121
+Miniso,Presentes e Acessórios,Balneário Shopping,11923.7,121
 Miss Make,Beleza e Bem-estar,Norte Shopping,474.5,9
 Missbely,Presentes e Acessórios,Norte Shopping,603.7,7
 Mmartan,Casa e Decoração,Garten Shopping,2498.25,2
@@ -660,7 +659,6 @@ Richard's,Moda,Balneário Shopping,36925.0,31
 Rip Curl,Moda,Balneário Shopping,12239.97,26
 Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,409.82,17
 Rochelli Calçados,Calçados,Garten Shopping,11479.6,27
-SABORES DO MUNDO,Gastronomia,Garten Shopping,170.0,1
 STUDIO GAMES,Lazer,Norte Shopping,100.0,1
 Sabor Brasileiro,Gastronomia,Norte Shopping,2197.17,45
 Sakae,Presentes e Acessórios,Garten Shopping,7954.4,127
@@ -679,7 +677,7 @@ Santo Boteco,Gastronomia,Nações Shopping,7911.82,45
 Schutz,Calçados,Balneário Shopping,35629.0,38
 Sephora,Beleza e Bem-estar,Balneário Shopping,189581.53,331
 Sestini,Presentes e Acessórios,Balneário Shopping,22889.1,49
-Shawarma Food Joinville,Gastronomia,Garten Shopping,616.9200000000001,13
+Shawarma Food Joinville,Gastronomia,Garten Shopping,616.92,13
 Shoulder,Moda Feminina,Balneário Shopping,64282.54,77
 Shoulder,Moda Feminina,Garten Shopping,37134.020000000004,52
 Shoulder,Moda Feminina,Neumarkt Shopping,68581.17,98
@@ -724,7 +722,6 @@ TIM,Telefonia,Balneário Shopping,13325.439999999999,6
 TIM,Telefonia,Continente Shopping,17005.0,9
 TIM,Telefonia,Garten Shopping,10314.0,4
 TIM,Telefonia,Neumarkt Shopping,18305.32,8
-TNG,Moda,Garten Shopping,15367.89,44
 TNG,Moda,Neumarkt Shopping,6250.09,24
 Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,1200.0,2
 Tania Bulhões,Presentes e Acessórios,Balneário Shopping,12920.8,22
@@ -764,7 +761,7 @@ VIRUS 41,Calçados,Garten Shopping,31468.649999999998,58
 Valenttina,Moda,Garten Shopping,10290.5,52
 Valenttina,Moda,Norte Shopping,2237.6,10
 Valenttina,Moda Feminina,Balneário Shopping,7638.200000000001,27
-Vans,Calçados,Balneário Shopping,49141.990000000005,78
+Vans,Calçados,Balneário Shopping,49141.99,78
 Via Brasil Balneario Camboriu,Moda,Balneário Shopping,11949.79,59
 Via Pian Food,Gastronomia,Nações Shopping,552.35,10
 Vialaser,Beleza e Bem-estar,Neumarkt Shopping,1244.58,3
