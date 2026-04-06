@@ -16,12 +16,20 @@ import time
 import smtplib
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
-from datetime import datetime, timedelta
+from datetime import datetime, timedelta, date
 
 try:
     from zoneinfo import ZoneInfo
 except ImportError:
     from backports.zoneinfo import ZoneInfo
+
+try:
+    import snowflake.connector
+    from cryptography.hazmat.primitives import serialization
+    from cryptography.hazmat.backends import default_backend
+    SNOWFLAKE_AVAILABLE = True
+except ImportError:
+    SNOWFLAKE_AVAILABLE = False
 
 # ==============================================================================
 # 1. CONFIG DA PÁGINA
@@ -872,7 +880,335 @@ def descobrir_periodos():
             if os.path.isdir(os.path.join(pasta_mes, d)) and d.startswith(("2025_", "2026_")):
                 periodos[d] = _label_periodo(d)
 
+    # Periodo personalizado (requer Snowflake)
+    if SNOWFLAKE_AVAILABLE and "snowflake" in st.secrets:
+        periodos["Personalizado"] = "Periodo Personalizado"
+
     return periodos if periodos else {"Completo": "Completo"}
+
+
+# ==============================================================================
+# 9B. SNOWFLAKE - PERIODO PERSONALIZADO
+# ==============================================================================
+
+SHOPPING_ID_PARA_NOME = {
+    1: "Continente Shopping", 2: "Balneário Shopping",
+    3: "Neumarkt Shopping", 4: "Norte Shopping",
+    5: "Garten Shopping", 6: "Nações Shopping",
+}
+
+SHOPPING_ID_PARA_SIGLA = {
+    1: "CS", 2: "BS", 3: "NK", 4: "NR", 5: "GS", 6: "NS",
+}
+
+QUERY_CUPONS_PERSONALIZADO = """
+WITH cupons_unificados AS (
+    SELECT id, cliente_id, shopping_id, cnpj_loja, valor_compra AS valor,
+           data_envio, data_compra, status
+    FROM BRONZE.BRZ_AJFANS_FIDELIDADE_CUPOM
+    WHERE status = 'Validado'
+    UNION ALL
+    SELECT id, cliente_id, shopping_id, cnpj_loja, valor_compra AS valor,
+           data_envio, data_compra, status
+    FROM BRONZE.BRZ_AJFANS_FIDELIDADE_CUPOM_OLD
+    WHERE status = 'Validado'
+),
+cupons_com_data AS (
+    SELECT *,
+           CASE
+               WHEN data_compra IS NULL THEN data_envio
+               WHEN data_compra > data_envio THEN data_envio
+               ELSE data_compra
+           END AS data_efetiva
+    FROM cupons_unificados
+)
+SELECT
+    fc.id AS cupom_id,
+    fc.cliente_id,
+    c.nome AS cliente_nome,
+    c.email,
+    c.cpf,
+    c.celular,
+    c.genero,
+    c.logradouro,
+    c.numero,
+    c.complemento,
+    c.bairro,
+    c.cidade AS cidade_moradia,
+    c.estado AS estado_moradia,
+    c.cep,
+    fc.shopping_id,
+    s.nome AS shopping_nome,
+    sl.nome AS loja_nome,
+    sl.segmento AS segmento_loja,
+    fc.valor,
+    fc.data_efetiva AS data_envio
+FROM cupons_com_data fc
+LEFT JOIN BRONZE.BRZ_AJFANS_CLIENTES c ON c.id = fc.cliente_id
+INNER JOIN (
+    SELECT cnpj, MAX(nome) AS nome, MAX(segmento) AS segmento
+    FROM BRONZE.BRZ_AJFANS_SHOPPING_LOJA
+    WHERE cnpj IS NOT NULL AND cnpj <> ''
+    GROUP BY cnpj
+) sl ON sl.cnpj = fc.cnpj_loja
+LEFT JOIN BRONZE.BRZ_AJFANS_SHOPPING s ON s.id = fc.shopping_id
+WHERE fc.data_efetiva >= %(data_inicio)s
+  AND fc.data_efetiva <= %(data_fim)s
+  AND c.status = 'ATIVO'
+ORDER BY fc.cliente_id
+"""
+
+
+@st.cache_resource(ttl=300)
+def _get_snowflake_connection():
+    """Conecta ao Snowflake usando RSA key do secrets.toml."""
+    try:
+        sf = st.secrets["snowflake"]
+        pem_key = sf["private_key"].encode("utf-8")
+        p_key = serialization.load_pem_private_key(pem_key, password=None, backend=default_backend())
+        pkb = p_key.private_bytes(
+            encoding=serialization.Encoding.DER,
+            format=serialization.PrivateFormat.PKCS8,
+            encryption_algorithm=serialization.NoEncryption(),
+        )
+        conn = snowflake.connector.connect(
+            account=sf["account"],
+            user=sf["user"],
+            warehouse=sf.get("warehouse", "COMPUTE_WH"),
+            database=sf["database"],
+            schema=sf.get("schema", "BRONZE"),
+            role=sf.get("role", "SYSADMIN"),
+            private_key=pkb,
+        )
+        return conn
+    except Exception as e:
+        st.error(f"Erro ao conectar no Snowflake: {e}")
+        return None
+
+
+@st.cache_data(ttl=1800, show_spinner="Consultando dados no Snowflake...")
+def _consultar_cupons_personalizado(data_inicio_str, data_fim_str):
+    """Consulta cupons no Snowflake para periodo personalizado."""
+    conn = _get_snowflake_connection()
+    if conn is None:
+        return pd.DataFrame()
+    try:
+        cur = conn.cursor()
+        cur.execute(QUERY_CUPONS_PERSONALIZADO, {
+            "data_inicio": data_inicio_str,
+            "data_fim": data_fim_str + " 23:59:59",
+        })
+        cols = [c[0].lower() for c in cur.description]
+        rows = cur.fetchall()
+        return pd.DataFrame(rows, columns=cols)
+    except Exception as e:
+        st.error(f"Erro na consulta Snowflake: {e}")
+        return pd.DataFrame()
+
+
+def _classificar_perfil(score_total):
+    """VIP>=13, Premium>=10, Potencial>=7, Pontual<7."""
+    if score_total >= 13:
+        return "VIP"
+    elif score_total >= 10:
+        return "Premium"
+    elif score_total >= 7:
+        return "Potencial"
+    return "Pontual"
+
+
+def _processar_cupons_para_rfv(df_raw, data_ref):
+    """Processa cupons brutos e retorna (df_top, df_loja_info, df_cliente_loja)."""
+    if df_raw.empty:
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+
+    df = df_raw.copy()
+    df["data_envio"] = pd.to_datetime(df["data_envio"]).dt.tz_localize(None)
+    df["valor"] = pd.to_numeric(df["valor"], errors="coerce").fillna(0)
+    df["shopping_nome"] = df["shopping_id"].map(SHOPPING_ID_PARA_NOME).fillna(df.get("shopping_nome", ""))
+
+    # --- cliente_loja ---
+    df_cliente_loja = df.groupby(["cliente_id", "loja_nome"]).agg(
+        n=("cupom_id", "count"), valor=("valor", "sum")
+    ).reset_index()
+    df_cliente_loja["valor"] = df_cliente_loja["valor"].round(2)
+
+    # --- loja_info ---
+    df_loja_info = pd.DataFrame()
+    if "segmento_loja" in df.columns:
+        df_loja_info = df.groupby(["loja_nome", "segmento_loja", "shopping_nome"]).agg(
+            valor=("valor", "sum"), cupons=("cupom_id", "count")
+        ).reset_index()
+        df_loja_info.columns = ["loja_nome", "segmento", "shopping", "valor", "cupons"]
+
+    # --- Metricas por cliente ---
+    def _moda(x):
+        m = x.mode()
+        return m.iloc[0] if len(m) > 0 else x.iloc[0]
+
+    agg = {
+        "valor": "sum",
+        "cupom_id": "count",
+        "shopping_nome": _moda,
+        "cliente_nome": "first",
+        "email": "first",
+        "cpf": "first",
+        "celular": "first",
+        "genero": "first",
+        "logradouro": "first",
+        "numero": "first",
+        "complemento": "first",
+        "bairro": "first",
+        "cidade_moradia": "first",
+        "estado_moradia": "first",
+        "cep": "first",
+    }
+    if "segmento_loja" in df.columns:
+        agg["segmento_loja"] = _moda
+    if "loja_nome" in df.columns:
+        agg["loja_nome"] = _moda
+
+    # Frequencia = dias distintos de compra
+    freq = df.groupby("cliente_id")["data_envio"].apply(lambda x: x.dt.date.nunique()).reset_index()
+    freq.columns = ["cliente_id", "frequencia"]
+
+    datas = df.groupby("cliente_id")["data_envio"].agg(["min", "max"]).reset_index()
+    datas.columns = ["cliente_id", "data_primeira", "data_ultima"]
+
+    cli = df.groupby("cliente_id", as_index=False).agg(agg)
+    cli = cli.merge(freq, on="cliente_id", how="left")
+    cli = cli.merge(datas, on="cliente_id", how="left")
+    cli["recencia_dias"] = (pd.Timestamp(data_ref) - cli["data_ultima"]).dt.days
+
+    # --- Scores RFV por quintis ---
+    n = len(cli)
+    n_bins = min(5, n)
+
+    for col_score, col_fonte, invertido in [
+        ("R_score", "recencia_dias", True),
+        ("F_score", "frequencia", False),
+        ("V_score", "valor", False),
+    ]:
+        if n_bins < 2:
+            cli[col_score] = 3
+        else:
+            labels = list(range(1, n_bins + 1))
+            if invertido:
+                labels = labels[::-1]
+            try:
+                cli[col_score] = pd.qcut(
+                    cli[col_fonte].rank(method="first"),
+                    q=n_bins, labels=labels, duplicates="drop"
+                ).astype(int)
+            except (ValueError, TypeError):
+                cli[col_score] = 3
+
+    cli["Score_Total_RFV"] = cli["R_score"] + cli["F_score"] + cli["V_score"]
+    cli["Perfil_Cliente"] = cli["Score_Total_RFV"].apply(_classificar_perfil)
+
+    # --- Loja favorita por shopping ---
+    if "loja_nome" in df.columns:
+        valor_loja_shop = df.groupby(["cliente_id", "shopping_id", "loja_nome"])["valor"].sum().reset_index()
+
+        # Loja favorita geral
+        idx_geral = valor_loja_shop.groupby("cliente_id")["valor"].idxmax()
+        loja_fav_geral = valor_loja_shop.loc[idx_geral, ["cliente_id", "loja_nome", "shopping_id", "valor"]].copy()
+        loja_fav_geral["sigla"] = loja_fav_geral["shopping_id"].map(SHOPPING_ID_PARA_SIGLA)
+        loja_fav_geral["Loja_Favorita_Geral"] = loja_fav_geral["loja_nome"] + " (" + loja_fav_geral["sigla"].fillna("") + ")"
+        loja_fav_geral = loja_fav_geral[["cliente_id", "Loja_Favorita_Geral", "valor"]].rename(
+            columns={"valor": "Valor_Loja_Favorita_Geral"})
+        cli = cli.merge(loja_fav_geral, on="cliente_id", how="left")
+
+        # Loja favorita dentro do shopping principal
+        shopping_nome_id = {v: k for k, v in SHOPPING_ID_PARA_NOME.items()}
+        cli["_shop_id"] = cli["shopping_nome"].map(shopping_nome_id)
+        cli_shop = cli[["cliente_id", "_shop_id"]].dropna(subset=["_shop_id"])
+        valor_shop = valor_loja_shop.merge(cli_shop, left_on=["cliente_id", "shopping_id"],
+                                            right_on=["cliente_id", "_shop_id"], how="inner")
+        if len(valor_shop) > 0:
+            idx_shop = valor_shop.groupby("cliente_id")["valor"].idxmax()
+            loja_fav_shop = valor_shop.loc[idx_shop, ["cliente_id", "loja_nome", "valor"]]
+            loja_fav_shop.columns = ["cliente_id", "Loja_Favorita_Shopping", "Valor_Loja_Favorita_Shopping"]
+            cli = cli.merge(loja_fav_shop, on="cliente_id", how="left")
+        else:
+            cli["Loja_Favorita_Shopping"] = None
+            cli["Valor_Loja_Favorita_Shopping"] = None
+        cli.drop(columns=["_shop_id"], inplace=True, errors="ignore")
+    else:
+        cli["Loja_Favorita_Geral"] = None
+        cli["Valor_Loja_Favorita_Geral"] = None
+        cli["Loja_Favorita_Shopping"] = None
+        cli["Valor_Loja_Favorita_Shopping"] = None
+
+    # --- Valor do segmento principal ---
+    if "segmento_loja" in df.columns:
+        val_seg = df.groupby(["cliente_id", "segmento_loja"])["valor"].sum().reset_index()
+        cli_seg = cli[["cliente_id", "segmento_loja"]].copy()
+        val_seg_merged = cli_seg.merge(val_seg, on=["cliente_id", "segmento_loja"], how="left")
+        cli["Valor_Segmento_Principal"] = val_seg_merged["valor"].values
+    else:
+        cli["Valor_Segmento_Principal"] = None
+
+    # --- Ranking por shopping ---
+    cli = cli.sort_values("valor", ascending=False)
+    cli["Ranking"] = cli.groupby("shopping_nome").cumcount() + 1
+
+    # --- Renomear para formato CSV ---
+    rename = {
+        "shopping_nome": "Shopping", "cliente_id": "Cliente_ID",
+        "cliente_nome": "Nome", "cpf": "CPF", "email": "Email", "celular": "Celular",
+        "logradouro": "Logradouro", "numero": "Numero", "complemento": "Complemento",
+        "bairro": "Bairro", "cidade_moradia": "Cidade", "estado_moradia": "Estado", "cep": "CEP",
+        "genero": "Genero", "valor": "Valor_Total", "frequencia": "Frequencia_Compras",
+        "recencia_dias": "Recencia_Dias",
+        "data_primeira": "Data_Primeira_Compra", "data_ultima": "Data_Ultima_Compra",
+        "segmento_loja": "Segmento_Principal",
+        "R_score": "Score_Recencia", "F_score": "Score_Frequencia", "V_score": "Score_Valor",
+    }
+    cli = cli.rename(columns=rename)
+
+    # Arredondar valores
+    for col in ["Valor_Total", "Valor_Segmento_Principal", "Valor_Loja_Favorita_Geral", "Valor_Loja_Favorita_Shopping"]:
+        if col in cli.columns:
+            cli[col] = pd.to_numeric(cli[col], errors="coerce").round(2)
+
+    # Selecionar colunas finais
+    colunas_finais = [
+        "Ranking", "Shopping", "Cliente_ID", "Nome", "CPF", "Email", "Celular",
+        "Logradouro", "Numero", "Complemento", "Bairro", "Cidade", "Estado", "CEP",
+        "Genero", "Valor_Total", "Frequencia_Compras", "Recencia_Dias",
+        "Data_Primeira_Compra", "Data_Ultima_Compra",
+        "Segmento_Principal", "Valor_Segmento_Principal",
+        "Loja_Favorita_Geral", "Valor_Loja_Favorita_Geral",
+        "Loja_Favorita_Shopping", "Valor_Loja_Favorita_Shopping",
+        "Score_Recencia", "Score_Frequencia", "Score_Valor",
+        "Score_Total_RFV", "Perfil_Cliente",
+    ]
+    colunas_existentes = [c for c in colunas_finais if c in cli.columns]
+    df_top = cli[colunas_existentes].reset_index(drop=True)
+
+    return df_top, df_loja_info, df_cliente_loja
+
+
+def carregar_dados_periodo_personalizado(data_inicio, data_fim, shopping_nome):
+    """Orquestrador: consulta Snowflake + processa RFV + filtra shopping."""
+    df_raw = _consultar_cupons_personalizado(str(data_inicio), str(data_fim))
+    if df_raw.empty:
+        return pd.DataFrame(), pd.DataFrame(), pd.DataFrame()
+
+    data_ref = data_fim if isinstance(data_fim, date) else date.today()
+    df_top, df_loja_info, df_cliente_loja = _processar_cupons_para_rfv(df_raw, data_ref)
+
+    if shopping_nome and not df_top.empty:
+        df_top = df_top[df_top["Shopping"] == shopping_nome].copy()
+        df_top["Ranking"] = range(1, len(df_top) + 1)
+    if shopping_nome and not df_loja_info.empty and "shopping" in df_loja_info.columns:
+        df_loja_info = df_loja_info[df_loja_info["shopping"] == shopping_nome].copy()
+    if shopping_nome and not df_cliente_loja.empty and not df_top.empty:
+        clientes_shopping = set(df_top["Cliente_ID"])
+        df_cliente_loja = df_cliente_loja[df_cliente_loja["cliente_id"].isin(clientes_shopping)].copy()
+
+    return df_top, df_loja_info, df_cliente_loja
 
 
 # ==============================================================================
@@ -1048,6 +1384,24 @@ def pagina_dashboard():
         if not periodos_selecionados:
             periodos_selecionados = [codigos[0]] if codigos else ["Completo"]
 
+        # Periodo personalizado — date inputs
+        is_personalizado = "Personalizado" in periodos_selecionados
+        data_inicio_custom = None
+        data_fim_custom = None
+        if is_personalizado:
+            periodos_selecionados = ["Personalizado"]
+            col_di, col_df = st.columns(2)
+            with col_di:
+                data_inicio_custom = st.date_input(
+                    "Inicio", value=date.today() - timedelta(days=30),
+                    min_value=date(2022, 1, 1), max_value=date.today(), key="dt_inicio")
+            with col_df:
+                data_fim_custom = st.date_input(
+                    "Fim", value=date.today(),
+                    min_value=date(2022, 1, 1), max_value=date.today(), key="dt_fim")
+            if data_inicio_custom > data_fim_custom:
+                st.error("Data inicio deve ser anterior a data fim.")
+
         st.divider()
         if st.button("🚪 Sair", key="logout_btn", use_container_width=True):
             for key in ["authentication_status", "shopping_nome", "username", "name", "role"]:
@@ -1063,16 +1417,27 @@ def pagina_dashboard():
         return
 
     # CARREGAR DADOS
-    df = carregar_top_consumidores(periodos_selecionados, shopping_nome)
-    if df.empty:
-        periodo_label = ", ".join([periodos_dict.get(p, p) for p in periodos_selecionados])
-        st.warning(f"Nenhum dado encontrado para **{shopping_nome}** no período **{periodo_label}**.")
+    if is_personalizado and data_inicio_custom and data_fim_custom and data_inicio_custom <= data_fim_custom:
+        df, df_loja_info, df_cliente_loja = carregar_dados_periodo_personalizado(
+            data_inicio_custom, data_fim_custom, shopping_nome)
+        periodo_label = f"{data_inicio_custom.strftime('%d/%m/%Y')} a {data_fim_custom.strftime('%d/%m/%Y')}"
+        if df.empty:
+            st.warning(f"Nenhum dado encontrado para **{shopping_nome}** no período **{periodo_label}**.")
+            return
+    elif is_personalizado:
         return
-    df_loja_info = carregar_loja_info(periodos_selecionados, shopping_nome)
-    df_cliente_loja = carregar_cliente_loja(periodos_selecionados)
+    else:
+        periodo_label = ", ".join([periodos_dict.get(p, p) for p in periodos_selecionados])
+        df = carregar_top_consumidores(periodos_selecionados, shopping_nome)
+        if df.empty:
+            st.warning(f"Nenhum dado encontrado para **{shopping_nome}** no período **{periodo_label}**.")
+            return
+        df_loja_info = carregar_loja_info(periodos_selecionados, shopping_nome)
+        df_cliente_loja = carregar_cliente_loja(periodos_selecionados)
 
     # HEADER
-    periodo_label = ", ".join([periodos_dict.get(p, p) for p in periodos_selecionados])
+    if not is_personalizado:
+        periodo_label = ", ".join([periodos_dict.get(p, p) for p in periodos_selecionados])
     st.markdown(f'<p class="main-header">📊 Top Consumidores — {shopping_nome}</p>', unsafe_allow_html=True)
     st.markdown(f'<p class="sub-header">Período: {periodo_label} · Dados para ações de relacionamento</p>', unsafe_allow_html=True)
 
