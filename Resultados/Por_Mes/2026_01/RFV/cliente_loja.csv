@@ -2812,7 +2812,7 @@
 29387,LOJAS AMERICANAS,1,22.67
 29387,Me.Linda,1,3.9
 29387,O Boticário,1,41.52
-29387,Ophicina,1,107.99
+29387,Ophicina Footwear,1,107.99
 29417,Café Cultura,1,26.01
 29417,Osklen,1,1197.0
 29417,Zara,1,518.5
@@ -3394,7 +3394,7 @@
 33809,Me.Linda,1,28.0
 33809,Mini Kalzone,2,20.0
 33809,O Boticário,1,35.8
-33809,Ophicina,1,103.99
+33809,Ophicina Footwear,1,103.99
 33809,Renner,2,219.8
 33809,Sinhá Benta Gourmet,1,48.77
 33817,Mc Donalds,1,48.9
@@ -6842,7 +6842,7 @@
 74211,MB Acessórios,1,79.8
 74211,Mamma Mia Express,1,79.0
 74211,Me.Linda,1,119.9
-74211,O Mundo das Capas,1,1300.0
+74211,O MUNDO DAS CAPAS,1,1300.0
 74211,Paris Cosméticos,1,114.0
 74211,Zara,1,497.5
 74282,Miniso,1,160.85
@@ -9326,7 +9326,7 @@
 109640,Cia do Homem,1,329.9
 109640,Kopenhagen,1,50.7
 109640,Lindt,3,247.26
-109640,O Mundo das Capas,1,380.0
+109640,O MUNDO DAS CAPAS,1,380.0
 109640,Portus Padaria Artesanal,2,260.8
 109640,Renner,2,389.6
 109640,Sinhá Benta Gourmet,2,271.71
@@ -11219,7 +11219,7 @@
 119567,Cavezzale,1,149.9
 119578,Centauro,1,139.99
 119578,Farm,1,978.6
-119578,Ophicina,1,479.99
+119578,Ophicina Footwear,1,479.99
 119578,Riachuelo,2,656.94
 119582,Bacio di Latte,1,51.9
 119582,Cotton On,1,239.8
@@ -15341,7 +15341,6 @@
 134372,Lojas Americanas,1,88.23
 134373,Bottero,1,953.78
 134373,Cavezzale,1,159.9
-134373,OJO,1,1608.0
 134373,Renner,1,109.8
 134373,Riachuelo,1,199.98
 134376,Decathlon,1,39.99
@@ -17803,7 +17802,6 @@
 143119,Madero,1,126.5
 143119,Me.Linda,2,762.5
 143119,O Boticário,2,364.25
-143119,OJO,1,891.0
 143119,Renner,1,279.8
 143125,Purpurata,1,53.9
 143125,Riachuelo,1,209.97
@@ -19892,14 +19890,13 @@
 152117,Farm,1,99.0
 152117,Luz da Lua,1,269.91
 152117,O Boticário,1,79.84
-152117,Ophicina,1,161.99
+152117,Ophicina Footwear,1,161.99
 152123,Riachuelo,1,329.97
 152129,Livrarias Catarinense,1,132.8
 152129,Mini Kalzone,1,61.5
 152129,Neumarkt Shopping - Estacionamento,1,16.0
 152138,Feng Cheng,1,167.94
 152138,Livrarias Catarinense,1,136.4
-152138,OJO,1,2100.0
 152141,Adidas,1,89.99
 152141,Arezzo,1,439.9
 152141,Beagle,1,299.99
@@ -19958,7 +19955,7 @@
 152307,Kopenhagen,1,97.6
 152307,O Boticário,1,165.8
 152307,SmartCase,1,119.9
-152345,O Mundo das Capas,1,200.0
+152345,O MUNDO DAS CAPAS,1,200.0
 152376,Kfc,1,115.3
 152376,Milky Moo,1,52.0
 152380,Centauro,1,139.99
@@ -20526,7 +20523,6 @@
 154424,Livrarias Catarinense,1,129.8
 154424,Lua Luá,1,139.3
 154424,Miniso,2,272.9
-154424,OJO,1,880.0
 154424,"Quem disse, Berenice?",1,16.82
 154424,Riachuelo,1,109.98
 154424,iPlace Mobile,2,2567.0
@@ -21206,7 +21202,6 @@
 156702,General Lyy,1,89.95
 156702,Renner,1,19.9
 156708,Lupo,1,227.2
-156711,OJO,3,1820.0
 156713,Anacapri,1,199.8
 156713,Cobasi,1,73.9
 156713,Feng Cheng,1,102.41
@@ -21261,7 +21256,7 @@
 156856,Due Sapori,1,39.89
 156856,Le Lis,1,589.9
 156856,Madero,1,80.3
-156856,O Mundo das Capas,1,250.0
+156856,O MUNDO DAS CAPAS,1,250.0
 156856,Shoulder,2,2113.48
 156856,Subway,1,45.5
 156856,Óticas Carol,1,1320.0
@@ -21528,7 +21523,6 @@
 157929,MB Acessórios,1,114.8
 157929,Madero,1,169.4
 157929,Mini Kalzone,2,31.5
-157929,OJO,1,420.0
 157929,Zee Rucci,2,716.38
 157930,CALZEDONIA,1,728.0
 157930,Sandra Duwe,1,1475.0
@@ -21622,7 +21616,6 @@
 158185,Ri Happy,2,1599.89
 158185,Smart Bc Ltda,1,400.0
 158199,JCanedo,1,1563.59
-158202,OJO,1,2630.0
 158213,Divino Fogão,1,49.85
 158220,LOJAS AMERICANAS,1,40.96
 158220,Riachuelo,1,89.99
@@ -23173,7 +23166,7 @@
 163390,Democrata,1,179.9
 163390,Freddo,1,44.0
 163390,Madero,1,237.16
-163390,Ophicina,1,155.98
+163390,Ophicina Footwear,1,155.98
 163390,Renner,1,99.9
 163393,Neumarkt Shopping - Estacionamento,1,16.0
 163420,Farm,1,258.3
@@ -23380,7 +23373,7 @@
 164324,Kfc,1,56.6
 164324,Mini Kalzone,1,54.5
 164324,O Boticário,1,169.9
-164324,Ophicina,1,619.98
+164324,Ophicina Footwear,1,619.98
 164324,Panvel Farmácias,2,111.78
 164326,Farm,1,321.3
 164326,TNG,1,209.98
@@ -23930,7 +23923,7 @@
 166662,Me.Linda,1,66.8
 166662,Natura,1,136.66
 166662,Neumarkt Shopping - Estacionamento,3,54.0
-166662,O Mundo das Capas,1,65.0
+166662,O MUNDO DAS CAPAS,1,65.0
 166662,Renner,1,39.9
 166672,Claro,1,4099.0
 166672,Decathlon,1,325.32
@@ -24608,7 +24601,7 @@
 169666,Lojas Americanas,3,133.55
 169666,Orientali,1,37.97
 169666,Renner,3,449.1
-169687,O Mundo das Capas,1,70.0
+169687,O MUNDO DAS CAPAS,1,70.0
 169687,Orientali,2,191.98
 169719,Hering Store,1,205.97
 169719,Livrarias Catarinense,1,161.73
@@ -26697,7 +26690,7 @@
 188189,Livrarias Catarinense,1,25.3
 188189,Norte Shopping - Estacionamento,6,79.0
 188189,O Boticário,1,684.01
-188189,O Mundo das Capas,1,730.0
+188189,O MUNDO DAS CAPAS,1,730.0
 188189,Renner,1,495.2
 188189,Superlegal Brinquedos,2,3199.98
 188201,Avatim,1,80.0
@@ -29682,7 +29675,6 @@
 204282,Rochelli Calçados,1,639.7
 204315,Clube Melissa,1,431.7
 204315,Livrarias Catarinense,2,160.7
-204315,OJO,1,816.0
 204322,Borelli Gelato,1,52.5
 204322,Decathlon,1,919.94
 204322,Livrarias Catarinense,1,42.9
@@ -31232,7 +31224,7 @@
 220749,Pittol,1,139.99
 220749,Youcom,2,311.81
 220750,Cacau Show,1,53.43
-220765,Ophicina,1,1064.98
+220765,Ophicina Footwear,1,1064.98
 220765,Óticas Carol,1,1548.7
 220790,KFC,1,50.7
 220790,Live!,1,169.9
@@ -32375,7 +32367,6 @@
 228343,Kalunga,3,212.6
 228343,McDonald's,1,51.9
 228343,Me.Linda,3,576.76
-228343,OJO,1,295.0
 228343,Renner,3,1278.7
 228343,Ri Happy,1,69.99
 228343,SmartCase,1,169.9
@@ -38611,7 +38602,6 @@
 275927,Riachuelo,2,239.95
 275932,Damyller,1,1355.0
 275939,Aramis,1,399.8
-275939,OJO,1,1230.0
 275939,Pegada,1,189.99
 275955,Avatim,2,145.0
 275955,Centauro,1,64.98
@@ -39742,7 +39732,7 @@
 283532,Havan,1,199.9
 283532,Lindt,1,16.65
 283532,O Boticário,1,79.9
-283532,O Mundo das Capas,1,160.0
+283532,O MUNDO DAS CAPAS,1,160.0
 283532,Sinhá Benta Gourmet,1,83.11
 283532,Vivara,1,6350.0
 283532,Óticas Carol,1,5360.0
@@ -41330,7 +41320,6 @@
 294342,Osklen,1,1494.0
 294361,Madero,1,143.0
 294361,Me.Linda,1,204.09
-294361,OJO,2,1280.0
 294361,Shoulder,2,801.1
 294396,Zara,2,609.75
 294404,Balneário Shopping - Estacionamento,1,35.0
@@ -41944,7 +41933,7 @@
 298136,Cobasi,2,419.6
 298136,Kalunga,2,99.8
 298136,Le Lis,1,489.8
-298136,O Mundo das Capas,1,1000.0
+298136,O MUNDO DAS CAPAS,1,1000.0
 298136,Ri Happy,1,299.99
 298150,C&A,1,331.97
 298150,Renner,1,199.9
@@ -42823,7 +42812,7 @@
 303769,Authentic Feet,1,599.99
 303769,LIVE!,1,249.9
 303769,Luz da Lua,1,1269.7
-303769,O Mundo das Capas,1,340.0
+303769,O MUNDO DAS CAPAS,1,340.0
 303769,Paquetá,1,429.98
 303799,Café Cultura,1,76.02
 303799,Docejo,1,78.9
@@ -43541,7 +43530,7 @@
 308173,Zara,1,158.0
 308180,Livrarias Catarinense,1,613.0
 308272,Life by Vivara,1,2030.0
-308272,O Mundo das Capas,1,65.0
+308272,O MUNDO DAS CAPAS,1,65.0
 308289,Colcci,1,2234.0
 308289,Levi's,1,460.3
 308289,Óticas Carol,1,1175.0
@@ -47283,7 +47272,6 @@
 329268,Le Lis,1,389.9
 329268,Life by Vivara,2,729.0
 329268,Me.Linda,1,21.7
-329268,OJO,1,1010.0
 329268,Pandora,1,536.7
 329268,Renner,1,229.8
 329268,Reserva,1,807.0
@@ -56275,7 +56263,7 @@
 406427,Wepink,3,206.7
 406445,Livrarias Catarinense,2,605.5
 406445,Lupo,1,651.0
-406445,Ophicina,1,531.0
+406445,Ophicina Footwear,1,531.0
 406445,Renner,1,1268.0
 406459,Farm,1,198.0
 406477,C&A,2,349.96
@@ -57295,7 +57283,7 @@
 415345,Morana,1,119.8
 415352,Cinépolis,1,79.0
 415357,.,1,337.23
-415357,O Mundo das Capas,1,600.0
+415357,O MUNDO DAS CAPAS,1,600.0
 415357,SmartCase,1,150.0
 415357,Vivara,1,4046.0
 415388,Natura,1,362.7
@@ -57642,6 +57630,7 @@
 419220,Renner,1,319.8
 419239,Renner,1,239.7
 419278,Kalunga,1,330.8
+419345,Camarão Express,1,172.9
 419374,Dona Torta,10,1186.0
 419374,Madero,1,317.35
 419374,Outback Steakhouse,1,137.87
@@ -60228,7 +60217,7 @@
 440125,McDonald's,1,27.9
 440125,Mini Kalzone,1,23.5
 440125,O Boticário,1,205.81
-440125,O Mundo das Capas,1,140.0
+440125,O MUNDO DAS CAPAS,1,140.0
 440125,Renner,2,809.4
 440125,Riachuelo,1,179.99
 440125,Studio Z,1,129.99
@@ -61227,7 +61216,6 @@
 446896,Bob's (Quiosque 1),1,5.0
 446896,Leo Cosméticos,2,55.36
 446896,Magazine Luiza,1,187.67
-446896,OJO,1,1440.0
 446896,Orientali,1,298.27
 446896,Toni Toys,1,299.99
 446946,Atacadão,1,345.03
@@ -62718,7 +62706,7 @@
 458798,Pittol,2,338.99
 458798,Ri Happy,1,119.9
 458798,Superlegal,1,139.99
-458832,Ophicina,1,269.99
+458832,Ophicina Footwear,1,269.99
 458851,Kalunga,2,493.4
 458851,Panvel Farmácias,1,17.99
 458871,Riachuelo,1,309.97
@@ -65193,7 +65181,7 @@
 475521,CVC,1,11920.44
 475525,Fátima Criança,1,89.0
 475598,Lupo,1,54.5
-475598,Ophicina,1,449.99
+475598,Ophicina Footwear,1,449.99
 475598,Renner,1,239.8
 475598,Riachuelo,2,199.98
 475608,Dona Torta,1,67.0
@@ -68140,7 +68128,7 @@
 490694,Kopenhagen,1,419.8
 490723,Gnc Balneario,1,34.0
 490724,Madero,1,187.13
-490724,Ophicina,1,259.99
+490724,Ophicina Footwear,1,259.99
 490724,Paquetá,1,199.99
 490724,Portus Padaria Artesanal,1,79.7
 490726,LOJAS AMERICANAS,1,38.75
@@ -70326,7 +70314,7 @@
 494206,Livrarias Catarinense,1,59.9
 494206,Madero,3,712.01
 494206,Me.Linda,2,69.8
-494206,Ophicina,1,74.99
+494206,Ophicina Footwear,1,74.99
 494206,Outback Steakhouse,1,228.42
 494206,Sinhá Benta Café,1,48.0
 494207,Claro,1,399.0
@@ -70555,7 +70543,6 @@
 494308,World Tennis,1,599.98
 494309,Livrarias Catarinense,1,89.3
 494309,Luz da Lua,1,284.9
-494311,OJO,1,1499.0
 494311,Óticas Carol,1,800.0
 494313,.,1,499.98
 494315,Chilli Beans,1,779.93
@@ -70574,9 +70561,6 @@
 494322,Madero,1,47.0
 494322,Ri Happy,1,129.98
 494322,Zara,1,517.0
-494323,.,1,249.99
-494323,Camarão Express,1,48.0
-494323,Natura,1,20.93
 494324,Havan,1,529.9
 494324,Leo Cosméticos,1,162.52
 494324,Mini Kalzone,1,69.0
@@ -71416,7 +71400,6 @@
 494792,Magazine Luiza,1,1499.0
 494793,Clube Melissa,1,119.8
 494793,Livrarias Catarinense,1,56.0
-494793,OJO,1,870.0
 494793,WePink,1,54.9
 494794,Companhia da Moda,1,723.41
 494795,Cobasi,1,106.88
@@ -72316,7 +72299,7 @@
 495269,Levi's,1,199.9
 495269,Renner,1,119.8
 495269,Youcom,1,219.9
-495270,Ophicina,1,379.99
+495270,Ophicina Footwear,1,379.99
 495272,Levi's,1,644.83
 495274,Hope,1,724.6
 495274,O Boticário,1,219.96
@@ -74460,7 +74443,7 @@
 496500,Clube Melissa,1,149.9
 496500,Superlegal Brinquedos,1,299.94
 496502,Adidas,1,399.99
-496502,Ophicina,1,1209.98
+496502,Ophicina Footwear,1,1209.98
 496503,Granado,1,789.8
 496505,C&A,1,119.98
 496505,Kalunga,1,82.89
@@ -75223,7 +75206,6 @@
 496942,Constance,1,529.97
 496943,C&A,1,399.97
 496944,Hering Store,1,419.98
-496944,OJO,1,665.0
 496946,Cia do Terno,1,699.0
 496946,Havan,1,99.99
 496947,Acium,1,518.0
@@ -75348,7 +75330,7 @@
 497015,Damyller,1,199.0
 497016,Adidas,1,149.84
 497016,Lindt,1,39.98
-497016,Ophicina,1,1379.98
+497016,Ophicina Footwear,1,1379.98
 497017,Mânoa Acessórios,1,119.96
 497017,Outlet Suplementos,1,212.48
 497018,Cia Marítima,1,138.86
@@ -77951,7 +77933,6 @@
 498372,Via Brasil Balneario Camboriu,1,69.99
 498373,Aramis,1,139.93
 498373,Life by Vivara,1,550.0
-498373,OJO,1,1448.0
 498375,Havan,1,149.97
 498375,Outback Steakhouse,1,654.45
 498376,Beagle,1,299.99
@@ -78055,7 +78036,7 @@
 498418,Renner,1,89.9
 498420,Animale,1,3377.0
 498420,Zara,1,3597.5
-498422,Ophicina,1,674.99
+498422,Ophicina Footwear,1,674.99
 498423,Havan,1,422.93
 498424,Colcci,2,2768.4
 498424,Havanna Café,1,30.14
@@ -79249,7 +79230,6 @@
 499080,Centauro,1,1079.94
 499080,Joker Socks,1,217.6
 499082,Avatim,1,80.0
-499082,OJO,1,760.0
 499084,C&A,4,719.87
 499084,Havaianas,2,94.98
 499084,Studio Z,1,309.94
@@ -83706,7 +83686,7 @@
 501480,Hering,1,129.99
 501480,Plié,1,189.8
 501482,Havan,1,272.94
-501482,Ophicina,1,371.98
+501482,Ophicina Footwear,1,371.98
 501482,Pratafina,1,125.0
 501482,Renner,1,339.8
 501482,Studio Z,1,239.98
@@ -83742,7 +83722,7 @@
 501490,Lindt,1,89.99
 501490,Livrarias Catarinense,1,135.5
 501490,Lupo,1,65.2
-501490,O Mundo das Capas,1,90.0
+501490,O MUNDO DAS CAPAS,1,90.0
 501490,Shoulder,1,899.0
 501490,Track & Field,1,569.8
 501492,Colcci,1,1527.8
@@ -85466,7 +85446,6 @@
 502400,"Quem disse, Berenice?",1,42.9
 502402,Arquipélago  Sushi,1,543.4
 502403,Paris Cosméticos,1,374.89
-502405,OJO,1,850.0
 502405,Panvel Farmácias,1,45.7
 502405,Renner,1,759.6
 502405,Ri Happy,1,129.99
@@ -86194,7 +86173,6 @@
 502781,World Tennis,2,599.98
 502782,General Lyy,1,399.9
 502784,Arquipélago  Sushi,1,312.4
-502785,OJO,1,1250.0
 502788,Cacau Show,2,100.47
 502788,Centauro,2,1378.95
 502788,Idéli Oui,1,279.0
@@ -87045,7 +87023,7 @@
 503339,Mr Trend,1,297.0
 503340,Adidas,1,699.97
 503340,Maze,1,74.97
-503340,Ophicina,1,341.99
+503340,Ophicina Footwear,1,341.99
 503341,Kalunga,1,458.3
 503341,Vivara,1,8619.0
 503342,Burger King,1,23.7
@@ -90018,7 +89996,7 @@
 505201,Cia do Terno,1,876.0
 505204,Forneria Carbone,1,346.32
 505205,Me.Linda,1,238.7
-505205,Ophicina,1,579.9
+505205,Ophicina Footwear,1,579.9
 505205,Zee Rucci,1,343.14
 505208,Balneário Shopping - Estacionamento,1,35.0
 505208,Beagle,1,59.95
@@ -91685,7 +91663,7 @@
 506322,Polishop,2,1373.66
 506322,Riachuelo,2,379.96
 506323,Outback Steakhouse,2,366.57
-506326,Ophicina,1,341.99
+506326,Ophicina Footwear,1,341.99
 506326,Renner,1,265.7
 506328,Empório Du Homem,1,1522.23
 506329,Café Cultura,1,125.0
@@ -92144,7 +92122,7 @@
 506560,Nike Unite,1,314.98
 506561,Renner,2,956.1
 506562,LOJAS AMERICANAS,1,44.48
-506562,O Mundo das Capas,2,100.0
+506562,O MUNDO DAS CAPAS,2,100.0
 506562,Studio Z,1,197.98
 506566,Companhia da Moda,1,159.9
 506566,Ótica Diniz,1,198.0
@@ -92259,7 +92237,7 @@
 506663,Centauro,1,999.0
 506663,LIVE!,1,839.7
 506663,Livrarias Catarinense,1,71.8
-506663,Ophicina,2,1021.9
+506663,Ophicina Footwear,2,1021.9
 506664,O Boticário,1,5.0
 506664,Polo Wear,1,9.99
 506664,Reserva,1,249.0
@@ -92311,7 +92289,7 @@
 506680,Polo Wear,2,209.98
 506680,Riachuelo,1,49.99
 506681,Life by Vivara,1,820.0
-506681,Ophicina,1,197.91
+506681,Ophicina Footwear,1,197.91
 506682,Beagle,1,199.89
 506682,O Boticário,1,42.0
 506682,Pratafina,1,250.0
@@ -92787,7 +92765,6 @@
 508186,Renner,1,150.0
 508191,Centauro,1,609.96
 508191,Life by Vivara,2,461.25
-508191,OJO,1,840.0
 508233,Mini Kalzone,1,20.0
 508233,Pizza Hut,1,95.4
 508236,Riachuelo,1,79.99

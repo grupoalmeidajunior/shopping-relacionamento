@@ -1352,7 +1352,6 @@
 22175,L'Occitane en Provence,1,366.0
 22175,Livrarias Catarinense,2,994.0
 22175,Madero,1,108.9
-22175,OJO,1,475.0
 22175,Orientali,3,187.92
 22175,Renner,2,1976.2
 22208,Arezzo,1,799.7
@@ -3041,7 +3040,6 @@
 49886,Livrarias Catarinense,1,79.9
 49886,Norte Shopping - Estacionamento,1,16.0
 49886,Pittol,1,199.0
-49977,OJO,1,920.0
 50029,Beagle,2,1568.0
 50029,C&A,1,179.97
 50054,Havan,1,59.99
@@ -4604,7 +4602,7 @@
 72770,Burger King,1,28.9
 72770,Gamelas & Panella's,2,162.47
 72770,Swell Poke,3,139.0
-72818,Ophicina,1,849.99
+72818,Ophicina Footwear,1,849.99
 72867,Idéli.Oui,1,768.0
 72883,Zara,1,239.0
 72953,Cacau Show,1,5.0
@@ -16792,7 +16790,7 @@
 192593,Bacio di Latte,1,39.9
 192613,Havan,1,209.96
 192613,Hering Store,1,503.46
-192652,Ophicina,1,269.99
+192652,Ophicina Footwear,1,269.99
 192652,Preçolândia,1,27.0
 192689,Arezzo,1,499.9
 192734,Arezzo,1,104.93
@@ -18021,7 +18019,6 @@
 204573,Centauro,1,29.99
 204573,Havan,1,164.97
 204573,L'Occitane Au Brésil,1,194.8
-204573,OJO,1,900.0
 204573,Panvel Farmácias,1,36.79
 204573,Polo Wear,1,199.98
 204573,Renner,4,589.5
@@ -21518,7 +21515,6 @@
 250557,Idéli.Oui,1,369.0
 250557,Lindt,1,69.98
 250557,Livrarias Catarinense,1,79.8
-250557,OJO,1,900.0
 250557,Riachuelo,1,459.69
 250606,Ponto Frio,1,79.0
 250660,Baummer,1,149.8
@@ -27485,7 +27481,6 @@
 303256,Pratafina,1,700.0
 303269,Feng Cheng,1,125.42
 303269,Kalunga,1,65.8
-303269,OJO,1,950.0
 303275,Decathlon,1,50.31
 303275,Gamelas & Panella's,1,50.37
 303275,Madero,1,189.2
@@ -28087,7 +28082,6 @@
 308566,Riachuelo,1,259.89
 308590,Lug's,1,32.99
 308605,Havan,1,409.95
-308605,OJO,1,890.0
 308605,Renner,2,1129.2
 308605,Rip Curl,1,232.49
 308629,Atacadão,1,590.38
@@ -31233,7 +31227,6 @@
 327850,Panvel Farmácias,1,24.99
 327856,Farm,1,876.8
 327856,Kalunga,1,186.2
-327856,OJO,1,830.0
 327856,Renner,1,39.8
 327856,Riachuelo,1,149.89
 327859,OPHICINA,1,149.99
@@ -32266,7 +32259,6 @@
 329477,MB Acessórios,1,121.8
 329477,McDonald's,1,28.8
 329477,Me.Linda,1,193.7
-329477,OJO,1,1820.0
 329477,Polo Wear,1,89.99
 329477,Renner,1,689.3
 329477,Riachuelo,1,810.98
@@ -34347,7 +34339,6 @@
 330433,Freddo,1,30.95
 330433,Hering Store,1,309.97
 330433,O Boticário,1,193.5
-330433,OJO,2,4765.0
 330433,Panvel Farmácias,1,34.96
 330433,Usaflex,2,749.97
 330434,Havanna Café,1,43.5
@@ -36769,7 +36760,6 @@
 332038,JCanedo,1,128.97
 332038,Polo Wear,1,185.97
 332039,Livrarias Catarinense,1,573.8
-332039,OJO,1,890.0
 332040,Centauro,1,679.96
 332040,Renner,1,219.9
 332040,Sinhá Benta Gourmet,1,150.58
@@ -37833,7 +37823,6 @@
 332614,Centauro,1,979.95
 332614,Motorola,1,2399.0
 332615,Bagaggio,1,1189.83
-332615,OJO,1,370.0
 332617,CLIFIELD,1,747.0
 332618,Ótica Chilli Beans,1,441.94
 332619,Artwalk,1,1099.99
@@ -38195,7 +38184,6 @@
 332768,Renner,1,119.9
 332769,Polo Wear,1,269.98
 332769,Studio Z,1,84.97
-332770,OJO,1,430.0
 332771,Havan,1,59.99
 332771,LOJAS AMERICANAS,1,245.93
 332771,Renner,1,299.7
@@ -38779,7 +38767,7 @@
 333041,Due Sapori,2,212.65
 333041,Havan,1,59.97
 333041,Livrarias Catarinense,1,36.4
-333041,Ophicina,1,459.99
+333041,Ophicina Footwear,1,459.99
 333041,Paquetá,1,219.96
 333042,Avatim,1,438.0
 333042,Usaflex,2,1059.96
@@ -41566,7 +41554,7 @@
 334610,Mcdonald´s Quiosque,1,12.5
 334610,Sakae,1,45.0
 334611,LAtte Art Coffee Cafeteria,1,24.0
-334611,Ophicina,1,179.99
+334611,Ophicina Footwear,1,179.99
 334611,Tech Smart,1,454.23
 334612,Democrata,1,250.0
 334612,Live!,1,399.84

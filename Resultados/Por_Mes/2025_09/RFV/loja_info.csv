@@ -23,7 +23,7 @@ Aramis,Moda,Neumarkt Shopping,1588.62,4
 Aramis Menswear,Moda,Garten Shopping,799.8,1
 Ardrak Ginger,Outros,Garten Shopping,131.5,1
 Arezzo,Calçados,Continente Shopping,7268.95,17
-Arezzo,Calçados,Garten Shopping,1448.7,4
+Arezzo,Calçados,Garten Shopping,1448.6999999999998,4
 Arezzo,Calçados,Nações Shopping,7570.88,14
 Arezzo,Calçados Femininos,Balneário Shopping,13177.73,22
 Arquipélago  Sushi,Gastronomia,Continente Shopping,5017.9,11
@@ -121,7 +121,7 @@ Camarão Express,Gastronomia,Neumarkt Shopping,3945.73,72
 Camicado,Casa e Decoração,Balneário Shopping,14000.92,41
 Camicado,Casa e Decoração,Nações Shopping,3492.71,15
 Camicado,Casa e Decoração,Neumarkt Shopping,15886.08,64
-Cantinho Grill,Gastronomia,Nações Shopping,2653.8,52
+Cantinho Grill,Gastronomia,Nações Shopping,2653.7999999999997,52
 Carioca Calçados,Calçados,Continente Shopping,16051.130000000001,51
 Carter's,Infantil,Garten Shopping,1800.91,9
 Carter's,Infantil,Neumarkt Shopping,7211.4800000000005,38
@@ -214,7 +214,7 @@ Docejo,Gastronomia,Continente Shopping,3188.83,73
 Dona Torta,Gastronomia,Garten Shopping,9172.6,204
 Donna Mirô,Gastronomia,Nações Shopping,1862.5900000000001,32
 Dudalina,Moda,Nações Shopping,10658.32,10
-Due Sapori,Gastronomia,Neumarkt Shopping,4535.5199999999995,73
+Due Sapori,Gastronomia,Neumarkt Shopping,4535.52,73
 Duladu,Gastronomia,Balneário Shopping,1387.4,16
 EVOLUCELL CELULARES,Telefonia,Continente Shopping,35.0,1
 Empório Du Homem,Moda,Continente Shopping,27345.7,40
@@ -260,7 +260,7 @@ Fátima Papelaria,Papelaria,Nações Shopping,3051.0,25
 GNC Cinemas,Lazer,Neumarkt Shopping,1375.5,30
 Game Mania,Eletrônicos,Balneário Shopping,1289.6,3
 Game Mania,Eletrônicos,Neumarkt Shopping,2979.8,3
-Game Mania,Eletrônicos,Norte Shopping,12129.400000000001,6
+Game Mania,Eletrônicos,Norte Shopping,12129.4,6
 Gamelas & Panella's,Gastronomia,Continente Shopping,7147.27,113
 Gamelas & Panella´s,Gastronomia,Balneário Shopping,3435.8,41
 Gelato Borelli,Gastronomia,Neumarkt Shopping,1757.73,41
@@ -317,7 +317,7 @@ JAH Açaí,Gastronomia,Nações Shopping,17711.15,142
 JBay,Moda,Continente Shopping,582.15,3
 JCanedo,Moda,Continente Shopping,850.86,4
 JCanedo,Moda,Garten Shopping,1.4,1
-JCanedo,Moda,Neumarkt Shopping,5534.360000000001,11
+JCanedo,Moda,Neumarkt Shopping,5534.36,11
 JCanedo,Moda,Norte Shopping,7243.05,8
 Jack Simonéia Garten,Salão de Beleza | Barbearia,Garten Shopping,582.0,5
 Jah Açaí,Gastronomia,Balneário Shopping,78.78,4
@@ -398,7 +398,7 @@ Livrarias Catarinense,Livrarias,Balneário Shopping,17345.77,160
 Livrarias Catarinense,Livrarias,Continente Shopping,12478.31,175
 Livrarias Catarinense,Livrarias,Neumarkt Shopping,20799.9,241
 Livrarias Catarinense,Livrarias,Norte Shopping,7964.72,84
-Livrarias Curitiba,Livrarias,Garten Shopping,6564.52,85
+Livrarias Curitiba,Livrarias,Garten Shopping,6564.5199999999995,85
 Lofty style,Moda Feminina,Balneário Shopping,2477.34,4
 Lojas Americanas,Eletrodomésticos,Continente Shopping,25601.13,448
 Lojas Americanas,Eletrodomésticos,Norte Shopping,14425.27,218
@@ -425,7 +425,7 @@ Madero,Gastronomia,Continente Shopping,12569.38,68
 Madero,Gastronomia,Garten Shopping,6302.39,34
 Madero,Gastronomia,Neumarkt Shopping,22214.35,134
 Magazine Luiza,Eletrodomésticos,Balneário Shopping,9465.98,9
-Magazine Luiza,Eletrodomésticos,Continente Shopping,60977.67,20
+Magazine Luiza,Eletrodomésticos,Continente Shopping,60977.670000000006,20
 Magazine Luiza,Eletrodomésticos,Garten Shopping,11122.91,6
 Magazine Luiza,Eletrodomésticos,Norte Shopping,22387.55,13
 Magic Feet,Moda,Balneário Shopping,14380.68,20
@@ -485,7 +485,7 @@ Mr Trend,Ótica,Balneário Shopping,365.01,1
 Mr Trend,Ótica,Continente Shopping,909.0,2
 Mr. Cat,Calçados,Continente Shopping,2259.1,7
 Mr. Cheff,Gastronomia,Balneário Shopping,509.94,9
-Mr. Cheff,Gastronomia,Continente Shopping,2914.78,68
+Mr. Cheff,Gastronomia,Continente Shopping,2914.7799999999997,68
 Mr. Cheff,Gastronomia,Norte Shopping,2311.76,44
 Mundo Di Chocolate,Gastronomia,Garten Shopping,1811.78,15
 Mânoa Acessórios,Presentes e Acessórios,Balneário Shopping,1421.94,21
@@ -507,15 +507,14 @@ O Boticário,Beleza e Bem-estar,Continente Shopping,10712.78,68
 O Boticário,Beleza e Bem-estar,Garten Shopping,5281.27,46
 O Boticário,Beleza e Bem-estar,Neumarkt Shopping,4907.14,31
 O Boticário,Beleza e Bem-estar,Norte Shopping,6024.25,38
-O Mundo das Capas,Telefonia,Neumarkt Shopping,325.0,1
-OJO,Ótica,Neumarkt Shopping,8289.0,3
+O MUNDO DAS CAPAS,Telefonia,Neumarkt Shopping,325.0,1
 OJO Sol & Grau,Ótica,Garten Shopping,5332.0,4
 Oakley,Ótica,Balneário Shopping,5521.9,4
 Officina do Celular,Eletrônicos,Garten Shopping,554.6,3
 Ophicina,Moda,Continente Shopping,1639.67,3
 Ophicina,Moda,Garten Shopping,279.91,1
-Ophicina,Moda,Neumarkt Shopping,69.9,1
 Ophicina Foot Wear,Não informado,Nações Shopping,1299.0,1
+Ophicina Footwear,Moda,Neumarkt Shopping,69.9,1
 Orientali,Gastronomia,Balneário Shopping,2427.26,35
 Orientali,Gastronomia,Continente Shopping,2161.75,32
 Orientali,Gastronomia,Neumarkt Shopping,1691.18,34
@@ -569,7 +568,7 @@ Plié,Moda,Nações Shopping,322.83,1
 Polo Wear,Moda,Continente Shopping,3988.4500000000003,21
 Polo Wear,Moda,Garten Shopping,2317.8,9
 Polo Wear,Moda,Nações Shopping,1523.8600000000001,12
-Polo Wear,Moda,Neumarkt Shopping,2490.74,15
+Polo Wear,Moda,Neumarkt Shopping,2490.7400000000002,15
 Polo Wear,Moda,Norte Shopping,2242.63,7
 Pop Me,Moda,Continente Shopping,5017.6,16
 Pop Me,Moda,Garten Shopping,6537.320000000001,25
@@ -583,7 +582,7 @@ Provin Joias,Joalheria,Garten Shopping,207.0,1
 Provin Joias,Joalheria,Norte Shopping,672.5,3
 Provin Jóias,Não informado,Nações Shopping,1289.0,5
 Puket,Moda,Balneário Shopping,3759.8,13
-Purpurata,Presentes e Acessórios,Garten Shopping,1486.9,8
+Purpurata,Presentes e Acessórios,Garten Shopping,1486.8999999999999,8
 Quebra Gelo,Presentes e Acessórios,Continente Shopping,536.0,2
 "Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,2350.7,15
 Quiksilver,Moda,Balneário Shopping,524.89,2
@@ -665,7 +664,7 @@ Subway,Gastronomia,Norte Shopping,643.06,18
 Sunglass Hut,Ótica,Balneário Shopping,3619.0,2
 Sunglass Hut,Ótica,Continente Shopping,2150.0,3
 Superlegal,Infantil,Garten Shopping,8157.2,55
-Superlegal Brinquedos,Infantil,Balneário Shopping,23972.78,116
+Superlegal Brinquedos,Infantil,Balneário Shopping,23972.780000000002,116
 Superlegal Brinquedos,Infantil,Norte Shopping,14173.84,69
 Swarovski,Joalheria,Balneário Shopping,679.0,2
 Swarovski,Joalheria,Neumarkt Shopping,5150.0,4
