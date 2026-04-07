@@ -1697,8 +1697,30 @@ def pagina_dashboard():
 
         if evolucao_rows:
             df_evo = pd.DataFrame(evolucao_rows)
-            # Ordenar por periodo
             df_evo = df_evo.sort_values("periodo")
+
+            # Filtro de meses
+            meses_disponiveis = df_evo[["periodo", "label"]].drop_duplicates().sort_values("periodo")
+            meses_codes = meses_disponiveis["periodo"].tolist()
+            meses_labels = meses_disponiveis["label"].tolist()
+
+            col_mi, col_mf = st.columns(2)
+            with col_mi:
+                idx_inicio = st.selectbox("De", range(len(meses_codes)),
+                    format_func=lambda i: meses_labels[i],
+                    index=0, key="evo_mes_inicio")
+            with col_mf:
+                idx_fim = st.selectbox("Até", range(len(meses_codes)),
+                    format_func=lambda i: meses_labels[i],
+                    index=len(meses_codes) - 1, key="evo_mes_fim")
+
+            if idx_inicio > idx_fim:
+                st.warning("Selecione um período válido (De ≤ Até).")
+                idx_inicio, idx_fim = idx_fim, idx_inicio
+
+            mes_inicio = meses_codes[idx_inicio]
+            mes_fim = meses_codes[idx_fim]
+            df_evo = df_evo[(df_evo["periodo"] >= mes_inicio) & (df_evo["periodo"] <= mes_fim)]
 
             perfil_order = ["VIP", "Premium", "Potencial", "Pontual"]
             cores_evo = {
