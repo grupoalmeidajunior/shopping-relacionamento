@@ -115,6 +115,13 @@ st.markdown(f"""
     background-color: #0a2240; border-color: #1a3a5c; border-radius: 6px;
 }}
 [data-testid="stSidebar"] .stSelectbox [data-baseweb="select"] > div * {{ color: #FFFFFF !important; }}
+[data-testid="stSidebar"] .stDateInput input {{
+    background-color: #0a2240 !important;
+    border-color: #1a3a5c !important;
+    border-radius: 6px !important;
+    color: #FFFFFF !important;
+}}
+[data-testid="stSidebar"] .stDateInput label {{ color: #8a9bb5 !important; font-size: 0.85rem !important; letter-spacing: 0.04em; }}
 [data-testid="stSidebar"] h3 {{ font-weight: 300 !important; letter-spacing: 0.12em !important; font-size: 1.1rem !important; }}
 [data-testid="stSidebar"] button[kind="secondary"] {{
     background-color: #E74C3C !important; color: white !important;
