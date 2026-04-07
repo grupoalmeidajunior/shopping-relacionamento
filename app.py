@@ -1720,8 +1720,9 @@ def pagina_dashboard():
                 fig_evo_cli.update_layout(
                     xaxis_title="Mês", yaxis_title="Clientes",
                     legend_title=None, hovermode="x unified",
-                    legend=dict(orientation="h", yanchor="top", y=-0.25, xanchor="center", x=0.5),
-                    margin=dict(b=120),
+                    legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
+                    title=dict(y=0.98, yanchor="top"),
+                    margin=dict(t=80, b=80),
                 )
                 fig_evo_cli.update_xaxes(tickangle=45)
                 render_chart(fig_evo_cli, key="evo_clientes")
@@ -1736,8 +1737,9 @@ def pagina_dashboard():
                 fig_evo_val.update_layout(
                     xaxis_title="Mês", yaxis_title="Valor (R$)",
                     legend_title=None, hovermode="x unified",
-                    legend=dict(orientation="h", yanchor="top", y=-0.25, xanchor="center", x=0.5),
-                    margin=dict(b=120),
+                    legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
+                    title=dict(y=0.98, yanchor="top"),
+                    margin=dict(t=80, b=80),
                 )
                 fig_evo_val.update_xaxes(tickangle=45)
                 render_chart(fig_evo_val, key="evo_valor")
