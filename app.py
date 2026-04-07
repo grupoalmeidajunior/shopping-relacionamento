@@ -1584,7 +1584,7 @@ def pagina_dashboard():
     st.markdown("#### 📈 Análises Visuais")
     st.caption("Os gráficos abaixo respondem aos filtros aplicados. Explore as abas para diferentes visões dos dados.")
     cores_perfil = CORES_PERFIL
-    tab1, tab2, tab3 = st.tabs(["Por Perfil", "Por Segmento", "Por Loja"])
+    tab1, tab2, tab3, tab4 = st.tabs(["Por Perfil", "Por Segmento", "Por Loja", "Evolução"])
 
     with tab1:
         st.caption(
@@ -1659,6 +1659,97 @@ def pagina_dashboard():
                 st.info("Nenhum dado de loja para os clientes filtrados.")
         else:
             st.info("Dados de loja não disponíveis para este período.")
+
+    with tab4:
+        st.caption(
+            "**Evolução mensal** da quantidade e valor de clientes por perfil (VIP, Premium, Potencial, Pontual). "
+            "Mostra como a base se movimenta ao longo dos meses — ideal para avaliar o impacto de campanhas e ações."
+        )
+
+        # Carregar dados mensais de todos os meses disponiveis
+        pasta_mes = os.path.join(RESULTADOS_DIR, "Por_Mes")
+        evolucao_rows = []
+        if os.path.exists(pasta_mes):
+            for d in sorted(os.listdir(pasta_mes)):
+                if not os.path.isdir(os.path.join(pasta_mes, d)):
+                    continue
+                csv_path = os.path.join(pasta_mes, d, "top_consumidores_rfv.csv")
+                if not os.path.exists(csv_path):
+                    continue
+                try:
+                    df_mes = pd.read_csv(csv_path, sep=";", decimal=",", encoding="utf-8-sig",
+                                         usecols=["Cliente_ID", "Shopping", "Valor_Total", "Perfil_Cliente"])
+                    if shopping_nome:
+                        df_mes = df_mes[df_mes["Shopping"] == shopping_nome]
+                    if df_mes.empty:
+                        continue
+                    for perfil in ["VIP", "Premium", "Potencial", "Pontual"]:
+                        sub = df_mes[df_mes["Perfil_Cliente"] == perfil]
+                        evolucao_rows.append({
+                            "periodo": d,
+                            "label": _label_periodo(d),
+                            "perfil": perfil,
+                            "clientes": len(sub),
+                            "valor": sub["Valor_Total"].sum(),
+                        })
+                except Exception:
+                    continue
+
+        if evolucao_rows:
+            df_evo = pd.DataFrame(evolucao_rows)
+            # Ordenar por periodo
+            df_evo = df_evo.sort_values("periodo")
+
+            perfil_order = ["VIP", "Premium", "Potencial", "Pontual"]
+            cores_evo = {
+                "VIP": CORES_PERFIL.get("VIP", "#C9A84C"),
+                "Premium": CORES_PERFIL.get("Premium", "#8A8D93"),
+                "Potencial": CORES_PERFIL.get("Potencial", "#B07D4B"),
+                "Pontual": CORES_PERFIL.get("Pontual", "#8E9AAF"),
+            }
+
+            evo_col1, evo_col2 = st.columns(2)
+
+            with evo_col1:
+                fig_evo_cli = px.area(
+                    df_evo, x="label", y="clientes", color="perfil",
+                    title="Clientes por Perfil ao Longo do Tempo",
+                    category_orders={"perfil": perfil_order},
+                    color_discrete_map=cores_evo,
+                )
+                fig_evo_cli.update_layout(
+                    xaxis_title="Mês", yaxis_title="Clientes",
+                    legend_title="Perfil", hovermode="x unified",
+                )
+                fig_evo_cli.update_xaxes(tickangle=45)
+                render_chart(fig_evo_cli, key="evo_clientes")
+
+            with evo_col2:
+                fig_evo_val = px.area(
+                    df_evo, x="label", y="valor", color="perfil",
+                    title="Valor (R$) por Perfil ao Longo do Tempo",
+                    category_orders={"perfil": perfil_order},
+                    color_discrete_map=cores_evo,
+                )
+                fig_evo_val.update_layout(
+                    xaxis_title="Mês", yaxis_title="Valor (R$)",
+                    legend_title="Perfil", hovermode="x unified",
+                )
+                fig_evo_val.update_xaxes(tickangle=45)
+                render_chart(fig_evo_val, key="evo_valor")
+
+            # Tabela resumo
+            with st.expander("Ver dados da evolução"):
+                pivot = df_evo.pivot_table(index="label", columns="perfil",
+                                           values="clientes", aggfunc="sum").fillna(0).astype(int)
+                pivot = pivot.reindex(columns=[p for p in perfil_order if p in pivot.columns])
+                pivot["Total"] = pivot.sum(axis=1)
+                # % VIP
+                if "VIP" in pivot.columns:
+                    pivot["% VIP"] = (pivot["VIP"] / pivot["Total"] * 100).round(1)
+                st.dataframe(pivot, use_container_width=True)
+        else:
+            st.info("Dados mensais não disponíveis para gerar a evolução. São necessários dados em `Resultados/Por_Mes/`.")
 
     st.markdown("---")
 
