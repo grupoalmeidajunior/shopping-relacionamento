@@ -1536,16 +1536,20 @@ def pagina_dashboard():
     # TABELA
     st.markdown("#### 📋 Lista de Clientes")
     st.caption(
-        "**Valor_Total** = total gasto pelo cliente no período (todas as lojas do shopping). "
-        "**Valor_Total_Filtrado** = total gasto apenas nas lojas/segmentos selecionados nos filtros. "
-        "**Perfil_Cliente** = classificação automática: **VIP** (maior valor e frequência), "
-        "**Premium** (alto), **Potencial** (médio) e **Pontual** (esporádico). "
-        "Clique no cabeçalho de qualquer coluna para ordenar a tabela."
+        "**Valor_Total** = total gasto no período. "
+        "**Freq.** = dias distintos de compra. "
+        "**Recencia** = dias desde última compra. "
+        "**Scores R/F/V** (1-5) = notas por quintis (5 = melhor). "
+        "**Score_Total** = R+F+V (3-15). "
+        "**Perfil** = VIP (≥13), Premium (≥10), Potencial (≥7), Pontual (<7). "
+        "Clique no cabeçalho para ordenar."
     )
     colunas_exibir = [
         "Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo", "Email", "Celular",
         "Bairro", "Cidade", "Genero",
         "Valor_Total", "Valor_Total_Filtrado",
+        "Frequencia_Compras", "Recencia_Dias",
+        "Score_Recencia", "Score_Frequencia", "Score_Valor", "Score_Total_RFV",
         "Perfil_Cliente",
     ]
     colunas_existentes = [c for c in colunas_exibir if c in df_filtrado.columns]
@@ -1714,7 +1718,9 @@ def pagina_dashboard():
 
     colunas_download = ["Ranking", "Cliente_ID", "Primeiro_Nome", "Nome_Completo",
                         "Email", "Celular", "Bairro", "Cidade",
-                        "Valor_Total", "Perfil_Cliente"]
+                        "Valor_Total", "Frequencia_Compras", "Recencia_Dias",
+                        "Score_Recencia", "Score_Frequencia", "Score_Valor", "Score_Total_RFV",
+                        "Perfil_Cliente"]
     if score_col:
         colunas_download.append(score_col)
     colunas_download = [c for c in colunas_download if c in df_filtrado.columns]
