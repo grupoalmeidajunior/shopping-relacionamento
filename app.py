@@ -1349,6 +1349,379 @@ def _calcular_evolucao_perfis(df_raw, shopping_nome=None):
     return pd.DataFrame(evolucao_rows) if evolucao_rows else pd.DataFrame()
 
 
+SHOPPING_NOME_PARA_ID = {v: k for k, v in SHOPPING_ID_PARA_NOME.items()}
+
+QUERY_BENEFICIOS_CADASTRADOS = """
+SELECT fb.ID, fb.TITULO, fb.TIPO_BENEFICIO, fb.QUANTIDADE_PONTOS, fb.STATUS,
+       fb.VALIDADE_INICIO, fb.VALIDADE_FIM, sl.NOME AS loja_nome,
+       COUNT(fcb.ID) AS total_resgates
+FROM BRONZE.BRZ_AJFANS_FIDELIDADE_BENEFICIO fb
+JOIN BRONZE.BRZ_AJFANS_SHOPPING_LOJA sl ON sl.ID = fb.LOJA_ID
+LEFT JOIN BRONZE.BRZ_AJFANS_FIDELIDADE_CLIENTE_BENEFICIO fcb ON fcb.BENEFICIO_ID = fb.ID
+WHERE sl.SHOPPING_ID = %(shopping_id)s
+GROUP BY fb.ID, fb.TITULO, fb.TIPO_BENEFICIO, fb.QUANTIDADE_PONTOS, fb.STATUS,
+         fb.VALIDADE_INICIO, fb.VALIDADE_FIM, sl.NOME
+ORDER BY total_resgates DESC
+"""
+
+QUERY_RESGATES_CLIENTES = """
+SELECT fcb.ID AS resgate_id, fcb.CLIENTE_ID, c.NOME, c.EMAIL, c.CELULAR,
+       fb.TITULO AS beneficio, fb.TIPO_BENEFICIO, fb.QUANTIDADE_PONTOS,
+       fcb.STATUS, fcb.DATA_RESGATE, fcb.DATA_USO, fcb.DATA_VENCIMENTO
+FROM BRONZE.BRZ_AJFANS_FIDELIDADE_CLIENTE_BENEFICIO fcb
+JOIN BRONZE.BRZ_AJFANS_FIDELIDADE_BENEFICIO fb ON fb.ID = fcb.BENEFICIO_ID
+LEFT JOIN BRONZE.BRZ_AJFANS_CLIENTES c ON c.ID = fcb.CLIENTE_ID
+WHERE fcb.SHOPPING_ID = %(shopping_id)s
+  AND fcb.DATA_RESGATE >= %(data_inicio)s
+  AND fcb.DATA_RESGATE <= %(data_fim)s
+ORDER BY fcb.DATA_RESGATE DESC
+"""
+
+
+@st.cache_data(ttl=86400, show_spinner="Carregando benefícios...")
+def _consultar_beneficios_cadastrados(shopping_id):
+    conn = _get_snowflake_connection()
+    if conn is None:
+        return pd.DataFrame()
+    try:
+        cur = conn.cursor()
+        cur.execute(QUERY_BENEFICIOS_CADASTRADOS, {"shopping_id": shopping_id})
+        cols = [c[0].lower() for c in cur.description]
+        return pd.DataFrame(cur.fetchall(), columns=cols)
+    except Exception as e:
+        st.error(f"Erro ao consultar benefícios: {e}")
+        return pd.DataFrame()
+
+
+@st.cache_data(ttl=86400, show_spinner="Carregando resgates...")
+def _consultar_resgates_clientes(shopping_id, data_inicio_str, data_fim_str):
+    conn = _get_snowflake_connection()
+    if conn is None:
+        return pd.DataFrame()
+    try:
+        cur = conn.cursor()
+        cur.execute(QUERY_RESGATES_CLIENTES, {
+            "shopping_id": shopping_id,
+            "data_inicio": data_inicio_str,
+            "data_fim": data_fim_str + " 23:59:59",
+        })
+        cols = [c[0].lower() for c in cur.description]
+        return pd.DataFrame(cur.fetchall(), columns=cols)
+    except Exception as e:
+        st.error(f"Erro ao consultar resgates: {e}")
+        return pd.DataFrame()
+
+
+# ==============================================================================
+# 9C. PAGINA BENEFICIOS
+# ==============================================================================
+
+def pagina_beneficios(shopping_nome, username):
+    """Pagina de beneficios cadastrados e resgatados."""
+    injetar_css_shopping(shopping_nome)
+    st.markdown(f'<p class="main-header">🎁 Benefícios — {shopping_nome}</p>', unsafe_allow_html=True)
+    st.markdown('<p class="sub-header">Benefícios cadastrados e resgates de clientes em tempo real</p>', unsafe_allow_html=True)
+
+    if not SNOWFLAKE_AVAILABLE or "snowflake" not in st.secrets:
+        st.warning("Conexão Snowflake não configurada.")
+        return
+
+    shopping_id = SHOPPING_NOME_PARA_ID.get(shopping_nome)
+    if not shopping_id:
+        st.error(f"Shopping não encontrado: {shopping_nome}")
+        return
+
+    # Carregar beneficios cadastrados
+    df_ben = _consultar_beneficios_cadastrados(shopping_id)
+
+    tab1, tab2, tab3, tab4 = st.tabs(["Visão Geral", "Benefícios Cadastrados", "Resgates por Cliente", "Ranking de Clientes"])
+
+    # ==== TAB 1: VISAO GERAL ====
+    with tab1:
+        # Periodo para visao geral
+        col_vg1, col_vg2 = st.columns(2)
+        with col_vg1:
+            vg_inicio = st.date_input("De", value=date(2025, 1, 1),
+                min_value=date(2022, 1, 1), max_value=date.today(), key="ben_vg_inicio")
+        with col_vg2:
+            vg_fim = st.date_input("Até", value=date.today(),
+                min_value=date(2022, 1, 1), max_value=date.today(), key="ben_vg_fim")
+
+        if vg_inicio > vg_fim:
+            st.error("Data início deve ser anterior a data fim.")
+            return
+
+        df_resg = _consultar_resgates_clientes(shopping_id, str(vg_inicio), str(vg_fim))
+
+        # KPIs
+        ben_ativos = len(df_ben[df_ben["status"] == "Ativo"]) if not df_ben.empty else 0
+        total_resgates = len(df_resg)
+        clientes_unicos = df_resg["cliente_id"].nunique() if not df_resg.empty else 0
+        if not df_resg.empty:
+            utilizados = (df_resg["status"] == "Utilizado").sum()
+            taxa_uso = (utilizados / total_resgates * 100) if total_resgates > 0 else 0
+        else:
+            taxa_uso = 0
+
+        c1, c2, c3, c4 = st.columns(4)
+        c1.metric("Benefícios Ativos", f"{ben_ativos}")
+        c2.metric("Total Resgates", f"{total_resgates:,}".replace(",", "."))
+        c3.metric("Clientes Únicos", f"{clientes_unicos:,}".replace(",", "."))
+        c4.metric("Taxa de Uso", f"{taxa_uso:.1f}%",
+                  help="% de resgates efetivamente utilizados (status = Utilizado)")
+
+        st.markdown("---")
+
+        if not df_resg.empty:
+            cores_shop = CORES_SHOPPING.get(shopping_nome, {})
+            gcol1, gcol2 = st.columns(2)
+
+            with gcol1:
+                # Pizza por tipo
+                tipo_counts = df_resg.groupby("tipo_beneficio").size().reset_index(name="resgates")
+                fig_tipo = px.pie(tipo_counts, values="resgates", names="tipo_beneficio",
+                                  title="Resgates por Tipo de Benefício",
+                                  color_discrete_sequence=[cores_shop.get("accent", "#C9A84C"),
+                                                           cores_shop.get("accent2", "#8A8D93")])
+                fig_tipo.update_traces(textinfo="label+percent+value")
+                render_chart(fig_tipo, key="ben_tipo_pie")
+
+            with gcol2:
+                # Top 10 beneficios
+                top_ben = df_resg.groupby("beneficio").size().reset_index(name="resgates")
+                top_ben = top_ben.sort_values("resgates", ascending=True).tail(10)
+                # Truncar nomes longos
+                top_ben["beneficio_short"] = top_ben["beneficio"].str[:40]
+                fig_top = px.bar(top_ben, x="resgates", y="beneficio_short", orientation="h",
+                                 title="Top 10 Benefícios Mais Resgatados",
+                                 color_discrete_sequence=[cores_shop.get("accent", "#C9A84C")])
+                fig_top.update_traces(texttemplate="%{x:,}", textposition="outside")
+                fig_top.update_layout(yaxis_title="", showlegend=False)
+                render_chart(fig_top, key="ben_top10")
+
+            # Evolucao mensal
+            df_resg["data_resgate"] = pd.to_datetime(df_resg["data_resgate"]).dt.tz_localize(None)
+            df_resg["mes"] = df_resg["data_resgate"].dt.to_period("M").astype(str)
+            evo_mensal = df_resg.groupby("mes").agg(
+                resgates=("resgate_id", "count"),
+                clientes=("cliente_id", "nunique"),
+            ).reset_index()
+            evo_mensal = evo_mensal.sort_values("mes")
+            # Label legivel
+            evo_mensal["label"] = evo_mensal["mes"].apply(
+                lambda x: _label_periodo(x.replace("-", "_")) if "-" in x else x)
+
+            fig_evo = go.Figure()
+            fig_evo.add_trace(go.Scatter(x=evo_mensal["label"], y=evo_mensal["resgates"],
+                name="Resgates", fill="tozeroy", line=dict(color=cores_shop.get("accent", "#C9A84C"))))
+            fig_evo.add_trace(go.Scatter(x=evo_mensal["label"], y=evo_mensal["clientes"],
+                name="Clientes Únicos", fill="tozeroy", line=dict(color=cores_shop.get("accent2", "#8A8D93"))))
+            fig_evo.update_layout(
+                title="Evolução Mensal de Resgates",
+                xaxis_title="Mês", yaxis_title="Quantidade",
+                legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
+                title_y=0.98, margin=dict(t=80, b=80), hovermode="x unified",
+            )
+            fig_evo.update_xaxes(tickangle=45)
+            render_chart(fig_evo, key="ben_evo_mensal")
+
+            # Alerta beneficios expirando
+            if not df_ben.empty and "validade_fim" in df_ben.columns:
+                df_ben["validade_fim"] = pd.to_datetime(df_ben["validade_fim"], errors="coerce").dt.tz_localize(None)
+                hoje = pd.Timestamp.now().normalize()
+                expirando = df_ben[
+                    (df_ben["status"] == "Ativo") &
+                    (df_ben["validade_fim"].notna()) &
+                    (df_ben["validade_fim"] >= hoje) &
+                    (df_ben["validade_fim"] <= hoje + pd.Timedelta(days=15))
+                ]
+                if not expirando.empty:
+                    st.warning(f"⚠️ **{len(expirando)} benefício(s) expirando nos próximos 15 dias:**")
+                    for _, row in expirando.iterrows():
+                        dias = (row["validade_fim"] - hoje).days
+                        st.caption(f"• {row['titulo']} — expira em **{dias} dia(s)** ({row['validade_fim'].strftime('%d/%m/%Y')})")
+
+            # Tempo medio de uso
+            df_usados = df_resg[df_resg["status"] == "Utilizado"].copy()
+            if not df_usados.empty and "data_uso" in df_usados.columns:
+                df_usados["data_uso"] = pd.to_datetime(df_usados["data_uso"], errors="coerce").dt.tz_localize(None)
+                df_usados["dias_para_uso"] = (df_usados["data_uso"] - df_usados["data_resgate"]).dt.days
+                df_usados = df_usados[df_usados["dias_para_uso"] >= 0]
+                if not df_usados.empty:
+                    media_dias = df_usados["dias_para_uso"].mean()
+                    st.info(f"⏱️ Tempo médio entre resgate e uso: **{media_dias:.1f} dias** (baseado em {len(df_usados):,} resgates utilizados)")
+
+        else:
+            st.info("Nenhum resgate encontrado no período selecionado.")
+
+    # ==== TAB 2: BENEFICIOS CADASTRADOS ====
+    with tab2:
+        if df_ben.empty:
+            st.info("Nenhum benefício cadastrado para este shopping.")
+        else:
+            st.caption("Lista de todos os benefícios cadastrados para o shopping. Filtre por status ou tipo.")
+
+            fcol1, fcol2 = st.columns(2)
+            with fcol1:
+                status_opts = sorted(df_ben["status"].dropna().unique().tolist())
+                status_filtro = st.multiselect("Status", status_opts, default=["Ativo"] if "Ativo" in status_opts else [], key="ben_status_filtro")
+            with fcol2:
+                tipo_opts = sorted(df_ben["tipo_beneficio"].dropna().unique().tolist())
+                tipo_filtro = st.multiselect("Tipo", tipo_opts, key="ben_tipo_filtro")
+
+            df_ben_filtrado = df_ben.copy()
+            if status_filtro:
+                df_ben_filtrado = df_ben_filtrado[df_ben_filtrado["status"].isin(status_filtro)]
+            if tipo_filtro:
+                df_ben_filtrado = df_ben_filtrado[df_ben_filtrado["tipo_beneficio"].isin(tipo_filtro)]
+
+            # Formatar datas
+            for col in ["validade_inicio", "validade_fim"]:
+                if col in df_ben_filtrado.columns:
+                    df_ben_filtrado[col] = pd.to_datetime(df_ben_filtrado[col], errors="coerce").dt.strftime("%d/%m/%Y")
+
+            colunas_ben = ["titulo", "tipo_beneficio", "quantidade_pontos", "status", "loja_nome",
+                           "validade_inicio", "validade_fim", "total_resgates"]
+            colunas_ben = [c for c in colunas_ben if c in df_ben_filtrado.columns]
+            rename_ben = {"titulo": "Benefício", "tipo_beneficio": "Tipo", "quantidade_pontos": "Pontos",
+                          "status": "Status", "loja_nome": "Loja", "validade_inicio": "Início",
+                          "validade_fim": "Fim", "total_resgates": "Resgates"}
+
+            st.markdown(f"**{len(df_ben_filtrado)} benefício(s)**")
+            st.dataframe(df_ben_filtrado[colunas_ben].rename(columns=rename_ben),
+                         height=500, hide_index=True, use_container_width=True)
+
+            # Download
+            csv_ben = df_ben_filtrado[colunas_ben].rename(columns=rename_ben).to_csv(
+                index=False, encoding="utf-8-sig", sep=";")
+            st.download_button("📥 Baixar CSV", csv_ben,
+                f"beneficios_{shopping_nome.replace(' ', '_')}.csv", "text/csv", key="dl_ben")
+
+    # ==== TAB 3: RESGATES POR CLIENTE ====
+    with tab3:
+        st.caption("Selecione um período para ver os clientes que resgataram benefícios. Ranking por quantidade de resgates.")
+
+        rcol1, rcol2 = st.columns(2)
+        with rcol1:
+            r_inicio = st.date_input("De", value=date.today() - timedelta(days=30),
+                min_value=date(2022, 1, 1), max_value=date.today(), key="ben_r_inicio")
+        with rcol2:
+            r_fim = st.date_input("Até", value=date.today(),
+                min_value=date(2022, 1, 1), max_value=date.today(), key="ben_r_fim")
+
+        if r_inicio > r_fim:
+            st.error("Data início deve ser anterior a data fim.")
+        else:
+            df_r = _consultar_resgates_clientes(shopping_id, str(r_inicio), str(r_fim))
+            registrar_filtro(username, shopping_nome, "Beneficios_Periodo", f"{r_inicio} a {r_fim}")
+
+            if df_r.empty:
+                st.info(f"Nenhum resgate entre {r_inicio.strftime('%d/%m/%Y')} e {r_fim.strftime('%d/%m/%Y')}.")
+            else:
+                # Agrupar por cliente
+                df_cli = df_r.groupby("cliente_id").agg(
+                    nome=("nome", "first"),
+                    email=("email", "first"),
+                    celular=("celular", "first"),
+                    resgates=("resgate_id", "count"),
+                    utilizados=("status", lambda x: (x == "Utilizado").sum()),
+                    pontos_gastos=("quantidade_pontos", "sum"),
+                    beneficios=("beneficio", lambda x: ", ".join(x.unique()[:3]) + ("..." if x.nunique() > 3 else "")),
+                ).reset_index()
+                df_cli["taxa_uso"] = (df_cli["utilizados"] / df_cli["resgates"] * 100).round(1)
+                df_cli = df_cli.sort_values("resgates", ascending=False).reset_index(drop=True)
+                df_cli.insert(0, "ranking", range(1, len(df_cli) + 1))
+
+                periodo_label = f"{r_inicio.strftime('%d/%m/%Y')} a {r_fim.strftime('%d/%m/%Y')}"
+                st.markdown(f"**{len(df_cli):,} clientes** resgataram no período {periodo_label}")
+
+                colunas_cli = ["ranking", "cliente_id", "nome", "email", "celular",
+                               "resgates", "utilizados", "taxa_uso", "pontos_gastos", "beneficios"]
+                rename_cli = {"ranking": "#", "cliente_id": "Cliente_ID", "nome": "Nome",
+                              "email": "Email", "celular": "Celular", "resgates": "Resgates",
+                              "utilizados": "Utilizados", "taxa_uso": "% Uso",
+                              "pontos_gastos": "Pontos", "beneficios": "Benefícios"}
+
+                st.dataframe(df_cli[colunas_cli].rename(columns=rename_cli),
+                             height=500, hide_index=True, use_container_width=True)
+
+                # Download
+                csv_cli = df_cli[colunas_cli].rename(columns=rename_cli).to_csv(
+                    index=False, encoding="utf-8-sig", sep=";")
+                st.download_button("📥 Baixar CSV", csv_cli,
+                    f"resgates_clientes_{shopping_nome.replace(' ', '_')}_{r_inicio}_{r_fim}.csv",
+                    "text/csv", key="dl_resg_cli")
+
+    # ==== TAB 4: RANKING DE CLIENTES ====
+    with tab4:
+        st.caption("Ranking dos clientes que mais resgatam benefícios. Escolha a visão mensal ou anual.")
+
+        modo_rank = st.radio("Período", ["Mensal", "Anual"], horizontal=True, key="ben_rank_modo")
+
+        if modo_rank == "Mensal":
+            mes_ref = st.date_input("Mês de referência", value=date.today().replace(day=1),
+                min_value=date(2022, 1, 1), max_value=date.today(), key="ben_rank_mes")
+            # Primeiro e ultimo dia do mes
+            import calendar
+            _, ultimo_dia = calendar.monthrange(mes_ref.year, mes_ref.month)
+            rk_inicio = mes_ref.replace(day=1)
+            rk_fim = mes_ref.replace(day=ultimo_dia)
+            rk_label = _label_periodo(f"{mes_ref.year}_{mes_ref.month:02d}")
+        else:
+            ano_ref = st.selectbox("Ano", [2026, 2025, 2024, 2023, 2022], key="ben_rank_ano")
+            rk_inicio = date(ano_ref, 1, 1)
+            rk_fim = min(date(ano_ref, 12, 31), date.today())
+            rk_label = str(ano_ref)
+
+        df_rk = _consultar_resgates_clientes(shopping_id, str(rk_inicio), str(rk_fim))
+
+        if df_rk.empty:
+            st.info(f"Nenhum resgate em {rk_label}.")
+        else:
+            df_rank = df_rk.groupby("cliente_id").agg(
+                nome=("nome", "first"),
+                email=("email", "first"),
+                celular=("celular", "first"),
+                resgates=("resgate_id", "count"),
+                utilizados=("status", lambda x: (x == "Utilizado").sum()),
+                pontos_gastos=("quantidade_pontos", "sum"),
+            ).reset_index()
+            df_rank["taxa_uso"] = (df_rank["utilizados"] / df_rank["resgates"] * 100).round(1)
+            df_rank = df_rank.sort_values("resgates", ascending=False).reset_index(drop=True)
+            df_rank.insert(0, "ranking", range(1, len(df_rank) + 1))
+
+            st.markdown(f"**Ranking {rk_label}** — {len(df_rank):,} clientes")
+
+            cores_shop = CORES_SHOPPING.get(shopping_nome, {})
+
+            # Top 20 grafico
+            top20 = df_rank.head(20).copy()
+            top20["nome_short"] = top20["nome"].str.split().str[0] + " " + top20["nome"].str.split().str[-1]
+            top20 = top20.sort_values("resgates", ascending=True)
+            fig_rank = px.bar(top20, x="resgates", y="nome_short", orientation="h",
+                              title=f"Top 20 — Clientes que Mais Resgataram ({rk_label})",
+                              color_discrete_sequence=[cores_shop.get("accent", "#C9A84C")])
+            fig_rank.update_traces(texttemplate="%{x}", textposition="outside")
+            fig_rank.update_layout(yaxis_title="", showlegend=False)
+            render_chart(fig_rank, key="ben_rank_chart")
+
+            # Tabela
+            colunas_rk = ["ranking", "cliente_id", "nome", "email", "celular",
+                          "resgates", "utilizados", "taxa_uso", "pontos_gastos"]
+            rename_rk = {"ranking": "#", "cliente_id": "Cliente_ID", "nome": "Nome",
+                         "email": "Email", "celular": "Celular", "resgates": "Resgates",
+                         "utilizados": "Utilizados", "taxa_uso": "% Uso", "pontos_gastos": "Pontos"}
+
+            st.dataframe(df_rank[colunas_rk].rename(columns=rename_rk),
+                         height=500, hide_index=True, use_container_width=True)
+
+            csv_rk = df_rank[colunas_rk].rename(columns=rename_rk).to_csv(
+                index=False, encoding="utf-8-sig", sep=";")
+            st.download_button("📥 Baixar CSV", csv_rk,
+                f"ranking_beneficios_{shopping_nome.replace(' ', '_')}_{rk_label}.csv",
+                "text/csv", key="dl_rank_ben")
+
+
 # ==============================================================================
 # 10. PAINEL ADMINISTRATIVO
 # ==============================================================================
@@ -1490,11 +1863,11 @@ def pagina_dashboard():
         st.divider()
         if role == "admin":
             pagina_selecionada = st.radio(
-                "Navegação", ["📊 Dashboard", "🎖️ AJFANS", "⚙️ Administração"],
+                "Navegação", ["📊 Dashboard", "🎖️ AJFANS", "🎁 Benefícios", "⚙️ Administração"],
                 key="nav_admin", label_visibility="collapsed")
         else:
             pagina_selecionada = st.radio(
-                "Navegação", ["📊 Dashboard", "🎖️ AJFANS"],
+                "Navegação", ["📊 Dashboard", "🎖️ AJFANS", "🎁 Benefícios"],
                 key="nav_viewer", label_visibility="collapsed")
 
         st.divider()
@@ -1552,6 +1925,9 @@ def pagina_dashboard():
         return
     if pagina_selecionada == "🎖️ AJFANS":
         pagina_ajfans(shopping_nome, username)
+        return
+    if pagina_selecionada == "🎁 Benefícios":
+        pagina_beneficios(shopping_nome, username)
         return
 
     # CARREGAR DADOS
