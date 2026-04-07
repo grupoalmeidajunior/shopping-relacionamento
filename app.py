@@ -1631,7 +1631,7 @@ def pagina_beneficios(shopping_nome, username):
                     resgates=("resgate_id", "count"),
                     utilizados=("status", lambda x: (x == "Utilizado").sum()),
                     pontos_gastos=("quantidade_pontos", "sum"),
-                    beneficios=("beneficio", lambda x: ", ".join(x.unique()[:3]) + ("..." if x.nunique() > 3 else "")),
+                    beneficios=("beneficio", lambda x: "; ".join(x.unique()[:3]) + ("..." if x.nunique() > 3 else "")),
                 ).reset_index()
                 df_cli["taxa_uso"] = (df_cli["utilizados"] / df_cli["resgates"] * 100).round(1)
                 df_cli = df_cli.sort_values("resgates", ascending=False).reset_index(drop=True)
