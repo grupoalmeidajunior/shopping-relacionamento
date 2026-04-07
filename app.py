@@ -1218,6 +1218,137 @@ def carregar_dados_periodo_personalizado(data_inicio, data_fim, shopping_nome):
     return df_top, df_loja_info, df_cliente_loja
 
 
+QUERY_EVOLUCAO_MENSAL = """
+WITH cupons_unificados AS (
+    SELECT id, cliente_id, shopping_id, cnpj_loja, valor_compra AS valor,
+           data_envio, data_compra, status
+    FROM BRONZE.BRZ_AJFANS_FIDELIDADE_CUPOM
+    WHERE status = 'Validado'
+    UNION ALL
+    SELECT id, cliente_id, shopping_id, cnpj_loja, valor_compra AS valor,
+           data_envio, data_compra, status
+    FROM BRONZE.BRZ_AJFANS_FIDELIDADE_CUPOM_OLD
+    WHERE status = 'Validado'
+),
+cupons_com_data AS (
+    SELECT *,
+           CASE
+               WHEN data_compra IS NULL THEN data_envio
+               WHEN data_compra > data_envio THEN data_envio
+               ELSE data_compra
+           END AS data_efetiva
+    FROM cupons_unificados
+)
+SELECT
+    fc.id AS cupom_id,
+    fc.cliente_id,
+    fc.shopping_id,
+    s.nome AS shopping_nome,
+    fc.valor,
+    fc.data_efetiva AS data_envio,
+    TO_CHAR(fc.data_efetiva, 'YYYY_MM') AS mes_codigo
+FROM cupons_com_data fc
+INNER JOIN BRONZE.BRZ_AJFANS_CLIENTES c ON c.id = fc.cliente_id
+INNER JOIN (
+    SELECT cnpj FROM BRONZE.BRZ_AJFANS_SHOPPING_LOJA
+    WHERE cnpj IS NOT NULL AND cnpj <> '' GROUP BY cnpj
+) sl ON sl.cnpj = fc.cnpj_loja
+LEFT JOIN BRONZE.BRZ_AJFANS_SHOPPING s ON s.id = fc.shopping_id
+WHERE fc.data_efetiva >= %(data_inicio)s
+  AND fc.data_efetiva <= %(data_fim)s
+  AND c.status = 'ATIVO'
+"""
+
+
+@st.cache_data(ttl=86400, show_spinner="Consultando evolução no Snowflake...")
+def _consultar_evolucao_mensal(data_inicio_str, data_fim_str):
+    """Consulta cupons para evolucao mensal."""
+    conn = _get_snowflake_connection()
+    if conn is None:
+        return pd.DataFrame()
+    try:
+        cur = conn.cursor()
+        cur.execute(QUERY_EVOLUCAO_MENSAL, {
+            "data_inicio": data_inicio_str,
+            "data_fim": data_fim_str + " 23:59:59",
+        })
+        cols = [c[0].lower() for c in cur.description]
+        return pd.DataFrame(cur.fetchall(), columns=cols)
+    except Exception as e:
+        st.error(f"Erro na consulta Snowflake: {e}")
+        return pd.DataFrame()
+
+
+def _calcular_evolucao_perfis(df_raw, shopping_nome=None):
+    """Calcula perfis RFV por mes a partir de cupons brutos."""
+    if df_raw.empty:
+        return pd.DataFrame()
+
+    df = df_raw.copy()
+    df["data_envio"] = pd.to_datetime(df["data_envio"]).dt.tz_localize(None)
+    df["valor"] = pd.to_numeric(df["valor"], errors="coerce").fillna(0)
+    df["shopping_nome"] = df["shopping_id"].map(SHOPPING_ID_PARA_NOME).fillna(df.get("shopping_nome", ""))
+
+    if shopping_nome:
+        df = df[df["shopping_nome"] == shopping_nome]
+
+    if df.empty:
+        return pd.DataFrame()
+
+    evolucao_rows = []
+    for mes in sorted(df["mes_codigo"].unique()):
+        df_mes = df[df["mes_codigo"] == mes]
+        # Ultimo dia do mes como data_ref
+        data_ref = df_mes["data_envio"].max()
+
+        # Metricas por cliente
+        freq = df_mes.groupby("cliente_id")["data_envio"].apply(lambda x: x.dt.date.nunique())
+        valor = df_mes.groupby("cliente_id")["valor"].sum()
+        ultima = df_mes.groupby("cliente_id")["data_envio"].max()
+
+        cli = pd.DataFrame({
+            "frequencia": freq,
+            "valor": valor,
+            "recencia_dias": (data_ref - ultima).dt.days,
+        })
+
+        # Scores RFV por quintis
+        n = len(cli)
+        n_bins = min(5, n)
+        for col_score, col_fonte, invertido in [
+            ("R", "recencia_dias", True), ("F", "frequencia", False), ("V", "valor", False)
+        ]:
+            if n_bins < 2:
+                cli[col_score] = 3
+            else:
+                labels = list(range(1, n_bins + 1))
+                if invertido:
+                    labels = labels[::-1]
+                try:
+                    cli[col_score] = pd.qcut(
+                        cli[col_fonte].rank(method="first"),
+                        q=n_bins, labels=labels, duplicates="drop"
+                    ).astype(int)
+                except (ValueError, TypeError):
+                    cli[col_score] = 3
+
+        cli["score"] = cli["R"] + cli["F"] + cli["V"]
+        cli["perfil"] = cli["score"].apply(_classificar_perfil)
+
+        label = _label_periodo(mes)
+        for perfil in ["VIP", "Premium", "Potencial", "Pontual"]:
+            sub = cli[cli["perfil"] == perfil]
+            evolucao_rows.append({
+                "periodo": mes,
+                "label": label,
+                "perfil": perfil,
+                "clientes": len(sub),
+                "valor": sub["valor"].sum(),
+            })
+
+    return pd.DataFrame(evolucao_rows) if evolucao_rows else pd.DataFrame()
+
+
 # ==============================================================================
 # 10. PAINEL ADMINISTRATIVO
 # ==============================================================================
@@ -1663,121 +1794,89 @@ def pagina_dashboard():
     with tab4:
         st.caption(
             "**Evolução mensal** da quantidade e valor de clientes por perfil (VIP, Premium, Potencial, Pontual). "
-            "Mostra como a base se movimenta ao longo dos meses — ideal para avaliar o impacto de campanhas e ações."
+            "Dados em tempo real via Snowflake — ideal para avaliar o impacto de campanhas e ações."
         )
 
-        # Carregar dados mensais de todos os meses disponiveis
-        pasta_mes = os.path.join(RESULTADOS_DIR, "Por_Mes")
-        evolucao_rows = []
-        if os.path.exists(pasta_mes):
-            for d in sorted(os.listdir(pasta_mes)):
-                if not os.path.isdir(os.path.join(pasta_mes, d)):
-                    continue
-                csv_path = os.path.join(pasta_mes, d, "top_consumidores_rfv.csv")
-                if not os.path.exists(csv_path):
-                    continue
-                try:
-                    df_mes = pd.read_csv(csv_path, sep=";", decimal=",", encoding="utf-8-sig",
-                                         usecols=["Cliente_ID", "Shopping", "Valor_Total", "Perfil_Cliente"])
-                    if shopping_nome:
-                        df_mes = df_mes[df_mes["Shopping"] == shopping_nome]
-                    if df_mes.empty:
-                        continue
-                    for perfil in ["VIP", "Premium", "Potencial", "Pontual"]:
-                        sub = df_mes[df_mes["Perfil_Cliente"] == perfil]
-                        evolucao_rows.append({
-                            "periodo": d,
-                            "label": _label_periodo(d),
-                            "perfil": perfil,
-                            "clientes": len(sub),
-                            "valor": sub["Valor_Total"].sum(),
-                        })
-                except Exception:
-                    continue
+        snowflake_ok = SNOWFLAKE_AVAILABLE and "snowflake" in st.secrets
 
-        if evolucao_rows:
-            df_evo = pd.DataFrame(evolucao_rows)
-            df_evo = df_evo.sort_values("periodo")
-
-            # Filtro de meses
-            meses_disponiveis = df_evo[["periodo", "label"]].drop_duplicates().sort_values("periodo")
-            meses_codes = meses_disponiveis["periodo"].tolist()
-            meses_labels = meses_disponiveis["label"].tolist()
-
+        if not snowflake_ok:
+            st.warning("Conexão Snowflake não configurada. Adicione as credenciais em secrets.toml.")
+        else:
+            # Seletor de range de meses
             col_mi, col_mf = st.columns(2)
             with col_mi:
-                idx_inicio = st.selectbox("De", range(len(meses_codes)),
-                    format_func=lambda i: meses_labels[i],
-                    index=0, key="evo_mes_inicio")
+                evo_data_inicio = st.date_input(
+                    "De", value=date(2025, 1, 1),
+                    min_value=date(2022, 1, 1), max_value=date.today(), key="evo_dt_inicio")
             with col_mf:
-                idx_fim = st.selectbox("Até", range(len(meses_codes)),
-                    format_func=lambda i: meses_labels[i],
-                    index=len(meses_codes) - 1, key="evo_mes_fim")
+                evo_data_fim = st.date_input(
+                    "Até", value=date.today(),
+                    min_value=date(2022, 1, 1), max_value=date.today(), key="evo_dt_fim")
 
-            if idx_inicio > idx_fim:
-                st.warning("Selecione um período válido (De ≤ Até).")
-                idx_inicio, idx_fim = idx_fim, idx_inicio
+            if evo_data_inicio > evo_data_fim:
+                st.error("Data inicio deve ser anterior a data fim.")
+            else:
+                df_evo_raw = _consultar_evolucao_mensal(str(evo_data_inicio), str(evo_data_fim))
+                df_evo = _calcular_evolucao_perfis(df_evo_raw, shopping_nome)
 
-            mes_inicio = meses_codes[idx_inicio]
-            mes_fim = meses_codes[idx_fim]
-            df_evo = df_evo[(df_evo["periodo"] >= mes_inicio) & (df_evo["periodo"] <= mes_fim)]
+                if df_evo.empty:
+                    st.info("Nenhum dado encontrado para o período selecionado.")
+                else:
+                    df_evo = df_evo.sort_values("periodo")
 
-            perfil_order = ["VIP", "Premium", "Potencial", "Pontual"]
-            cores_evo = {
-                "VIP": CORES_PERFIL.get("VIP", "#C9A84C"),
-                "Premium": CORES_PERFIL.get("Premium", "#8A8D93"),
-                "Potencial": CORES_PERFIL.get("Potencial", "#B07D4B"),
-                "Pontual": CORES_PERFIL.get("Pontual", "#8E9AAF"),
-            }
+                    perfil_order = ["VIP", "Premium", "Potencial", "Pontual"]
+                    cores_evo = {
+                        "VIP": CORES_PERFIL.get("VIP", "#C9A84C"),
+                        "Premium": CORES_PERFIL.get("Premium", "#8A8D93"),
+                        "Potencial": CORES_PERFIL.get("Potencial", "#B07D4B"),
+                        "Pontual": CORES_PERFIL.get("Pontual", "#8E9AAF"),
+                    }
 
-            evo_col1, evo_col2 = st.columns(2)
+                    evo_col1, evo_col2 = st.columns(2)
 
-            with evo_col1:
-                fig_evo_cli = px.area(
-                    df_evo, x="label", y="clientes", color="perfil",
-                    title="Clientes por Perfil ao Longo do Tempo",
-                    category_orders={"perfil": perfil_order},
-                    color_discrete_map=cores_evo,
-                )
-                fig_evo_cli.update_layout(
-                    xaxis_title="Mês", yaxis_title="Clientes",
-                    legend_title=None, hovermode="x unified",
-                    legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
-                    title=dict(y=0.98, yanchor="top"),
-                    margin=dict(t=80, b=80),
-                )
-                fig_evo_cli.update_xaxes(tickangle=45)
-                render_chart(fig_evo_cli, key="evo_clientes")
+                    with evo_col1:
+                        fig_evo_cli = px.area(
+                            df_evo, x="label", y="clientes", color="perfil",
+                            title="Clientes por Perfil ao Longo do Tempo",
+                            category_orders={"perfil": perfil_order},
+                            color_discrete_map=cores_evo,
+                        )
+                        fig_evo_cli.update_layout(
+                            xaxis_title="Mês", yaxis_title="Clientes",
+                            legend_title=None, hovermode="x unified",
+                            legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
+                            title=dict(y=0.98, yanchor="top"),
+                            margin=dict(t=80, b=80),
+                        )
+                        fig_evo_cli.update_xaxes(tickangle=45)
+                        render_chart(fig_evo_cli, key="evo_clientes")
 
-            with evo_col2:
-                fig_evo_val = px.area(
-                    df_evo, x="label", y="valor", color="perfil",
-                    title="Valor (R$) por Perfil ao Longo do Tempo",
-                    category_orders={"perfil": perfil_order},
-                    color_discrete_map=cores_evo,
-                )
-                fig_evo_val.update_layout(
-                    xaxis_title="Mês", yaxis_title="Valor (R$)",
-                    legend_title=None, hovermode="x unified",
-                    legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
-                    title=dict(y=0.98, yanchor="top"),
-                    margin=dict(t=80, b=80),
-                )
-                fig_evo_val.update_xaxes(tickangle=45)
-                render_chart(fig_evo_val, key="evo_valor")
+                    with evo_col2:
+                        fig_evo_val = px.area(
+                            df_evo, x="label", y="valor", color="perfil",
+                            title="Valor (R$) por Perfil ao Longo do Tempo",
+                            category_orders={"perfil": perfil_order},
+                            color_discrete_map=cores_evo,
+                        )
+                        fig_evo_val.update_layout(
+                            xaxis_title="Mês", yaxis_title="Valor (R$)",
+                            legend_title=None, hovermode="x unified",
+                            legend=dict(orientation="h", yanchor="bottom", y=1.08, xanchor="center", x=0.5),
+                            title=dict(y=0.98, yanchor="top"),
+                            margin=dict(t=80, b=80),
+                        )
+                        fig_evo_val.update_xaxes(tickangle=45)
+                        render_chart(fig_evo_val, key="evo_valor")
 
-            # Tabela resumo
-            with st.expander("Ver dados da evolução"):
-                pivot = df_evo.pivot_table(index="label", columns="perfil",
-                                           values="clientes", aggfunc="sum").fillna(0).astype(int)
-                pivot = pivot.reindex(columns=[p for p in perfil_order if p in pivot.columns])
-                pivot["Total"] = pivot.sum(axis=1)
-                # % VIP
-                if "VIP" in pivot.columns:
-                    pivot["% VIP"] = (pivot["VIP"] / pivot["Total"] * 100).round(1)
-                st.dataframe(pivot, use_container_width=True)
-        else:
-            st.info("Dados mensais não disponíveis para gerar a evolução. São necessários dados em `Resultados/Por_Mes/`.")
+                    # Tabela resumo
+                    with st.expander("Ver dados da evolução"):
+                        pivot = df_evo.pivot_table(index="label", columns="perfil",
+                                                   values="clientes", aggfunc="sum").fillna(0).astype(int)
+                        pivot = pivot.reindex(columns=[p for p in perfil_order if p in pivot.columns])
+                        pivot["Total"] = pivot.sum(axis=1)
+                        if "VIP" in pivot.columns:
+                            pivot["% VIP"] = (pivot["VIP"] / pivot["Total"] * 100).round(1)
+                        st.dataframe(pivot, use_container_width=True)
 
     st.markdown("---")
 
