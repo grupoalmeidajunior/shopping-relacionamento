@@ -993,7 +993,7 @@ def _get_snowflake_connection():
         return None
 
 
-@st.cache_data(ttl=1800, show_spinner="Consultando dados no Snowflake...")
+@st.cache_data(ttl=86400, show_spinner="Consultando dados no Snowflake...")
 def _consultar_cupons_personalizado(data_inicio_str, data_fim_str):
     """Consulta cupons no Snowflake para periodo personalizado."""
     conn = _get_snowflake_connection()
