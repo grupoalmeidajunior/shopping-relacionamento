@@ -1495,9 +1495,12 @@ def pagina_beneficios(shopping_nome, username):
                 fig_top = px.bar(top_ben, x="resgates", y="beneficio_short", orientation="h",
                                  title="Top 10 Benefícios Mais Resgatados",
                                  color_discrete_sequence=[cores_shop.get("accent", "#C9A84C")])
-                fig_top.update_traces(texttemplate="%{x:,}")
-                fig_top.update_traces(textposition=["inside" if v > 800 else "outside" for v in top_ben["resgates"]],
-                                      insidetextanchor="end", textfont=dict(color="white"))
+                fig_top.update_traces(
+                    texttemplate="%{x:,}",
+                    textposition=["inside" if v > 800 else "outside" for v in top_ben["resgates"]],
+                    insidetextanchor="end",
+                    textfont=dict(color=["white" if v > 800 else "#333" for v in top_ben["resgates"]]),
+                )
                 fig_top.update_layout(yaxis_title="", showlegend=False)
                 render_chart(fig_top, key="ben_top10")
 
