@@ -1209,7 +1209,6 @@
 13026,Zara,1,628.5
 13027,C&A,2,359.96
 13027,Centauro,1,229.99
-13027,KFC,1,59.8
 13027,McDonald's,1,27.9
 13027,Renner,2,739.4
 13027,Spoleto,1,118.7
@@ -2874,7 +2873,7 @@
 26774,Gamelas & Panella's,2,105.05
 26774,JBay,1,800.0
 26811,C&A,1,597.95
-26811,Ótica Chilli Beans,1,399.98
+26811,Chilli Beans,1,399.98
 26833,Havan,1,79.99
 26833,Leo Cosméticos,1,105.7
 26833,Renner,1,139.6
@@ -5957,7 +5956,7 @@
 60663,Békko,1,1424.0
 60663,Mini Kalzone,1,35.0
 60670,Acuo,1,479.7
-60670,Ótica Chilli Beans,1,399.98
+60670,Chilli Beans,1,399.98
 60686,Cassol Centerlar,1,119.9
 60686,Panvel Farmácias,1,11.98
 60690,Farm,2,1098.1
@@ -8792,8 +8791,8 @@
 96082,Spoleto,1,105.79
 96103,Avatim,1,485.0
 96103,Camicado,2,556.08
-96103,Otica Chilli Beans,1,2414.56
 96103,Renner,1,299.8
+96103,Ótica Chilli Beans,1,2414.56
 96112,Kopenhagen,1,35.8
 96112,Mac,1,289.0
 96112,Renner,1,379.7
@@ -10429,8 +10428,8 @@
 113581,Divino Fogão,1,79.9
 113581,McDonald's,1,59.8
 113581,Stanley,2,668.0
+113603,Chilli Beans,1,399.98
 113603,Essence Parfums,1,965.81
-113603,Ótica Chilli Beans,1,399.98
 113609,Me.Linda,1,207.7
 113609,Studio Z,2,382.95
 113609,Vivo,1,149.0
@@ -13379,7 +13378,6 @@
 124095,Bacio di Latte,2,91.85
 124095,Cartes - Cozinha do Mundo,1,115.57
 124095,Centauro,1,379.99
-124095,KFC,1,29.8
 124095,Mini Kalzone,3,55.0
 124095,Renner,1,299.8
 124095,Spoleto,2,245.64
@@ -14047,7 +14045,6 @@
 126173,Sinhá Benta,1,40.0
 126180,C&A,1,39.99
 126180,Fini,1,10.43
-126180,KFC,1,84.6
 126180,Panvel Farmácias,1,152.0
 126207,Brasil Cacau,1,14.99
 126207,Nike Unite,1,599.98
@@ -14058,7 +14055,6 @@
 126209,Cobasi,1,344.01
 126209,Continente Shopping - Estacionamento,1,20.0
 126209,Fini,2,73.61
-126209,KFC,1,67.8
 126209,Lojas Americanas,1,57.22
 126209,McDonald's,1,5.5
 126209,Mini Kalzone,1,26.4
@@ -17688,7 +17684,6 @@
 138022,Renner,2,479.5
 138022,Sinhá Benta Gourmet,1,143.97
 138022,Studio Z,1,159.99
-138035,KFC,1,85.8
 138047,C&A,1,149.96
 138065,BelShop,1,34.98
 138065,Damyller,1,678.0
@@ -23793,7 +23788,6 @@
 159944,Carioca Calçados,2,189.98
 159944,Chiquinho Sorvetes,1,6.0
 159944,Giraffas,3,175.7
-159944,KFC,1,64.7
 159944,McDonald's,1,64.8
 159944,Panvel Farmácias,1,107.42
 159944,Pernambucanas,2,369.91
@@ -36608,7 +36602,6 @@
 249055,Maze,2,1699.8
 249055,Vivara,1,2050.0
 249092,Griletto,2,40.9
-249092,KFC,1,36.7
 249092,Mini Kalzone,2,28.9
 249115,Cobasi,1,38.34
 249115,Dudalina,1,449.91
@@ -40230,7 +40223,7 @@
 272630,z Bob's - Quiosque 2,1,41.7
 272634,Live!,2,1335.68
 272639,General Lyy,1,649.99
-272643,Ótica Chilli Beans,1,479.98
+272643,Chilli Beans,1,479.98
 272659,Cacau Show,1,46.96
 272659,Feng Cheng,1,70.96
 272659,HOPE Moda íntima,1,223.9
@@ -50322,7 +50315,7 @@
 346808,C&A,1,519.98
 346808,Wepink,1,39.9
 346829,C&A,1,659.96
-346829,Ótica Chilli Beans,1,469.98
+346829,Chilli Beans,1,469.98
 346834,Paquetá,1,299.99
 346935,C&A,1,129.99
 346979,Cobasi,1,55.8
@@ -53092,7 +53085,7 @@
 358599,Renner,1,269.6
 358599,Riachuelo,1,310.96
 358599,Spoleto,1,83.0
-358611,Ótica Chilli Beans,1,459.98
+358611,Chilli Beans,1,459.98
 358612,Paquetá Esportes,1,339.99
 358612,Riachuelo,1,259.99
 358624,Granado,1,233.5
@@ -53525,7 +53518,7 @@
 360315,Griletto,1,58.9
 360315,Mini Kalzone,1,11.0
 360317,C&A,1,179.99
-360317,Ótica Chilli Beans,1,399.98
+360317,Chilli Beans,1,399.98
 360345,Cacau Show,1,42.45
 360345,General Lyy,1,1051.88
 360345,Lupo,1,28.8
@@ -55247,9 +55240,9 @@
 367695,SmartCase,1,50.0
 367696,Artwalk,1,1409.98
 367701,BelShop,1,99.92
+367701,Chilli Beans,1,399.98
 367701,Las Leñas Parrilla Uruguaya,2,593.75
 367701,Renner,1,259.7
-367701,Ótica Chilli Beans,1,399.98
 367715,10 Pastéis,1,27.0
 367722,Café Cultura,25,1878.5
 367722,Estação Choperia,1,57.8
@@ -58364,7 +58357,7 @@
 379376,Riachuelo,2,381.99
 379376,Valenttina,1,149.8
 379412,Cobasi,1,194.41
-379412,Otica Chilli Beans,1,699.98
+379412,Ótica Chilli Beans,1,699.98
 379432,Brooksfield,1,399.92
 379432,Centauro,1,199.97
 379444,Arezzo,1,399.9
@@ -59087,8 +59080,8 @@
 381792,Subway,1,56.0
 381793,Superlegal,1,99.99
 381799,Claro,1,3378.9
-381805,Otica Chilli Beans,1,699.98
 381805,Polo Wear,1,369.98
+381805,Ótica Chilli Beans,1,699.98
 381809,Casa Maria,1,62.97
 381809,Continente Shopping - Estacionamento,1,20.0
 381816,Burger King,1,45.9
@@ -59223,7 +59216,7 @@
 382302,Riachuelo,2,179.96
 382306,Live!,1,779.7
 382311,Lupo,1,83.0
-382312,Otica Chilli Beans,1,1838.98
+382312,Ótica Chilli Beans,1,1838.98
 382315,Cobasi,1,83.6
 382315,Morana,2,70.0
 382315,Outback Steakhouse,2,319.42
@@ -63984,7 +63977,7 @@
 386532,Renner,1,345.7
 386533,Natura,2,180.51
 386534,Superlegal,1,359.98
-386535,Otica Chilli Beans,1,799.96
+386535,Ótica Chilli Beans,1,799.96
 386536,Natura,1,32.9
 386537,Aramis,2,3769.6
 386537,Levi's,1,859.8
@@ -64776,8 +64769,8 @@
 387085,Outback Steakhouse,1,339.45
 387087,Pittol,1,549.98
 387088,C&A,1,597.95
+387088,Chilli Beans,1,399.98
 387088,Renner,2,599.8
-387088,Ótica Chilli Beans,1,399.98
 387089,C&A,1,282.96
 387089,Chiquinho Sorvetes,1,24.5
 387089,Griletto,1,142.9
@@ -65287,7 +65280,6 @@
 387412,Polo Wear,1,99.99
 387417,Chiquinho Sorvetes,1,12.0
 387417,Cobasi,1,15.16
-387417,KFC,1,38.6
 387417,Livrarias Catarinense,1,48.9
 387417,McDonald's,1,43.0
 387417,Mr. Cheff,1,30.99
@@ -68086,8 +68078,8 @@
 389528,Riachuelo,1,639.87
 389529,Paris Cosméticos,1,1168.42
 389530,C&A,1,399.96
+389530,Chilli Beans,1,299.98
 389530,Riachuelo,1,69.99
-389530,Ótica Chilli Beans,1,299.98
 389531,Freddo,2,82.7
 389531,Pecorino,1,274.59
 389532,C&A,1,169.98
@@ -70681,7 +70673,6 @@
 391329,Vicio DiPrata,1,217.0
 391330,Decathlon,1,89.99
 391330,Fini,2,55.72
-391330,KFC,1,31.8
 391330,Zanoni Sushi,1,42.55
 391332,Pratafina,1,283.0
 391335,Calvin Klein,1,1869.0
@@ -71001,7 +70992,7 @@
 391564,CVC,1,2599.17
 391565,Idéli.oui,1,1688.0
 391565,Polo Wear,1,409.97
-391569,Ótica Chilli Beans,1,379.98
+391569,Chilli Beans,1,379.98
 391571,Bacio di Latte,1,100.8
 391571,L'occitane au Brésil,1,129.9
 391571,Mini Kalzone,1,19.0
@@ -74535,7 +74526,7 @@
 394106,Livrarias Catarinense,1,140.5
 394106,Sunglass Hut,1,1400.0
 394107,BelShop,2,1167.84
-394107,Otica Chilli Beans,1,1237.6
+394107,Ótica Chilli Beans,1,1237.6
 394108,Calvin Klein,1,329.0
 394108,Chilli Beans,1,409.94
 394108,Renner,2,939.74
@@ -74784,8 +74775,8 @@
 394306,Cacau Show,1,49.98
 394306,Cassol Centerlar,1,211.7
 394306,Centauro,1,59.99
+394306,Chilli Beans,1,479.98
 394306,Livraria Catarinense,2,126.7
-394306,Ótica Chilli Beans,1,479.98
 394308,Cacau Show,2,51.9
 394308,Centauro,1,529.97
 394308,Polo Wear,1,239.96
@@ -78597,9 +78588,9 @@
 397299,Livrarias Catarinense,1,276.1
 397299,Youcom,1,499.7
 397300,Paris Cosméticos,1,579.01
+397304,Chilli Beans,1,436.98
 397304,Pittol,1,99.9
 397304,Renner,1,179.9
-397304,Ótica Chilli Beans,1,436.98
 397305,ANACAPRI,1,149.9
 397305,Casa Bauducco,1,114.3
 397305,Clube Melissa,1,319.8
@@ -80676,8 +80667,8 @@
 398924,Magazine Luiza,1,838.4
 398925,Tokaia,1,2345.0
 398927,Damyller,1,1157.0
+398930,Chilli Beans,1,399.98
 398930,Luz da Lua,1,999.9
-398930,Ótica Chilli Beans,1,399.98
 398931,Feng Cheng,1,51.87
 398931,KFC,2,81.7
 398931,Kalunga,2,138.4
@@ -81593,7 +81584,7 @@
 399600,Maze Skate,1,803.83
 399601,Clifield,1,399.0
 399601,Renner,1,275.7
-399604,Otica Chilli Beans,1,722.98
+399604,Ótica Chilli Beans,1,722.98
 399606,Calzedonia,1,199.0
 399606,Livrarias Catarinense,3,418.4
 399606,Quiksilver,1,1138.7

@@ -83,7 +83,7 @@ Bob's Sorvete - Quiosque,Gastronomia,Continente Shopping,7032.69,200
 Boiko,Joalheria,Balneário Shopping,135524.7,33
 Boiko Joalheiros,Joalheria,Norte Shopping,23629.3,22
 Bona Park,Moda,Balneário Shopping,849.0,1
-Bondyou,Presentes e Acessórios,Balneário Shopping,536.6999999999999,9
+Bondyou,Presentes e Acessórios,Balneário Shopping,536.7,9
 Bonna Panquecas e Massas,Gastronomia,Balneário Shopping,2990.9,42
 Borelli Gelato,Gastronomia - Sorvetes,Continente Shopping,7880.9,192
 Boss,Moda,Balneário Shopping,177041.0,64
@@ -166,13 +166,14 @@ Chef's & Fritas,Gastronomia,Nações Shopping,1889.6000000000001,24
 Chilli Beans,Ótica,Balneário Shopping,7214.54,14
 Chilli Beans,Ótica,Continente Shopping,10049.84,16
 Chilli Beans,Ótica,Garten Shopping,29644.08,48
+Chilli Beans,Ótica,Nações Shopping,7272.620000000001,16
 Chilli Beans,Ótica,Norte Shopping,29725.870000000003,45
 Chiquinho Sorvetes,Gastronomia,Neumarkt Shopping,4120.3,172
 Chiquinho Sorvetes,Gastronomia - Sorvetes,Continente Shopping,2048.0,76
 Chiquinho Sorvetes,Gastronomia - Sorvetes,Garten Shopping,2523.0,95
 Chiquinho Sorvetes,Gastronomia - Sorvetes,Norte Shopping,1971.8,72
 Chope Do Mestre,Gastronomia,Continente Shopping,549.6800000000001,25
-Chope do Mestre,Gastronomia,Nações Shopping,217.20000000000002,7
+Chope do Mestre,Gastronomia,Nações Shopping,217.2,7
 Chuá Brand,Moda,Garten Shopping,97535.97,92
 Chuá Brand,Moda Feminina,Continente Shopping,57827.68,63
 Cia Marítima,Moda Feminina,Neumarkt Shopping,18013.18,18
@@ -344,10 +345,10 @@ Idéli Oui,Beleza e Bem-estar,Garten Shopping,198756.45,316
 Idéli.Oui,Beleza e Bem-estar,Neumarkt Shopping,229710.3,235
 Idéli.oui,Beleza e Bem-estar,Norte Shopping,128331.7,271
 Innovva Editora,Livrarias,Garten Shopping,59.9,2
-Inovare Suplementos,Esportes,Continente Shopping,7541.62,41
+Inovare Suplementos,Esportes,Continente Shopping,7541.620000000001,41
 Inovathi Acessórios,Presentes e Acessórios,Garten Shopping,32827.67,93
 Intimissimi,Moda,Continente Shopping,38535.31,79
-JAH Açaí,Gastronomia,Nações Shopping,15868.039999999999,389
+JAH Açaí,Gastronomia,Nações Shopping,15868.04,389
 JBay,Moda,Continente Shopping,18695.54,35
 JCanedo,Moda,Continente Shopping,52795.96,64
 JCanedo,Moda,Garten Shopping,67066.4,82
@@ -369,7 +370,6 @@ Joker Socks,Presentes e Acessórios,Continente Shopping,5338.82,26
 Jorge Bischoff,Calçados,Balneário Shopping,84967.64,87
 Juistreet,Gastronomia,Balneário Shopping,1057.34,33
 KFC,Gastronomia,Balneário Shopping,11245.6,193
-KFC,Gastronomia,Continente Shopping,11951.14,218
 KFC,Gastronomia,Garten Shopping,11707.19,209
 KStore Acessórios,Presentes e Acessórios,Nações Shopping,8954.97,17
 Kalunga,Papelaria,Continente Shopping,61936.08,540
@@ -520,7 +520,7 @@ Moncloa,Serviços,Balneário Shopping,6267.86,33
 Montana Grill,Gastronomia,Balneário Shopping,6963.49,101
 Montana Grill,Gastronomia,Garten Shopping,6684.849999999999,123
 Monte Carlo Joias,Joalheria,Balneário Shopping,172566.16999999998,48
-Morana,Presentes e Acessórios,Balneário Shopping,34522.159999999996,177
+Morana,Presentes e Acessórios,Balneário Shopping,34522.16,177
 Morana,Presentes e Acessórios,Continente Shopping,18623.7,127
 Morana Acessórios,Presentes e Acessórios,Garten Shopping,20330.54,120
 Motorola,Telefonia,Balneário Shopping,43093.0,15
@@ -576,7 +576,6 @@ Orientali,Gastronomia,Neumarkt Shopping,9156.25,129
 Orientali,Gastronomia,Norte Shopping,9776.02,136
 Ortobom,Hub da Saúde,Nações Shopping,21831.84,7
 Osklen,Moda,Balneário Shopping,66947.54,54
-Otica Chilli Beans,Infantil,Nações Shopping,3131.9,5
 Outback SteakHouse,Gastronomia,Nações Shopping,7979.2699999999995,29
 Outback Steakhouse,Gastronomia,Balneário Shopping,144661.49,536
 Outback Steakhouse,Gastronomia,Continente Shopping,54529.32,212
@@ -739,7 +738,7 @@ TIM,Telefonia,Garten Shopping,78608.28,23
 TIM,Telefonia,Neumarkt Shopping,70551.28,24
 TNG,Moda,Neumarkt Shopping,46847.51,112
 Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,813.7,5
-Tea Shop,Gastronomia,Balneário Shopping,16479.83,61
+Tea Shop,Gastronomia,Balneário Shopping,16479.829999999998,61
 Tech Smart,Eletrônicos,Balneário Shopping,10570.07,32
 Tech Smart,Eletrônicos,Neumarkt Shopping,13523.210000000001,58
 Tech Smart,Eletrônicos,Norte Shopping,7690.150000000001,29
@@ -831,7 +830,7 @@ z Bob's - Quiosque 2,Gastronomia,Nações Shopping,2608.8,68
 z SH JOIAS,Presentes e Acessórios,Nações Shopping,3041.0,10
 Água de coco,Moda Feminina,Balneário Shopping,20296.93,9
 Ótica Chilli Beans,Ótica,Garten Shopping,28627.1,30
-Ótica Chilli Beans,Ótica,Nações Shopping,7272.620000000001,16
+Ótica Chilli Beans,Ótica,Nações Shopping,3131.9,5
 Ótica Chilli Beans,Ótica,Neumarkt Shopping,14801.42,18
 Ótica Chroma,Ótica,Neumarkt Shopping,62493.0,37
 Ótica Diniz,Ótica,Continente Shopping,108499.56,68

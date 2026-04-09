@@ -94,7 +94,7 @@ Burger King,Gastronomia,Balneário Shopping,3029.7599999999998,60
 Burger King,Gastronomia,Continente Shopping,6657.65,134
 Burger King,Gastronomia,Garten Shopping,3367.84,70
 Burger King,Gastronomia,Nações Shopping,4376.88,79
-Burger King,Gastronomia,Neumarkt Shopping,9188.28,183
+Burger King,Gastronomia,Neumarkt Shopping,9188.279999999999,183
 Burger King,Gastronomia,Norte Shopping,17713.19,311
 Békko,Moda,Nações Shopping,8442.16,14
 C&A,Moda,Balneário Shopping,47358.65,204
@@ -338,7 +338,7 @@ Kalunga,Papelaria,Continente Shopping,18460.3,252
 Kalunga,Papelaria,Garten Shopping,9328.13,120
 Kalunga,Papelaria,Neumarkt Shopping,23190.13,262
 Kalunga,Papelaria,Norte Shopping,11320.25,139
-Kfc,Fast Food,Continente Shopping,5740.6,113
+Kfc,Gastronomia,Continente Shopping,5740.6,113
 Kfc,Gastronomia,Neumarkt Shopping,10919.23,210
 Kib´s,Kids,Garten Shopping,2584.67,43
 Kings,Moda,Nações Shopping,4494.18,9
@@ -426,7 +426,7 @@ Madero,Gastronomia,Continente Shopping,10560.92,57
 Madero,Gastronomia,Garten Shopping,4180.11,31
 Madero,Gastronomia,Neumarkt Shopping,19912.73,126
 Magazine Luiza,Eletrodomésticos,Balneário Shopping,10094.18,6
-Magazine Luiza,Eletrodomésticos,Continente Shopping,50230.520000000004,32
+Magazine Luiza,Eletrodomésticos,Continente Shopping,50230.52,32
 Magazine Luiza,Eletrodomésticos,Garten Shopping,21472.55,13
 Magazine Luiza,Eletrodomésticos,Norte Shopping,27133.97,16
 Magic Feet,Moda,Balneário Shopping,7064.88,13
@@ -517,10 +517,9 @@ Ophicina Footwear,Moda,Neumarkt Shopping,6835.9800000000005,17
 Orientali,Gastronomia,Balneário Shopping,1923.24,28
 Orientali,Gastronomia,Continente Shopping,2933.16,35
 Orientali,Gastronomia,Neumarkt Shopping,1981.11,35
-Orientali,Gastronomia,Norte Shopping,6928.4400000000005,81
+Orientali,Gastronomia,Norte Shopping,6928.44,81
 Ortobom,Hub da Saúde,Nações Shopping,3006.0,1
 Osklen,Moda,Balneário Shopping,818.7,3
-Otica Chilli Beans,Infantil,Nações Shopping,2205.87,5
 Outback SteakHouse,Gastronomia,Nações Shopping,26669.45,115
 Outback Steakhouse,Gastronomia,Balneário Shopping,16791.21,62
 Outback Steakhouse,Gastronomia,Continente Shopping,20470.88,95
@@ -548,7 +547,7 @@ Panvel Farmácias,Farmácias,Neumarkt Shopping,26850.12,280
 Panvel Farmácias,Farmácias,Norte Shopping,16122.130000000001,174
 Paquetá,Esportes,Neumarkt Shopping,11371.24,42
 Paquetá,Esportes,Norte Shopping,13783.55,61
-Paquetá Esportes,Esportes,Balneário Shopping,6708.65,22
+Paquetá Esportes,Esportes,Balneário Shopping,6708.650000000001,22
 Paquetá Esportes,Esportes,Garten Shopping,3210.81,13
 Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,15909.23,58
 Patbo,Moda Feminina,Balneário Shopping,25137.0,8
@@ -558,7 +557,7 @@ Pernambucanas,Moda,Continente Shopping,10370.61,70
 Pittol,Calçados,Garten Shopping,9112.880000000001,49
 Pittol,Calçados,Nações Shopping,12751.470000000001,50
 Pittol,Calçados,Norte Shopping,61704.200000000004,210
-Pizza Hut,Gastronomia,Balneário Shopping,2217.01,39
+Pizza Hut,Gastronomia,Balneário Shopping,2217.0099999999998,39
 Pizza Hut,Gastronomia,Neumarkt Shopping,5487.23,69
 Plié,Moda,Balneário Shopping,1191.8600000000001,3
 Plié,Moda,Garten Shopping,689.5,3
@@ -585,7 +584,7 @@ Provin Jóias,Não informado,Nações Shopping,1017.0,3
 Puket,Moda,Balneário Shopping,3004.0,14
 Purpurata,Presentes e Acessórios,Garten Shopping,4036.3599999999997,15
 Quebra Gelo,Presentes e Acessórios,Continente Shopping,775.0,4
-"Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,1931.09,22
+"Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,1931.0900000000001,22
 Quiksilver,Moda,Balneário Shopping,4172.1,6
 Ravelli,Moda,Continente Shopping,792.82,3
 Rayban,Ótica,Balneário Shopping,3229.5,3
@@ -726,7 +725,7 @@ Vivara,Joalheria,Nações Shopping,13397.49,7
 Vivara,Joalheria,Neumarkt Shopping,26809.8,12
 Vivara,Joalheria,Norte Shopping,6836.95,10
 Vivo,Telefonia,Continente Shopping,8668.0,4
-Vivo,Telefonia,Garten Shopping,13300.25,6
+Vivo,Telefonia,Garten Shopping,13300.249999999998,6
 Vivo,Telefonia,Neumarkt Shopping,4699.0,1
 Vivo,Telefonia,Norte Shopping,79.0,1
 Vix Varejo,Moda Feminina,Balneário Shopping,5958.0,3
@@ -759,6 +758,7 @@ z Bob's - Quiosque 2,Gastronomia,Nações Shopping,1509.1,34
 z Kfc,Gastronomia,Nações Shopping,5952.15,101
 Água de coco,Moda Feminina,Balneário Shopping,9998.22,2
 Ótica Chilli Beans,Ótica,Garten Shopping,779.88,2
+Ótica Chilli Beans,Ótica,Nações Shopping,2205.87,5
 Ótica Chroma,Ótica,Neumarkt Shopping,9237.0,5
 Ótica Diniz,Ótica,Continente Shopping,7765.8,10
 Ótica chilli beans,Ótica,Balneário Shopping,4758.9,4

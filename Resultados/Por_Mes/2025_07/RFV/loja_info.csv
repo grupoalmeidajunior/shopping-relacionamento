@@ -82,14 +82,14 @@ Bottero,Calçados,Neumarkt Shopping,8486.5,18
 Bowling Blu,Lazer,Norte Shopping,169.0,1
 Brando Bike,Outros,Norte Shopping,899.0,1
 Brasil Cacau,Gastronomia,Continente Shopping,1599.81,66
-Bread Pide,Gastronomia,Balneário Shopping,1557.66,24
+Bread Pide,Gastronomia,Balneário Shopping,1557.6599999999999,24
 Brooksfield,Moda,Balneário Shopping,3797.51,5
 Brooksfield,Moda,Continente Shopping,4239.76,3
 Brooksfield,Moda,Garten Shopping,7133.53,8
 Brooksfield,Moda,Neumarkt Shopping,11970.35,12
 Buddha Spa,Serviços,Balneário Shopping,1504.0,1
 Bull Prime Steak House,Gastronomia,Garten Shopping,2119.5,6
-Burger King,Gastronomia,Balneário Shopping,5113.14,89
+Burger King,Gastronomia,Balneário Shopping,5113.139999999999,89
 Burger King,Gastronomia,Continente Shopping,5762.32,107
 Burger King,Gastronomia,Garten Shopping,4592.3099999999995,83
 Burger King,Gastronomia,Nações Shopping,2613.65,55
@@ -335,8 +335,8 @@ Kalunga,Papelaria,Continente Shopping,7700.25,159
 Kalunga,Papelaria,Garten Shopping,5001.99,80
 Kalunga,Papelaria,Neumarkt Shopping,13122.03,173
 Kalunga,Papelaria,Norte Shopping,3171.16,57
-Kfc,Fast Food,Continente Shopping,3906.56,63
-Kfc,Gastronomia,Neumarkt Shopping,7773.599999999999,148
+Kfc,Gastronomia,Continente Shopping,3906.56,63
+Kfc,Gastronomia,Neumarkt Shopping,7773.6,148
 Kfc,Gastronomia,Norte Shopping,47.7,1
 Kib´s,Kids,Garten Shopping,2954.31,57
 Kings,Moda,Nações Shopping,15036.76,22
@@ -373,7 +373,7 @@ Le Creuset,Casa e Decoração,Balneário Shopping,3198.87,7
 Le Lis,Moda,Neumarkt Shopping,7999.13,10
 Le Lis Blanc,Moda,Balneário Shopping,15524.94,13
 Le Lis Blanc,Moda,Garten Shopping,7170.93,7
-Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,4637.27,66
+Leo Cosméticos,Beleza e Bem-estar,Norte Shopping,4637.2699999999995,66
 Levi's,Moda,Balneário Shopping,2305.55,8
 Levi's,Moda,Garten Shopping,12852.029999999999,27
 Lez a Lez,Moda,Continente Shopping,2929.05,4
@@ -421,7 +421,7 @@ Madero,Gastronomia,Balneário Shopping,9954.12,93
 Madero,Gastronomia,Continente Shopping,11148.85,79
 Madero,Gastronomia,Garten Shopping,4769.62,28
 Madero,Gastronomia,Neumarkt Shopping,19732.739999999998,127
-Magazine Luiza,Eletrodomésticos,Balneário Shopping,11402.960000000001,6
+Magazine Luiza,Eletrodomésticos,Balneário Shopping,11402.96,6
 Magazine Luiza,Eletrodomésticos,Continente Shopping,8896.279999999999,6
 Magazine Luiza,Eletrodomésticos,Garten Shopping,3698.0,2
 Magazine Luiza,Eletrodomésticos,Norte Shopping,12824.220000000001,7
@@ -518,7 +518,7 @@ Orientali,Gastronomia,Neumarkt Shopping,1904.7,29
 Orientali,Gastronomia,Norte Shopping,2855.64,44
 Ortobom,Hub da Saúde,Nações Shopping,2906.77,1
 Osklen,Moda,Balneário Shopping,1178.79,2
-Outback SteakHouse,Gastronomia,Nações Shopping,39437.909999999996,146
+Outback SteakHouse,Gastronomia,Nações Shopping,39437.91,146
 Outback Steakhouse,Gastronomia,Balneário Shopping,16730.73,70
 Outback Steakhouse,Gastronomia,Continente Shopping,12065.96,67
 Outback Steakhouse,Gastronomia,Garten Shopping,9061.37,44
@@ -655,7 +655,7 @@ Subway,Gastronomia,Norte Shopping,321.5,6
 Sunglass Hut,Ótica,Balneário Shopping,6883.0,2
 Sunglass Hut,Ótica,Continente Shopping,2775.0,2
 Superlegal,Infantil,Garten Shopping,6470.78,51
-Superlegal Brinquedos,Infantil,Balneário Shopping,19555.6,122
+Superlegal Brinquedos,Infantil,Balneário Shopping,19555.600000000002,122
 Superlegal Brinquedos,Infantil,Norte Shopping,5547.96,45
 Swarovski,Joalheria,Balneário Shopping,8182.0,8
 Swarovski,Joalheria,Neumarkt Shopping,7704.0,6

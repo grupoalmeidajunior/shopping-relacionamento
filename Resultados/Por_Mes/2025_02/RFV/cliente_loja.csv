@@ -62,7 +62,6 @@
 2040,Burger King,1,54.8
 2210,Cobasi,1,51.0
 2210,Continente Shopping - Estacionamento,1,20.0
-2210,KFC,1,74.8
 2210,Kopenhagen,1,69.8
 2210,Madero,1,159.5
 2210,Panvel Farmácias,1,8.99
@@ -325,7 +324,6 @@
 11563,Sinhá Benta Gourmet,2,282.02
 11803,Bacio di Latte,5,163.56
 11803,Centauro,1,379.99
-11803,KFC,1,105.2
 11803,Kalunga,1,59.1
 11803,Me Blue,1,152.0
 11803,Mini Kalzone,2,44.0
@@ -393,7 +391,6 @@
 13332,Preçolândia,1,43.0
 13428,C&A,1,159.99
 13428,Cobasi,1,42.4
-13428,KFC,2,59.7
 13428,Panvel Farmácias,1,32.99
 13428,Renner,1,49.8
 13428,Studio Z,2,88.99
@@ -421,7 +418,6 @@
 14035,Madero,1,229.9
 14136,Bacio di Latte,1,84.95
 14156,Continente Shopping - Estacionamento,1,16.0
-14156,KFC,1,38.7
 14344,Bacio di Latte,2,440.46
 14344,Cacau Show,1,289.0
 14344,Outback Steakhouse,1,184.69
@@ -445,7 +441,6 @@
 15563,Livrarias Catarinense,1,43.9
 15600,Renner,1,870.25
 15722,Livrarias Catarinense,1,661.7
-15737,KFC,3,131.7
 15737,Mini Kalzone,1,10.0
 15737,Spoleto,1,42.0
 15770,Bonna Panquecas e Massas,1,25.0
@@ -513,7 +508,6 @@
 20541,Divino Fogão,1,83.0
 20541,Giraffas,1,91.5
 20541,Griletto,1,39.9
-20541,KFC,1,9.9
 20541,McDonald's,1,47.0
 20541,Mini Kalzone,2,31.9
 20629,Leo Cosméticos,1,29.0
@@ -709,7 +703,6 @@
 25720,Belshop,1,51.94
 25720,Lupo,1,47.8
 25833,Burger King,1,32.9
-25833,KFC,1,36.6
 25889,Riachuelo,1,99.98
 25971,Cacau Show,1,562.65
 26054,Due Sapori,1,64.0
@@ -1017,7 +1010,6 @@
 40339,C&A,1,39.99
 40339,Cinépolis,1,20.0
 40339,Continente Shopping - Estacionamento,1,16.0
-40339,KFC,1,73.6
 40522,Cassol Centerlar,1,1.75
 40620,Renner,2,379.8
 40723,Pizza Hut,1,39.9
@@ -1138,7 +1130,6 @@
 51458,Burger King,2,168.6
 51976,Burger King,1,67.8
 51976,Hering Store,1,139.98
-51976,KFC,1,30.8
 51976,Kalunga,3,68.6
 51976,Livrarias Catarinense,4,161.0
 51976,Spoleto,2,165.88
@@ -1242,17 +1233,14 @@
 55377,Camicado,1,19.99
 55377,Casa Bauducco,1,51.0
 55377,Hering,1,1279.0
-55488,KFC,1,17.9
 55491,Óticas Carol,1,1569.4
 55492,Bacio di Latte,1,41.9
 55492,Bob's Sorvete - Quiosque,1,29.5
 55492,Cobasi,1,59.8
-55492,KFC,1,31.8
 55492,Outback Steakhouse,1,150.86
 55492,Riachuelo,1,199.89
 55492,Spoleto,1,26.45
 55495,Centauro,1,337.98
-55495,KFC,2,69.8
 55495,McDonald's,2,126.3
 55495,Me.Linda,1,26.0
 55495,Mini Kalzone,1,26.5
@@ -1296,7 +1284,6 @@
 55926,Bacio di Latte,1,0.01
 55926,Brasil Cacau,1,21.48
 55926,Gamelas & Panella's,1,20.9
-55926,KFC,1,34.9
 55926,Lojas Americanas,1,14.41
 55926,Panvel Farmácias,1,35.99
 56013,Kalunga,1,174.6
@@ -1420,7 +1407,6 @@
 59436,Magazine Luiza,1,1.0
 59436,McDonald's,1,28.5
 59436,Panvel Farmácias,1,15.99
-59669,KFC,1,60.6
 59669,Lupo,1,270.0
 59669,McDonald's,1,28.5
 59741,Livraria Catarinense,2,309.4
@@ -2364,7 +2350,6 @@
 96888,Decathlon,1,64.98
 96888,Gamelas & Panella's,1,88.42
 96888,Havaianas,1,69.99
-96888,KFC,1,95.6
 96888,Lojas Americanas,1,26.63
 96888,McDonald's,1,28.5
 96888,Mini Kalzone,3,81.5
@@ -2599,7 +2584,6 @@
 107077,Panvel Farmácias,1,90.84
 107077,Renner,1,309.7
 107198,Bob's Sorvete - Quiosque,1,19.9
-107198,KFC,1,34.9
 107352,Livrarias Catarinense,1,67.0
 107452,Livrarias Catarinense,1,39.8
 107629,Gamelas & Panella's,1,61.94
@@ -2781,7 +2765,6 @@
 113949,Zara,1,1.0
 114193,Cassol Centerlar,2,295.6
 114193,Livraria Catarinense,1,59.75
-114434,KFC,1,27.5
 114434,McDonald's,1,28.5
 114434,Nike Unite,1,369.99
 114434,Orientali,1,42.68
@@ -2878,7 +2861,6 @@
 116381,Bob's Sorvete - Quiosque,1,14.9
 116381,Decathlon,1,6.98
 116381,HOT DOG DUPIRU,1,24.0
-116381,KFC,1,94.7
 116381,Renner,1,79.9
 116397,JCanedo,1,386.91
 116397,LAtte Art Coffee Cafeteria,1,62.0
@@ -3341,13 +3323,11 @@
 123467,Decathlon,1,94.98
 123467,Divino Fogão,1,159.0
 123467,Gamelas & Panella's,1,154.55
-123467,KFC,1,44.9
 123467,Livrarias Catarinense,2,129.8
 123467,Panvel Farmácias,2,185.96
 123467,Renner,2,225.71
 123467,Riachuelo,2,288.9
 123512,Cartes - Cozinha do Mundo,1,133.19
-123512,KFC,1,85.7
 123512,Kalunga,1,83.3
 123512,Lojas Americanas,1,74.9
 123512,Mini Kalzone,1,21.5
@@ -3382,7 +3362,6 @@
 124033,Centauro,1,359.98
 124033,Kalunga,2,248.7
 124095,Bacio di Latte,3,165.6
-124095,KFC,3,281.5
 124095,Spoleto,1,127.16
 124108,Havan,1,219.96
 124108,Lindt,1,236.75
@@ -4096,7 +4075,6 @@
 137816,Pop Me,1,101.83
 137840,HOT DOG DUPIRU,1,49.99
 137840,Havaianas,2,109.98
-137840,KFC,1,32.8
 137840,Lojas Americanas,1,143.96
 137840,McDonald's,2,44.5
 137840,Óticas Carol,1,2629.25
@@ -4595,7 +4573,6 @@
 152426,Tommy Hilfiger,1,399.0
 152426,Zara,1,1.0
 152578,Docejo,1,37.0
-152578,KFC,1,44.6
 152578,Studio Z,1,169.99
 152578,Swell Poke,1,50.0
 152587,Livrarias Catarinense,1,79.8
@@ -4686,7 +4663,6 @@
 155658,Chope Do Mestre,3,111.95
 155658,Cinépolis,1,20.0
 155658,Cobasi,1,35.8
-155658,KFC,1,16.9
 155658,Kalunga,1,89.7
 155658,Lojas Americanas,1,73.92
 155658,Me Blue,1,69.0
@@ -4919,7 +4895,6 @@
 162614,Mini Kalzone,1,25.8
 162614,Polo Wear,1,149.97
 162812,Café Cultura,1,37.0
-162812,KFC,1,32.8
 162812,McDonald's,1,28.5
 162812,Swell Poke,1,56.0
 162895,Divino Fogão,16,320.0
@@ -5431,7 +5406,6 @@
 185021,Bacio di Latte,1,39.9
 185021,Burger King,1,33.9
 185021,C&A,1,159.99
-185021,KFC,1,35.8
 185021,Lojas Americanas,1,15.0
 185021,Me.Linda,1,1.0
 185021,Mini Kalzone,1,17.0
@@ -5627,7 +5601,6 @@
 189969,Adcos,1,2305.0
 189969,Bacio di Latte,1,29.95
 189969,Pizza Hut,1,41.8
-190054,KFC,1,65.9
 190054,McDonald's,1,28.5
 190054,Morana,1,89.9
 190054,Panvel Farmácias,1,442.24
@@ -5906,7 +5879,6 @@
 199825,Havaianas,1,59.99
 199825,Yes Cosmetics,1,208.72
 200163,C&A,1,139.99
-200163,KFC,1,33.4
 200163,Me Blue,1,172.0
 200163,Me.Linda,1,29.0
 200163,Renner,2,259.5
@@ -6000,7 +5972,6 @@
 203567,Panvel Farmácias,1,40.69
 203567,Renner,1,628.7
 203621,Giraffas,1,38.5
-203621,KFC,1,36.7
 203621,Mini Kalzone,1,55.0
 203621,Renner,1,309.0
 203621,Youcom,1,219.9
@@ -6104,7 +6075,6 @@
 206569,Sinhá Benta Gourmet,10,758.85
 206614,Burger King,1,80.6
 206975,Burger King,1,18.9
-206975,KFC,1,91.5
 206975,Mini Kalzone,1,93.0
 206975,Mr. Cheff,1,53.98
 206975,Orientali,2,135.25
@@ -6194,7 +6164,6 @@
 213703,Casa Maria,1,19.9
 213703,Continente Shopping - Estacionamento,1,20.0
 213703,Decathlon,1,179.97
-213703,KFC,1,19.9
 213703,Lojas Americanas,5,88.42
 213703,Mini Kalzone,1,15.0
 213703,Panvel Farmácias,1,86.98
@@ -6488,7 +6457,6 @@
 226036,Cacau Show,2,22.99
 226036,Casa Maria,1,26.98
 226036,Decathlon,1,281.97
-226036,KFC,6,268.7
 226036,Kalunga,2,100.6
 226036,Livrarias Catarinense,1,8.9
 226036,Lojas Americanas,2,45.34
@@ -6705,7 +6673,6 @@
 233224,Cartes - Cozinha do Mundo,1,145.24
 233224,Continente Shopping - Estacionamento,4,72.0
 233224,Gamelas & Panella's,1,61.94
-233224,KFC,2,117.2
 233224,Kopenhagen,3,59.65
 233224,McDonald's,4,157.3
 233224,Me.Linda,1,1.0
@@ -6776,7 +6743,6 @@
 236760,Atacadão,3,204.4
 236760,Leo Cosméticos,1,44.0
 236844,Brasil Cacau,1,2.0
-236844,KFC,2,48.7
 236844,Kalunga,1,18.1
 236844,Panvel Farmácias,1,7.99
 236844,Renner,2,415.6
@@ -7279,7 +7245,6 @@
 266524,Renner,2,499.6
 266524,Subway,1,24.5
 266547,Constance,1,239.99
-266547,KFC,1,49.7
 266547,Lupo,1,179.1
 266547,Spoleto,1,41.5
 266785,Riachuelo,1,549.84
@@ -7614,7 +7579,6 @@
 290557,Renner,1,229.0
 290791,Gamelas & Panella's,1,108.36
 291139,Livrarias Catarinense,1,20.0
-291374,KFC,1,91.2
 291374,Lojas Americanas,2,95.93
 291374,Panvel Farmácias,1,252.65
 291374,Renner,1,99.0
@@ -7876,7 +7840,6 @@
 309465,Ri Happy,1,159.0
 309465,Swarovski,1,1783.0
 309660,Bob's Sorvete - Quiosque,1,5.0
-309660,KFC,2,86.5
 309660,Kalunga,1,17.2
 309660,Nike Unite,1,709.98
 309660,Renner,1,389.6
@@ -8189,7 +8152,6 @@
 334481,Neumarkt Shopping - Estacionamento,1,22.0
 334495,Livrarias Catarinense,1,942.4
 334523,Burger King,1,27.9
-334523,KFC,1,19.9
 334865,Lindt,1,21.2
 334865,Renner,1,161.46
 334985,Bacio di Latte,5,490.66
@@ -8477,7 +8439,6 @@
 339116,Chiquinho Sorvetes,1,55.0
 339120,Burger King,1,19.9
 339120,Divino Fogão,2,101.0
-339120,KFC,4,137.5
 339120,Livrarias Catarinense,1,219.7
 339120,Lojas Americanas,5,156.11
 339120,Me.Linda,1,63.69
@@ -8530,7 +8491,6 @@
 339512,Jah Açaí,1,27.41
 339512,Kfc,1,19.9
 339512,Starbucks,1,14.5
-339528,KFC,1,47.8
 339541,10 Pastéis,1,27.5
 339541,Mini Kalzone,1,31.5
 339621,Riachuelo,1,239.98
@@ -8770,7 +8730,6 @@
 341839,Riachuelo,1,719.85
 341841,Panvel Farmácias,1,63.96
 341878,Giraffas,1,91.0
-341878,KFC,1,9.9
 341910,Beagle,1,589.97
 341910,Kalunga,1,56.7
 341916,Studio Z,2,459.93
