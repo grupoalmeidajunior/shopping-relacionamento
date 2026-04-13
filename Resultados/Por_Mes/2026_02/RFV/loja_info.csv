@@ -3,10 +3,10 @@
 A Fabulosa,Presentes e Acessórios,Norte Shopping,1363.4399999999998,22
 ADCOS,Beleza e Bem-estar,Continente Shopping,1393.85,6
 ADCOS,Beleza e Bem-estar,Garten Shopping,4748.8,10
-AJ FANS Neumarkt,Promocional,Neumarkt Shopping,1500.0,3
 AJFans Balneário Shopping,Promocional,Balneário Shopping,500.0,1
 AJFans Garten Shopping (Ação especial),Promocional,Garten Shopping,500.0,1
 AJFans Nações Shopping (Ação especial),Telefonia,Nações Shopping,4500.0,7
+AJFans Neumarkt,Promocional,Neumarkt Shopping,1500.0,3
 ALLMINI,Presentes e Acessórios,Norte Shopping,856.89,13
 Acium,Joalheria,Neumarkt Shopping,179.0,2
 Acium,Presentes e Acessórios,Garten Shopping,995.0,4
@@ -44,7 +44,7 @@ Avatim,Beleza e Bem-estar,Nações Shopping,3084.0,25
 Avatim,Beleza e Bem-estar,Neumarkt Shopping,13731.0,87
 Avatim,Beleza e Bem-estar,Norte Shopping,3283.5,26
 Bacio di Latte,Gastronomia,Balneário Shopping,6581.349999999999,136
-Bacio di Latte,Gastronomia,Continente Shopping,5859.27,127
+Bacio di Latte,Gastronomia,Continente Shopping,5859.2699999999995,127
 Bagaggio,Presentes e Acessórios,Balneário Shopping,1249.3,5
 Bagaggio,Presentes e Acessórios,Continente Shopping,10895.89,18
 Bagaggio,Presentes e Acessórios,Garten Shopping,4647.599999999999,12
@@ -122,7 +122,7 @@ Camarão Express,Gastronomia,Neumarkt Shopping,1220.6,20
 Camicado,Casa e Decoração,Balneário Shopping,6496.8,30
 Camicado,Casa e Decoração,Nações Shopping,8274.42,16
 Camicado,Casa e Decoração,Neumarkt Shopping,9886.47,51
-Cantinho Grill,Gastronomia,Nações Shopping,1540.3999999999999,30
+Cantinho Grill,Gastronomia,Nações Shopping,1540.4,30
 Capivalley,Promocional,Continente Shopping,3500.0,6
 Carioca Calçados,Calçados,Continente Shopping,9918.6,25
 Carter's,Infantil,Garten Shopping,1409.88,7
@@ -185,7 +185,7 @@ Damyller,Moda,Garten Shopping,2911.0,6
 Damyller,Moda,Nações Shopping,549.0,1
 Damyller,Moda,Neumarkt Shopping,5848.0,10
 Damyller,Não informado,Balneário Shopping,578.0,2
-Daniela Tombini,Moda,Neumarkt Shopping,1521.6799999999998,6
+Daniela Tombini,Moda,Neumarkt Shopping,1521.68,6
 De Ville Gourmet,Gastronomia,Balneário Shopping,1681.31,27
 Decathlon,Esportes,Continente Shopping,12088.07,69
 Democrata,Calçados,Continente Shopping,3460.2,11
@@ -332,7 +332,7 @@ Kipling,Presentes e Acessórios,Balneário Shopping,10055.8,12
 Kitsu Box,Gastronomia,Nações Shopping,1033.07,8
 Kombina Felice,Gastronomia - Restaurante,Neumarkt Shopping,7164.6,33
 Kopenhagen,Gastronomia,Balneário Shopping,1341.46,30
-Kopenhagen,Gastronomia,Continente Shopping,1771.6000000000001,31
+Kopenhagen,Gastronomia,Continente Shopping,1771.6,31
 Kopenhagen,Gastronomia,Neumarkt Shopping,5870.97,128
 Kopenhagen,Não informado,Nações Shopping,844.88,17
 Kulkes,Joalheria,Balneário Shopping,20355.0,1
@@ -418,7 +418,7 @@ Makenji,Moda,Garten Shopping,4430.09,12
 Mamma Mia,Gastronomia,Garten Shopping,1570.6,6
 Mamma Mia Express,Gastronomia,Neumarkt Shopping,2908.5,62
 Mamma Mia Galeto,Gastronomia,Nações Shopping,326.6,2
-Manly,Moda Feminina,Continente Shopping,1613.3999999999999,4
+Manly,Moda Feminina,Continente Shopping,1613.4,4
 Manly,Moda Feminina,Garten Shopping,2398.62,4
 Mar de Maria,Moda,Nações Shopping,1270.0,7
 Maria Dolores,Joalheria,Balneário Shopping,7956.0,4
@@ -585,7 +585,7 @@ Ri Happy,Infantil,Garten Shopping,2005.89,21
 Ri Happy,Infantil,Neumarkt Shopping,13091.92,71
 Ri Happy Baby,Infantil,Continente Shopping,5599.1,39
 Riachuelo,Moda,Balneário Shopping,24332.25,91
-Riachuelo,Moda,Continente Shopping,22569.58,103
+Riachuelo,Moda,Continente Shopping,22569.579999999998,103
 Riachuelo,Moda,Garten Shopping,20049.78,102
 Riachuelo,Moda,Nações Shopping,13447.98,85
 Riachuelo,Moda,Neumarkt Shopping,33623.32,161

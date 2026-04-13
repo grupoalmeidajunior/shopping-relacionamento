@@ -46,7 +46,7 @@ Avatim,Beleza e Bem-estar,Nações Shopping,40990.9,201
 Avatim,Beleza e Bem-estar,Neumarkt Shopping,132337.5,713
 Avatim,Beleza e Bem-estar,Norte Shopping,48601.29,283
 Avatim Cheiros Da Terra,Presentes e Acessórios,Garten Shopping,25978.45,137
-BRANDO BIKES,Presentes e Acessórios,Continente Shopping,22153.0,21
+BRANDO BIKE,Presentes e Acessórios,Continente Shopping,22153.0,21
 Baby Mee,Infantil,Continente Shopping,3627.1,24
 BabyMee,Infantil,Neumarkt Shopping,1702.06,20
 Bacio di Latte,Gastronomia,Balneário Shopping,19507.39,412
@@ -83,7 +83,7 @@ Bob's Sorvete - Quiosque,Gastronomia,Continente Shopping,7032.69,200
 Boiko,Joalheria,Balneário Shopping,135524.7,33
 Boiko Joalheiros,Joalheria,Norte Shopping,23629.3,22
 Bona Park,Moda,Balneário Shopping,849.0,1
-Bondyou,Presentes e Acessórios,Balneário Shopping,536.7,9
+Bondyou,Presentes e Acessórios,Balneário Shopping,536.6999999999999,9
 Bonna Panquecas e Massas,Gastronomia,Balneário Shopping,2990.9,42
 Borelli Gelato,Gastronomia - Sorvetes,Continente Shopping,7880.9,192
 Boss,Moda,Balneário Shopping,177041.0,64
@@ -104,7 +104,7 @@ Buddha Spa,Serviços,Balneário Shopping,3556.01,9
 Bull Prime Steak House,Gastronomia,Garten Shopping,20959.07,71
 Burger King,Gastronomia,Balneário Shopping,7467.0,152
 Burger King,Gastronomia,Continente Shopping,2764.9,51
-Burger King,Gastronomia,Garten Shopping,10260.45,207
+Burger King,Gastronomia,Garten Shopping,10260.449999999999,207
 Burger King,Gastronomia,Nações Shopping,4158.2,82
 Burger King,Gastronomia,Neumarkt Shopping,10979.699999999999,218
 Burger King,Gastronomia,Norte Shopping,7678.8,138
@@ -345,10 +345,10 @@ Idéli Oui,Beleza e Bem-estar,Garten Shopping,198756.45,316
 Idéli.Oui,Beleza e Bem-estar,Neumarkt Shopping,229710.3,235
 Idéli.oui,Beleza e Bem-estar,Norte Shopping,128331.7,271
 Innovva Editora,Livrarias,Garten Shopping,59.9,2
-Inovare Suplementos,Esportes,Continente Shopping,7541.620000000001,41
+Inovare Suplementos,Esportes,Continente Shopping,7541.62,41
 Inovathi Acessórios,Presentes e Acessórios,Garten Shopping,32827.67,93
 Intimissimi,Moda,Continente Shopping,38535.31,79
-JAH Açaí,Gastronomia,Nações Shopping,15868.04,389
+JAH Açaí,Gastronomia,Nações Shopping,15868.039999999999,389
 JBay,Moda,Continente Shopping,18695.54,35
 JCanedo,Moda,Continente Shopping,52795.96,64
 JCanedo,Moda,Garten Shopping,67066.4,82
@@ -374,7 +374,7 @@ KFC,Gastronomia,Garten Shopping,11707.19,209
 KStore Acessórios,Presentes e Acessórios,Nações Shopping,8954.97,17
 Kalunga,Papelaria,Continente Shopping,61936.08,540
 Kalunga,Papelaria,Garten Shopping,59082.12,493
-Kalunga,Papelaria,Neumarkt Shopping,77344.07,606
+Kalunga,Papelaria,Neumarkt Shopping,77344.06999999999,606
 Kalunga,Papelaria,Norte Shopping,48305.92,230
 Kfc,Gastronomia,Norte Shopping,7712.0,125
 Kib´s,Kids,Garten Shopping,18115.27,281
@@ -576,7 +576,7 @@ Orientali,Gastronomia,Neumarkt Shopping,9156.25,129
 Orientali,Gastronomia,Norte Shopping,9776.02,136
 Ortobom,Hub da Saúde,Nações Shopping,21831.84,7
 Osklen,Moda,Balneário Shopping,66947.54,54
-Outback SteakHouse,Gastronomia,Nações Shopping,7979.2699999999995,29
+Outback SteakHouse,Gastronomia,Nações Shopping,7979.27,29
 Outback Steakhouse,Gastronomia,Balneário Shopping,144661.49,536
 Outback Steakhouse,Gastronomia,Continente Shopping,54529.32,212
 Outback Steakhouse,Gastronomia,Garten Shopping,68910.52,246
@@ -738,7 +738,7 @@ TIM,Telefonia,Garten Shopping,78608.28,23
 TIM,Telefonia,Neumarkt Shopping,70551.28,24
 TNG,Moda,Neumarkt Shopping,46847.51,112
 Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,813.7,5
-Tea Shop,Gastronomia,Balneário Shopping,16479.829999999998,61
+Tea Shop,Gastronomia,Balneário Shopping,16479.83,61
 Tech Smart,Eletrônicos,Balneário Shopping,10570.07,32
 Tech Smart,Eletrônicos,Neumarkt Shopping,13523.210000000001,58
 Tech Smart,Eletrônicos,Norte Shopping,7690.150000000001,29
@@ -758,7 +758,7 @@ Tommy Hilfiger,Moda,Continente Shopping,84810.0,73
 Tommy Hilfiger,Moda,Neumarkt Shopping,90644.0,70
 Toni Toys,Infantil,Norte Shopping,22602.16,125
 Track & Field,Moda,Neumarkt Shopping,165044.36,252
-Track&Field,Moda,Balneário Shopping,158564.13999999998,236
+Track&Field,Moda,Balneário Shopping,158564.14,236
 Track&Field,Moda,Garten Shopping,54550.72,93
 Trem Bala,Gastronomia,Garten Shopping,22.0,1
 Trëma,Gastronomia,Garten Shopping,2005.3999999999999,19

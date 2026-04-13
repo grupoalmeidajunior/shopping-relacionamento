@@ -3970,7 +3970,7 @@
 24713,Farm,1,129.0
 24713,Souq,1,796.0
 24735,Atacadão,1,171.13
-24735,Divino Fogão,1,79.98
+24735,Divino Fogão,2,183.93
 24735,Havan,1,119.99
 24735,Leo Cosméticos,1,29.98
 24735,Lojas Americanas,2,133.99
@@ -4289,7 +4289,7 @@
 26774,Bob's Sorvete - Quiosque,3,163.1
 26774,Docejo,1,30.0
 26774,Gamelas & Panella's,1,43.37
-26836,AJ FANS Neumarkt,1,500.0
+26836,AJFans Neumarkt,1,500.0
 26836,Cacau Show,1,49.0
 26836,Kalunga,1,56.0
 26836,Kopenhagen,1,78.4
@@ -11082,7 +11082,7 @@
 73765,Cia Marítima,1,1588.0
 73765,Kopenhagen,3,343.6
 73765,Livrarias Catarinense,3,871.2
-73836,AJ FANS Neumarkt,1,500.0
+73836,AJFans Neumarkt,1,500.0
 73836,Bottero,1,174.95
 73836,JCanedo,1,414.74
 73836,LIVE!,1,429.8
@@ -20741,7 +20741,7 @@
 126095,Decathlon,1,249.97
 126109,Centauro,1,299.97
 126109,Renner,1,119.9
-126166,AJ FANS Neumarkt,1,500.0
+126166,AJFans Neumarkt,1,500.0
 126173,Bacio di Latte,6,158.65
 126173,Freddo,6,179.4
 126173,Lindt,3,94.81
@@ -26870,7 +26870,7 @@
 141149,Livrarias Catarinense,1,652.4
 141149,Mini Kalzone,1,52.9
 141150,Magazine Luiza,1,2899.0
-141194,BRANDO BIKES,1,55.0
+141194,BRANDO BIKE,1,55.0
 141194,Bacio di Latte,1,39.8
 141194,Brasil Cacau,1,22.99
 141194,Centauro,2,399.97
@@ -27032,6 +27032,7 @@
 141571,Miniso,1,44.98
 141571,Renner,1,269.8
 141594,Centauro,2,729.95
+141594,Farm,1,1482.4
 141594,Hope,2,836.8
 141594,Paris Cosméticos,2,318.85
 141594,Renner,2,739.6
@@ -42657,7 +42658,7 @@
 200007,Riachuelo,1,19.99
 200007,Superlegal Brinquedos,1,1.0
 200025,Avatim,1,277.0
-200026,AJ FANS Neumarkt,1,500.0
+200026,AJFans Neumarkt,1,500.0
 200026,Avatim,1,160.0
 200026,Cacau Show,1,9.0
 200026,Cobasi,1,48.6
@@ -43902,7 +43903,7 @@
 206758,Centauro,1,259.98
 206758,Ri Happy,3,124.94
 206758,Zara,1,78.5
-206854,BRANDO BIKES,1,3999.0
+206854,BRANDO BIKE,1,3999.0
 206854,Madero,9,1532.86
 206871,Hope,2,382.0
 206871,Livrarias Catarinense,1,216.7
@@ -63229,7 +63230,7 @@
 317253,Luz da Lua,1,349.9
 317277,GNC Cinemas,1,42.0
 317277,Outback Steakhouse,2,547.9
-317298,AJ FANS Neumarkt,1,500.0
+317298,AJFans Neumarkt,1,500.0
 317299,Havan,1,519.78
 317299,Pizza Hut,1,89.8
 317326,Clube Melissa,1,219.9
@@ -75977,6 +75978,7 @@
 399080,Beagle,2,2173.6
 399080,C&A,3,849.95
 399080,Chiquinho Sorvetes,1,15.0
+399080,Democrata,1,164.95
 399080,Hering,1,209.97
 399080,Kalunga,1,38.9
 399080,Leo Cosméticos,4,86.0
@@ -87017,7 +87019,7 @@
 465169,Livrarias Catarinense,2,425.3
 465169,Me.Linda,1,26.8
 465175,Zara,1,1592.5
-465179,AJ FANS Neumarkt,1,500.0
+465179,AJFans Neumarkt,1,500.0
 465194,Fini,3,77.59
 465208,Bottero,1,649.8
 465208,Camicado,2,772.16
@@ -87663,7 +87665,7 @@
 469047,Livrarias Catarinense,4,174.3
 469052,Beagle,1,199.99
 469052,C&A,1,79.98
-469052,Centauro,1,1.2
+469052,Centauro,1,1199.98
 469052,Superlegal Brinquedos,1,19.99
 469062,Adidas,1,89.99
 469067,Renner,1,99.9
@@ -90825,7 +90827,7 @@
 486005,Studio Z,2,144.98
 486019,Granado,1,98.0
 486023,Via Brasil Balneario Camboriu,1,159.98
-486024,BRANDO BIKES,1,2399.0
+486024,BRANDO BIKE,1,2399.0
 486024,Eco Made,1,3568.32
 486046,Zara,1,1214.5
 486050,Freddo,1,76.8
@@ -92882,7 +92884,7 @@
 493503,Pampile,1,409.88
 493503,Ri Happy,2,239.87
 493503,Tip Top,1,429.7
-493504,BRANDO BIKES,1,899.0
+493504,BRANDO BIKE,1,899.0
 493504,Centauro,1,399.99
 493504,JBay,1,1417.24
 493504,New Era,1,219.9
@@ -94963,7 +94965,7 @@
 494607,Mc Donald's,1,14.0
 494607,McDonald's,1,55.8
 494608,World Tennis,1,479.97
-494609,AJ FANS Neumarkt,1,500.0
+494609,AJFans Neumarkt,1,500.0
 494609,Havan,1,72.93
 494609,Kalunga,1,101.7
 494609,Lupo,1,28.8
@@ -102021,7 +102023,7 @@
 498438,Life Vivara,1,1216.0
 498438,Livrarias Catarinense,1,179.7
 498438,Youcom,1,139.9
-498439,BRANDO BIKES,1,3999.0
+498439,BRANDO BIKE,1,3999.0
 498439,Cobasi,1,78.9
 498441,Boiko,1,5760.0
 498442,Bagaggio,1,199.9
@@ -117870,9 +117872,9 @@
 513799,C&A,1,99.99
 513799,Panvel Farmácias,1,81.06
 513800,Hot Dog Du Piru,1,28.99
+513800,Kfc,1,49.9
 513800,Leo Cosméticos,1,20.0
 513800,Lojas Americanas,4,283.51
-513814,Renner,1,199.7
 513816,Avatim,1,55.0
 513816,Freddo,1,26.0
 513816,Lindt,1,65.36
@@ -118125,7 +118127,7 @@
 514761,Cobasi,2,125.7
 514761,Divino Fogão,1,54.9
 514761,IDéli oui,1,529.0
-514761,Kalunga,1,39.3
+514761,Kalunga,3,64.6
 514761,Lojas Americanas,5,145.33
 514761,Natura,1,47.84
 514761,Panvel Farmácias,1,3.99
