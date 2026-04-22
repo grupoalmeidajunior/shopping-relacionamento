@@ -8,7 +8,7 @@
 10 Pastéis,Gastronomia,Balneário Shopping,8663.08,182
 10 Pastéis Joinville,Gastronomia,Garten Shopping,3094.25,92
 A Fabulosa,Presentes e Acessórios,Norte Shopping,24209.72,411
-ADCOS,Beleza e Bem-estar,Continente Shopping,87048.18,167
+ADCOS,Beleza e Bem-estar,Continente Shopping,87048.18000000001,167
 ADCOS,Beleza e Bem-estar,Garten Shopping,47102.21,131
 AJFans Garten Shopping (Ação especial),Promocional,Garten Shopping,500.0,1
 AJFans Nações Shopping (Ação especial),Telefonia,Nações Shopping,1000.0,1
@@ -148,7 +148,7 @@ Calzedonia,Moda Feminina,Neumarkt Shopping,88915.06,163
 Calçados Pegada,Calçados,Garten Shopping,53569.8,136
 Camarão Express,Gastronomia,Balneário Shopping,15186.65,177
 Camarão Express,Gastronomia,Continente Shopping,97160.72,1012
-Camarão Express,Gastronomia,Nações Shopping,16626.17,176
+Camarão Express,Gastronomia,Nações Shopping,16626.170000000002,176
 Camarão Express,Gastronomia,Neumarkt Shopping,8954.0,135
 Camicado,Casa e Decoração,Balneário Shopping,261644.21,663
 Camicado,Casa e Decoração,Nações Shopping,16984.260000000002,63
@@ -244,13 +244,13 @@ Damyller,Moda,Neumarkt Shopping,163216.3,251
 Damyller,Não informado,Balneário Shopping,72219.65,110
 Daniela Tombini,Moda,Neumarkt Shopping,75830.85,134
 De Ville Gourmet,Gastronomia,Balneário Shopping,28654.99,319
-Decathlon,Esportes,Continente Shopping,470224.97,1791
+Decathlon,Esportes,Continente Shopping,470224.97000000003,1791
 Dedal Oficina de Costura,Serviços,Continente Shopping,173.0,2
 Democrata,Calçados,Balneário Shopping,134256.26,317
 Democrata,Calçados,Continente Shopping,141741.3,343
 Democrata,Calçados,Garten Shopping,141200.49,329
 Democrata,Calçados,Neumarkt Shopping,113637.8,284
-Dengo,Beleza e Bem-estar,Balneário Shopping,198247.55,845
+Dengo,Beleza e Bem-estar,Balneário Shopping,198247.55000000002,845
 Dez Pastéis,Gastronomia,Nações Shopping,1251.5,30
 Diesel,Moda,Balneário Shopping,100465.35,54
 Digital Duo,Eletrônicos,Garten Shopping,3838.6,16
@@ -281,7 +281,7 @@ Empório Du Homem,Moda,Nações Shopping,45198.35,35
 Empório DuHomem,Moda,Norte Shopping,55127.32,96
 Engenharia do Corpo Academia,Serviços,Nações Shopping,349.70000000000005,2
 Espaço Laser,Beleza e Bem-estar,Continente Shopping,49375.91,29
-Espaço Laser,Beleza e Bem-estar,Nações Shopping,1820.11,4
+Espaço Laser,Beleza e Bem-estar,Nações Shopping,1820.1100000000001,4
 Espaço Laser,Beleza e Bem-estar,Neumarkt Shopping,339.6,1
 Espaço Laser,Beleza e Bem-estar,Norte Shopping,2460.76,4
 Essence Parfums,Beleza e Bem-estar,Nações Shopping,74857.39,96
@@ -584,7 +584,7 @@ Mr Trend,Ótica,Balneário Shopping,30078.39,92
 Mr Trend,Ótica,Continente Shopping,16049.02,55
 Mr. Cat,Calçados,Continente Shopping,43922.22,99
 Mr. Cheff,Gastronomia,Balneário Shopping,2321.41,41
-Mr. Cheff,Gastronomia,Continente Shopping,6980.5199999999995,128
+Mr. Cheff,Gastronomia,Continente Shopping,6980.52,128
 Mr. Cheff,Gastronomia,Neumarkt Shopping,448.86,10
 Mr. Cheff,Gastronomia,Norte Shopping,35761.99,543
 Mundo Di Chocolate,Gastronomia,Garten Shopping,2342.14,42
@@ -662,7 +662,7 @@ Panvel Farmácias,Farmácias,Neumarkt Shopping,98866.26,1032
 Panvel Farmácias,Farmácias,Norte Shopping,4672.82,54
 Paquetá,Esportes,Neumarkt Shopping,119202.8,384
 Paquetá,Esportes,Norte Shopping,78640.92,264
-Paquetá Esportes,Esportes,Balneário Shopping,94212.48000000001,268
+Paquetá Esportes,Esportes,Balneário Shopping,94212.48,268
 Paquetá Esportes,Esportes,Garten Shopping,108503.51000000001,363
 Paris Cosméticos,Beleza e Bem-estar,Balneário Shopping,613167.07,1333
 Patbo,Moda Feminina,Balneário Shopping,48639.11,17
@@ -803,7 +803,7 @@ TNG,Moda,Neumarkt Shopping,109142.7,297
 TOUTI Blumenau,Beleza e Bem-estar,Norte Shopping,4177.88,31
 Tabacaria E Presentes Trevo,Serviços,Garten Shopping,4386.82,28
 Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,2234.6,14
-Tea Shop,Gastronomia,Balneário Shopping,41955.27,172
+Tea Shop,Gastronomia,Balneário Shopping,41955.270000000004,172
 Tech Smart,Eletrônicos,Balneário Shopping,38006.05,97
 Tech Smart,Eletrônicos,Neumarkt Shopping,65603.55,150
 Tech Smart,Eletrônicos,Norte Shopping,17688.01,46

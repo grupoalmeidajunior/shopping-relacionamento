@@ -106,7 +106,7 @@ Brando Bike,Outros,Norte Shopping,20542.0,6
 Brasil Cacau,Gastronomia,Continente Shopping,20911.87,255
 Brasileirisse,Gastronomia,Norte Shopping,124.94,2
 Bread Pide,Gastronomia,Balneário Shopping,5064.64,75
-Brooksfield,Moda,Balneário Shopping,191329.61,131
+Brooksfield,Moda,Balneário Shopping,191329.61000000002,131
 Brooksfield,Moda,Continente Shopping,89012.32,78
 Brooksfield,Moda,Garten Shopping,73022.13,69
 Brooksfield,Moda,Neumarkt Shopping,85554.45,74
@@ -160,7 +160,7 @@ Carter´s,Infantil,Balneário Shopping,67071.86,168
 Cartes - Cozinha do Mundo,Gastronomia,Continente Shopping,53924.71,523
 Casa Bauducco,Gastronomia,Balneário Shopping,16971.94,201
 Casa Bauducco,Gastronomia,Garten Shopping,8659.77,100
-Casa Maria,Casa e Decoração,Continente Shopping,15077.529999999999,199
+Casa Maria,Casa e Decoração,Continente Shopping,15077.53,199
 Casa Maria,Casa e Decoração,Nações Shopping,2015.8,28
 Casas Bahia,Eletrodomésticos,Norte Shopping,208429.33,97
 Cases e Capas,Presentes e Acessórios,Nações Shopping,99.99,1
@@ -311,7 +311,7 @@ Fun Case,Eletrônicos,Norte Shopping,1194.0,3
 Fun Case,Telefonia,Continente Shopping,3904.0,7
 Fun Case,Telefonia,Garten Shopping,783.0,4
 Fun Case Gamer,Presentes e Acessórios,Balneário Shopping,1933.9,6
-Fábrica Di Chocolate,Gastronomia,Nações Shopping,459.68999999999994,6
+Fábrica Di Chocolate,Gastronomia,Nações Shopping,459.69,6
 Fátima Bebê,Infantil,Nações Shopping,2900.6,9
 Fátima Criança,Infantil,Nações Shopping,3892.8,21
 Fátima Esportes,Esportes,Nações Shopping,1026.0,4
@@ -488,7 +488,7 @@ Lupo,Moda,Garten Shopping,22565.62,99
 Lupo,Moda,Nações Shopping,2840.9,17
 Lupo,Moda,Neumarkt Shopping,37624.58,188
 Luz da Lua,Calçados,Balneário Shopping,110787.03,150
-Luz da Lua,Calçados,Neumarkt Shopping,82844.81999999999,115
+Luz da Lua,Calçados,Neumarkt Shopping,82844.82,115
 Luz da Lua,Calçados Femininos,Nações Shopping,4608.2,7
 Luz da Lua,Moda,Continente Shopping,40733.07,57
 MB Acessórios,Presentes e Acessórios,Neumarkt Shopping,10986.17,101
@@ -604,7 +604,7 @@ ORTOBOM,Casa e Decoração,Continente Shopping,61525.07,17
 Oakley,Ótica,Balneário Shopping,68305.14,60
 Oculum,Calçados,Balneário Shopping,61161.0,16
 Officina Do Celular,Eletrônicos,Garten Shopping,10938.85,33
-Officina Gelatiera,Gastronomia,Nações Shopping,843.45,22
+Officina Gelatiera,Gastronomia,Nações Shopping,843.4499999999999,22
 Officina do Celular,Eletrônicos,Garten Shopping,2978.6,12
 Ojo by mr.ray,Ótica,Balneário Shopping,39268.0,39
 Ophicina,Moda,Continente Shopping,17615.82,34
@@ -738,7 +738,7 @@ Sapataria do Futuro,Serviços,Nações Shopping,250.0,1
 Schutz,Calçados,Balneário Shopping,69756.32,93
 Senhora Farinha,Gastronomia,Norte Shopping,1789.17,30
 Sestini,Presentes e Acessórios,Balneário Shopping,54564.09,114
-Shawarma Food Joinville,Gastronomia,Garten Shopping,4576.900000000001,53
+Shawarma Food Joinville,Gastronomia,Garten Shopping,4576.9,53
 Shoulder,Moda Feminina,Balneário Shopping,103803.33,131
 Shoulder,Moda Feminina,Garten Shopping,126346.34,150
 Shoulder,Moda Feminina,Neumarkt Shopping,163705.33,200
@@ -863,7 +863,7 @@ Wow Park,Infantil,Norte Shopping,1723.0,4
 Wow Park Balneario Camboriu,Beleza e Bem-estar,Balneário Shopping,1070.9,7
 Youcom,Moda,Balneário Shopping,43051.38,161
 Youcom,Moda,Continente Shopping,47976.200000000004,179
-Youcom,Moda,Garten Shopping,40470.88,160
+Youcom,Moda,Garten Shopping,40470.880000000005,160
 Youcom,Moda,Nações Shopping,11421.130000000001,41
 Youcom,Moda,Neumarkt Shopping,28898.71,117
 Zamban Grill,Gastronomia,Norte Shopping,2199.94,26
