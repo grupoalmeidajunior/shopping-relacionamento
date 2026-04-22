@@ -33,7 +33,7 @@ Adidas,Esportes,Balneário Shopping,466093.71,765
 Adidas,Esportes,Garten Shopping,250629.42,378
 Adidas,Esportes,Neumarkt Shopping,580216.25,1140
 Adidas,Moda,Balneário Shopping,267853.89,381
-Adidas Originals,Moda,Balneário Shopping,423819.54,635
+Adidas Originals,Moda,Balneário Shopping,423819.54000000004,635
 Alice Salazar,Beleza e Bem-estar,Garten Shopping,47.0,1
 Alison Salles Hair Stylist,Salão de Beleza | Barbearia,Neumarkt Shopping,55636.85,248
 Altenburg,Casa e Decoração,Balneário Shopping,593172.79,567
@@ -118,7 +118,7 @@ Boiko,Joalheria,Balneário Shopping,655003.25,149
 Boiko Joalheiros,Joalheria,Norte Shopping,129343.72,109
 Bom Beef,Gastronomia,Continente Shopping,46563.84,503
 Bona Park,Moda,Balneário Shopping,5053.87,10
-Bondyou,Presentes e Acessórios,Balneário Shopping,9919.289999999999,125
+Bondyou,Presentes e Acessórios,Balneário Shopping,9919.29,125
 Bonna Panquecas e Massas,Gastronomia,Balneário Shopping,28603.7,448
 Borelli,Gastronomia,Balneário Shopping,9327.38,220
 Borelli Gelato,Gastronomia - Sorvetes,Continente Shopping,34262.39,880
@@ -249,7 +249,7 @@ Clube Melissa,Calçados,Neumarkt Shopping,171769.83000000002,621
 Coach,Beleza e Bem-estar,Balneário Shopping,367489.8,104
 Coach,Moda Feminina,Balneário Shopping,40472.0,13
 Cobasi,Pets,Continente Shopping,405679.52,2995
-Cobasi,Pets,Garten Shopping,248716.86,2161
+Cobasi,Pets,Garten Shopping,248716.86000000002,2161
 Cobasi,Pets,Nações Shopping,232160.05,1704
 Cobasi,Pets,Neumarkt Shopping,405061.07,2830
 Cobasi,Pets,Norte Shopping,276148.81,2099
@@ -356,7 +356,7 @@ Feng Cheng,Gastronomia,Garten Shopping,213316.57,2881
 Feng Cheng,Gastronomia,Neumarkt Shopping,115712.24,1542
 Feng Cheng,Gastronomia,Norte Shopping,40496.19,576
 Figueira Store,Esportes,Continente Shopping,51019.16,184
-Fini,Gastronomia,Balneário Shopping,15850.38,308
+Fini,Gastronomia,Balneário Shopping,15850.380000000001,308
 Fini,Gastronomia,Continente Shopping,58916.44,2014
 Fini,Gastronomia,Garten Shopping,2998.5,98
 Fini,Gastronomia,Nações Shopping,2415.7,82
@@ -554,7 +554,7 @@ Life by Vivara,Joalheria,Neumarkt Shopping,998774.63,1400
 Lilica & Tigor,Infantil,Continente Shopping,51090.33,152
 Lindt,Gastronomia,Balneário Shopping,842800.65,4542
 Lindt,Gastronomia,Garten Shopping,280582.14,1736
-Lindt,Gastronomia,Neumarkt Shopping,499477.27999999997,3313
+Lindt,Gastronomia,Neumarkt Shopping,499477.28,3313
 Liquori Caffè Gourmet,Gastronomia,Balneário Shopping,23469.5,406
 Live!,Moda,Balneário Shopping,949428.59,1405
 Live!,Moda,Garten Shopping,328455.12,577
@@ -820,7 +820,7 @@ Provin Joias,Joalheria,Norte Shopping,50621.79,162
 Provin Joias,Não informado,Continente Shopping,37326.26,119
 Provin Jóias,Não informado,Nações Shopping,46233.51,103
 Puket,Moda,Balneário Shopping,202714.62,570
-Purpurata,Presentes e Acessórios,Garten Shopping,274460.16,1029
+Purpurata,Presentes e Acessórios,Garten Shopping,274460.16000000003,1029
 Quebra Gelo,Presentes e Acessórios,Continente Shopping,37929.85,169
 "Quem disse, Berenice?",Beleza e Bem-estar,Balneário Shopping,52577.56,536
 Quiksilver,Moda,Balneário Shopping,219741.81,345
@@ -904,7 +904,7 @@ Souq,Moda Feminina,Balneário Shopping,322430.95,359
 Spedini,Gastronomia,Neumarkt Shopping,5871.0,110
 Spedini Trattoria Expressa,Gastronomia,Continente Shopping,10221.4,167
 Spoleto,Gastronomia,Continente Shopping,126405.05,2367
-St. Chicken,Gastronomia,Garten Shopping,18490.33,374
+St. Chicken,Gastronomia,Garten Shopping,18490.329999999998,374
 St.Chicken,Gastronomia,Nações Shopping,8698.8,143
 Stanley,Presentes e Acessórios,Balneário Shopping,166517.84,475
 Stanley,Presentes e Acessórios,Garten Shopping,170707.48,512
@@ -1040,7 +1040,7 @@ Youcom,Moda,Garten Shopping,417747.75,1368
 Youcom,Moda,Nações Shopping,399743.94,1093
 Youcom,Moda,Neumarkt Shopping,414498.01,1370
 Zamban Grill,Gastronomia,Norte Shopping,22952.59,232
-Zanoni Sushi,Gastronomia,Continente Shopping,209851.38999999998,3106
+Zanoni Sushi,Gastronomia,Continente Shopping,209851.39,3106
 Zara,Moda,Balneário Shopping,9964673.46,16289
 Zee Rucci,Moda Feminina,Neumarkt Shopping,131895.92,628
 Zeiss Vision Center,Ótica,Balneário Shopping,145098.03,51

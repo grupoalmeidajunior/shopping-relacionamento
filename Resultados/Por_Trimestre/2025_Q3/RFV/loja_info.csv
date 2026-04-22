@@ -117,7 +117,7 @@ CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,2348.21,
 CAPA FINA,Telefonia,Garten Shopping,620.1,6
 CELULAR CENTER,Eletrônicos,Continente Shopping,424.91,2
 Cabanas,Moda,Neumarkt Shopping,3975.75,16
-Cacau Show,Gastronomia,Balneário Shopping,5343.69,98
+Cacau Show,Gastronomia,Balneário Shopping,5343.6900000000005,98
 Cacau Show,Gastronomia,Continente Shopping,3517.08,94
 Cacau Show,Gastronomia,Garten Shopping,13954.5,280
 Cacau Show,Gastronomia,Nações Shopping,12312.96,216
@@ -384,7 +384,7 @@ Kfc,Gastronomia,Continente Shopping,16047.11,299
 Kfc,Gastronomia,Neumarkt Shopping,24667.21,486
 Kfc,Gastronomia,Norte Shopping,47.7,1
 Kib´s,Kids,Garten Shopping,8946.27,161
-Kings,Moda,Nações Shopping,25247.239999999998,38
+Kings,Moda,Nações Shopping,25247.24,38
 Kings  Sneakers,Calçados,Continente Shopping,15096.58,27
 Kings Sneakers,Calçados,Neumarkt Shopping,6723.5599999999995,10
 Kings Sneakers,Moda,Garten Shopping,4372.5,6
@@ -431,7 +431,7 @@ Life Vivara,Joalheria,Balneário Shopping,25181.0,39
 Life Vivara,Joalheria,Continente Shopping,24172.62,35
 Life Vivara,Joalheria,Garten Shopping,17776.07,32
 Life by Vivara,Joalheria,Neumarkt Shopping,40166.3,72
-Lilica & Tigor,Infantil,Continente Shopping,13143.880000000001,44
+Lilica & Tigor,Infantil,Continente Shopping,13143.88,44
 Lindt,Gastronomia,Balneário Shopping,23956.51,208
 Lindt,Gastronomia,Garten Shopping,15391.83,116
 Lindt,Gastronomia,Neumarkt Shopping,29697.33,297
@@ -538,7 +538,7 @@ Mr. Cat,Calçados,Continente Shopping,4223.6,12
 Mr. Cheff,Gastronomia,Balneário Shopping,1298.87,24
 Mr. Cheff,Gastronomia,Continente Shopping,8703.17,197
 Mr. Cheff,Gastronomia,Norte Shopping,7497.34,132
-Mundo Di Chocolate,Gastronomia,Garten Shopping,2999.53,31
+Mundo Di Chocolate,Gastronomia,Garten Shopping,2999.5299999999997,31
 Mânoa Acessórios,Presentes e Acessórios,Balneário Shopping,5059.75,67
 NEW ERA,Moda,Continente Shopping,1855.33,4
 NOHA SHOES,Calçados,Garten Shopping,2372.82,4
@@ -559,7 +559,7 @@ Nutty Bavarian,Gastronomia,Balneário Shopping,131.0,4
 Nutty Bavarian,Gastronomia,Garten Shopping,93.0,1
 O Boticário,Beleza e Bem-estar,Balneário Shopping,19436.55,145
 O Boticário,Beleza e Bem-estar,Continente Shopping,31933.47,201
-O Boticário,Beleza e Bem-estar,Garten Shopping,20035.33,162
+O Boticário,Beleza e Bem-estar,Garten Shopping,20035.329999999998,162
 O Boticário,Beleza e Bem-estar,Neumarkt Shopping,17036.63,108
 O Boticário,Beleza e Bem-estar,Norte Shopping,15095.18,86
 O MUNDO DAS CAPAS,Telefonia,Neumarkt Shopping,648.05,5
@@ -570,7 +570,7 @@ Officina do Celular,Eletrônicos,Garten Shopping,2529.4,7
 Ophicina,Moda,Continente Shopping,3442.56,6
 Ophicina,Moda,Garten Shopping,279.91,1
 Ophicina Foot Wear,Não informado,Nações Shopping,4835.86,7
-Ophicina Footwear,Moda,Neumarkt Shopping,8525.96,22
+Ophicina Footwear,Moda,Neumarkt Shopping,8525.960000000001,22
 Orientali,Gastronomia,Balneário Shopping,5506.49,80
 Orientali,Gastronomia,Continente Shopping,6985.91,92
 Orientali,Gastronomia,Neumarkt Shopping,5576.99,98
@@ -612,7 +612,7 @@ Patbo,Moda Feminina,Balneário Shopping,107950.21,35
 Paula Torres,Calçados Femininos,Balneário Shopping,34556.81,23
 Pecorino,Gastronomia,Balneário Shopping,3134.39,9
 Pegada,Calçados,Neumarkt Shopping,4946.27,15
-Pernambucanas,Moda,Continente Shopping,34316.770000000004,222
+Pernambucanas,Moda,Continente Shopping,34316.77,222
 Piastrini Joinville - Optica Machota,Ótica e Joalheria,Garten Shopping,11357.0,5
 Pittol,Calçados,Garten Shopping,32340.6,138
 Pittol,Calçados,Nações Shopping,31417.57,120
@@ -675,7 +675,7 @@ Rip Curl,Moda,Balneário Shopping,4178.85,7
 Riviera Café,Gastronomia,Continente Shopping,7814.04,162
 Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,1884.45,63
 Rochelli Calçados,Calçados,Garten Shopping,7410.9,10
-SAINT GERMAIN STORE,Joalheria,Garten Shopping,4306.799999999999,9
+SAINT GERMAIN STORE,Joalheria,Garten Shopping,4306.8,9
 SOS Ateliê,Serviços,Neumarkt Shopping,980.0,11
 Sabor Brasileiro,Gastronomia,Norte Shopping,3255.82,74
 Saint Germain,Joalheria,Balneário Shopping,3282.0,7
@@ -786,7 +786,7 @@ Vialaser,Beleza e Bem-estar,Norte Shopping,2717.86,2
 Vicio DiPrata,Joalheria,Continente Shopping,4150.6,26
 Victor Hugo,Moda Feminina,Balneário Shopping,15144.4,6
 Victor Hugo,Presentes e Acessórios,Neumarkt Shopping,24552.35,8
-Villa,Moda,Nações Shopping,7292.429999999999,16
+Villa,Moda,Nações Shopping,7292.43,16
 Virus 41,Calçados,Balneário Shopping,21895.46,38
 Vivara,Joalheria,Balneário Shopping,99113.3,45
 Vivara,Joalheria,Continente Shopping,89350.94,42

@@ -134,13 +134,13 @@ Calvin Klein e Tommy Hilfiger,Moda,Nações Shopping,21136.0,31
 Calzedonia,Moda,Garten Shopping,2723.52,11
 Calzedonia,Moda Feminina,Continente Shopping,1996.02,4
 Camarão Express,Gastronomia,Balneário Shopping,4478.0,52
-Camarão Express,Gastronomia,Continente Shopping,13346.29,168
-Camarão Express,Gastronomia,Nações Shopping,13876.71,157
+Camarão Express,Gastronomia,Continente Shopping,13346.289999999999,168
+Camarão Express,Gastronomia,Nações Shopping,13876.710000000001,157
 Camicado,Casa e Decoração,Balneário Shopping,51857.24,163
 Camicado,Casa e Decoração,Garten Shopping,14809.43,67
 Camicado,Casa e Decoração,Nações Shopping,21998.95,66
 Camicado,Casa e Decoração,Neumarkt Shopping,47916.71,169
-Cantinho Grill,Gastronomia,Nações Shopping,1905.4199999999998,34
+Cantinho Grill,Gastronomia,Nações Shopping,1905.42,34
 Carioca Calçados,Calçados,Continente Shopping,45721.05,149
 Carter's,Infantil,Garten Shopping,23553.48,74
 Carter´s,Infantil,Balneário Shopping,28258.06,92
@@ -341,7 +341,7 @@ JAH Açaí,Gastronomia,Nações Shopping,3179.97,70
 JBay,Moda,Continente Shopping,10746.86,29
 JCanedo,Moda,Continente Shopping,16090.5,29
 JCanedo,Moda,Garten Shopping,14267.48,21
-JCanedo,Moda,Neumarkt Shopping,45513.590000000004,74
+JCanedo,Moda,Neumarkt Shopping,45513.59,74
 JCanedo,Moda,Norte Shopping,14225.35,21
 JOHN JOHN,Moda,Balneário Shopping,4856.54,5
 Jack Simonéia Garten,Salão de Beleza | Barbearia,Garten Shopping,50.0,1
@@ -458,7 +458,7 @@ MB Acessórios,Presentes e Acessórios,Neumarkt Shopping,8197.800000000001,94
 MB acessórios,Presentes e Acessórios,Balneário Shopping,6057.55,29
 Mac,Beleza e Bem-estar,Balneário Shopping,22620.7,52
 Madero,Gastronomia,Balneário Shopping,46641.07,272
-Madero,Gastronomia,Continente Shopping,47669.66,250
+Madero,Gastronomia,Continente Shopping,47669.659999999996,250
 Madero,Gastronomia,Garten Shopping,24945.6,147
 Madero,Gastronomia,Neumarkt Shopping,67546.94,383
 Mafiawood,Presentes e Acessórios,Norte Shopping,724.0,2
@@ -513,7 +513,7 @@ Mmartan,Casa e Decoração,Garten Shopping,2498.25,2
 Moncloa,Presentes e Acessórios,Balneário Shopping,8785.12,15
 Moncloa,Serviços,Balneário Shopping,1840.58,7
 Montana Grill,Gastronomia,Balneário Shopping,3643.5099999999998,58
-Montana Grill,Gastronomia,Garten Shopping,5946.139999999999,129
+Montana Grill,Gastronomia,Garten Shopping,5946.14,129
 Monte Carlo Joias,Joalheria,Balneário Shopping,33293.49,9
 Morana,Presentes e Acessórios,Balneário Shopping,18721.31,77
 Morana,Presentes e Acessórios,Continente Shopping,10162.300000000001,64
@@ -545,7 +545,7 @@ Natureza Bistrô,Gastronomia,Nações Shopping,3756.0,98
 Nba Store Balneario Camboriu,Esportes,Balneário Shopping,1468.9,2
 Nba Store Balneario Camboriu,Moda,Balneário Shopping,9012.83,14
 Neumarkt Shopping - Estacionamento,Serviços,Neumarkt Shopping,9946.0,505
-New Era,Moda,Balneário Shopping,7044.860000000001,25
+New Era,Moda,Balneário Shopping,7044.86,25
 Nike Unite,Moda,Continente Shopping,161267.81,381
 Noel Decorações,Não informado,Continente Shopping,18424.05,56
 Noha Shoes,Moda,Balneário Shopping,11685.08,15
@@ -588,7 +588,7 @@ Padrão,Calçados,Balneário Shopping,72944.6,45
 Padrão,Moda,Garten Shopping,28277.0,17
 Paladare Di Italia,Gastronomia,Balneário Shopping,6458.5,67
 Panda Café & Chá Mix,Gastronomia,Nações Shopping,712.7,16
-Panda Sushi,Gastronomia,Nações Shopping,1947.1299999999999,32
+Panda Sushi,Gastronomia,Nações Shopping,1947.13,32
 Pandora,Joalheria,Balneário Shopping,25995.53,28
 Pandora,Joalheria,Continente Shopping,17188.5,14
 Pandora,Joalheria,Garten Shopping,9501.61,10
@@ -644,7 +644,7 @@ Rayban,Ótica,Balneário Shopping,25037.8,22
 Rei Do Mate,Gastronomia,Neumarkt Shopping,2471.8,70
 Renner,Moda,Balneário Shopping,269460.52,1009
 Renner,Moda,Continente Shopping,248885.0,1005
-Renner,Moda,Garten Shopping,203945.61000000002,865
+Renner,Moda,Garten Shopping,203945.61,865
 Renner,Moda,Nações Shopping,125665.14,515
 Renner,Moda,Neumarkt Shopping,278749.3,1107
 Renner,Moda,Norte Shopping,67039.7,289
@@ -769,10 +769,10 @@ VIRUS 41,Calçados,Balneário Shopping,3730.24,6
 VIRUS 41,Calçados,Garten Shopping,39201.94,74
 Valenttina,Moda,Garten Shopping,11174.7,57
 Valenttina,Moda Feminina,Balneário Shopping,7808.1,28
-Vans,Calçados,Balneário Shopping,56365.81,91
+Vans,Calçados,Balneário Shopping,56365.810000000005,91
 Via Brasil Balneario Camboriu,Moda,Balneário Shopping,13793.65,68
 Via Pian Food,Gastronomia,Nações Shopping,982.28,17
-Vialaser,Beleza e Bem-estar,Neumarkt Shopping,1244.5800000000002,3
+Vialaser,Beleza e Bem-estar,Neumarkt Shopping,1244.58,3
 Victor Hugo,Moda Feminina,Balneário Shopping,42766.2,16
 Victor Hugo,Presentes e Acessórios,Neumarkt Shopping,32415.0,15
 Virus 41,Calçados,Balneário Shopping,25230.86,46
