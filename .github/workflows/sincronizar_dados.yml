@@ -164,15 +164,14 @@ jobs:
           for d in $(ls Resultados/Por_Trimestre/ 2>/dev/null); do echo "- Trimestre: $d" >> $GITHUB_STEP_SUMMARY; done
           for d in $(ls Resultados/Por_Mes/ 2>/dev/null); do echo "- Mes: $d" >> $GITHUB_STEP_SUMMARY; done
 
-  # Job de notificacao WhatsApp (roda no self-hosted onde esta o gateway)
-  notificar-whatsapp:
-    runs-on: self-hosted
+  # Job de notificacao Teams (ubuntu-latest, sem dependencia de self-hosted)
+  notificar-teams:
+    runs-on: ubuntu-latest
     needs: sincronizar
     if: always()
 
     env:
-      WA_GATEWAY_URL: "http://localhost:3001"
-      WA_GROUP_ID: "120363408855201409@g.us"
+      TEAMS_WEBHOOK_URL: ${{ secrets.TEAMS_WEBHOOK_URL }}
 
     steps:
       - name: Checkout (para acessar o script)
@@ -188,12 +187,10 @@ jobs:
 
       - name: Notificar sucesso
         if: needs.sincronizar.result == 'success'
-        shell: powershell
         run: |
-          $csvCount = "${{ needs.sincronizar.outputs.csv_count }}"
-          python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status sucesso --detalhes "$csvCount CSVs sincronizados do Dashboard Perfil"
+          CSV_COUNT="${{ needs.sincronizar.outputs.csv_count }}"
+          python scripts/notificar_teams.py --dashboard "Shopping Relacionamento" --status sucesso --detalhes "$CSV_COUNT CSVs sincronizados do Dashboard Perfil"
 
       - name: Notificar erro
         if: needs.sincronizar.result == 'failure'
-        shell: powershell
-        run: python scripts/notificar_whatsapp.py --dashboard "Shopping Relacionamento" --status erro
+        run: python scripts/notificar_teams.py --dashboard "Shopping Relacionamento" --status erro
