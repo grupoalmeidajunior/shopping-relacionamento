@@ -299,3 +299,30 @@ Apenas 7 dependencias (vs 17+ do dashboard principal).
 
 *Ultima atualizacao: 03/03/2026 (Sessao 4)*
 *Repositorio: https://github.com/grupoalmeidajunior/shopping-relacionamento*
+
+---
+
+## Migracao para GitHub organizacional (24/04/2026)
+
+Repositorio transferido de `carlosgravi/shopping-relacionamento` para
+`grupoalmeidajunior/shopping-relacionamento` via API Transfer Ownership
+do GitHub. Transfer preservou:
+
+- Secrets do GitHub Actions (REPO_ACCESS_TOKEN)
+- Runner self-hosted `shopping-runner` (continuou online)
+- Historico de commits, PRs, issues
+- URLs antigas redirecionam automaticamente
+
+**Deploy Streamlit Cloud recriado** na conta `almeida-junior-lakehouse`
+(conta corporativa). Arquivo `secrets.toml` reconstruido localmente a
+partir de backup e complementado com bloco `[snowflake]` que faltava
+(usuario SVC_DASHBOARDS_AJFANS, rsa_key.p8 de Snowflake_Extrator/).
+
+**Senha admin padronizada:** `ADM@AJ#Dash2026` (hash bcrypt no secrets.toml).
+Demais usuarios (cs, bs, nk, nr, gs, ns) mantiveram senhas originais.
+
+**Arquivos atualizados** nesta sessao:
+- `scripts/notificar_whatsapp.py` — DASHBOARD_CONFIG apontando para grupoalmeidajunior
+- `.github/workflows/sincronizar_dados.yml` — checkout do repo fonte (perfil)
+- `.gitignore` — ja protegia secrets.toml
+
