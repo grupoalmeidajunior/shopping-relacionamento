@@ -5,7 +5,7 @@
 Dashboard **leve e focado** em acoes de relacionamento para os shoppings Almeida Junior. Cada shopping tem login proprio e ve apenas seus consumidores, com filtros por perfil, segmento e loja. Versao simplificada do Dashboard Perfil de Cliente, com foco em uso pratico pelos times de marketing dos shoppings.
 
 **URL do Dashboard:** https://shopping-relacionamento.streamlit.app
-**Repositorio GitHub:** https://github.com/carlosgravi/shopping-relacionamento
+**Repositorio GitHub:** https://github.com/grupoalmeidajunior/shopping-relacionamento
 
 ---
 
@@ -168,7 +168,7 @@ Multi-selecao de periodos: ao combinar, dados sao agregados (soma valor/frequenc
 ### GitHub Actions Workflow
 - **Arquivo:** `.github/workflows/sincronizar_dados.yml`
 - **Execucao:** Segunda-feira 6h BRT (9h UTC) + manual + repository_dispatch
-- **Fonte:** repo `carlosgravi/dashboard-perfil-cliente`
+- **Fonte:** repo `grupoalmeidajunior/dashboard-perfil-cliente`
 - **Destino:** pasta `Resultados/`
 - **Periodos sincronizados:** Completo + 2025/2026 (ano, trimestre, mes)
 - **CSVs AJFANS:** cliente_categoria.csv + ranking_ajfans.csv (da raiz do repo fonte)
@@ -298,4 +298,4 @@ Apenas 7 dependencias (vs 17+ do dashboard principal).
 ---
 
 *Ultima atualizacao: 03/03/2026 (Sessao 4)*
-*Repositorio: https://github.com/carlosgravi/shopping-relacionamento*
+*Repositorio: https://github.com/grupoalmeidajunior/shopping-relacionamento*

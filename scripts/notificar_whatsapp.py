@@ -26,12 +26,12 @@ DASHBOARD_CONFIG = {
     "Perfil de Cliente": {
         "emoji": "\U0001F464",       # 👤
         "url": "https://dashboard-perfil-cliente.streamlit.app",
-        "repo": "carlosgravi/dashboard-perfil-cliente",
+        "repo": "grupoalmeidajunior/dashboard-perfil-cliente",
     },
     "Shopping Relacionamento": {
         "emoji": "\U0001F6CD",       # 🛍
         "url": "https://shopping-relacionamento.streamlit.app",
-        "repo": "carlosgravi/shopping-relacionamento",
+        "repo": "grupoalmeidajunior/shopping-relacionamento",
     },
     "Normas Regulamentadoras": {
         "emoji": "\U0001F4DC",       # 📜

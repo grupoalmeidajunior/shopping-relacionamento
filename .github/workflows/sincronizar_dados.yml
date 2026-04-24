@@ -36,7 +36,7 @@ jobs:
       - name: Checkout dashboard-perfil-cliente (fonte dos dados)
         uses: actions/checkout@v4
         with:
-          repository: carlosgravi/dashboard-perfil-cliente
+          repository: grupoalmeidajunior/dashboard-perfil-cliente
           token: ${{ secrets.REPO_ACCESS_TOKEN }}
           path: fonte
 
