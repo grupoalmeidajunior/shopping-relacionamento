@@ -113,7 +113,7 @@ Bull Prime Steak House,Gastronomia,Garten Shopping,34084.2,117
 Burger King,Gastronomia,Balneário Shopping,16140.119999999999,321
 Burger King,Gastronomia,Continente Shopping,8689.4,161
 Burger King,Gastronomia,Garten Shopping,19064.19,384
-Burger King,Gastronomia,Nações Shopping,10172.53,209
+Burger King,Gastronomia,Nações Shopping,10172.529999999999,209
 Burger King,Gastronomia,Neumarkt Shopping,23525.11,472
 Burger King,Gastronomia,Norte Shopping,15422.27,279
 Békko,Moda,Nações Shopping,184328.65,173
@@ -130,7 +130,7 @@ Cabanas,Moda,Neumarkt Shopping,62361.67,137
 Cacau Show,Gastronomia,Balneário Shopping,28229.45,326
 Cacau Show,Gastronomia,Continente Shopping,20132.48,311
 Cacau Show,Gastronomia,Garten Shopping,40146.27,666
-Cacau Show,Gastronomia,Nações Shopping,42490.409999999996,656
+Cacau Show,Gastronomia,Nações Shopping,42490.41,656
 Cacau Show,Gastronomia,Neumarkt Shopping,39867.15,667
 Cacau Show,Gastronomia,Norte Shopping,13223.12,216
 Café Cultura,Gastronomia,Balneário Shopping,13289.19,249
@@ -157,7 +157,7 @@ Cartes - Cozinha do Mundo,Gastronomia,Continente Shopping,48917.04,625
 Casa Bauducco,Gastronomia,Balneário Shopping,20215.3,362
 Casa Bauducco,Gastronomia,Garten Shopping,12836.37,238
 Casa Maria,Casa e Decoração,Continente Shopping,41567.75,540
-Casa Maria,Casa e Decoração,Nações Shopping,41904.66,438
+Casa Maria,Casa e Decoração,Nações Shopping,41904.659999999996,438
 Casas Bahia,Eletrodomésticos,Norte Shopping,632099.73,332
 Cases e Capas,Presentes e Acessórios,Nações Shopping,13895.5,81
 Cassol Centerlar,Casa e Decoração,Nações Shopping,242660.43,405
@@ -329,7 +329,7 @@ Granado,Beleza e Bem-estar,Balneário Shopping,146863.81,557
 Granado Phamácias,Farmácias,Garten Shopping,138928.46,586
 GrandVision by Fototica,Ótica,Neumarkt Shopping,131562.46,61
 Grandvision By Fototica,Gastronomia - Restaurante,Nações Shopping,50671.71,36
-Grandvision by Fototica,Ótica,Balneário Shopping,74568.48999999999,42
+Grandvision by Fototica,Ótica,Balneário Shopping,74568.49,42
 Grano Pasta Ristorante,Gastronomia,Garten Shopping,12616.02,218
 Griletto,Gastronomia,Continente Shopping,31469.59,641
 Griletto,Gastronomia,Nações Shopping,8509.59,157
@@ -429,7 +429,7 @@ Lanzara,Joalheria,Continente Shopping,124670.85,52
 Lança Perfume,Moda,Continente Shopping,53465.82,51
 Lança Perfume,Moda,Nações Shopping,53247.22,51
 Las Leñas,Gastronomia,Balneário Shopping,64114.7,190
-Las Leñas Parrilla Uruguaya,Gastronomia,Nações Shopping,50120.340000000004,162
+Las Leñas Parrilla Uruguaya,Gastronomia,Nações Shopping,50120.34,162
 Lavi Sunglasses,Ótica,Balneário Shopping,2195.0,6
 Le Charbon Crepes e Café,Gastronomia,Nações Shopping,1164.5,44
 Le Creuset,Casa e Decoração,Balneário Shopping,164209.94,161
@@ -444,13 +444,13 @@ Life Vivara,Joalheria,Balneário Shopping,475029.95,546
 Life Vivara,Joalheria,Continente Shopping,189178.38,209
 Life Vivara,Joalheria,Garten Shopping,303951.42,380
 Life by Vivara,Joalheria,Neumarkt Shopping,361430.86,449
-Lilica & Tigor,Infantil,Continente Shopping,15899.55,30
+Lilica & Tigor,Infantil,Continente Shopping,15899.550000000001,30
 Lindt,Gastronomia,Balneário Shopping,131967.24,1122
 Lindt,Gastronomia,Garten Shopping,42239.47,413
 Lindt,Gastronomia,Neumarkt Shopping,85400.11,891
 Liquori Caffè Gourmet,Gastronomia,Balneário Shopping,9243.5,164
 Live!,Moda,Balneário Shopping,359746.54,432
-Live!,Moda,Garten Shopping,127097.71,198
+Live!,Moda,Garten Shopping,127097.70999999999,198
 Live!,Moda,Nações Shopping,95035.12,135
 Live!,Moda Feminina,Continente Shopping,183565.77,292
 Livraria Catarinense,Livrarias,Nações Shopping,82327.49,747
@@ -503,7 +503,7 @@ Mar de Maria,Moda,Nações Shopping,17078.81,78
 Maria Dolores,Joalheria,Balneário Shopping,79057.18000000001,58
 Maxmuscle,Esportes,Nações Shopping,1056.0,4
 Maze,Calçados,Neumarkt Shopping,262082.18,279
-Maze Skate,Moda,Garten Shopping,308846.09,293
+Maze Skate,Moda,Garten Shopping,308846.08999999997,293
 Maze Vale Comercio LTDA,Moda,Continente Shopping,96020.43,114
 Mc Donald's,Beleza e Bem-estar,Balneário Shopping,622.3,9
 Mc Donalds,Gastronomia,Norte Shopping,18274.09,356
@@ -565,7 +565,7 @@ Natura,Beleza e Bem-estar,Continente Shopping,69562.47,414
 Natura,Beleza e Bem-estar,Garten Shopping,52250.24,361
 Natura,Beleza e Bem-estar,Nações Shopping,69881.38,386
 Natura,Beleza e Bem-estar,Neumarkt Shopping,57789.42,301
-Natura,Beleza e Bem-estar,Norte Shopping,61373.09,399
+Natura,Beleza e Bem-estar,Norte Shopping,61373.090000000004,399
 Natureza Bistrô,Gastronomia,Nações Shopping,7124.49,156
 Nações Shopping Estacionamento,Não informado,Nações Shopping,7458.0,538
 Nba Store Balneario Camboriu,Moda,Balneário Shopping,47904.19,103
@@ -603,7 +603,7 @@ Ortobom,Hub da Saúde,Nações Shopping,78564.97,25
 Osklen,Moda,Balneário Shopping,105198.34,96
 Outback SteakHouse,Gastronomia,Nações Shopping,24235.16,76
 Outback Steakhouse,Gastronomia,Balneário Shopping,267909.06,1008
-Outback Steakhouse,Gastronomia,Continente Shopping,96361.06999999999,392
+Outback Steakhouse,Gastronomia,Continente Shopping,96361.07,392
 Outback Steakhouse,Gastronomia,Garten Shopping,127520.67,483
 Outback Steakhouse,Gastronomia,Neumarkt Shopping,69828.2,300
 Outlet Suplementos,Esportes,Continente Shopping,13313.77,71
@@ -736,7 +736,7 @@ Smartcase,Eletrônicos,Continente Shopping,10442.1,37
 Souq,Moda Feminina,Balneário Shopping,55583.09,60
 Spoleto,Gastronomia,Continente Shopping,39693.27,739
 St. Chicken,Gastronomia,Garten Shopping,7981.15,158
-St.Chicken,Gastronomia,Nações Shopping,4083.2999999999997,62
+St.Chicken,Gastronomia,Nações Shopping,4083.3,62
 Stanley,Presentes e Acessórios,Balneário Shopping,39800.13,109
 Stanley,Presentes e Acessórios,Garten Shopping,63563.69,191
 Starbucks,Gastronomia,Norte Shopping,14575.1,376

@@ -133,7 +133,7 @@ C&A,Moda,Balneário Shopping,1127620.1300000001,3600
 C&A,Moda,Continente Shopping,971196.96,3564
 C&A,Moda,Garten Shopping,664480.09,2624
 C&A,Moda,Nações Shopping,301967.35,1159
-CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,40481.09,937
+CANTINA MATTERELLO RESTAURANTE E PASTELARIA,Gastronomia,Garten Shopping,39941.29,916
 CAPA FINA,Telefonia,Garten Shopping,5615.37,53
 CVC,Serviços,Garten Shopping,723431.6,49
 CVC,Serviços,Norte Shopping,205054.12,22
@@ -147,7 +147,7 @@ Cacau Show,Gastronomia,Norte Shopping,128020.4,1063
 Cafe Cultura,Calçados,Balneário Shopping,828.81,21
 Café Cultura,Gastronomia,Balneário Shopping,18147.21,344
 Café Cultura,Gastronomia,Continente Shopping,17503.23,398
-Café Cultura,Gastronomia,Garten Shopping,24563.73,571
+Café Cultura,Gastronomia,Garten Shopping,24529.73,570
 Café Cultura,Gastronomia,Neumarkt Shopping,62079.92,1218
 Calvin Klein,Moda,Balneário Shopping,188926.01,368
 Calvin Klein,Moda,Garten Shopping,169377.31,248
@@ -268,7 +268,7 @@ Diesel,Moda,Balneário Shopping,157811.75,73
 Digital Duo,Eletrônicos,Garten Shopping,4643.0,21
 Divino Fogão,Gastronomia,Balneário Shopping,18546.12,343
 Divino Fogão,Gastronomia,Continente Shopping,29623.77,478
-Divino Fogão,Gastronomia,Garten Shopping,22184.329999999998,395
+Divino Fogão,Gastronomia,Garten Shopping,22022.53,392
 Divino Fogão,Gastronomia,Neumarkt Shopping,25213.18,430
 Divino Fogão,Gastronomia - Restaurante,Norte Shopping,16261.81,283
 Docejo,Gastronomia,Continente Shopping,43873.88,931
@@ -338,7 +338,7 @@ Fábrica Di Chocolate,Gastronomia,Nações Shopping,2661.9,62
 Fátima Bebê,Infantil,Nações Shopping,24608.05,74
 Fátima Criança,Infantil,Nações Shopping,65399.84,292
 Fátima Esportes,Esportes,Nações Shopping,50156.89,122
-Fátima Papelaria,Papelaria,Nações Shopping,30706.329999999998,141
+Fátima Papelaria,Papelaria,Nações Shopping,30706.33,141
 GNC Cinemas,Lazer,Neumarkt Shopping,24347.25,355
 Game Mania,Eletrônicos,Balneário Shopping,120559.99,117
 Game Mania,Eletrônicos,Neumarkt Shopping,153812.16,157
@@ -346,7 +346,7 @@ Game Mania,Eletrônicos,Norte Shopping,159192.62,92
 Gamelas & Panella's,Gastronomia,Continente Shopping,62821.99,918
 Gamelas & Panella´s,Gastronomia,Balneário Shopping,29671.01,331
 Gelato Borelli,Gastronomia,Neumarkt Shopping,19512.55,434
-Gelato Borelli,Gastronomia - Sorvetes,Garten Shopping,16869.74,367
+Gelato Borelli,Gastronomia - Sorvetes,Garten Shopping,16827.74,365
 General Lyy,Moda,Garten Shopping,254953.0,637
 General Lyy,Moda,Neumarkt Shopping,188621.84,464
 Geror,Ótica,Nações Shopping,1889.5,9
@@ -580,7 +580,7 @@ Milon,Infantil,Balneário Shopping,172107.98,366
 Milon,Infantil,Garten Shopping,91435.58,285
 Mini Kalzone,Gastronomia,Balneário Shopping,20634.4,886
 Mini Kalzone,Gastronomia,Continente Shopping,38067.59,1698
-Mini Kalzone,Gastronomia,Garten Shopping,26557.1,1106
+Mini Kalzone,Gastronomia,Garten Shopping,26493.4,1102
 Mini Kalzone,Gastronomia,Nações Shopping,17954.3,796
 Mini Kalzone,Gastronomia,Neumarkt Shopping,52907.85,2147
 Mini Kalzone,Gastronomia,Norte Shopping,40090.15,1485
@@ -683,7 +683,7 @@ Pandora,Joalheria,Norte Shopping,33112.57,39
 Panvel,Farmácias,Norte Shopping,2774.45,30
 Panvel Farmácias,Farmácias,Balneário Shopping,31112.37,194
 Panvel Farmácias,Farmácias,Continente Shopping,182370.25,1979
-Panvel Farmácias,Farmácias,Garten Shopping,92897.5,1068
+Panvel Farmácias,Farmácias,Garten Shopping,92868.01,1067
 Panvel Farmácias,Farmácias,Nações Shopping,32621.68,302
 Panvel Farmácias,Farmácias,Neumarkt Shopping,174372.03,1802
 Panvel Farmácias,Farmácias,Norte Shopping,17308.78,209
@@ -718,7 +718,7 @@ Pop Me,Moda,Continente Shopping,151540.49,594
 Pop Me,Moda,Garten Shopping,249032.05,982
 Portus Padaria Artesanal,Gastronomia,Neumarkt Shopping,13276.97,228
 Pratafina,Presentes e Acessórios,Balneário Shopping,255478.88,916
-Pratafina,Presentes e Acessórios,Garten Shopping,184010.0,699
+Pratafina,Presentes e Acessórios,Garten Shopping,183760.0,698
 Pratafina,Presentes e Acessórios,Neumarkt Shopping,179504.8,831
 Pratafina,Presentes e Acessórios,Norte Shopping,143736.0,589
 Preçolândia,Casa e Decoração,Neumarkt Shopping,5913.12,60
@@ -921,7 +921,7 @@ Youcom,Moda,Balneário Shopping,189047.14,606
 Youcom,Moda,Continente Shopping,281182.32,908
 Youcom,Moda,Garten Shopping,224255.77,791
 Youcom,Moda,Nações Shopping,119510.41,373
-Youcom,Moda,Neumarkt Shopping,189180.33000000002,702
+Youcom,Moda,Neumarkt Shopping,189180.33,702
 Zamban Grill,Gastronomia,Norte Shopping,13022.87,133
 Zanoni Sushi,Gastronomia,Continente Shopping,120670.81,1806
 Zara,Moda,Balneário Shopping,5117063.26,8220

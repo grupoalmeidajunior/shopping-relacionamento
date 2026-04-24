@@ -72,7 +72,7 @@ Baummer,Joalheria,Nações Shopping,6854.97,43
 Baummer Semijóias,Presentes e Acessórios,Garten Shopping,4640.74,27
 Beagle,Moda,Balneário Shopping,14183.7,42
 Beagle,Moda,Continente Shopping,24852.38,57
-Beagle,Moda,Garten Shopping,37191.02,104
+Beagle,Moda,Garten Shopping,37191.020000000004,104
 Beagle,Moda,Nações Shopping,47943.04,117
 Beagle,Moda,Norte Shopping,16702.16,60
 BelShop,Beleza e Bem-estar,Nações Shopping,27740.86,188
@@ -112,7 +112,7 @@ Bread Pide,Gastronomia,Balneário Shopping,2374.73,45
 Brooksfield,Moda,Balneário Shopping,122089.28,63
 Brooksfield,Moda,Continente Shopping,87470.79000000001,81
 Brooksfield,Moda,Garten Shopping,122856.8,95
-Brooksfield,Moda,Neumarkt Shopping,149569.08000000002,93
+Brooksfield,Moda,Neumarkt Shopping,149569.08,93
 Buddha SPA,Beleza e Bem-estar,Garten Shopping,1673.0,2
 Buddha Spa,Serviços,Balneário Shopping,3007.0,7
 Bull Prime Steak House,Gastronomia,Garten Shopping,7431.81,21
@@ -376,7 +376,7 @@ Hering Store,Moda,Continente Shopping,77166.62,230
 Hering Store,Moda,Neumarkt Shopping,87781.17,248
 Homem do Sapato,Moda,Continente Shopping,683.1,1
 Hope,Moda,Balneário Shopping,69952.92,223
-Hope,Moda,Continente Shopping,24297.760000000002,93
+Hope,Moda,Continente Shopping,24297.76,93
 Hope,Moda,Neumarkt Shopping,53056.5,153
 Hope Nacoes Shopping,Outros,Nações Shopping,23291.31,80
 Hot Dog Du Piru,Gastronomia,Continente Shopping,2444.78,66
@@ -400,7 +400,7 @@ JCanedo,Moda,Neumarkt Shopping,96786.12,116
 JCanedo,Moda,Norte Shopping,70346.23,79
 Jack Simonéia Garten,Salão de Beleza | Barbearia,Garten Shopping,1906.67,9
 Jah Açaí,Gastronomia,Balneário Shopping,905.03,29
-Jah Açaí,Gastronomia,Neumarkt Shopping,1231.62,52
+Jah Açaí,Gastronomia,Neumarkt Shopping,1231.6200000000001,52
 Jah Açaí,Gastronomia,Norte Shopping,1326.21,49
 Jah Açaí Joinville,Gastronomia - Sorvetes,Garten Shopping,945.35,20
 Jah do Açaí,Gastronomia,Continente Shopping,293.27,17
@@ -552,7 +552,7 @@ Milkymoo,Gastronomia - Sorvetes,Nações Shopping,3805.91,102
 Milon,Infantil,Balneário Shopping,37525.53,80
 Milon,Infantil,Garten Shopping,21689.34,55
 Mini Kalzone,Gastronomia,Balneário Shopping,5966.7,256
-Mini Kalzone,Gastronomia,Continente Shopping,9960.289999999999,457
+Mini Kalzone,Gastronomia,Continente Shopping,9960.29,457
 Mini Kalzone,Gastronomia,Garten Shopping,6550.7,282
 Mini Kalzone,Gastronomia,Nações Shopping,8710.7,387
 Mini Kalzone,Gastronomia,Neumarkt Shopping,13448.8,565
@@ -717,7 +717,7 @@ Reserva,Moda,Garten Shopping,32530.72,46
 Reserva,Moda,Neumarkt Shopping,37547.68,68
 Reserva Nacoes Shopping,Moda,Nações Shopping,22711.19,32
 Ri Happy,Infantil,Balneário Shopping,58938.66,245
-Ri Happy,Infantil,Garten Shopping,29439.510000000002,163
+Ri Happy,Infantil,Garten Shopping,29439.51,163
 Ri Happy,Infantil,Neumarkt Shopping,93198.52,379
 Ri Happy Baby,Infantil,Continente Shopping,49490.43,221
 Riachuelo,Moda,Balneário Shopping,217395.08000000002,734
