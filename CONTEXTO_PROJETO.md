@@ -326,3 +326,20 @@ Demais usuarios (cs, bs, nk, nr, gs, ns) mantiveram senhas originais.
 - `.github/workflows/sincronizar_dados.yml` — checkout do repo fonte (perfil)
 - `.gitignore` — ja protegia secrets.toml
 
+
+---
+
+## Sessao 40 (24/04/2026, continuacao) — Notificacao WhatsApp -> Teams/Slack
+
+Migracao de notificacoes para eliminar dependencia de self-hosted runner + WhatsApp gateway local:
+
+- **Canal novo:** Microsoft Teams via Power Automate Workflow webhook
+- **Secret adicionado:** `TEAMS_WEBHOOK_URL`
+- **Script:** `scripts/notificar_teams.py` (AdaptiveCard com botoes)
+- **Job:** `notificar-teams` em `ubuntu-latest` (antes era `self-hosted`)
+- **Canal Teams:** AJ Dashboards - Atualizacoes (conta `almeida-junior-lakehouse`)
+
+Runner self-hosted e WhatsApp Gateway removidos do notebook local.
+`scripts/notificar_whatsapp.py` mantido no repo como referencia legada (nao e mais chamado).
+
+*Documento atualizado em 24/04/2026 - Sessao 40: Migracao notificacoes*
