@@ -74,7 +74,7 @@ Beagle,Moda,Garten Shopping,118962.79000000001,377
 Beagle,Moda,Nações Shopping,20828.55,66
 Beagle,Moda,Norte Shopping,59685.5,187
 BelShop,Beleza e Bem-estar,Nações Shopping,14433.55,115
-Belshop,Beleza e Bem-estar,Neumarkt Shopping,65760.56999999999,500
+Belshop,Beleza e Bem-estar,Neumarkt Shopping,65760.57,500
 Bergerson,Joalheria,Garten Shopping,1153874.98,48
 Beto Carrero World Quiosque,Serviços,Balneário Shopping,2383.5,2
 Beto Carrero World Quiosque,Serviços,Nações Shopping,1439.76,1
@@ -153,7 +153,7 @@ Camarão Express,Gastronomia,Neumarkt Shopping,8954.0,135
 Camicado,Casa e Decoração,Balneário Shopping,261644.21,663
 Camicado,Casa e Decoração,Nações Shopping,16984.260000000002,63
 Camicado,Casa e Decoração,Neumarkt Shopping,213812.79,816
-Cantinho Grill,Gastronomia,Nações Shopping,2962.8,58
+Cantinho Grill,Gastronomia,Nações Shopping,2962.7999999999997,58
 Capivalley,Promocional,Continente Shopping,500.0,1
 Carioca Calçados,Calçados,Continente Shopping,280521.92,833
 Carter's,Infantil,Garten Shopping,128071.54000000001,425
@@ -258,7 +258,7 @@ Divino Fogão,Gastronomia,Balneário Shopping,12725.17,228
 Divino Fogão,Gastronomia,Continente Shopping,15756.57,258
 Divino Fogão,Gastronomia,Garten Shopping,14152.81,256
 Divino Fogão,Gastronomia,Neumarkt Shopping,12701.8,230
-Divino Fogão,Gastronomia - Restaurante,Norte Shopping,8977.87,155
+Divino Fogão,Gastronomia - Restaurante,Norte Shopping,8977.869999999999,155
 Docejo,Gastronomia,Continente Shopping,26760.78,513
 Dolce & Gabbana,Moda,Balneário Shopping,2600.0,1
 Dolce & Gabbana Do Brasil,Moda,Balneário Shopping,628819.0,85
@@ -303,7 +303,7 @@ Farm,Moda Feminina,Garten Shopping,267812.88,466
 Farm,Moda Feminina,Neumarkt Shopping,289904.8,571
 Feng Cheng,Gastronomia,Garten Shopping,66078.51,887
 Feng Cheng,Gastronomia,Neumarkt Shopping,33736.03,449
-Feng Cheng,Gastronomia,Norte Shopping,14036.460000000001,194
+Feng Cheng,Gastronomia,Norte Shopping,14036.46,194
 Figueira Store,Esportes,Continente Shopping,20158.53,83
 Fini,Gastronomia,Balneário Shopping,1096.31,39
 Fini,Gastronomia,Continente Shopping,31614.8,1086
@@ -425,7 +425,7 @@ Kids Play,Lazer,Garten Shopping,25.0,1
 Kings,Moda,Nações Shopping,19316.36,24
 Kings  Sneakers,Calçados,Continente Shopping,61894.36,80
 Kings Sneakers,Calçados,Balneário Shopping,15926.17,27
-Kings Sneakers,Calçados,Neumarkt Shopping,74316.1,106
+Kings Sneakers,Calçados,Neumarkt Shopping,72616.7,105
 Kings Sneakers,Moda,Garten Shopping,64992.44,95
 Kings Sneakers,Moda,Norte Shopping,41808.13,56
 Kipling,Presentes e Acessórios,Balneário Shopping,215783.8,204
@@ -436,7 +436,7 @@ Kopenhagen,Gastronomia,Continente Shopping,107161.98,604
 Kopenhagen,Gastronomia,Neumarkt Shopping,132905.53,1043
 Kopenhagen,Não informado,Nações Shopping,10848.15,70
 Kulkes,Joalheria,Balneário Shopping,803762.0,16
-L'Occitane Au Brésil,Beleza e Bem-estar,Neumarkt Shopping,75005.41,410
+L'Occitane Au Brésil,Beleza e Bem-estar,Neumarkt Shopping,74555.61,409
 L'Occitane En Provence,Beleza e Bem-estar,Balneário Shopping,171735.01,376
 L'Occitane en Provence,Beleza e Bem-estar,Neumarkt Shopping,179697.85,331
 L'occitane Au Brasil,Beleza e Bem-estar,Garten Shopping,62603.43,325
@@ -483,7 +483,7 @@ Live!,Moda Feminina,Continente Shopping,177406.91,328
 Livraria Catarinense,Livrarias,Nações Shopping,24028.45,217
 Livrarias Catarinense,Livrarias,Balneário Shopping,342832.48,2432
 Livrarias Catarinense,Livrarias,Continente Shopping,213994.65,1781
-Livrarias Catarinense,Livrarias,Neumarkt Shopping,454798.16,3429
+Livrarias Catarinense,Livrarias,Neumarkt Shopping,454649.26,3428
 Livrarias Catarinense,Livrarias,Norte Shopping,90755.5,737
 Livrarias Curitiba,Livrarias,Garten Shopping,207812.86000000002,1844
 Livre Mix,Joalheria,Nações Shopping,957.86,8
@@ -598,7 +598,7 @@ Natura,Beleza e Bem-estar,Continente Shopping,108637.72,600
 Natura,Beleza e Bem-estar,Garten Shopping,80682.72,583
 Natura,Beleza e Bem-estar,Nações Shopping,13202.51,73
 Natura,Beleza e Bem-estar,Neumarkt Shopping,123626.89,756
-Natura,Beleza e Bem-estar,Norte Shopping,79041.29,482
+Natura,Beleza e Bem-estar,Norte Shopping,79041.29000000001,482
 Nações Shopping Estacionamento,Não informado,Nações Shopping,5524.0,328
 Nba Store Balneario Camboriu,Moda,Balneário Shopping,93463.27,141
 Neumarkt Shopping - Estacionamento,Serviços,Neumarkt Shopping,31783.0,1737
@@ -721,7 +721,7 @@ Ri Happy,Infantil,Balneário Shopping,375207.73,1255
 Ri Happy,Infantil,Garten Shopping,236149.76,1033
 Ri Happy,Infantil,Neumarkt Shopping,440224.17,1562
 Ri Happy Baby,Infantil,Continente Shopping,340974.14,1382
-Riachuelo,Moda,Balneário Shopping,577716.53,1934
+Riachuelo,Moda,Balneário Shopping,577356.57,1933
 Riachuelo,Moda,Continente Shopping,554701.56,2109
 Riachuelo,Moda,Garten Shopping,934468.85,3558
 Riachuelo,Moda,Nações Shopping,78511.52,327
@@ -729,7 +729,7 @@ Riachuelo,Moda,Neumarkt Shopping,641673.85,2466
 Riachuelo,Moda,Norte Shopping,362683.13,1393
 Richard's,Moda,Balneário Shopping,264316.0,215
 Rip Curl,Moda,Balneário Shopping,164417.25,289
-Ritmi Studio,Moda Feminina,Nações Shopping,24893.100000000002,69
+Ritmi Studio,Moda Feminina,Nações Shopping,24893.1,69
 Riviera Café,Gastronomia,Continente Shopping,11354.49,238
 Roasted Potato & Suco Bagaço,Gastronomia,Balneário Shopping,2652.95,66
 Rochelli Calçados,Calçados,Garten Shopping,133910.49,359
@@ -803,7 +803,7 @@ TNG,Moda,Neumarkt Shopping,109142.7,297
 TOUTI Blumenau,Beleza e Bem-estar,Norte Shopping,4177.88,31
 Tabacaria E Presentes Trevo,Serviços,Garten Shopping,4386.82,28
 Tabacaria El Patrono,Presentes e Acessórios,Nações Shopping,2234.6,14
-Tea Shop,Gastronomia,Balneário Shopping,41955.27,172
+Tea Shop,Gastronomia,Balneário Shopping,41955.270000000004,172
 Tech Smart,Eletrônicos,Balneário Shopping,38006.05,97
 Tech Smart,Eletrônicos,Neumarkt Shopping,65603.55,150
 Tech Smart,Eletrônicos,Norte Shopping,17688.01,46
@@ -819,7 +819,7 @@ Tokaia,Moda,Nações Shopping,19582.0,10
 Tomato,Gastronomia,Continente Shopping,6269.2,84
 Tommy Hilfiger,Moda,Balneário Shopping,370857.6,498
 Tommy Hilfiger,Moda,Continente Shopping,169852.4,291
-Tommy Hilfiger,Moda,Neumarkt Shopping,219040.99,371
+Tommy Hilfiger,Moda,Neumarkt Shopping,217625.99,370
 Toni Toys,Infantil,Norte Shopping,122009.17,435
 Track & Field,Moda,Neumarkt Shopping,416012.81,666
 Track&Field,Moda,Balneário Shopping,435408.05,659
