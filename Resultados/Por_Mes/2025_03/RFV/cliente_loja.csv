@@ -61,7 +61,7 @@
 1427,Usaflex,1,139.0
 1941,Centauro,1,379.0
 2040,C&A,1,135.98
-2040,Pratafina,1,155.0
+2040,Prata fina,1,155.0
 2213,Atacadão,6,912.9
 2213,Avatim,2,615.0
 2213,Cobasi,3,232.87
@@ -180,11 +180,11 @@
 4661,Mini Kalzone,1,9.0
 4661,Panvel Farmácias,1,8.49
 4661,Santo Boteco,1,99.47
+4682,Bob's - Quiosque 2,2,33.0
 4682,Camarão Express,4,208.6
 4682,Livraria Catarinense,1,54.7
 4682,Natura,2,174.04
 4682,St.Chicken,2,94.6
-4682,z Bob's - Quiosque 2,2,33.0
 4683,Bacio di Latte,2,103.85
 4683,Livrarias Catarinense,1,73.9
 4683,Riachuelo,1,399.75
@@ -685,7 +685,7 @@
 23483,Studio Z,1,76.0
 23659,Me.Linda,1,69.99
 23659,Renner,1,69.9
-23676,Pratafina,1,75.0
+23676,Prata fina,1,75.0
 23676,Ri Happy,1,199.0
 23749,Lojas Americanas,1,111.0
 23749,Ri Happy Baby,2,428.99
@@ -921,7 +921,7 @@
 33140,CLARO,1,4261.4
 33140,Camicado,1,49.99
 33140,Livrarias Catarinense,1,36.4
-33140,Pratafina,1,375.0
+33140,Prata fina,1,375.0
 33140,Renner,3,259.5
 33140,Wepink,1,61.45
 33143,Brooksfield,1,1199.7
@@ -1545,7 +1545,7 @@
 60045,Renner,1,229.8
 60045,Riachuelo,1,359.96
 60113,Donna Mirô,1,39.91
-60113,Estacionamento - Nações Shopping,1,16.0
+60113,Estacionamento - Nações Shopping (CERTO),1,16.0
 60113,Gamelas & Panella´s,2,158.77
 60113,Livraria Catarinense,1,51.9
 60113,Livrarias Catarinense,4,93.7
@@ -1714,6 +1714,7 @@
 64356,Sinhá Benta Gourmet,1,90.35
 64426,Beagle,1,79.99
 64426,BelShop,1,39.94
+64426,Bob's - Quiosque 2,1,14.0
 64426,Cantinho Grill,3,211.3
 64426,Casa Maria,1,47.93
 64426,Chope do Mestre,1,5.0
@@ -1726,7 +1727,6 @@
 64426,Riachuelo,1,269.96
 64426,Santo Boteco,1,138.37
 64426,Subway,1,31.0
-64426,z Bob's - Quiosque 2,1,14.0
 64597,McDonald's,1,46.9
 64743,Clube Melissa,1,389.8
 64743,Gondolier,1,68.0
@@ -2400,7 +2400,7 @@
 92047,Livrarias Catarinense,1,21.3
 92294,Arezzo,1,329.8
 92419,C&A,1,329.97
-92419,HOPE Moda íntima,1,493.5
+92419,HOPE,1,493.5
 92419,Livrarias Curitiba,1,399.2
 92419,Pop Me,1,899.1
 92419,Youcom,1,1688.8
@@ -2637,10 +2637,10 @@
 103573,Continente Shopping - Estacionamento,1,20.0
 103573,Panvel Farmácias,2,73.97
 103573,Swell Poke,1,100.0
+103644,Bob's - Quiosque 2,2,43.9
 103644,Camarão Express,1,53.9
 103644,Mini Kalzone,4,102.5
 103644,Riachuelo,1,59.99
-103644,z Bob's - Quiosque 2,2,43.9
 103673,C&A,1,309.98
 103673,Renner,1,99.9
 103673,Zara,1,1.0
@@ -3629,7 +3629,7 @@
 126968,Morana,3,100.8
 126968,Mânoa Acessórios,1,29.0
 126968,Paris Cosméticos,1,139.0
-126968,Pratafina,1,125.0
+126968,Prata fina,1,125.0
 126968,Reserva,2,325.0
 126971,C&A,2,375.78
 126971,Polo Wear,1,89.99
@@ -3658,7 +3658,7 @@
 127203,Livrarias Catarinense,1,57.0
 127211,Damyller,1,579.0
 127211,Granado Phamácias,1,158.0
-127211,HOPE Moda íntima,1,543.5
+127211,HOPE,1,543.5
 127211,Idéli Oui,1,963.0
 127211,Madero,1,145.2
 127211,VIRUS 41,1,167.93
@@ -3718,7 +3718,7 @@
 128639,C&A,1,89.99
 128639,Centauro,3,618.58
 128639,Colcci,1,1096.0
-128639,Kings,1,269.99
+128639,Kings Sneackers,1,269.99
 128639,Panvel Farmácias,1,126.37
 128639,Pittol,1,99.99
 128639,Riachuelo,1,545.84
@@ -3803,7 +3803,7 @@
 130196,Calvin Klein e Tommy Hilfiger,1,528.0
 130196,Casa Maria,1,178.75
 130196,Donna Mirô,1,74.43
-130196,Kings,1,1499.0
+130196,Kings Sneackers,1,1499.0
 130196,Lupo,1,186.5
 130196,Santo Boteco,1,89.87
 130239,Centauro,1,129.99
@@ -4035,7 +4035,7 @@
 134163,Gamelas & Panella's,1,201.38
 134230,Morana,1,1253.2
 134230,Panvel Farmácias,1,155.08
-134230,Pratafina,1,155.0
+134230,Prata fina,1,155.0
 134230,Usaflex,1,639.0
 134343,Camarão Express,1,155.0
 134343,Chuá Brand,1,303.9
@@ -5672,7 +5672,7 @@
 188140,Acuo,1,129.9
 188140,Burger King,1,27.9
 188140,Cobasi,2,209.28
-188140,Estacionamento - Nações Shopping,1,16.0
+188140,Estacionamento - Nações Shopping (CERTO),1,16.0
 188140,Mini Kalzone,4,40.0
 188140,Riachuelo,1,299.98
 188213,Hector Albertazzi,1,3493.0
@@ -5967,7 +5967,7 @@
 198279,C&A,3,1079.92
 198279,Centauro,2,479.98
 198279,Granado Phamácias,1,175.0
-198279,HOPE Moda íntima,1,13.0
+198279,HOPE,1,13.0
 198279,Kalunga,1,33.1
 198279,Morana Acessórios,1,129.8
 198279,Panvel Farmácias,3,1556.68
@@ -6036,7 +6036,7 @@
 201361,Renner,2,749.5
 201387,Giraffas,1,39.0
 201387,Spoleto,1,34.5
-201568,HOPE Moda íntima,1,85.0
+201568,HOPE,1,85.0
 201587,Shoulder,1,399.0
 201713,Beagle,1,619.97
 201713,JCanedo,1,2532.69
@@ -6046,7 +6046,7 @@
 201865,Cacau Show,1,51.96
 201865,Dona Torta,1,110.0
 201865,Granado Phamácias,1,158.0
-201865,HOPE Moda íntima,2,349.4
+201865,HOPE,2,349.4
 201865,Livrarias Curitiba,1,21.8
 201865,Pittol,1,229.0
 201865,Renner,1,269.7
@@ -6162,7 +6162,7 @@
 206569,Mamma Mia Express,1,100.0
 206672,KFC,1,13.8
 206672,Livrarias Catarinense,1,39.1
-206672,Pratafina,1,4.0
+206672,Prata fina,1,4.0
 206900,Burger King,1,19.9
 206975,Bob's Sorvete - Quiosque,1,53.7
 206975,Mini Kalzone,1,34.0
@@ -6207,7 +6207,7 @@
 210435,JAH Açaí,1,101.99
 210735,Cobasi,1,275.88
 210735,Donna Mirô,1,71.73
-210735,Estacionamento - Nações Shopping,2,32.0
+210735,Estacionamento - Nações Shopping (CERTO),2,32.0
 210735,Milkymoo,1,20.0
 210735,Mini Kalzone,1,9.0
 210813,Continente Shopping - Estacionamento,1,20.0
@@ -6277,10 +6277,10 @@
 214051,VIRUS 41,1,559.93
 214128,Renner,1,99.8
 214128,Riachuelo,1,29.99
+214172,Bob's - Quiosque 2,1,31.0
 214172,Fátima Papelaria,1,32.0
 214172,Livraria Catarinense,1,9.9
 214172,Lupo,1,64.0
-214172,z Bob's - Quiosque 2,1,31.0
 214174,Bibi,1,199.9
 214174,Kalunga,1,160.4
 214174,Kopenhagen,1,119.3
@@ -6424,7 +6424,7 @@
 221194,Cobasi,1,305.8
 221362,BelShop,1,116.94
 221362,Centauro,1,199.99
-221362,Estacionamento - Nações Shopping,1,16.0
+221362,Estacionamento - Nações Shopping (CERTO),1,16.0
 221362,Renner,1,261.7
 221362,Riachuelo,1,79.99
 221362,Uebel Make Up,1,363.3
@@ -6491,15 +6491,15 @@
 224904,Lug's,1,25.99
 224904,Mini Kalzone,1,31.0
 224904,Via Pian Food,1,27.99
+225011,Bob's - Quiosque 2,1,10.0
 225011,Camarão Express,1,105.8
 225011,Dez Pastéis,3,79.5
-225011,Estacionamento - Nações Shopping,1,6.0
+225011,Estacionamento - Nações Shopping (CERTO),1,6.0
 225011,Griletto,4,68.0
 225011,Milkymoo,1,46.0
 225011,Outback SteakHouse,1,363.44
 225011,Samsung,1,239.0
 225011,Subway,1,51.5
-225011,z Bob's - Quiosque 2,1,10.0
 225432,Bob's,1,18.0
 225432,Renner,1,109.8
 225548,Casa Maria,2,73.88
@@ -6656,11 +6656,11 @@
 231014,Mini Kalzone,1,42.0
 231505,Havan,1,129.99
 231889,Cobasi,2,38.36
-231889,Estacionamento - Nações Shopping,1,16.0
+231889,Estacionamento - Nações Shopping (CERTO),1,16.0
 231889,Livraria Catarinense,1,49.0
 231889,Panvel Farmácias,2,200.77
 232211,Mini Kalzone,2,39.0
-232358,Estacionamento - Nações Shopping,1,10.0
+232358,Estacionamento - Nações Shopping (CERTO),1,10.0
 232358,Mini Kalzone,1,24.9
 232358,Renner,1,399.8
 232567,Békko,2,758.9
@@ -6806,7 +6806,7 @@
 238365,Lua Luá,1,316.8
 238450,Burger King,1,129.8
 238450,Lojas Americanas,1,60.89
-238593,Estacionamento - Nações Shopping,1,16.0
+238593,Estacionamento - Nações Shopping (CERTO),1,16.0
 238593,Livraria Catarinense,1,99.8
 238610,Bob's (Quiosque 2),1,20.0
 238610,Kalunga,1,105.1
@@ -6995,7 +6995,7 @@
 248144,Riachuelo,1,139.0
 248144,St.Chicken,1,49.0
 248416,Centauro,1,209.98
-248416,HOPE Moda íntima,1,175.0
+248416,HOPE,1,175.0
 248416,Pittol,1,469.0
 248527,Cia do Homem,1,119.7
 248527,LOJAS AMERICANAS,1,145.26
@@ -7250,7 +7250,7 @@
 266070,Renner,1,169.8
 266070,Studio Z,1,172.98
 266070,VIRUS 41,1,449.9
-266412,Pratafina,1,370.0
+266412,Prata fina,1,370.0
 266412,Vans,1,549.99
 266547,Decathlon,1,39.99
 266547,Panvel Farmácias,1,29.01
@@ -7277,9 +7277,9 @@
 267877,Stanley,1,269.0
 268033,Atacadão,1,536.0
 268033,Havan,1,121.0
+269505,Bob's - Quiosque 2,1,18.0
 269505,Camarão Express,4,191.02
 269505,Mini Kalzone,2,76.8
-269505,z Bob's - Quiosque 2,1,18.0
 269702,Chiquinho Sorvetes,2,63.0
 269702,Lojas Americanas,1,14.48
 269702,Mr. Cheff,1,51.98
@@ -7378,8 +7378,8 @@
 277621,Livrarias Catarinense,1,209.6
 277621,Renner,1,555.2
 277820,BelShop,1,67.96
-277820,Kings,1,839.89
-277865,Estacionamento - Nações Shopping,1,10.0
+277820,Kings Sneackers,1,839.89
+277865,Estacionamento - Nações Shopping (CERTO),1,10.0
 278354,Fini,1,42.32
 278354,Orientali,1,106.4
 279041,ADCOS,1,165.0
@@ -7713,16 +7713,16 @@
 305131,Panvel Farmácias,1,246.89
 305131,Ri Happy,1,79.0
 305131,Riachuelo,1,369.96
+305419,Bob's - Quiosque 2,1,31.9
 305419,Mini Kalzone,1,10.0
-305419,z Bob's - Quiosque 2,1,31.9
-305533,Estacionamento - Nações Shopping,1,16.0
+305533,Estacionamento - Nações Shopping (CERTO),1,16.0
 305660,Bacio di Latte,1,48.9
 305660,Decathlon,1,69.99
 305987,Renner,2,399.8
 306009,C&A,1,2.0
 306009,iPlace Mobile,1,7036.0
 306048,Adidas,1,549.95
-306048,Pratafina,1,1350.0
+306048,Prata fina,1,1350.0
 306048,Studio Z,1,265.0
 306989,Bacio di Latte,1,46.9
 306989,Cacau Show,1,77.95
@@ -7769,7 +7769,7 @@
 310159,Mini Kalzone,1,29.5
 310159,O Boticário,2,268.9
 310159,Paladare Di Italia,1,16.0
-310159,Pratafina,1,115.0
+310159,Prata fina,1,115.0
 310159,Riachuelo,1,189.97
 310398,Camarão Express,1,29.9
 310398,Mini Kalzone,3,44.7
@@ -8350,10 +8350,10 @@
 342767,Mini Kalzone,1,46.5
 342769,Pernambucanas,1,732.86
 342801,Chef's & Fritas,1,7.9
+342862,Bob's - Quiosque 2,1,20.0
 342862,Panvel Farmácias,1,21.99
 342862,Pittol,1,50.0
 342862,Riachuelo,1,119.89
-342862,z Bob's - Quiosque 2,1,20.0
 342870,C&A,1,119.99
 342873,Lojas Americanas,2,193.78
 342873,Mini Kalzone,2,46.8
@@ -8419,7 +8419,7 @@
 343670,Spedini,1,39.0
 343672,Mini Kalzone,1,36.0
 343684,Livrarias Catarinense,2,133.1
-343684,Pratafina,1,79.0
+343684,Prata fina,1,79.0
 343684,Superlegal Brinquedos,1,74.98
 343694,Brasil Cacau,2,32.43
 343694,HOT DOG DUPIRU,1,29.0
@@ -8470,7 +8470,7 @@
 344002,Riachuelo,1,29.99
 344005,Gondolier,1,42.0
 344005,McDonald's,2,105.6
-344010,Pratafina,2,243.0
+344010,Prata fina,2,243.0
 344015,Mini Kalzone,1,61.5
 344017,Riachuelo,1,490.89
 344028,John John,1,637.58
@@ -8546,7 +8546,7 @@
 344966,Adidas,1,699.99
 344966,Carter's,1,199.99
 344966,Dona Torta,1,83.0
-344966,HOPE Moda íntima,1,658.4
+344966,HOPE,1,658.4
 344966,Hering,1,449.96
 344966,Kib´s,1,121.54
 344975,Cacau Show,1,14.0

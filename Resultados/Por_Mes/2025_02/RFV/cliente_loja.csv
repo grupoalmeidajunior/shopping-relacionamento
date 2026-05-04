@@ -630,7 +630,7 @@
 23434,Livrarias Catarinense,1,35.0
 23434,Madero,1,114.4
 23434,Panvel Farmácias,1,117.98
-23434,Pratafina,1,145.0
+23434,Prata fina,1,145.0
 23434,Renner,3,208.8
 23434,Riachuelo,2,160.78
 23434,Sinhá Benta,2,187.0
@@ -1254,7 +1254,7 @@
 55516,Youcom,1,219.6
 55560,Camarão Express,1,117.9
 55560,Cobasi,1,340.17
-55560,Estacionamento - Nações Shopping,1,16.0
+55560,Estacionamento - Nações Shopping (CERTO),1,16.0
 55622,Bacio di Latte,1,36.85
 55622,Gnc Balneario,1,40.0
 55622,Granado,1,328.0
@@ -1590,7 +1590,7 @@
 63297,Madero,1,171.27
 63297,Neumarkt Shopping - Estacionamento,1,16.0
 63457,Me.Linda,1,12.0
-63508,Estacionamento - Nações Shopping,1,10.0
+63508,Estacionamento - Nações Shopping (CERTO),1,10.0
 63544,Havaianas,1,90.0
 63544,Kalunga,1,31.1
 63544,Zanoni Sushi,1,126.52
@@ -2238,7 +2238,7 @@
 89854,Zanoni Sushi,1,52.48
 90124,McDonald's,1,39.0
 90288,Zara,2,1423.0
-90504,Estacionamento - Nações Shopping,1,10.0
+90504,Estacionamento - Nações Shopping (CERTO),1,10.0
 90504,Milkymoo,1,69.0
 90517,Chiquinho Sorvetes,1,18.0
 90517,Lojas Americanas,2,116.44
@@ -2543,8 +2543,8 @@
 104184,Usaflex,1,69.99
 105206,Colcci,2,1846.0
 105206,Damyller,1,477.0
-105206,Kings,1,849.9
-105416,Kings,1,139.9
+105206,Kings Sneackers,1,849.9
+105416,Kings Sneackers,1,139.9
 105416,Panvel Farmácias,1,102.13
 105416,Renner,1,99.9
 105416,Riachuelo,1,189.0
@@ -3012,7 +3012,7 @@
 117801,Mini Kalzone,1,12.5
 117801,Superlegal Brinquedos,1,89.99
 117863,C&A,1,159.98
-117863,Estacionamento - Nações Shopping,1,10.0
+117863,Estacionamento - Nações Shopping (CERTO),1,10.0
 117863,Luz da Lua,1,319.9
 117863,Panda Sushi,1,22.2
 117936,Beagle,1,279.99
@@ -3366,8 +3366,8 @@
 124108,Lindt,1,236.75
 124108,Shoulder,1,958.0
 124118,Puket,1,199.8
+124134,Bob's - Quiosque 2,1,84.0
 124134,Mini Kalzone,1,23.0
-124134,z Bob's - Quiosque 2,1,84.0
 124153,Centauro,1,404.97
 124153,Havaianas,1,73.97
 124153,Life Vivara,1,255.0
@@ -4301,7 +4301,7 @@
 143009,HOT DOG DUPIRU,1,51.0
 143009,IDéli oui,1,59.0
 143145,Burger King,1,117.7
-143205,Estacionamento - Nações Shopping,1,16.0
+143205,Estacionamento - Nações Shopping (CERTO),1,16.0
 143205,Livraria Catarinense,2,61.4
 143205,Riachuelo,1,29.99
 143206,Belshop,1,42.96
@@ -4402,7 +4402,7 @@
 145342,Outback Steakhouse,1,172.68
 145342,Paris Cosméticos,1,379.0
 145342,Pizza Hut,2,81.7
-145342,Pratafina,1,175.0
+145342,Prata fina,1,175.0
 145342,Superlegal Brinquedos,1,129.99
 145342,Swarovski,1,679.0
 145342,Zara,1,657.5
@@ -4854,7 +4854,7 @@
 161597,De Ville Gourmet,2,189.87
 161597,Grandvision by Fototica,1,891.0
 161597,Kopenhagen,1,28.7
-161597,Pratafina,1,155.0
+161597,Prata fina,1,155.0
 161597,Superlegal Brinquedos,1,39.99
 161704,BelShop,1,159.44
 161704,C&A,1,119.99
@@ -4876,7 +4876,7 @@
 161953,Freddo,1,19.0
 161953,Renner,1,99.9
 162047,Ri Happy,1,279.99
-162105,Estacionamento - Nações Shopping,1,16.0
+162105,Estacionamento - Nações Shopping (CERTO),1,16.0
 162105,Livraria Catarinense,4,113.3
 162105,Panda Café & Chá Mix,1,79.9
 162105,World Tennis,1,59.99
@@ -5276,10 +5276,10 @@
 179177,Live!,1,639.7
 179177,Panvel Farmácias,1,13.98
 179177,Riachuelo,2,279.95
+179217,Bob's - Quiosque 2,2,40.5
 179217,Cantinho Grill,2,122.6
 179217,Mini Kalzone,1,7.5
 179217,Subway,1,50.5
-179217,z Bob's - Quiosque 2,2,40.5
 179434,Bacio di Latte,1,45.9
 179434,Continente Shopping - Estacionamento,5,80.0
 179434,Me Blue,1,229.0
@@ -5573,7 +5573,7 @@
 189642,Kopenhagen,1,51.8
 189642,McDonald's,1,146.6
 189642,Riachuelo,1,209.89
-189788,Estacionamento - Nações Shopping,1,10.0
+189788,Estacionamento - Nações Shopping (CERTO),1,10.0
 189788,FATIMA ESPORTES,1,399.98
 189788,Hope Nacoes Shopping,1,89.0
 189788,JAH Açaí,7,444.54
@@ -5870,7 +5870,7 @@
 199613,Centauro,1,399.98
 199613,Kalunga,1,6.9
 199613,Lojas Americanas,1,146.77
-199613,Pratafina,1,79.0
+199613,Prata fina,1,79.0
 199695,Beagle,1,139.99
 199695,Centauro,1,270.95
 199695,Jcanedo,1,747.94
@@ -6169,7 +6169,7 @@
 213759,Havan,2,499.94
 213759,Mcdonald´s Quiosque,1,5.5
 213950,Livrarias Curitiba,1,131.6
-214051,HOPE Moda íntima,1,212.8
+214051,HOPE,1,212.8
 214051,Renner,2,351.03
 214174,Kalunga,1,38.6
 214174,Ri Happy,1,189.0
@@ -6350,7 +6350,7 @@
 221242,Havan,1,209.91
 221242,Subway,1,58.5
 221362,Natura,1,674.6
-221680,Estacionamento - Nações Shopping,1,16.0
+221680,Estacionamento - Nações Shopping (CERTO),1,16.0
 221680,Panvel Farmácias,1,46.2
 221722,C&A,1,49.99
 221722,Centauro,1,69.99
@@ -6465,7 +6465,7 @@
 226036,Natura,2,169.3
 226036,Pernambucanas,1,171.95
 226036,Riachuelo,1,109.97
-226043,Pratafina,1,110.0
+226043,Prata fina,1,110.0
 226043,Riachuelo,1,559.78
 226043,Zara,1,1.0
 226047,Constance,1,169.99
@@ -6645,7 +6645,7 @@
 232211,C&A,1,149.99
 232211,Mini Kalzone,2,60.0
 232211,Riachuelo,1,209.89
-232358,Estacionamento - Nações Shopping,1,10.0
+232358,Estacionamento - Nações Shopping (CERTO),1,10.0
 232358,Renner,1,419.0
 232451,Baummer,1,49.96
 232451,Havaianas,1,49.99
@@ -6812,7 +6812,7 @@
 238838,Livrarias Catarinense,2,235.9
 238838,Lojas Americanas,2,180.37
 238838,Mc Donald's,1,88.5
-238838,Pratafina,1,140.0
+238838,Prata fina,1,140.0
 238838,Riachuelo,2,233.79
 238838,Stanley,2,540.01
 238838,Youcom,2,789.2
@@ -6909,7 +6909,7 @@
 244508,Renner,2,319.5
 244508,Riachuelo,1,79.9
 244703,Colcci,1,1064.0
-244703,Estacionamento - Nações Shopping,1,16.0
+244703,Estacionamento - Nações Shopping (CERTO),1,16.0
 244703,Panvel Farmácias,1,56.57
 244828,Cases e Capas,1,100.0
 244828,Centauro,1,399.99
@@ -7104,7 +7104,7 @@
 258357,Kalunga,1,176.82
 258357,Loungerie,1,889.3
 258357,Morana,1,119.8
-258357,Pratafina,1,125.0
+258357,Prata fina,1,125.0
 258357,Vans,1,599.99
 258634,Café Cultura,2,72.0
 258634,Casa Bauducco,1,35.0
@@ -7380,7 +7380,7 @@
 277729,McDonald's,1,57.0
 279041,Natura,1,169.3
 279722,Lindt,1,40.79
-279847,Estacionamento - Nações Shopping,1,16.0
+279847,Estacionamento - Nações Shopping (CERTO),1,16.0
 279920,Burger King,1,64.9
 279969,Renner,1,695.1
 280418,Bacio di Latte,1,19.95
@@ -7635,7 +7635,7 @@
 294473,Tok & Stok,1,72.9
 294797,Live!,1,769.62
 295278,Chef's & Fritas,1,79.9
-295278,Estacionamento - Nações Shopping,1,16.0
+295278,Estacionamento - Nações Shopping (CERTO),1,16.0
 295586,Youcom,1,239.9
 296019,Clube Melissa,1,364.7
 296019,Cobasi,1,360.2
@@ -7742,7 +7742,7 @@
 301907,Pratafina,1,120.0
 301992,Track&Field,1,989.7
 302006,Cobasi,1,71.8
-302132,Kings,1,549.7
+302132,Kings Sneackers,1,549.7
 302206,Lojas Americanas,1,4.99
 302206,Spoleto,1,26.5
 302365,Burger King,5,230.5
@@ -7980,7 +7980,7 @@
 325367,Lojas Americanas,1,85.4
 325367,Lua Luá,1,1476.0
 325367,Paris Cosméticos,2,344.16
-325367,Pratafina,1,125.0
+325367,Prata fina,1,125.0
 325442,Lojas Americanas,1,1.0
 325442,Panvel Farmácias,1,79.8
 325696,C&A,1,119.98
@@ -8063,7 +8063,7 @@
 329162,Subway,1,28.0
 329626,C&A,1,99.99
 329626,Renner,2,345.5
-329666,Estacionamento - Nações Shopping,1,16.0
+329666,Estacionamento - Nações Shopping (CERTO),1,16.0
 329666,Panvel Farmácias,1,30.99
 329720,Giraffas,1,14.5
 329720,Mini Kalzone,1,29.8
@@ -8200,7 +8200,7 @@
 335678,Kalunga,1,90.0
 335678,Renner,1,1019.8
 335725,Kalunga,1,142.3
-335729,Pratafina,1,95.0
+335729,Prata fina,1,95.0
 335766,Bob's Sorvete - Quiosque,1,32.9
 335766,Camarão Express,1,49.9
 335766,Carioca Calçados,1,299.0
@@ -8406,7 +8406,7 @@
 338797,Manteigaria do Porto,1,13.0
 338813,Livraria Catarinense,2,481.8
 338865,Dez Pastéis,1,56.2
-338865,Estacionamento - Nações Shopping,1,16.0
+338865,Estacionamento - Nações Shopping (CERTO),1,16.0
 338865,Mini Kalzone,2,38.0
 338871,Alô Bebê,2,296.04
 338871,Cacau Show,1,19.0
@@ -8736,7 +8736,7 @@
 341950,Decathlon,1,261.0
 341950,Mini Kalzone,2,23.0
 341973,Spoleto,1,27.9
-341976,Pratafina,1,79.0
+341976,Prata fina,1,79.0
 341980,Livraria Catarinense,1,44.9
 342000,Bacio di Latte,1,21.95
 342000,Decathlon,1,49.99
